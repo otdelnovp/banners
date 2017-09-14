@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<script type="text/javascript" src="https://awaps.yandex.net/data/lib/adsdk.js"></script>
+	<meta charset="utf-8" name="ad.size" content="width=300,height=300">
+	<meta name="viewport" content="width=300, height=300, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="main.css">
+	<title>zuub</title>
+</head>
+<body>
+
+<div id="zuubban" class="zuubban">
+	<a id="click_area" href="#" target="_blank" class="zuubban_link">
+		<div class="zuubban_logo"></div>
+		<div class="zuubban_slide">
+
+			<!-- slide 1 -->
+
+			<div id="zuubban_slide_1" class="zuubban_slide_item zuubban_slide_item_1 show">
+				<div class="zuubban_slide_bg"></div>
+				<div class="zuubban_slide_up zuubban_slide_up_1 zuubban_slide_1_1"><span>Акция</span> супер цена</div>
+				<div class="zuubban_slide_up zuubban_slide_up_2 zuubban_slide_1_2">Брекеты <span class="big">2 <b class="min">по цене</b> 1</span></div>
+			</div>
+
+			<!-- slide 2 -->
+
+			<div id="zuubban_slide_2" class="zuubban_slide_item zuubban_slide_item_2">
+
+				<div class="zuubban_slide_bg zuubban_slide_bg_1"></div>
+				<div class="zuubban_slide_bg zuubban_slide_bg_2"></div>
+				<div class="zuubban_slide_bg zuubban_slide_bg_3"></div>
+
+				<div class="zuubban_slide_move zuubban_slide_move_1 zuubban_slide_2_1">керамические<br> брекеты</div>
+				<div class="zuubban_slide_left zuubban_slide_left_1 zuubban_slide_2_2">
+					<s>&nbsp;90 000 <span>&#8381;</span></s>
+					45 000 <span>&#8381;</span>
+				</div>
+
+				<div class="zuubban_slide_move zuubban_slide_move_2 zuubban_slide_2_1">металлические <br> брекеты</div>
+				<div class="zuubban_slide_left zuubban_slide_left_2 zuubban_slide_2_2">
+					<s>&nbsp;70 000 <span>&#8381;</span></s>
+					35 000 <span>&#8381;</span>
+				</div>
+
+				<div class="zuubban_slide_move zuubban_slide_move_3 zuubban_slide_2_1">сапфировые<br> брекеты</div>
+				<div class="zuubban_slide_left zuubban_slide_left_3 zuubban_slide_2_2">
+					<s>&nbsp;100 000 <span>&#8381;</span></s>
+					50 000 <span>&#8381;</span>
+				</div>
+
+				<div class="zuubban_slide_up zuubban_slide_up_4 zuubban_slide_2_3">
+					<div><sup>*</sup>Установка на 2 челюсти</div>
+					<div><sup>*</sup>Брекеты входят в стоимость</div>
+				</div>
+				<div class="zuubban_slide_up zuubban_slide_up_6 zuubban_slide_2_4"><span><b>ПОДАРКИ</b> КАЖДОМУ</span></div>
+
+			</div>
+
+			<!-- slide 3 -->
+
+			<div id="zuubban_slide_3" class="zuubban_slide_item zuubban_slide_item_3">
+
+				<div class="zuubban_slide_bg zuubban_slide_bg_1"></div>
+				<div class="zuubban_slide_bg zuubban_slide_bg_2"></div>
+				<div class="zuubban_slide_bg zuubban_slide_bg_3"></div>
+
+				<div class="zuubban_slide_up zuubban_slide_up_3 zuubban_slide_3_1"><span>Подарки</span> <i class="zuubban_slide_up zuubban_slide_up_5"><sup>*</sup>(экономия за каждую челюсть)</i></div>
+
+				<div class="zuubban_slide_move zuubban_slide_move_1 zuubban_slide_3_2_1"><span>Снятие</span> брекетов</div>
+				<div class="zuubban_slide_bounce zuubban_slide_bounce_1 zuubban_slide_3_3">0 <span>&#8381;</span> <s>7 500 <span>&#8381;</span></s><div><div></div></div></div>
+
+				<div class="zuubban_slide_move zuubban_slide_move_2 zuubban_slide_3_2_2">Чистка эмалевой<br> поверхности зубов <span>перед установкой</span></div>
+				<div class="zuubban_slide_bounce zuubban_slide_bounce_2 zuubban_slide_3_3">0 <span>&#8381;</span> <s>3 000 <span>&#8381;</span></s><div><div></div></div></div>
+
+				<div class="zuubban_slide_move zuubban_slide_move_3 zuubban_slide_3_2_3">Капа-ретейнер<br> для удержания<br> результата</div>
+				<div class="zuubban_slide_bounce zuubban_slide_bounce_3 zuubban_slide_3_3">0 <span>&#8381;</span> <s>6 500 <span>&#8381;</span></s><div><div></div></div></div>
+
+			</div>
+
+		</div>
+		<div class="zuubban_note"><sup>*</sup> Имеются противопоказания необходима консультация врача</div>
+	</a>
+</div>
+
+<script>
+	function getUrlParam(name) {
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		results = regex.exec(location.search);
+		return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+	document.getElementById("click_area").href = getUrlParam('link1');
+</script>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script>
+	window.onload = function() {
+	var slide_1 = document.getElementById('zuubban_slide_1');
+	var slide_2 = document.getElementById('zuubban_slide_2');
+	var slide_3 = document.getElementById('zuubban_slide_3');
+	var i = 1;
+	setInterval(function() {
+		switch(++i) {
+			case 1:
+				slide_3.classList.remove('show');
+				slide_1.classList.add('show');
+				break;
+			case 2:
+				slide_1.classList.remove('show');
+				slide_2.classList.add('show');
+				break;
+			case 5:
+				slide_2.classList.remove('show');
+				slide_3.classList.add('show');
+				i = -2;
+				break;
+		}
+	}, 3000);
+};
+</script>
+
+</body>
+</html>

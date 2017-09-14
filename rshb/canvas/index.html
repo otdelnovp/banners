@@ -1,0 +1,63 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>RSHB canvas</title>
+	<meta name="ad.size" content="width=100%,height=100%">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.owl.carousel.css" />
+	<link rel="stylesheet" href="css/main.css" />
+
+	<script>
+
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+			{(i[r].q=i[r].q||[]).push(arguments)}
+			,i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create','UA-81706562-1','auto',{'name':'b'});
+
+		ga('b.require', 'displayfeatures');
+		ga('b.send','pageview');
+
+		(function($) {
+			var label = 0;
+			setInterval(function() { label+=5; ga('b.send', 'event', 'Время на странице', label, {'nonInteraction': 1}); }, 5000);
+		})();
+
+		setTimeout(function() { ga('b.send', 'event', 'Bounce Rate', 'Correction'); }, 60000);
+
+	</script>
+
+</head>
+<body>
+
+	<div class="main">
+
+		<video id="video" class="video" poster="video/poster.jpg" preload autoplay loop>
+			<source src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+			<source src="video/video.webm" type='video/webm; codecs="vp8, vorbis"'>
+		</video>
+
+		<span class="skip">Пропустить видео</span>
+
+		<div class="content">
+			<div class="content_inner">
+				<div class="content_card"></div>
+				<div class="content_title">Оплачивая покупки картой<br> <b>«Амурский&nbsp;тигр»</b>, Вы поможете защитить<br> и&nbsp;сохранить это уникальное, находящееся<br> на&nbsp;грани исчезновения животное<sup>*</sup>.</div>
+				<div class="content_description"><sup>*</sup>С каждой операции оплаты покупки по карте &laquo;Амурский тигр&raquo;<br> АО &laquo;Россельхозбанк&raquo; перечислит часть своих доходов в Автономную<br> некоммерческую организацию &laquo;Центр по изучению и сохранению<br> популяции амурского тигра&raquo;</div>
+				<a href="%link1%" class="content_button" target="_blank" onClick="ga('b.send', 'event', 'Переход на сайт клиента');">подробнее</a>
+				<div class="content_note">Главный спонсор информационно-просветительской кампании &laquo;Их судьба в наших руках&raquo; - АО &laquo;Россельхозбанк&raquo;.<br> Генеральная лицензия Банка России №3349. Реклама.</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/core.js"></script>
+
+</body>
+
+</html>
