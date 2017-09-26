@@ -1,0 +1,35 @@
+html, body { margin: 0; padding: 0; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 240px;
+	height: 400px;
+	font-size: 0;
+	color: #fff;
+	background: #fab030;
+	border: 0;
+}
+
+#html_banner .html_banner_link {display:block; position: relative; width:100%; height:100%; text-decoration: none;}
+
+#html_banner .html_banner_bg {display: block; position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%; background: url(img/bg.jpg) 0 0 no-repeat; }
+
+#html_banner .html_banner_title {display: block; position: absolute; z-index: 2; bottom: 100px; left: 0; width: 100%; height: 20px; background: url(img/title.png) center no-repeat; }
+
+#html_banner .html_banner_btn {display: block; position: absolute; z-index: 3; bottom: 25px; left: 50%; margin: 0 0 0 -67px; width: 135px; height: 50px; background: url(img/btn.png) center no-repeat; border: 1px solid #000; border-radius: 26px; transition: all 250ms; animation: pulse 2s cubic-bezier(.53,.34,.53,.72) Infinite;}
+#html_banner .html_banner_btn:hover {background: #000 url(img/btn_hover.png) center no-repeat !important; transform: scale(1) !important;}
+
+@keyframes pulse {
+  0%, 33% {
+    transform: scale(1);
+		background-color: transparent;
+  }
+  20% {
+    transform: scale(0.95);
+		background-color: rgba(0,0,0,0.15);
+  }
+}
