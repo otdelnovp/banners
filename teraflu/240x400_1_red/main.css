@@ -1,0 +1,42 @@
+html, body { margin: 0; padding: 0; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 240px;
+	height: 400px;
+	font-size: 0;
+	color: #fff;
+	background: #1C7CD3;
+	border: 0;
+}
+
+#html_banner .html_banner_link {display:block; position: relative; width:100%; height:100%; text-decoration: none;}
+
+#html_banner .html_banner_title {display: block; position: absolute; z-index: 2; top: 30px; left: 0; width: 100%; height: 60px; background: url(img/title.png) center no-repeat; }
+
+#html_banner .html_banner_map {display: block; position: absolute; z-index: 2; top: 110px; left: 0; width: 100%; height: 145px; background: url(img/map.png) center no-repeat; }
+
+#html_banner .html_banner_alien {display: block; position: absolute; z-index: 5; top: 150px; right: -20px; width: 176px; height: 170px; background: url(img/alien.png) center no-repeat; animation: fly 15s cubic-bezier(.53,.34,.53,.72) Infinite;}
+
+#html_banner .html_banner_btn {display: block; position: absolute; z-index: 11; bottom: 30px; left: 50%; margin: 0 0 0 -100px; width: 200px; height: 60px; background: #FFEA00 url(img/btn.png) center no-repeat; box-shadow: 0 4px 0 0 #0A5AA3; border-radius: 30px; transition: all 250ms; animation: pulse 2s cubic-bezier(.53,.34,.53,.72) Infinite;}
+#html_banner .html_banner_btn:hover {background-color: #FFF500;}
+#html_banner .html_banner_btn:active {transform: translateY(4px); box-shadow: 0 0 0 0 #0A5AA3;}
+
+@keyframes fly {
+  0%, 100% {
+    transform: translate(0, 0) rotateZ(-5deg);
+  }
+  25% {
+    transform: translate(-5px, -5px) rotateZ(5deg);
+  }
+  50% {
+    transform: translate(5px, 10px) rotateZ(-5deg);
+  }
+  75% {
+    transform: translate(10px, 5px) rotateZ(2deg);
+  }
+}
