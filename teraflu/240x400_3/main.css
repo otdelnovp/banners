@@ -1,0 +1,66 @@
+html, body { margin: 0; padding: 0; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 240px;
+	height: 400px;
+	font-size: 0;
+	color: #fff;
+	background: #827273 url(img/bg.jpg) center no-repeat;
+	border: 0;
+}
+
+#html_banner .html_banner_link {display:block; position: relative; width:100%; height:100%; text-decoration: none;}
+
+#html_banner .html_banner_title {display: block; position: absolute; z-index: 2; top: 30px; left: 0; width: 100%; height: 55px; background: url(img/title.png) center no-repeat; }
+
+#html_banner .html_banner_alien {display: block; position: absolute; z-index: 5; top: 115px; left: 15px; width: 154px; height: 148px; background: url(img/alien.png) center no-repeat; animation: fly 15s cubic-bezier(.53,.34,.53,.72) Infinite;}
+
+#html_banner .html_banner_alien_2 {display: block; position: absolute; z-index: 4; top: 190px; right: 5px; width: 54px; height: 52px; background: url(img/alien_2.png) center no-repeat; animation: fly2 15s cubic-bezier(.53,.34,.53,.72) Infinite;}
+
+#html_banner .html_banner_cloud {display: block; position: absolute; z-index: 11; top: 0; left: 0; width: 500px; height: 100%; background: url(img/cloud.png) center no-repeat; animation: cloud 60s cubic-bezier(.53,.34,.53,.72) Infinite;}
+
+#html_banner .html_banner_btn {display: block; position: absolute; z-index: 11; bottom: 40px; left: 50%; margin: 0 0 0 -105px; width: 210px; height: 60px; background: #FFE900 url(img/btn.png) center no-repeat; border-radius: 30px; transition: all 250ms; animation: pulse 2s cubic-bezier(.53,.34,.53,.72) Infinite;}
+#html_banner .html_banner_btn:hover {background-color: #FFF500;}
+#html_banner .html_banner_btn:active {transform: translateY(4px);}
+
+@keyframes fly {
+  0%, 100% {
+    transform: translate(0, 0) rotateZ(-5deg);
+  }
+  25% {
+    transform: translate(-5px, -5px) rotateZ(5deg);
+  }
+  50% {
+    transform: translate(5px, 10px) rotateZ(-5deg);
+  }
+  75% {
+    transform: translate(10px, 5px) rotateZ(2deg);
+  }
+}
+@keyframes fly2 {
+  0%, 100% {
+    transform: translate(0, 0) rotateZ(3deg);
+  }
+  25% {
+    transform: translate(-3px, -5px) rotateZ(3deg);
+  }
+  50% {
+	   transform: translate(3px, 3px) rotateZ(-3deg);
+  }
+  75% {
+    transform: translate(-5px, -3px) rotateZ(-2deg);
+  }
+}
+@keyframes cloud {
+  0%, 100% {
+    transform: translate(-250px, 0);
+  }
+  50% {
+	   transform: translate(0, 0);
+  }
+}
