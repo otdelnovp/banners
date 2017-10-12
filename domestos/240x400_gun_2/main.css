@@ -1,0 +1,37 @@
+html, body { margin: 0; padding: 0; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 240px;
+	height: 400px;
+	font-size: 0;
+	color: #fff;
+	background: #827273 url(img/bg.jpg) center no-repeat;
+	border: 0;
+}
+
+#html_banner .html_banner_link {display:block; position: relative; width:100%; height:100%; text-decoration: none; cursor: crosshair;}
+
+#html_banner .html_banner_gun {display: block; position: absolute; z-index: 5; top: 50%; left: 50%; margin: -100px -55px; width: 110px; height: 110px; background: url(img/gun.png) center no-repeat; animation: gun 8s cubic-bezier(.53,.34,.53,.72) Infinite;}
+
+@keyframes gun {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  14% {
+    transform: translate(-30px, -20px);
+  }
+  35% {
+    transform: translate(-80px, 60px);
+  }
+  64% {
+    transform: translate(30px, -70px);
+  }
+  85% {
+    transform: translate(70px, 40px);
+  }
+}

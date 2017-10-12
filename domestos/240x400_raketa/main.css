@@ -1,0 +1,37 @@
+html, body { margin: 0; padding: 0; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 240px;
+	height: 400px;
+	font-size: 0;
+	color: #fff;
+	background: #081933 url(img/bg.jpg) center no-repeat;
+	border: 0;
+}
+
+#html_banner .html_banner_link {display:block; position: relative; width:100%; height:100%; text-decoration: none;}
+
+#html_banner .html_banner_slide_0,
+#html_banner .html_banner_slide_1,
+#html_banner .html_banner_slide_2,
+#html_banner .html_banner_slide_3,
+#html_banner .html_banner_slide_4 {position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; opacity: 0; transform: scale(0.5); animation: slide 7s cubic-bezier(0.4, 0.0, 0.2, 1) Infinite;}
+#html_banner .html_banner_slide_0 {background: url(img/slide_0.png) center no-repeat;}
+#html_banner .html_banner_slide_1 {background: url(img/slide_1.png) center no-repeat; animation-delay: 1.15s;}
+#html_banner .html_banner_slide_2 {background: url(img/slide_2.png) center no-repeat; animation-delay: 2.3s;}
+#html_banner .html_banner_slide_3 {background: url(img/slide_3.png) center no-repeat; animation-delay: 3.45s;}
+#html_banner .html_banner_slide_4 {background: url(img/slide_4.png) center no-repeat; animation: slide2 7s cubic-bezier(0.4, 0.0, 0.2, 1) Infinite; animation-delay: 4.6s;}
+
+@keyframes slide {
+	0%, 17% {opacity: 0; transform: scale(0.5);}
+	2%, 15% {opacity: 1; transform: scale(1);}
+}
+@keyframes slide2 {
+	0%, 34% {opacity: 0; transform: scale(0.5);}
+	2%, 32% {opacity: 1; transform: scale(1);}
+}
