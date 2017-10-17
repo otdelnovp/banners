@@ -18,30 +18,30 @@ html, body { margin: 0; padding: 0; }
 
 #html_banner .html_banner_title {display: block; position: absolute; z-index: 2; top: 285px; left: 0; width: 100%; height: 20px; background: url(img/title.png) center no-repeat; }
 
-#html_banner .html_banner_micro {display: block; position: absolute; z-index: 5; top: 15px; left: 15px; width: 60px; height: 100px; background: url(img/micro_1.png) center no-repeat; animation: fly 15s cubic-bezier(.53,.34,.53,.72) Infinite;}
+#html_banner .html_banner_micro {display: block; position: absolute; z-index: 5; top: 15px; left: 15px; width: 60px; height: 100px; background: url(img/micro_1.png) center no-repeat; animation: fly 11s cubic-bezier(.53,.34,.53,.72) Infinite;}
 
-#html_banner .html_banner_micro_2 {display: block; position: absolute; z-index: 4; top: -5px; right: -10px; width: 90px; height: 106px; background: url(img/micro_2.png) center no-repeat; animation: fly2 15s cubic-bezier(.53,.34,.53,.72) Infinite;}
+#html_banner .html_banner_micro_2 {display: block; position: absolute; z-index: 4; top: -5px; right: -10px; width: 90px; height: 106px; background: url(img/micro_2.png) center no-repeat; animation: fly2 12s cubic-bezier(.53,.34,.53,.72) Infinite;}
 
-#html_banner .html_banner_micro_3 {display: block; position: absolute; z-index: 4; top: 155px; left: 15px; width: 109px; height: 117px; background: url(img/micro_3.png) center no-repeat; animation: fly3 10s cubic-bezier(.53,.34,.53,.72) Infinite;}
+#html_banner .html_banner_micro_3 {display: block; position: absolute; z-index: 4; top: 155px; left: 15px; width: 109px; height: 117px; background: url(img/micro_3.png) center no-repeat; animation: fly3 8s cubic-bezier(.53,.34,.53,.72) Infinite;}
 
-#html_banner .html_banner_micro_4 {display: block; position: absolute; z-index: 4; top: 190px; right: -20px; width: 124px; height: 90px; background: url(img/micro_4.png) center no-repeat; animation: fly 18s cubic-bezier(.53,.34,.53,.72) Infinite;}
+#html_banner .html_banner_micro_4 {display: block; position: absolute; z-index: 4; top: 190px; right: -20px; width: 124px; height: 90px; background: url(img/micro_4.png) center no-repeat; animation: fly 13s cubic-bezier(.53,.34,.53,.72) Infinite;}
 
-#html_banner .html_banner_btn {display: block; position: absolute; z-index: 11; bottom: 20px; left: 50%; margin: 0 0 0 -85px; width: 170px; height: 60px; background: #E51A31 url(img/btn.png) center no-repeat; transition: all 250ms; animation: pulse 2s cubic-bezier(.53,.34,.53,.72) Infinite;}
+#html_banner .html_banner_btn {display: block; position: absolute; z-index: 11; bottom: 20px; left: 50%; margin: 0 0 0 -85px; width: 170px; height: 60px; background: #E51A31 url(img/btn.png) center no-repeat; transition: all 250ms;}
 #html_banner .html_banner_btn:hover {background-color: #ff2724;}
 #html_banner .html_banner_btn:active {transform: translateY(4px);}
 
 @keyframes fly {
   0%, 100% {
-    transform: translate(0, 0) rotateZ(-5deg);
+    transform: translate(0, 0) rotateZ(-7deg);
   }
   25% {
-    transform: translate(-5px, -5px) rotateZ(5deg);
+    transform: translate(-15px, -15px) rotateZ(7deg);
   }
   50% {
-    transform: translate(5px, 10px) rotateZ(-5deg);
+    transform: translate(10px, 10px) rotateZ(-7deg);
   }
   75% {
-    transform: translate(10px, 5px) rotateZ(2deg);
+    transform: translate(12px, 8px) rotateZ(5deg);
   }
 }
 @keyframes fly2 {
@@ -49,20 +49,20 @@ html, body { margin: 0; padding: 0; }
     transform: translate(0, 0) rotateZ(2deg);
   }
   50% {
-	   transform: translate(10px, 20px) rotateZ(-4deg);
+	   transform: translate(20px, 30px) rotateZ(-6deg);
   }
 }
 @keyframes fly3 {
   0%, 100% {
-    transform: translate(0, 0) rotateZ(3deg);
+    transform: translate(0, 0) rotateZ(5deg);
   }
   25% {
-    transform: translate(-3px, -5px) rotateZ(3deg);
+    transform: translate(-5px, -10px) rotateZ(4deg);
   }
   50% {
-	   transform: translate(3px, 3px) rotateZ(-3deg);
+	   transform: translate(6px, 8px) rotateZ(-6deg);
   }
   75% {
-    transform: translate(-5px, -3px) rotateZ(-2deg);
+    transform: translate(-8px, -5px) rotateZ(-3deg);
   }
 }
