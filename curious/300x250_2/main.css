@@ -1,0 +1,36 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner img {display: block; margin: 0 auto;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	min-width: 300px;
+	min-height: 250px;
+	max-width: 600px;
+	max-height: 500px;
+	font-size: 0;
+	color: #fff;
+	background: #fff url(img/bg.jpg);
+	-webkit-background-size: cover; background-size: cover;
+}
+
+#html_banner .html_banner_link {display:block; position: relative; width:100%; height:100%; text-decoration: none;}
+
+#html_banner .html_banner_logo {display: block; position: absolute; z-index: 0; top: 7.8%; left: 0; width: 100%; height: 8%; background: url(img/logo.png) 50% 50% no-repeat; -webkit-background-size: contain; background-size: contain;}
+
+#html_banner .html_banner_title {display: block; position: absolute; z-index: 0; top: 45.5%; left: 0; width: 100%; height: 25%; background: url(img/title.png) 50% 50% no-repeat; -webkit-background-size: contain; background-size: contain; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%);}
+
+#html_banner .html_banner_btn {display: block; position: absolute; z-index: 11; bottom: 8%; left: 26.5%; width: 47%; height: 16%; background: #9013FE url(img/btn.png) 50% 50% no-repeat; -webkit-background-size: contain; background-size: contain; border-radius: 13%/50%; -webkit-transition: all 250ms; -moz-transition: all 250ms; transition: all 250ms;}
+#html_banner .html_banner_btn:hover {background-color: #7D12DC;}
+#html_banner .html_banner_btn:active {-webkit-transform: translateY(1%); -moz-transform: translateY(1%); -o-transform: translateY(1%); transform: translateY(1%);}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	#html_banner .html_banner_logo {background-image: url(img/logo@2x.png)}
+	#html_banner .html_banner_title {background-image: url(img/title@2x.png)}
+	#html_banner .html_banner_btn {background-image: url(img/btn@2x.png)}
+}
