@@ -1,0 +1,44 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner img {display: block; margin: 0 auto;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	min-width: 300px;
+	min-height: 250px;
+	max-width: 600px;
+	max-height: 500px;
+	font-size: 0;
+	color: #fff;
+	background: #fff url(img/bg.jpg);
+	-webkit-background-size: cover; background-size: cover;
+}
+
+#html_banner .html_banner_link {display:block; position: relative; width:100%; height:100%; text-decoration: none;}
+
+#html_banner .html_banner_monetki {display: block; position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%; background: url(img/monetki.png) 50% 50% no-repeat; background-size: contain;}
+
+#html_banner .html_banner_btn {display: block; position: absolute; z-index: 2; bottom: 8%; left: 16%; width: 68%; height: 32%; background: #E51A31 url(img/btn.png) 50% 50% no-repeat; background-size: contain; transition: all 250ms;}
+#html_banner:hover .html_banner_btn {background-color: #ff2724;}
+
+#html_banner .html_banner_microb {display: block; position: absolute; z-index: 3; top: 0; left: 0; width: 100%; height: 100%; background: url(img/microb.png) 50% 50% no-repeat; background-size: contain; animation: fly 15s cubic-bezier(.53,.34,.53,.72) Infinite;}
+
+@keyframes fly {
+  0%, 100% {
+    transform: translate(0, 0) rotate(-5deg);
+  }
+  25% {
+    transform: translate(-5px, -5px) rotate(3deg);
+  }
+  50% {
+    transform: translate(5px, 10px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(10px, 5px) rotate(2deg);
+  }
+}

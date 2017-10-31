@@ -1,0 +1,120 @@
+html, body { margin: 0; padding: 0; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 240px;
+	height: 400px;
+	font-size: 0;
+	color: #fff;
+	background: #827273 url(img/bg.jpg) center no-repeat;
+	border: 0;
+}
+
+#html_banner .html_banner_screen1,
+#html_banner .html_banner_screen2 {display:block; position: absolute; z-index: 1; top: 0; left: 0; width:100%; height:100%; text-decoration: none;}
+#html_banner .html_banner_screen2 {display: none; z-index: 11; background: #827273 url(img/bg.jpg) center no-repeat;}
+
+
+#html_banner .html_banner_micro {position: absolute; top: 45px; left: 17px; width: 84px; height: 104px; background: url(img/microb_2.png) center no-repeat; background-size: contain;}
+
+#html_banner .html_banner_monetka {position: absolute; top: 60px; right: 13px; width: 86px; height: 78px; background: url(img/monetka.png) center no-repeat; background-size: contain;}
+#html_banner .html_banner_monetka:before {content: '='; position: absolute; top: 50%; right: 100%; font-size: 47px; color: #fff; font-family: Arial, sans-serif; transform: translate(-9px, -55%);}
+
+#html_banner .html_banner_title {display: block; position: absolute; z-index: 2; top: 188px; left: 0; width: 100%; height: 51px; background: url(img/title.png) center no-repeat; background-size: contain;}
+
+#html_banner .html_banner_btn {display: block; position: absolute; z-index: 11; bottom: 40px; left: 95px; width: 77px; height: 77px; background: url(img/arrow.png) center no-repeat; background-size: contain;}
+
+
+#html_banner .html_banner_gun {display: block; position: absolute; z-index: 11; top: 50%; left: 50%; margin: -33px; width: 66px; height: 66px; background: url(img/gun.png) center no-repeat; background-size: contain; animation: gun 8s cubic-bezier(.53,.34,.53,.72) Infinite;}
+#html_banner .html_banner_screen1:hover .html_banner_gun {display: none;}
+#html_banner .html_banner_screen1:hover {cursor: url(img/gun.png) 38 38, crosshair;}
+
+@keyframes gun {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  14% {
+    transform: translate(-80px, -130px);
+  }
+  35% {
+    transform: translate(-50px, 130px);
+  }
+  64% {
+    transform: translate(100px, -50px);
+  }
+  85% {
+    transform: translate(-20px, 50px);
+  }
+}
+
+
+#html_banner .html_banner_microb {display: block; position: absolute; z-index: 5; top: -100%; left: -100%;}
+#html_banner .html_banner_microb_1 {width: 121px; height: 150px; animation: fly1 12s cubic-bezier(.5,.3,.5,.7) Infinite; animation-delay: 4s;}
+#html_banner .html_banner_microb_2 {width: 102px; height: 128px; animation: fly2 12s cubic-bezier(.5,.3,.5,.7) Infinite; animation-delay: 2s;}
+#html_banner .html_banner_microb_3 {width: 118px; height: 147px; animation: fly3 12s cubic-bezier(.5,.3,.5,.7) Infinite;}
+
+#html_banner .html_banner_microb:before {content: ''; display: block; position: relative; width: 100%; height: 100%; background-position: center; background-repeat: no-repeat; animation: rotate 1.5s cubic-bezier(.53,.34,.53,.72) Infinite;}
+#html_banner .html_banner_microb_1:before {background-image: url(img/microb_1.png)}
+#html_banner .html_banner_microb_2:before {background-image: url(img/microb_2.png)}
+#html_banner .html_banner_microb_3:before {background-image: url(img/microb_3.png)}
+
+@keyframes fly1 {
+  0%, 100% {
+		top: 0;
+		left: 0;
+    transform: translate(-200px, -250px);
+  }
+  49% {
+    transform: translate(300px, 500px);
+  }
+  51% {
+    transform: translate(300px, 500px) scaleX(-1);
+  }
+  99% {
+    transform: translate(-200px, -250px) scaleX(-1);
+  }
+}
+@keyframes fly2 {
+  0%, 100% {
+		top: 0;
+		left: 0;
+    transform: translate(350px, 150px);
+  }
+  49% {
+    transform: translate(-200px, 300px);
+  }
+  51% {
+    transform: translate(-200px, 300px) scaleX(-1);
+  }
+  99% {
+    transform: translate(350px, 150px) scaleX(-1);
+  }
+}
+@keyframes fly3 {
+  0%, 100% {
+		top: 0;
+		left: 0;
+    transform: translate(-150px, 400px);
+  }
+  49% {
+    transform: translate(300px, -200px);
+  }
+  51% {
+    transform: translate(300px, -200px) scaleX(-1);
+  }
+  99% {
+    transform: translate(-150px, 400px) scaleX(-1);
+  }
+}
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+}
