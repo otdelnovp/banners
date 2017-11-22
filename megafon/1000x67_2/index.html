@@ -14,7 +14,7 @@
 			position: relative;
 			width: 100%;
 			height: 67px;
-			background: #00b956;
+			background: #37aa32;
 			overflow: hidden;
 		}
 		.s-container_link {
@@ -24,7 +24,7 @@
 			height: 100%;
 			background-position: center;
 			background-repeat: no-repeat;
-			background-image: url(screen_0.png);
+			background-image: url(screen_0.jpg);
 			background-size: contain;
 		}
 		.s-container_screen {
@@ -37,24 +37,30 @@
 			height: 100%;
 			background-position: center;
 			background-repeat: no-repeat;
-			background-image: url(screen_1.png);
+			background-image: url(screen_1.jpg);
 			background-size: contain;
 			animation: slide 5s cubic-bezier(0.4, 0.0, 0.2, 1) Infinite;
-			animation-delay: 1.25s;
+			animation-delay: 1s;
 			opacity: 0;
 		}
 		.s-container_screen__2 {
-			background-image: url(screen_2.png);
-			animation-delay: 2.5s;
+			background-image: url(screen_2.jpg);
+			animation-delay: 2s;
 		}
 		.s-container_screen__3 {
-			background-image: url(screen_3.png);
-			animation-delay: 3.75s;
+			background-image: url(screen_3.jpg);
+			animation-name: slide2;
+			animation-delay: 3s;
 		}
 
 		@keyframes slide {
-			32%, 100% {opacity: 0; z-index: 1;}
-			3%, 28% {opacity: 1;}
+			50%, 100% {opacity: 0; z-index: 1;}
+			3%, 22% {opacity: 1;}
+			0%, 70% {z-index: 11;}
+		}
+		@keyframes slide2 {
+			50%, 100% {opacity: 0; z-index: 1;}
+			3%, 40% {opacity: 1;}
 			0%, 70% {z-index: 11;}
 		}
 	</style>
