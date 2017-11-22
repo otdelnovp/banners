@@ -18,7 +18,7 @@
   left: $l/722*100%;
   top: $t/1036*100%;
   &:before {
-    transform: rotateZ(#{$ang}deg);
+    transform: rotateZ(#{$ang}deg) translate(-50%,-50%);
   }
 }
 
@@ -75,7 +75,7 @@ html, body {
   @for $x from 1 through 5 {
     @for $y from 1 through 12 {
       .ball-pos-#{$i} {
-        @include calcPos(random(640), random(1213), random(360));
+        @include calcPos(128 * $x - 60, 101 * $y - 50, random(360));
         animation-delay: -.2s + .2s * $i / 5;
       }
       $i: $i+1;
