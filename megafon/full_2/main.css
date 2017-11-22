@@ -1,0 +1,629 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#banner-html {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#banner-html div {
+  position: absolute;
+}
+#banner-html div:before {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#banner-html .ball {
+  animation: ball .5s linear both;
+}
+#banner-html .ball-1 {
+  width: 23.4072%;
+}
+#banner-html .ball-1:before {
+  content: '';
+  display: block;
+  padding-bottom: 107.69231%;
+}
+#banner-html .ball-1:before {
+  background-image: url(./img/ball-1.png);
+}
+#banner-html .ball-2 {
+  width: 23.2687%;
+}
+#banner-html .ball-2:before {
+  content: '';
+  display: block;
+  padding-bottom: 107.7381%;
+}
+#banner-html .ball-2:before {
+  background-image: url(./img/ball-2.png);
+}
+#banner-html .ball-3 {
+  width: 23.13019%;
+}
+#banner-html .ball-3:before {
+  content: '';
+  display: block;
+  padding-bottom: 107.78443%;
+}
+#banner-html .ball-3:before {
+  background-image: url(./img/ball-3.png);
+}
+#banner-html .ball-pos-1 {
+  left: 22.43767%;
+  top: 100.67568%;
+  animation-delay: -0.16s;
+}
+#banner-html .ball-pos-1:before {
+  transform: rotateZ(324deg);
+}
+#banner-html .ball-pos-2 {
+  left: 86.84211%;
+  top: 69.20849%;
+  animation-delay: -0.12s;
+}
+#banner-html .ball-pos-2:before {
+  transform: rotateZ(151deg);
+}
+#banner-html .ball-pos-3 {
+  left: 2.90859%;
+  top: 32.04633%;
+  animation-delay: -0.08s;
+}
+#banner-html .ball-pos-3:before {
+  transform: rotateZ(322deg);
+}
+#banner-html .ball-pos-4 {
+  left: 15.23546%;
+  top: 3.95753%;
+  animation-delay: -0.04s;
+}
+#banner-html .ball-pos-4:before {
+  transform: rotateZ(163deg);
+}
+#banner-html .ball-pos-5 {
+  left: 17.72853%;
+  top: 80.50193%;
+  animation-delay: 0s;
+}
+#banner-html .ball-pos-5:before {
+  transform: rotateZ(305deg);
+}
+#banner-html .ball-pos-6 {
+  left: 18.00554%;
+  top: 48.93822%;
+  animation-delay: 0.04s;
+}
+#banner-html .ball-pos-6:before {
+  transform: rotateZ(119deg);
+}
+#banner-html .ball-pos-7 {
+  left: 10.24931%;
+  top: 107.33591%;
+  animation-delay: 0.08s;
+}
+#banner-html .ball-pos-7:before {
+  transform: rotateZ(330deg);
+}
+#banner-html .ball-pos-8 {
+  left: 68.28255%;
+  top: 91.98842%;
+  animation-delay: 0.12s;
+}
+#banner-html .ball-pos-8:before {
+  transform: rotateZ(287deg);
+}
+#banner-html .ball-pos-9 {
+  left: 87.95014%;
+  top: 102.3166%;
+  animation-delay: 0.16s;
+}
+#banner-html .ball-pos-9:before {
+  transform: rotateZ(120deg);
+}
+#banner-html .ball-pos-10 {
+  left: 25.76177%;
+  top: 48.74517%;
+  animation-delay: 0.2s;
+}
+#banner-html .ball-pos-10:before {
+  transform: rotateZ(310deg);
+}
+#banner-html .ball-pos-11 {
+  left: 68.55956%;
+  top: 80.40541%;
+  animation-delay: 0.24s;
+}
+#banner-html .ball-pos-11:before {
+  transform: rotateZ(319deg);
+}
+#banner-html .ball-pos-12 {
+  left: 20.49861%;
+  top: 96.71815%;
+  animation-delay: 0.28s;
+}
+#banner-html .ball-pos-12:before {
+  transform: rotateZ(163deg);
+}
+#banner-html .ball-pos-13 {
+  left: 39.61219%;
+  top: 84.84556%;
+  animation-delay: 0.32s;
+}
+#banner-html .ball-pos-13:before {
+  transform: rotateZ(332deg);
+}
+#banner-html .ball-pos-14 {
+  left: 25.20776%;
+  top: 84.65251%;
+  animation-delay: 0.36s;
+}
+#banner-html .ball-pos-14:before {
+  transform: rotateZ(254deg);
+}
+#banner-html .ball-pos-15 {
+  left: 66.06648%;
+  top: 74.32432%;
+  animation-delay: 0.4s;
+}
+#banner-html .ball-pos-15:before {
+  transform: rotateZ(9deg);
+}
+#banner-html .ball-pos-16 {
+  left: 0.69252%;
+  top: 25.96525%;
+  animation-delay: 0.44s;
+}
+#banner-html .ball-pos-16:before {
+  transform: rotateZ(67deg);
+}
+#banner-html .ball-pos-17 {
+  left: 45.84488%;
+  top: 50.19305%;
+  animation-delay: 0.48s;
+}
+#banner-html .ball-pos-17:before {
+  transform: rotateZ(301deg);
+}
+#banner-html .ball-pos-18 {
+  left: 51.52355%;
+  top: 109.74903%;
+  animation-delay: 0.52s;
+}
+#banner-html .ball-pos-18:before {
+  transform: rotateZ(103deg);
+}
+#banner-html .ball-pos-19 {
+  left: 32.13296%;
+  top: 69.78764%;
+  animation-delay: 0.56s;
+}
+#banner-html .ball-pos-19:before {
+  transform: rotateZ(127deg);
+}
+#banner-html .ball-pos-20 {
+  left: 61.08033%;
+  top: 16.60232%;
+  animation-delay: 0.6s;
+}
+#banner-html .ball-pos-20:before {
+  transform: rotateZ(111deg);
+}
+#banner-html .ball-pos-21 {
+  left: 0.1385%;
+  top: 35.61776%;
+  animation-delay: 0.64s;
+}
+#banner-html .ball-pos-21:before {
+  transform: rotateZ(91deg);
+}
+#banner-html .ball-pos-22 {
+  left: 2.35457%;
+  top: 25.86873%;
+  animation-delay: 0.68s;
+}
+#banner-html .ball-pos-22:before {
+  transform: rotateZ(329deg);
+}
+#banner-html .ball-pos-23 {
+  left: 54.70914%;
+  top: 87.64479%;
+  animation-delay: 0.72s;
+}
+#banner-html .ball-pos-23:before {
+  transform: rotateZ(59deg);
+}
+#banner-html .ball-pos-24 {
+  left: 27.28532%;
+  top: 28.66795%;
+  animation-delay: 0.76s;
+}
+#banner-html .ball-pos-24:before {
+  transform: rotateZ(322deg);
+}
+#banner-html .ball-pos-25 {
+  left: 30.19391%;
+  top: 16.89189%;
+  animation-delay: 0.8s;
+}
+#banner-html .ball-pos-25:before {
+  transform: rotateZ(256deg);
+}
+#banner-html .ball-pos-26 {
+  left: 7.75623%;
+  top: 35.32819%;
+  animation-delay: 0.84s;
+}
+#banner-html .ball-pos-26:before {
+  transform: rotateZ(245deg);
+}
+#banner-html .ball-pos-27 {
+  left: 3.60111%;
+  top: 10.90734%;
+  animation-delay: 0.88s;
+}
+#banner-html .ball-pos-27:before {
+  transform: rotateZ(270deg);
+}
+#banner-html .ball-pos-28 {
+  left: 37.11911%;
+  top: 18.33977%;
+  animation-delay: 0.92s;
+}
+#banner-html .ball-pos-28:before {
+  transform: rotateZ(70deg);
+}
+#banner-html .ball-pos-29 {
+  left: 45.70637%;
+  top: 94.30502%;
+  animation-delay: 0.96s;
+}
+#banner-html .ball-pos-29:before {
+  transform: rotateZ(116deg);
+}
+#banner-html .ball-pos-30 {
+  left: 37.95014%;
+  top: 18.62934%;
+  animation-delay: 1s;
+}
+#banner-html .ball-pos-30:before {
+  transform: rotateZ(104deg);
+}
+#banner-html .ball-pos-31 {
+  left: 24.93075%;
+  top: 112.06564%;
+  animation-delay: 1.04s;
+}
+#banner-html .ball-pos-31:before {
+  transform: rotateZ(147deg);
+}
+#banner-html .ball-pos-32 {
+  left: 66.759%;
+  top: 44.78764%;
+  animation-delay: 1.08s;
+}
+#banner-html .ball-pos-32:before {
+  transform: rotateZ(356deg);
+}
+#banner-html .ball-pos-33 {
+  left: 33.241%;
+  top: 91.98842%;
+  animation-delay: 1.12s;
+}
+#banner-html .ball-pos-33:before {
+  transform: rotateZ(325deg);
+}
+#banner-html .ball-pos-34 {
+  left: 13.2964%;
+  top: 0.28958%;
+  animation-delay: 1.16s;
+}
+#banner-html .ball-pos-34:before {
+  transform: rotateZ(263deg);
+}
+#banner-html .ball-pos-35 {
+  left: 76.45429%;
+  top: 85.23166%;
+  animation-delay: 1.2s;
+}
+#banner-html .ball-pos-35:before {
+  transform: rotateZ(53deg);
+}
+#banner-html .ball-pos-36 {
+  left: 68.00554%;
+  top: 2.99228%;
+  animation-delay: 1.24s;
+}
+#banner-html .ball-pos-36:before {
+  transform: rotateZ(117deg);
+}
+#banner-html .ball-pos-37 {
+  left: 85.59557%;
+  top: 51.1583%;
+  animation-delay: 1.28s;
+}
+#banner-html .ball-pos-37:before {
+  transform: rotateZ(234deg);
+}
+#banner-html .ball-pos-38 {
+  left: 74.51524%;
+  top: 61.87259%;
+  animation-delay: 1.32s;
+}
+#banner-html .ball-pos-38:before {
+  transform: rotateZ(295deg);
+}
+#banner-html .ball-pos-39 {
+  left: 38.91967%;
+  top: 37.45174%;
+  animation-delay: 1.36s;
+}
+#banner-html .ball-pos-39:before {
+  transform: rotateZ(248deg);
+}
+#banner-html .ball-pos-40 {
+  left: 2.07756%;
+  top: 47.77992%;
+  animation-delay: 1.4s;
+}
+#banner-html .ball-pos-40:before {
+  transform: rotateZ(99deg);
+}
+#banner-html .ball-pos-41 {
+  left: 68.42105%;
+  top: 33.59073%;
+  animation-delay: 1.44s;
+}
+#banner-html .ball-pos-41:before {
+  transform: rotateZ(1deg);
+}
+#banner-html .ball-pos-42 {
+  left: 1.38504%;
+  top: 15.25097%;
+  animation-delay: 1.48s;
+}
+#banner-html .ball-pos-42:before {
+  transform: rotateZ(7deg);
+}
+#banner-html .ball-pos-43 {
+  left: 12.18837%;
+  top: 76.44788%;
+  animation-delay: 1.52s;
+}
+#banner-html .ball-pos-43:before {
+  transform: rotateZ(345deg);
+}
+#banner-html .ball-pos-44 {
+  left: 79.63989%;
+  top: 7.81853%;
+  animation-delay: 1.56s;
+}
+#banner-html .ball-pos-44:before {
+  transform: rotateZ(83deg);
+}
+#banner-html .ball-pos-45 {
+  left: 3.4626%;
+  top: 77.99228%;
+  animation-delay: 1.6s;
+}
+#banner-html .ball-pos-45:before {
+  transform: rotateZ(307deg);
+}
+#banner-html .ball-pos-46 {
+  left: 26.03878%;
+  top: 31.94981%;
+  animation-delay: 1.64s;
+}
+#banner-html .ball-pos-46:before {
+  transform: rotateZ(256deg);
+}
+#banner-html .ball-pos-47 {
+  left: 77.42382%;
+  top: 77.3166%;
+  animation-delay: 1.68s;
+}
+#banner-html .ball-pos-47:before {
+  transform: rotateZ(250deg);
+}
+#banner-html .ball-pos-48 {
+  left: 31.30194%;
+  top: 5.59846%;
+  animation-delay: 1.72s;
+}
+#banner-html .ball-pos-48:before {
+  transform: rotateZ(35deg);
+}
+#banner-html .ball-pos-49 {
+  left: 28.53186%;
+  top: 102.99228%;
+  animation-delay: 1.76s;
+}
+#banner-html .ball-pos-49:before {
+  transform: rotateZ(88deg);
+}
+#banner-html .ball-pos-50 {
+  left: 56.09418%;
+  top: 44.01544%;
+  animation-delay: 1.8s;
+}
+#banner-html .ball-pos-50:before {
+  transform: rotateZ(335deg);
+}
+#banner-html .ball-pos-51 {
+  left: 5.81717%;
+  top: 38.41699%;
+  animation-delay: 1.84s;
+}
+#banner-html .ball-pos-51:before {
+  transform: rotateZ(200deg);
+}
+#banner-html .ball-pos-52 {
+  left: 68.69806%;
+  top: 77.7027%;
+  animation-delay: 1.88s;
+}
+#banner-html .ball-pos-52:before {
+  transform: rotateZ(259deg);
+}
+#banner-html .ball-pos-53 {
+  left: 85.04155%;
+  top: 62.93436%;
+  animation-delay: 1.92s;
+}
+#banner-html .ball-pos-53:before {
+  transform: rotateZ(77deg);
+}
+#banner-html .ball-pos-54 {
+  left: 68.14404%;
+  top: 103.37838%;
+  animation-delay: 1.96s;
+}
+#banner-html .ball-pos-54:before {
+  transform: rotateZ(42deg);
+}
+#banner-html .ball-pos-55 {
+  left: 52.35457%;
+  top: 41.31274%;
+  animation-delay: 2s;
+}
+#banner-html .ball-pos-55:before {
+  transform: rotateZ(69deg);
+}
+#banner-html .ball-pos-56 {
+  left: 23.68421%;
+  top: 79.53668%;
+  animation-delay: 2.04s;
+}
+#banner-html .ball-pos-56:before {
+  transform: rotateZ(135deg);
+}
+#banner-html .ball-pos-57 {
+  left: 2.49307%;
+  top: 105.98456%;
+  animation-delay: 2.08s;
+}
+#banner-html .ball-pos-57:before {
+  transform: rotateZ(128deg);
+}
+#banner-html .ball-pos-58 {
+  left: 42.79778%;
+  top: 116.11969%;
+  animation-delay: 2.12s;
+}
+#banner-html .ball-pos-58:before {
+  transform: rotateZ(65deg);
+}
+#banner-html .ball-pos-59 {
+  left: 10.24931%;
+  top: 89.18919%;
+  animation-delay: 2.16s;
+}
+#banner-html .ball-pos-59:before {
+  transform: rotateZ(62deg);
+}
+#banner-html .ball-pos-60 {
+  left: 88.50416%;
+  top: 112.35521%;
+  animation-delay: 2.2s;
+}
+#banner-html .ball-pos-60:before {
+  transform: rotateZ(319deg);
+}
+#banner-html .bg {
+  width: 100%;
+  height: 100%;
+  background-color: #00b956;
+  animation: bg 1s ease both 2s;
+}
+#banner-html .sign {
+  left: 50%;
+  top: 50%;
+  animation: sign 1s ease both 2.4s;
+  width: 145.01385%;
+}
+#banner-html .sign:before {
+  content: '';
+  display: block;
+  padding-bottom: 34.47947%;
+}
+#banner-html .sign:before {
+  background-image: url(./img/sign.png);
+}
+#banner-html .text {
+  width: 84.07202%;
+  left: 6.92521%;
+  top: 7.62548%;
+}
+#banner-html .text:before {
+  content: '';
+  display: block;
+  padding-bottom: 35.09061%;
+}
+#banner-html .text:before {
+  transform: rotateZ(0deg);
+}
+#banner-html .text:before {
+  background-image: url(./img/text.png);
+}
+#banner-html .logo {
+  width: 40.58172%;
+  left: 6.92521%;
+  top: 86.67954%;
+}
+#banner-html .logo:before {
+  content: '';
+  display: block;
+  padding-bottom: 26.62116%;
+}
+#banner-html .logo:before {
+  transform: rotateZ(0deg);
+}
+#banner-html .logo:before {
+  background-image: url(./img/logo.png);
+}
+#banner-html .text, #banner-html .logo {
+  animation: text 1s ease both 2.5s;
+}
+
+@keyframes ball {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes sign {
+  from {
+    transform: translate(-50%, -50%) scale(0.01);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

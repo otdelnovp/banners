@@ -1,0 +1,163 @@
+@mixin calcValues($w, $h, $l, $t) {
+  width: $w/722*100%;
+  height: $h/1036*100%;
+  left: $l/722*100%;
+  top: $t/1036*100%;
+}
+
+@mixin calcSize($w, $h) {
+  width: $w/722*100%;
+  &:before {
+    content: '';
+    display: block;
+    padding-bottom: $h / $w * 100%;
+  }
+}
+
+@mixin calcPos($l, $t, $ang: 0) {
+  left: $l/722*100%;
+  top: $t/1036*100%;
+  &:before {
+    transform: rotateZ(#{$ang}deg);
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#banner-html {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: rgba(#000, .3);
+
+  div {
+    position: absolute;
+    &:before {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .ball {
+    animation: ball .5s linear both;
+  }
+
+  .ball-1 {
+    @include calcSize(169, 182);
+    &:before {
+      background-image: url(./img/ball-1.png);
+    }
+  }
+
+  .ball-2 {
+    @include calcSize(168, 181);
+    &:before {
+      background-image: url(./img/ball-2.png);
+    }
+  }
+
+  .ball-3 {
+    @include calcSize(167, 180);
+    &:before {
+      background-image: url(./img/ball-3.png);
+    }
+  }
+
+  $i: 1;
+  @for $x from 1 through 5 {
+    @for $y from 1 through 12 {
+      .ball-pos-#{$i} {
+        @include calcPos(random(640), random(1213), random(360));
+        animation-delay: -.2s + .2s * $i / 5;
+      }
+      $i: $i+1;
+    }
+  }
+
+  .bg {
+    width: 100%;
+    height: 100%;
+    background-color: #00b956;
+    animation: bg 1s ease both 2s;
+  }
+
+  .sign {
+    left: 50%;
+    top: 50%;
+    animation: sign 1s ease both 2.4s;
+
+    @include calcSize(1047, 361);
+    &:before {
+      background-image: url(./img/sign.png);
+    }
+  }
+
+  .text {
+    @include calcSize(607, 213);
+    @include calcPos(50, 79);
+    &:before {
+      background-image: url(./img/text.png);
+    }
+  }
+
+  .logo {
+    @include calcSize(293, 78);
+    @include calcPos(50, 898);
+    &:before {
+      background-image: url(./img/logo.png);
+    }
+  }
+
+  .text, .logo {
+    animation: text 1s ease both 2.5s;
+  }
+}
+
+@keyframes ball {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bg {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sign {
+  from {
+    transform: translate(-50%, -50%) scale(0.01);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes text {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
