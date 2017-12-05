@@ -1,0 +1,56 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+#html_banner {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100px;
+	background-color: #37aa32;
+	display: block;
+	overflow: hidden;
+	position: relative
+}
+
+#html_banner>div {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: center
+}
+
+#html_banner .girl {
+	background-image: url(./img/boy.png);
+	background-size: auto 100%;
+	background-position: 100% 0;
+	width: 180px;
+	height: 100px;
+	right: 0;
+	bottom: 0
+}
+
+#html_banner .text {
+	background-image: url(./img/text.png);
+	background-size: contain;
+	width: 110px;
+	height: 61px;
+	right: 182px;
+	top: 25px
+}
+
+#html_banner .ball {
+	background-image: url(./img/ball.png);
+	background-size: contain;
+	width: 33px;
+	height: 32px;
+	top: 49px
+}
+
+#html_banner .ball-1 {
+	right: 109px
+}
+
+#html_banner .ball-2 {
+	right: 144px
+}

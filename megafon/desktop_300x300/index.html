@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ad.size" content="width=300,height=300">
+    <link rel="stylesheet" href="main.css">
+    <title>Banner preview</title>
+    <style>
+        .banner-timer {
+            display: none;
+            position: absolute;
+            bottom: 5px;
+            width: 70%;
+            margin: 0 15%;
+            padding: 3px 5px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 5px;
+            font: 14px/18px Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<a id="banner-html" href="%link1%" target="_blank" class="animate">
+    <div class="banner-timer"></div>
+</a>
+<script>
+    var banner = document.querySelector('#banner-html')
+    window.addEventListener('message', function(e){
+        var data = JSON.parse(e.data);
+        switch (data.type) {
+            case "over": // mouseover - запустить таймер расхлопа
+                startTimer();
+                break;
+            case "out": // mouseout - сбросить таймер расхлопа
+                stopTimer();
+                break;
+            case "move": // mousemove - передача координат курсора
+                goToNextStep(data);
+                break;
+        }
+    });
+
+    var stepCount = 29;
+
+    function goToNextStep(data) {
+    
+        var x = data.clientX;
+        var viewportWidth = data.viewportWidth;
+
+        var columnWidth = viewportWidth / stepCount;
+        var newStep = stepCount - Math.max(1, Math.floor((x / columnWidth)));
+
+        banner.style.backgroundPosition = '0 ' + -300 * newStep + 'px'
+    }
+    var timer;
+
+    function startTimer() {
+        var delay = 1;
+
+        document.querySelector('.banner-timer').style.display = "block";
+        timer = setInterval(function() {
+            delay--;
+            //setTime(delay);
+            if (delay === 0) {
+                clearInterval(timer);
+                window.parent.postMessage('canvas:click', '*');
+            }
+        }, 1000);
+
+        setTime(delay);
+
+        function setTime(time) {
+            var t = time + 1;
+        }
+    }
+
+    function stopTimer() {
+        clearInterval(timer)
+    }
+</script>
+</body>
+</html>

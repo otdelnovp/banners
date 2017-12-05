@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="ad.size" content="width=100%,height=100">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Banner preview</title>
+    <link rel="stylesheet" href="main.css">
+  	<script type="text/javascript" src="prefixfree.min.js"></script>
+</head>
+<body>
+<a id="html_banner" href="%link1%" target="_blank" class="full">
+    <div class="girl"></div>
+    <div class="text"></div>
+    <div class="balls"></div>
+</a>
+<script>
+    var girlStates = {
+        0: {
+            translateX: 180,
+        },
+        37: {
+            translateX: 0,
+        },
+        100: {
+            translateX: 0,
+        }
+    }
+    var textStates = {
+        0: {
+            translateY: 100
+        },
+        37: {
+            translateY: 100
+        },
+        75: {
+            translateY: 0
+        },
+        100: {
+            translateY: 0
+        }
+    }
+    var ballsStates = {
+        0: {
+            translateY: 100
+        },
+        75: {
+            translateY: 100
+        },
+        100: {
+            translateY: 0
+        }
+    }
+</script>
+<script>
+    function getDelta(startKey, nextKey, states) {
+        var result = {}
+        var stepKeys = Object.keys(states[startKey])
+        var prevStep = states[startKey]
+        var nextStep = states[nextKey]
+
+        for (var i = startKey; i<=nextKey; i++) {
+            if (i===startKey || i ===nextKey) {
+                result[i] = states[i]
+            }
+
+            result[i] = stepKeys.reduce(function(sum, key) {
+                sum[key] = getValue(getProgress(i, startKey, nextKey), prevStep[key], nextStep[key])
+                return sum
+            }, {})
+        }
+
+        return result
+    }
+
+    function prepareStates(states) {
+        return Object.keys(states).reduce(function(sum, step, i, self){
+            if (i === self.length - 1) {
+                sum[step] = states[step]
+                return sum
+            }
+
+            Object.assign(sum, getDelta(parseInt(step, 10), parseInt(self[i+1], 10), states))
+
+            return sum
+        }, {})
+    }
+
+    function getProgress(val, from, to) {
+        return (val - from) / (to - from)
+    }
+
+    function getValue(progress, from, to) {
+        return from + ((to - from) * progress)
+    }
+</script>
+<script>
+    var girl = document.querySelector('.girl')
+    var text = document.querySelector('.text')
+    var balls = document.querySelector('.balls')
+
+    var STATES = {
+        girl: prepareStates(girlStates),
+        text: prepareStates(textStates),
+        balls: prepareStates(ballsStates)
+    }
+
+    function setAnimationPercent(percent) {
+        // Здесь нужно обновить текущий кадр анимации
+        // percent (0-100) - процент завершения анимации
+
+        var gitlState = STATES.girl[percent]
+        var textState = STATES.text[percent]
+        var ballsState = STATES.balls[percent]
+
+        setStyles(gitlState, girl)
+        setStyles(textState, text)
+        setStyles(ballsState, balls)
+    }
+
+    setAnimationPercent(0)
+
+    function setStyles(styles, element) {
+        var functions = {
+            translateX: setTranslateX,
+            translateY: setTranslateY
+        }
+
+        Object.keys(styles).forEach(function(style){
+            functions[style](styles[style], element)
+        })
+    }
+
+    function setTranslateX(value, element) {
+        element.style.webkitTransform = 'translateX('+ value + 'px)'
+        element.style.MozTransform = 'translateX('+ value + 'px)'
+        element.style.transform = 'translateX('+ value + 'px)'
+    }
+
+    function setTranslateY(value, element) {
+        element.style.webkitTransform = 'translateY('+ value + 'px)'
+        element.style.MozTransform = 'translateY('+ value + 'px)'
+        element.style.transform = 'translateY('+ value + 'px)'
+    }
+
+    window.addEventListener('message', function (e) {
+        var data = e.data;
+        var command = data.split(':');
+        if (command[0] === 'animation' && !isNaN(parseInt(command[1], 10))) {
+            setAnimationPercent(parseInt(command[1], 10));
+        }
+    });
+
+
+</script>
+
+
+</body>
+</html>

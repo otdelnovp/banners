@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ad.size" content="width=300,height=300">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="prefixfree.min.js"></script>
+    <title>Banner preview</title>
+    <style>
+      #banner-html {
+        position: absolute;
+        width: auto;
+        height: auto;
+        top: 30px;
+        left: 300px;
+        right: 0;
+        bottom: 0;
+        overflow: visible;
+      }
+    </style>
+    <script>
+        window.MRGCanvas = window.MRGCanvas || function (e, n) {
+            function t() {
+                u()
+            }
+
+            function a(e) {
+                b || (b = e, h = b.muted, b.addEventListener("play", c), b.addEventListener("pause", i), b.addEventListener("timeupdate", l), b.addEventListener("ended", s), b.addEventListener("volumechange", f), n.addEventListener("fullscreenchange", v), n.addEventListener("webkitfullscreenchange", v), n.addEventListener("mozfullscreenchange", v), n.addEventListener("MSFullscreenChange", v))
+            }
+
+            function u() {
+                n.addEventListener("DOMContentLoaded", d), e.addEventListener("message", o)/*, e.addEventListener("focus", p), e.addEventListener("blur", m)*/
+            }
+
+            function d() {
+                var e = n.querySelector("video");
+                e && !b && a(e)
+            }
+
+            function o(e) {
+                "canvas:close" == e.data ? (L("close")) : "canvas:open" == e.data && (L("open"))
+            }
+
+            function c() {
+                w = !0, C++ , 0 == C ? y("playbackStarted") : !S && O >= 0 && (T++ , 0 === T && y("playbackResumed"))
+            }
+
+            function i() {
+                w = !1, b.duration && b.currentTime < b.duration - 1 && !S && (O++ , 0 === O && y("playbackPaused"))
+            }
+
+            function l(e) {
+                var n = Math.round(b.currentTime / b.duration * 100);
+                r(n)
+            }
+
+            function r(e) {
+                (e >= 25 && 0 === M || e >= 50 && 1 === M || e >= 75 && 2 === M || e >= 99 && 3 === M) && (M += 1, y("playheadReachedValue", 25 * M))
+            }
+
+            function s(e) {
+                y("playbackCompleted")
+            }
+
+            function f(e) {
+                b.muted !== h && (h = b.muted, y(b.muted ? "volumeOff" : "volumeOn"))
+            }
+
+            function v(e) {
+                var t = n.fullscreenElement || n.webkitFullscreenElement || n.mozFullScreenElement || n.msFullscreenElement || null;
+                y(t && t === b ? "fullscreenOn" : "fullscreenOff")
+            }
+
+            function m() {
+                ("boolean" != typeof g || g) && (g = !1, S = !0, F = w, clearTimeout(R), b.pause())
+            }
+
+            function p(e) {
+                g || (g = !0, S = !1, F && (w = !0, R = setTimeout(function () {
+                    b.paused && (S = !0, b.play(), setTimeout(function () {
+                        S = !1
+                    }, 500))
+                }, 200)))
+            }
+
+            function E(e, n) {
+                k[e] = n
+            }
+
+            function L(e) {
+                var n = k[e];
+                n && "function" == typeof n && n()
+            }
+
+            function y(e, n) {
+                if (!S) {
+                    var t = e + (n ? "::" + n : "");
+                    parent.postMessage("canvasevent:" + t, "*")
+                }
+            }
+            var b, h, w, g, k = {},
+                M = 0,
+                C = -1,
+                O = -1,
+                T = -1,
+                F = !1,
+                R = null,
+                S = !1;
+            return t(), {
+                on: E
+            }
+        }(window, document);
+    </script>
+</head>
+
+<body>
+    <a id="banner-html" href="%link1%" target="_blank" class="">
+        <div class="wrapper">
+            <div class="container">
+                <div class="ball ball-1"></div>
+                <div class="ball ball-2"></div>
+                <div class="green-bg">
+                  <div class="icon icon-type-1"></div>
+                  <div class="icon icon-type-2"></div>
+                  <div class="icon icon-type-3"></div>
+                  <div class="icon icon-type-4"></div>
+                  <div class="icon icon-type-5"></div>
+                  <div class="icon icon-type-6"></div>
+                  <div class="icon icon-type-7"></div>
+                  <div class="icon icon-type-8"></div>
+                  <div class="icon icon-type-9"></div>
+                  <div class="icon icon-type-10"></div>
+                  <div class="icon icon-type-11"></div>
+                  <div class="icon icon-type-12"></div>
+                  <div class="icon icon-type-13"></div>
+                  <div class="icon icon-type-14"></div>
+                  <div class="icon icon-type-15"></div>
+                  <div class="icon icon-type-16"></div>
+                  <div class="icon icon-type-17"></div>
+                  <div class="icon icon-type-18"></div>
+                  <div class="icon icon-type-19"></div>
+                  <div class="icon icon-type-20"></div>
+                  <div class="icon icon-type-21"></div>
+                  <div class="icon icon-type-22"></div>
+                  <div class="icon icon-type-23"></div>
+                  <div class="icon icon-type-24"></div>
+                  <div class="icon icon-type-25"></div>
+                  <div class="icon icon-type-26"></div>
+                  <div class="icon icon-type-27"></div>
+                  <div class="icon icon-type-28"></div>
+                  <div class="icon icon-type-29"></div>
+                  <div class="icon icon-type-30"></div>
+                  <div class="icon icon-type-31"></div>
+                  <div class="icon icon-type-32"></div>
+                  <div class="icon icon-type-33"></div>
+                  <div class="icon icon-type-34"></div>
+                  <div class="icon icon-type-35"></div>
+                  <div class="icon icon-type-36"></div>
+                  <div class="icon icon-type-37"></div>
+                  <div class="icon icon-type-38"></div>
+                  <div class="icon icon-type-39"></div>
+                  <div class="icon icon-type-40"></div>
+                  <div class="icon icon-type-41"></div>
+                  <div class="icon icon-type-42"></div>
+                  <div class="icon icon-type-43"></div>
+                  <div class="icon icon-type-44"></div>
+                  <div class="icon icon-type-45"></div>
+                  <div class="icon icon-type-46"></div>
+                  <div class="icon icon-type-47"></div>
+                  <div class="icon icon-type-48"></div>
+                  <div class="icon icon-type-49"></div>
+                  <div class="icon icon-type-50"></div>
+                  <div class="icon icon-type-51"></div>
+                  <div class="icon icon-type-52"></div>
+                  <div class="icon icon-type-53"></div>
+                </div>
+                <div class="text">Безлимит на соцсети и&nbsp;мессенджеры<br/> <span>Включайся! Общайся</span></div>
+                <div id="video-container"></div>
+                <div class="button"></div>
+                <div class="logo"></div>
+            </div>
+        </div>
+    </a>
+    <div class="close"></div>
+    <script>
+        document.querySelector('.close').addEventListener('click', function () {
+            parent.postMessage('canvas:closeclick', '*');
+        });
+
+        var banner = document.querySelector('#banner-html')
+
+      /*  MRGCanvas.on('open', function () {
+            banner.className = 'animate';
+        })
+
+        MRGCanvas.on('close', function () {
+            banner.className = '';
+        })*/
+
+        var VIDEO_SRC = './video.mp4'
+        initVideoPlayer().appendToAndPlay(document.querySelector('#video-container'));
+
+        function initVideoPlayer() {
+            var container, video, play, mute, zoom, close, playTimeout;
+            createElements()
+            setButtons()
+
+            return {
+                appendToAndPlay: appendTo
+            }
+
+            function appendTo(where) {
+                where.appendChild(container)
+                playTimeout = setTimeout(function () {
+                    container.classList.add('show')
+                    video.play()
+                }, 9999);
+                MRGCanvas.on('open', function () {
+                    banner.className = 'animate';
+                    clearTimeout(playTimeout);
+                    playTimeout = setTimeout(function () {
+                        container.classList.add('show')
+                        video.play();
+                        play.classList.remove('play');
+                        play.classList.add('pause');
+                    }, 9999);
+                });
+                MRGCanvas.on('close', function () {
+                    banner.className = '';
+                    clearTimeout(playTimeout);
+                    pauseVideo();
+                });
+
+                window.addEventListener('blur', function () {
+                    blurHandler();
+                });
+                document.addEventListener('visibilitychange', function() {
+                    if (document.hidden) {
+                        blurHandler();
+                    }
+                })
+            }
+
+            function blurHandler() {
+                clearTimeout(playTimeout);
+                pauseVideo();
+            }
+            function pauseVideo() {
+                play.classList.add('play');
+                play.classList.remove('pause');
+                video.pause();
+            }
+
+            function createElements() {
+                container = createElement('div', { class: 'video-container' })
+                video = createVideo(VIDEO_SRC)
+                play = createElement('div', { class: 'pause' })
+                mute = createElement('div', { class: 'mute' })
+
+                zoom = createElement('div', { class: 'zoom' })
+                container.appendChild(video)
+                container.appendChild(play)
+                container.appendChild(mute)
+                container.appendChild(zoom)
+
+                container.appendChild(createElement('a', { class: 'video-more', href: '%link1%', target: '_blank' }))
+            }
+
+            function setButtons() {
+                video.addEventListener('click', onClickPlay)
+                play.addEventListener('click', onClickPlay)
+                mute.addEventListener('click', onClickMute)
+                zoom.addEventListener('click', onClickZoom)
+
+                function onClickPlay(e) {
+                    e.preventDefault()
+                    if (video.paused) {
+                        video.play();
+                        play.classList.remove('play');
+                        play.classList.add('pause');
+                    } else {
+                        video.pause();
+                        play.classList.add('play');
+                        play.classList.remove('pause');
+                    }
+                }
+
+                function onClickZoom(e) {
+                    e.preventDefault()
+                    var propperties = ['requestFullscreen', 'webkitRequestFullscreen', 'msRequestFullscreen', 'mozRequestFullScreen']
+
+                    propperties.some(function (val) {
+                        if (video[val]) {
+                            video[val]()
+                            return true
+                        }
+                    })
+                }
+
+                function onClickMute(e) {
+                    e.preventDefault()
+                    if (video.muted) {
+                        video.muted = false;
+                        mute.classList.add('off');
+                    } else {
+                        video.muted = true;
+                        mute.classList.remove('off');
+                    }
+                }
+
+
+            }
+
+
+            function createElement(type, attr) {
+                var element = document.createElement(type)
+                for (var prop in attr) {
+                    element.setAttribute(prop, attr[prop])
+                }
+                return element
+            }
+
+            function createVideo(srcLink) {
+                var video = createElement('video', { id: 'video', class: 'video-player', muted: true, loop: true, onloadedmetadata: "this.muted = true" })
+                var src = createElement('source', { src: srcLink, type: 'video/mp4' })
+
+                video.appendChild(src)
+
+                return video
+            }
+        }
+    </script>
+</body>
+
+</html>
