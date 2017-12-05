@@ -349,7 +349,7 @@ html, body {
   opacity: 0;
 }
 #html_banner .banner_box_item.active .banner_box_item_cap {
-  transition: transform 1000ms;
+  transition: transform 1000ms, opacity 500ms;
   transition-delay: 100ms;
   transform: scale(1);
   opacity: 1;
@@ -522,6 +522,7 @@ html, body {
 	background-image: url(./img/share_fb.svg);
 }
 .s_vk:before {
+	margin: 0 0 0 -0.05rem;
 	background-image: url(./img/share_vk.svg);
 }
 .s_odnoklassniki:before {
