@@ -39,7 +39,7 @@ $(function() {
 		$('#html_banner').toggleClass('closed').postMessage('canvas:closeclick', '*');
 	});
 
-	$('#html_banner .toggle').click(function(){
+	$('#html_banner .toggle, #html_banner .preview').click(function(){
 		clicked = false;
 		$('#html_banner').toggleClass('small');
 		$('#html_banner .banner').removeClass('clicked');

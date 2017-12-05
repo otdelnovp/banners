@@ -282,6 +282,7 @@ html, body {
   opacity: 0;
 }
 #html_banner .banner_box_item.active .banner_box_item_pechen div {
+  transition: opacity 30ms;
   opacity: 0;
 }
 #html_banner .banner_box_item.active .banner_box_item_pechen div:nth-child(2),
@@ -294,7 +295,11 @@ html, body {
   animation-delay: 300ms;
 }
 @keyframes pechen {
-  1%, 99% {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  10%, 90% {
     opacity: 1;
     visibility: visible;
   }
