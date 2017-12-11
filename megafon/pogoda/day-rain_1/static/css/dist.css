@@ -1,0 +1,179 @@
+.banner, .bottom {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box
+}
+
+.banner, .link-hero, body, html {
+	height: 100%;
+	width: 100%
+}
+
+body, html {
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-style: normal;
+	color: #fff;
+	border: 0
+}
+
+.banner {
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box
+}
+
+.link-hero, .slide {
+	position: absolute;
+	display: block
+}
+
+.slide {
+	background-repeat: no-repeat
+}
+
+.link {
+	z-index: 200;
+	text-decoration: none
+}
+
+.link-hero {
+	z-index: 100;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0)
+}
+
+.bottom {
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	box-sizing: border-box;
+	padding-top: 28px;
+	background: #00b956
+}
+
+.bottom-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	max-width: 945px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto
+}
+
+.dots, .slide-99 {
+	position: absolute
+}
+
+.slide-1 {
+	width: 260px;
+	height: 33px;
+	margin-bottom: 9px;
+	background: url(../images/text-1.png) no-repeat;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain
+}
+
+.slide-2 {
+	width: 439px;
+	height: 52px;
+	margin-bottom: 20px;
+	background: url(../images/text-2.svg) no-repeat;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain
+}
+
+.slide-3, .slide-4, .slide-5 {
+	display: inline-block;
+	width: 130px;
+	height: 130px;
+	margin: 0 5px
+}
+
+.dots {
+	top: 0;
+	right: -5px
+}
+
+.slide-3, .slide-4 {
+	background: url(../images/round.svg) no-repeat;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain
+}
+
+.slide-5 {
+	background: url(../images/round-white.svg) no-repeat;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain
+}
+
+.slide-99 {
+	top: 48px;
+	left: -55px;
+	width: 86px;
+	height: 61px;
+	background: url(../images/99.svg) no-repeat;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain
+}
+
+.logo-box {
+	position: relative
+}
+
+.girl, .slide-7 {
+	position: absolute
+}
+
+.slide-6 {
+	width: 134px;
+	height: 25px;
+	background: url(../images/logo.svg) no-repeat;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain
+}
+
+.slide-7 {
+	top: 7px;
+	left: 166px;
+	width: 156px;
+	height: 12px;
+	background: url(../images/additional.svg) no-repeat;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain
+}
+
+.girl {
+	top: -28px;
+	right: 40px;
+	width: 241px;
+	height: 300px;
+	background: url(../images/girl.png) 50% 100% no-repeat;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	-webkit-transform: translate(0, -100%);
+	-moz-transform: translate(0, -100%);
+	-ms-transform: translate(0, -100%);
+	-o-transform: translate(0, -100%);
+	transform: translate(0, -100%)
+}
