@@ -15,6 +15,7 @@ html, body {
 	font-size: 7px;
 	width: 100%;
 	height: 100%;
+  min-width: 600px;
 	background: transparent;
 	overflow: hidden;
   -ms-text-size-adjust: 100%;
@@ -30,18 +31,15 @@ html, body {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-  height: 33rem;
+  height: 230px;
+  min-width: 767px;
 	color: #fff;
 	background: #00b956;
-	box-shadow: 0 0 1.5rem rgba(0,0,0,0.33);
-	transition: height 200ms, opacity 200ms, visibility 200ms;
+	box-shadow: 0 0 10px rgba(0,0,0,0.33);
+  overflow: hidden;
 }
 #html_banner.small {
-  height: 8.8rem;
-}
-#html_banner.closed {
-	visibility: hidden;
-	opacity: 0;
+  height: 60px;
 }
 
 
@@ -75,9 +73,9 @@ html, body {
 #html_banner .toggle {
 	position: absolute;
 	z-index: 111;
-	top: 0;
+	bottom: 90%;
 	left: 50%;
-	margin: -4rem -7rem;
+	margin: 0 -7rem;
 	width: 14rem;
 	height: 4rem;
 	overflow: hidden;
@@ -122,17 +120,17 @@ html, body {
 	bottom: 0;
 	left: 0;
 	width: 100%;
+  height: 60px;
 	text-align: center;
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity 200ms, visibility 200ms;
   cursor: pointer;
 }
 #html_banner .preview_title {
 	position: relative;
 	display: inline-block;
 	padding: 0 0 0 5rem;
-	font: 400 4.6rem/8.8rem "GTWalsheimBlack", Arial, serif;
+	font: 400 4.6rem/60px "GTWalsheimBlack", Arial, serif;
 	letter-spacing: 0.05rem;
 }
 #html_banner .preview_title:before {
@@ -169,6 +167,7 @@ html, body {
 #html_banner.small .banner {
   opacity: 0;
   visibility: hidden;
+	transition: none;
 }
 
 
@@ -195,7 +194,6 @@ html, body {
 }
 #html_banner .banner.clicked .banner_text-start {
   transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
-  transition-delay: 500ms;
 	transform: translateY(-80%);
   opacity: 0;
 }
@@ -303,26 +301,16 @@ html, body {
 #html_banner .banner_box_item.active .banner_box_item_pechen div:nth-child(3) {
   opacity: 1;
   visibility: visible;
-  transform: rotate(-40deg) translate(-5rem, 1.5rem);
-  transition: opacity 30ms, transform 700ms 30ms;
-  /*animation: pechen 300ms both;*/
+  transform: rotate(-40deg) translate(-7rem, 1.5rem);
+  transition: opacity 30ms, transform 700ms;
 }
 #html_banner .banner_box_item.active .banner_box_item_pechen div:nth-child(3) {
-  transform: rotate(40deg) translate(5rem, 1rem);
+  transform: rotate(40deg) translate(7rem, 1rem);
 }
-@keyframes pechen {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  10%, 90% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
+
+#html_banner .banner.clicked .banner_box_item_pechen,
+#html_banner .banner.clicked .banner_box_item_pechen div {
+  cursor: default;
 }
 
 
@@ -370,7 +358,7 @@ html, body {
   opacity: 0;
 }
 #html_banner .banner_box_item.active .banner_box_item_cap {
-  transition: transform 1000ms, opacity 500ms;
+  transition: transform 500ms, opacity 300ms;
   transition-delay: 100ms;
   transform: scale(1);
   opacity: 1;
@@ -382,6 +370,7 @@ html, body {
 	top: 50%;
 	left: 50%;
 	margin: 0 0 0 14rem;
+  height: 15rem;
 	transform: translateY(-10rem);
 	color: #fff;
 	font: 400 5rem/1 "GTWalsheimBlack", Arial, serif;
@@ -399,10 +388,10 @@ html, body {
   visibility: hidden;
   transform: translateY(50%);
   transition: transform 500ms, opacity 500ms, height 500ms;
-  transition-delay: 2500ms;
+  transition-delay: 1700ms;
 }
 #html_banner .banner.clicked .banner_prediction {
-  animation: prediction 3000ms ease-in-out 1000ms both;
+  animation: prediction 3000ms ease-in-out 300ms both;
 }
 #html_banner .banner.clicked .banner_prediction span {
   opacity: 1;
@@ -428,6 +417,7 @@ html, body {
   100% {
     transform: translateY(-6.6rem);
     opacity: 1;
+    height: 15rem;
   }
 }
 
@@ -486,7 +476,7 @@ html, body {
   transform: translateY(-100%);
 }
 #html_banner .banner.clicked .banner_logo {
-  transition: transform 500ms ease-in-out 3700ms, opacity 500ms ease-in-out 3700ms;
+  transition: transform 500ms ease-in-out 2700ms, opacity 500ms ease-in-out 2700ms;
   opacity: 1;
   transform: translateY(0%);
 }
@@ -494,17 +484,19 @@ html, body {
 
 #html_banner .banner_share {
   position: absolute;
-  top: 24rem;
+  bottom: 5rem;
   left: 50%;
   margin: 0 0 0 14rem;
   font-size: 0;
   line-height: 0;
   opacity: 0;
+  visibility: hidden;
   transform: translateY(100%);
 }
 #html_banner .banner.clicked .banner_share {
-  transition: transform 500ms ease-in-out 3700ms, opacity 500ms ease-in-out 3700ms;
+  transition: transform 500ms ease-in-out 2700ms, opacity 500ms ease-in-out 2700ms, visibility 0s 2700ms;
   opacity: 1;
+  visibility: visible;
   transform: translateY(0%);
 }
 
@@ -553,3 +545,41 @@ html, body {
 	width: 2.3rem;
 	background-image: url(./img/share_my.svg);
 }
+
+
+#html_banner .banner_more {
+  position: absolute;
+  bottom: 4.4rem;
+  left: 50%;
+  margin: 0 0 0 44rem;
+  font-size: 0;
+  line-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0.95rem 0 1.05rem;
+  width: 17.7rem;
+	font: 400 1.8rem/2rem "GTWalsheimRegular", Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+#html_banner .banner_more:hover {
+  color: #00b956;
+  background: #fff;
+}
+#html_banner .banner.clicked .banner_more {
+  transition: transform 500ms ease-in-out 3000ms, opacity 500ms ease-in-out 3000ms, visibility 0s 3000ms, color 300ms, background 300ms;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+}
+
+
+@media (max-width: 1000px) { html{font-size: 6px;} }
+@media (max-width: 800px) { html{font-size: 5.5px;} }

@@ -111,7 +111,6 @@ html, body {
   font-size: 3rem;
   line-height: 1.1;
   transform: translateY(50%);
-  transition: transform 500ms 3000ms, opacity 500ms 3000ms;
   opacity: 0;
   visibility: hidden;
 }
@@ -119,6 +118,7 @@ html, body {
   opacity: 1;
   visibility: visible;
   transform: translateY(-50%);
+  transition: transform 500ms 3000ms, opacity 500ms 3000ms, visibility 500ms;
 }
 #html_banner .footer_btn {
   position: relative;
@@ -132,7 +132,7 @@ html, body {
   color: #fff;
   background: #ffa717;
   cursor: pointer;
-  transition: transform 500ms 3250ms, opacity 500ms 3250ms, background 200ms;
+  transition: transform 500ms, opacity 500ms, visibility 500ms;
   transform: translateY(100%);
   opacity: 0;
   visibility: hidden;
@@ -141,6 +141,7 @@ html, body {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  transition: transform 500ms 3250ms, opacity 500ms 3250ms, visibility 500ms, color 200ms, background 200ms;
 }
 #html_banner .footer_btn:active {
   transform: scale(0.95);
@@ -152,7 +153,7 @@ html, body {
   margin: 1.5rem 0 0;
   font-size: 2.4rem;
   color: #929292;
-  transition: transform 500ms 3500ms, opacity 500ms 3500ms;
+  transition: transform 500ms, opacity 500ms, visibility 500ms;
   transform: translateY(100%);
   opacity: 0;
   visibility: hidden;
@@ -161,6 +162,7 @@ html, body {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  transition: transform 500ms 3500ms, opacity 500ms 3500ms, visibility 500ms;
 }
 
 /*****/
@@ -475,6 +477,7 @@ html, body {
   line-height: 0;
   opacity: 0;
   transform: translateY(100%);
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
 }
 #html_banner .banner.clicked .banner_share {
   transition: transform 500ms ease-in-out 3700ms, opacity 500ms ease-in-out 3700ms;
@@ -551,13 +554,14 @@ html, body {
   background: transparent;
   border: 1px solid #fff;
   cursor: pointer;
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
 }
 #html_banner .banner_reload:hover {
   color: #00b956;
   background: #fff;
 }
 #html_banner .banner.clicked .banner_reload {
-  transition: transform 500ms ease-in-out 3700ms, opacity 500ms ease-in-out 3700ms, color 300ms, background 300ms;
+  transition: transform 500ms ease-in-out 3800ms, opacity 500ms ease-in-out 3800ms, color 300ms, background 300ms;
   opacity: 1;
   transform: translateY(0%);
 }

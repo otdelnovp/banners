@@ -39,7 +39,7 @@ $(function() {
 		},
 		{
 			pic: 7,
-			title: "Перемена",
+			title: "Рост",
 			message: "Лети в Новый год на скорости 4G+<br> Подключи скоростной мобильный интернет",
 			link: "http://r.mail.ru/n266188118"
 		},
@@ -191,16 +191,21 @@ $(function() {
 
 	var clicked = false;
 
-	var random = Math.floor(Math.random() * (predictions.length + 1));
-	$('#html_banner .banner_prediction .value').text(predictions[random].title);
-	$('#html_banner .banner_box_item_cap').css({'backgroundImage' : 'url(./img/pics/' + predictions[random].pic + '.png)'});
-	$('#html_banner .footer_title').html(predictions[random].message);
-	$('#html_banner .footer_btn').attr("href", predictions[random].link);
-
-	$('#html_banner .clear').click(function(){
+	function recalc() {
+		clicked = false;
 		$('#html_banner').removeClass('clicked');
 		$('#html_banner .banner').removeClass('clicked');
 		$('#html_banner .banner_box_item').removeClass('active');
+		var random = Math.floor(Math.random() * (predictions.length + 1));
+		$('#html_banner .banner_prediction .value').text(predictions[random].title);
+		$('#html_banner .banner_box_item_cap').css({'backgroundImage' : 'url(./img/pics/' + predictions[random].pic + '.png)'});
+		$('#html_banner .footer_title').html(predictions[random].message);
+		$('#html_banner .footer_btn').attr("href", predictions[random].link);
+	}
+
+	recalc();
+	$('#html_banner .banner_reload').click(function() {
+		recalc();
 	});
 
 	$('#html_banner .banner_box_item').click(function(){
