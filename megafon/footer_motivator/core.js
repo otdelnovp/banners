@@ -66,12 +66,12 @@ $(function() {
 		$('#html_banner .banner_box_item_cap').css({'backgroundImage' : 'url(./img/pics/' + (random + 1) + '.png)'});
 
 		$('.share').unbind().ShareLink({
-			title: 'Я узнал(а), что ждёт меня в 2018 году / новом году. А ты?',
+			title: 'Я знаю, что ждёт меня в 2018 году. А ты?',
 			text: ' ',
-			image: ('https  ://megafon2018.mail.ru/shering/' + (random + 1) + '.jpg'),
+			image: ('https://megafon2018.mail.ru/shering/' + (random + 1) + '.png'),
 			url: ('https://megafon2018.mail.ru/?share=' + (random + 1)),
-			width: 640,
-			height: 600
+			width: 600,
+			height: 700
 		}).click(function(){
 			parent.postMessage('footerevent:share_' + $(this).attr("name"), '*');
 		});
@@ -94,12 +94,12 @@ $(function() {
 	////////////
 
 	$('#html_banner .close').click(function(){
-		parent.postMessage('canvas:closeclick', '*');
 		if(small) {
 			parent.postMessage('footerevent:close_preview', '*');
 		} else {
 			parent.postMessage('footerevent:close_full', '*');
 		}
+		parent.postMessage('canvas:closefooter', '*');
 	});
 
 	////////////
@@ -109,20 +109,3 @@ $(function() {
 	}, function() { return false; });
 
 });
-
-// СОБЫТИЯ:
-//
-// Наведение на свернутую перетяжку - hover_preview
-// Показ свернутой перетяжки (схлоп) - collapse
-// Показ развернутой перетяжки (расхлоп) - expand
-// Закрытие свернутой перетяжки - close_preview
-// Закрытие развернутой перетяжки - close_full
-//
-// Клик по первой печеньке - pechen_1
-// Клик по второй печеньке - pechen_2
-// Клик по третьей печеньке - pechen_3
-//
-// Нажатие на шеринг в Фб - share_fb
-// Нажатие на шеринг в ВК - share_vk
-// Нажатие на шеринг в ОК - share_ok
-// Нажатие на шеринг в ММ - share_my

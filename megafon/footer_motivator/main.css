@@ -49,7 +49,7 @@ html, body {
 	z-index: 111;
 	top: 0;
 	right: 0;
-	margin: 3.3rem;
+	margin: 3.2rem;
 	font: 400 2.2rem/1 Arial, sans-serif;
 	color: #fff;
 	transition: opacity 300ms;
@@ -353,6 +353,7 @@ html, body {
   width: 100%;
   height: 100%;
   background: url(./img/cap.png) 50% 50% no-repeat;
+  -webkit-background-size: 95% 95%;
   background-size: 95% 95%;
   transform: scale(0.3);
   opacity: 0;
@@ -434,8 +435,8 @@ html, body {
   height: 23rem;
   border-radius: 50%;
   background: url(./img/circle.png) center no-repeat;
+  -webkit-background-size: 95% 95%;
   background-size: 95% 95%;
-  transform: scale(0.5);
   opacity: 0;
 }
 #html_banner .banner_box:after {
@@ -443,6 +444,7 @@ html, body {
 }
 #html_banner .banner.clicked .banner_box:before,
 #html_banner .banner.clicked .banner_box:after {
+  transform: scale(1);
   animation: circle 500ms ease-in-out 2000ms both;
 }
 @keyframes circle {
@@ -502,19 +504,23 @@ html, body {
 
 .share {
 	position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 2.2rem 0 0;
-  width: 4.2rem;
-  height: 4.2rem;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  overflow: hidden;
+  margin: 0 20px 0 0;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: #fff;
-  border: 1px solid #fff;
   cursor: pointer;
   transition: opacity 300ms;
+  zoom: 1;
 }
-.share:hover {
-  opacity: 0.8;
+.share:after {
+  content: ' ';
+  display: inline-block;
+  position: relative;
 }
 .share:before {
 	content: '';
@@ -523,35 +529,32 @@ html, body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 20px;
+	height: 20px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 .s_facebook:before {
-	margin: 0 0 0 -0.05rem;
-	height: 2.3rem;
+	height: 18px;
 	background-image: url(./img/share_fb.svg);
 }
 .s_vk:before {
-	margin: 0 0 0 -0.05rem;
 	background-image: url(./img/share_vk.svg);
 }
 .s_odnoklassniki:before {
 	background-image: url(./img/share_ok.svg);
 }
 .s_myworld:before {
-	width: 2.3rem;
 	background-image: url(./img/share_my.svg);
 }
 
 
 #html_banner .banner_more {
   position: absolute;
-  bottom: 4.4rem;
+  bottom: 4.1rem;
   left: 50%;
-  margin: 0 0 0 44rem;
+  margin: 0 0 0 45rem;
   font-size: 0;
   line-height: 0;
   opacity: 0;
@@ -581,5 +584,12 @@ html, body {
 }
 
 
-@media (max-width: 1000px) { html{font-size: 6px;} }
-@media (max-width: 800px) { html{font-size: 5.5px;} }
+@media (max-width: 1000px) {
+  html {font-size: 6px;}
+  #html_banner .banner_more {margin: 0 0 0 50rem;}
+  .share {margin: 0 15px 0 0;}
+}
+@media (max-width: 800px) {
+  html {font-size: 5.5px;}
+  .share {margin: 0 15px 0 0;}
+}

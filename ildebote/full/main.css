@@ -1,0 +1,232 @@
+html, body { margin: 0; padding: 0; font-size: 10px; width: 100%; height: 100%; background: transparent; overflow: hidden; }
+
+#html_banner img {display: block; margin: 0 auto;}
+#html_banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+}
+
+#html_banner .html_banner_link {
+	display:block;
+	position: relative;
+	width:100%;
+	height:100%;
+	text-decoration: none;
+}
+
+/**/
+
+.html_banner_bg1,
+.html_banner_bg2 {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	background: #231632;
+	opacity: 0;
+}
+.animate .html_banner_bg1 {
+	opacity: 0.5;
+	transition: opacity 2000ms;
+}
+.animate .html_banner_bg2 {
+	z-index: 10;
+	background: url(img/bg.jpg) center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	opacity: 1;
+	transition: opacity 2000ms 3000ms;
+}
+
+/**/
+
+.html_banner_confetti {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+.animate .html_banner_confetti {
+	opacity: 1;
+	transition: opacity 300ms;
+}
+
+/**/
+
+.html_banner_carusel {
+	position: absolute;
+	z-index: 11;
+	top: 50%;
+	left: 0;
+	margin: -50vw 0 0;
+	width: 100vw;
+	height: 100vw;
+	opacity: 0;
+}
+.animate .html_banner_carusel {
+	opacity: 1;
+	transition: opacity 1000ms 500ms;
+	animation: carusel_fade 1000ms 4000ms both;
+}
+
+.html_banner_carusel div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 38vw;
+	height: 38vw;
+	margin: -19vw;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	animation: carusel_rotate 3000ms linear infinite;
+	opacity: 0;
+}
+.animate .html_banner_carusel div {
+	opacity: 1;
+	transition: opacity 1000ms;
+}
+.html_banner_carusel div:nth-child(1) {
+	transform: translate(0, -36vw);
+	background-image: url(img/icon_1.png);
+}
+.html_banner_carusel div:nth-child(2) {
+	transform: translate(30.5vw, -17.3vw);
+	animation-delay: 500ms;
+	transition-delay: 500ms !important;
+	background-image: url(img/icon_2.png);
+}
+.html_banner_carusel div:nth-child(3) {
+	transform: translate(30.5vw, 17.3vw);
+	animation-delay: 1000ms;
+	transition-delay: 1000ms !important;
+	background-image: url(img/icon_3.png);
+}
+.html_banner_carusel div:nth-child(4) {
+	transform: translate(0, 36vw);
+	animation-delay: 1500ms;
+	transition-delay: 1500ms !important;
+	background-image: url(img/icon_4.png);
+}
+.html_banner_carusel div:nth-child(5) {
+	transform: translate(-30.5vw, 17.3vw);
+	animation-delay: 2000ms;
+	transition-delay: 2000ms !important;
+	background-image: url(img/icon_5.png);
+}
+.html_banner_carusel div:nth-child(6) {
+	transform: translate(-30.5vw, -17.3vw);
+	animation-delay: 2500ms;
+	transition-delay: 2500ms !important;
+	background-image: url(img/icon_6.png);
+}
+
+@keyframes carusel_fade {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+@keyframes carusel_rotate {
+	0% { transform: rotate(0deg) translate(-32vw) rotate(0deg); }
+	100% {transform: rotate(360deg) translate(-32vw) rotate(-360deg); }
+}
+
+/**/
+
+.html_banner_btn {
+	position: absolute;
+	z-index: 11;
+	top: 50%;
+	left: 50%;
+	width: 70vw;
+	height: 12vh;
+	margin: -6vh -35vw;
+	background: url(img/btn.png) center no-repeat;
+	background-size: contain;
+	transform: scale(0.3);
+	opacity: 0;
+}
+.animate .html_banner_btn {
+	opacity: 1;
+	transform: scale(1);
+	transition: opacity 1000ms 4000ms;
+	animation: btn 4000ms ease-in-out 4000ms both;
+}
+.html_banner_btn:active {
+	transition: margin 200ms;
+	margin: 5px 0 0;
+}
+@keyframes btn {
+	0% { transform: translateY(0) scale(0.3); }
+	20%, 30% { transform: translateY(0) scale(1); }
+	50% { transform: translateY(-20vh) scale(1); }
+	93% { transform: translateY(-20vh) scale(0.9); }
+	88%, 100% { transform: translateY(-20vh) scale(1); }
+}
+
+/**/
+
+.html_banner_girls {
+	position: absolute;
+	z-index: 11;
+	top: 40%;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: url(img/girls.png) 50% 100% no-repeat;
+	background-size: contain;
+	opacity: 0;
+}
+.animate .html_banner_girls {
+	opacity: 1;
+	transition: opacity 700ms 5700ms;
+}
+
+/**/
+
+.html_banner_title {
+	position: absolute;
+	z-index: 11;
+	top: 5%;
+	left: 0;
+	width: 100%;
+	height: 14%;
+	background: url(img/title.png) 50% 100% no-repeat;
+	background-size: contain;
+	opacity: 0;
+	transform: translateY(-20%);
+}
+.animate .html_banner_title {
+	opacity: 1;
+	transform: translateY(0%);
+	transition: opacity 500ms 6500ms, transform 500ms 6500ms;
+}
+
+/**/
+
+.html_banner_logo {
+	position: absolute;
+	z-index: 11;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 6.3%;
+	border-top: 2px solid #fff;
+	background: #000 url(img/logo.png) 50% 50% no-repeat;
+	background-size: contain;
+	transform: translateY(0);
+}
+.animate .html_banner_logo {
+	transform: translateY(-100%);
+	transition: transform 500ms 7000ms;
+}
