@@ -12,14 +12,47 @@ html, body { margin: 0; padding: 0; font-size: 10px; width: 100%; height: 100%; 
 	width: 100%;
 	height: 100%;
 	font-size: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+#html_banner.animate {
+	opacity: 1;
+	visibility: visible;
 }
 
-#html_banner .html_banner_link {
+.play {
+	position: absolute;
+	z-index: 1111;
+	padding: 20px;
+	color: #fff;
+	background: #000;
+}
+
+#html_banner.stop * {
+	animation: none !important;
+	transition: none !important;
+}
+
+.html_banner_link {
 	display:block;
 	position: relative;
 	width:100%;
 	height:100%;
 	text-decoration: none;
+}
+
+.html_banner_close {
+	position: absolute;
+	z-index: 111;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	font-size: 50px;
+	line-height: 1;
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	text-align: center;
+	color: #fff;
 }
 
 /**/
@@ -79,6 +112,10 @@ html, body { margin: 0; padding: 0; font-size: 10px; width: 100%; height: 100%; 
 	transition: opacity 1000ms 500ms;
 	animation: carusel_fade 1000ms 4000ms both;
 }
+@keyframes carusel_fade {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
 
 .html_banner_carusel div {
 	position: absolute;
@@ -90,55 +127,62 @@ html, body { margin: 0; padding: 0; font-size: 10px; width: 100%; height: 100%; 
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	animation: carusel_rotate 3000ms linear infinite;
-	opacity: 0;
-}
-.animate .html_banner_carusel div {
-	opacity: 1;
-	transition: opacity 1000ms;
+	animation: carusel_rotate_1 3000ms linear infinite;
 }
 .html_banner_carusel div:nth-child(1) {
+	animation-name: carusel_rotate_1;
 	transform: translate(0, -36vw);
 	background-image: url(img/icon_1.png);
 }
 .html_banner_carusel div:nth-child(2) {
+	animation-name: carusel_rotate_2;
 	transform: translate(30.5vw, -17.3vw);
-	animation-delay: 500ms;
-	transition-delay: 500ms !important;
 	background-image: url(img/icon_2.png);
 }
 .html_banner_carusel div:nth-child(3) {
+	animation-name: carusel_rotate_3;
 	transform: translate(30.5vw, 17.3vw);
-	animation-delay: 1000ms;
-	transition-delay: 1000ms !important;
 	background-image: url(img/icon_3.png);
 }
 .html_banner_carusel div:nth-child(4) {
+	animation-name: carusel_rotate_4;
 	transform: translate(0, 36vw);
-	animation-delay: 1500ms;
-	transition-delay: 1500ms !important;
 	background-image: url(img/icon_4.png);
 }
 .html_banner_carusel div:nth-child(5) {
+	animation-name: carusel_rotate_5;
 	transform: translate(-30.5vw, 17.3vw);
-	animation-delay: 2000ms;
-	transition-delay: 2000ms !important;
 	background-image: url(img/icon_5.png);
 }
 .html_banner_carusel div:nth-child(6) {
+	animation-name: carusel_rotate_6;
 	transform: translate(-30.5vw, -17.3vw);
-	animation-delay: 2500ms;
-	transition-delay: 2500ms !important;
 	background-image: url(img/icon_6.png);
 }
 
-@keyframes carusel_fade {
-	0% { opacity: 1; }
-	100% { opacity: 0; }
-}
-@keyframes carusel_rotate {
+@keyframes carusel_rotate_1 {
 	0% { transform: rotate(0deg) translate(-32vw) rotate(0deg); }
 	100% {transform: rotate(360deg) translate(-32vw) rotate(-360deg); }
+}
+@keyframes carusel_rotate_2 {
+	0% { transform: rotate(60deg) translate(-32vw) rotate(-60deg); }
+	100% {transform: rotate(420deg) translate(-32vw) rotate(-420deg); }
+}
+@keyframes carusel_rotate_3 {
+	0% { transform: rotate(120deg) translate(-32vw) rotate(-120deg); }
+	100% {transform: rotate(480deg) translate(-32vw) rotate(-480deg); }
+}
+@keyframes carusel_rotate_4 {
+	0% { transform: rotate(180deg) translate(-32vw) rotate(-180deg); }
+	100% {transform: rotate(540deg) translate(-32vw) rotate(-540deg); }
+}
+@keyframes carusel_rotate_5 {
+	0% { transform: rotate(240deg) translate(-32vw) rotate(-240deg); }
+	100% {transform: rotate(600deg) translate(-32vw) rotate(-600deg); }
+}
+@keyframes carusel_rotate_6 {
+	0% { transform: rotate(300deg) translate(-32vw) rotate(-300deg); }
+	100% {transform: rotate(660deg) translate(-32vw) rotate(-660deg); }
 }
 
 /**/
@@ -161,10 +205,6 @@ html, body { margin: 0; padding: 0; font-size: 10px; width: 100%; height: 100%; 
 	transform: scale(1);
 	transition: opacity 1000ms 4000ms;
 	animation: btn 4000ms ease-in-out 4000ms both;
-}
-.html_banner_btn:active {
-	transition: margin 200ms;
-	margin: 5px 0 0;
 }
 @keyframes btn {
 	0% { transform: translateY(0) scale(0.3); }

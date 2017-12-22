@@ -12,7 +12,8 @@
 </head>
 <body>
 
-	<div id="html_banner">
+	<div id="html_banner" class="stop">
+		<div class="html_banner_close" onclick="parent.postMessage('canvas:closeclick', '*')">&times;</div>
 		<a class="html_banner_link" href="%link1%" target="_blank">
 			<canvas class="html_banner_confetti" id="world"></canvas>
 			<div class="html_banner_bg1"></div>
@@ -26,7 +27,18 @@
 	</div>
 
 <script type="text/javascript">
-setTimeout(function() {document.querySelector('#html_banner').className = 'animate'}, 1);
+
+var banner = document.querySelector('#html_banner');
+if(window.MRGCanvas) {
+	MRGCanvas.on('open', function(){
+		setTimeout(function() {banner.className = 'animate'}, 1);
+	});
+	MRGCanvas.on('close', function(){
+		banner.className = 'stop';
+	});
+} else {
+	setTimeout(function() {banner.className = 'animate'}, 1);
+}
 
 (function() {
 var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
@@ -128,6 +140,8 @@ return results;
 step();
 }).call(this);
 </script>
+
+<!-- <div class="play" onclick="document.querySelector('#html_banner').className = 'animate'">play</div> -->
 
 </body>
 </html>

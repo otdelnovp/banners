@@ -1,0 +1,53 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=100%,height=100%">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="main.css" />
+	<script type="text/javascript" src="prefixfree.min.js"></script>
+	<title>mts</title>
+</head>
+<body>
+
+	<div id="html_banner" class="stop">
+		<div class="html_banner_close" onclick="parent.postMessage('canvas:closeclick', '*')">&times;</div>
+		<a class="html_banner_link" href="%link1%" target="_blank">
+			<div class="html_banner_bg1"></div>
+			<div class="html_banner_bg2"></div>
+			<div class="html_banner_logo"></div>
+			<div class="html_banner_image">
+				<div class="html_banner_image_item html_banner_image_item__1"></div>
+				<div class="html_banner_image_item html_banner_image_item__2"></div>
+				<div class="html_banner_image_item html_banner_image_item__3"></div>
+			</div>
+			<div class="html_banner_text">
+				<div class="html_banner_text_item html_banner_text_item__1"></div>
+				<div class="html_banner_text_item html_banner_text_item__2"></div>
+				<div class="html_banner_text_item html_banner_text_item__3"></div>
+			</div>
+			<div class="html_banner_note"><div>Акция. С 01.12.17г. по 08.01.18 г. при покупке в салонах МТС и на www.shop.mts.ru (при условии самовывоза) смартфона Samsung, участвующего в акции, получите кэшбэк до 5000 руб., который будет перечислен на Ваш счет платежного сервиса «Кошелек МТС Деньги» (необходимо пройти регистрацию в сервисе, в случае его отсутствия). Размер кэшбэка зависит от приобретаемой модели смартфона (5000 руб. возвращается при покупке смартфона Samsung Galaxy A5 (2017) Galaxy=Гэлакси , срок зачисления средств на платежный сервис до 7 дней. Количество товара ограничено. Организатор акции АО «РТК» (АО «РТК», ОГРН 1027739165662, 109147, Москва, ул. Воронцовская, д.5 стр.2) вправе менять условия, период проведения акции. Подробная информация - на shop.mts.ru.</div></div>
+		</a>
+	</div>
+
+<script type="text/javascript">
+var banner = document.querySelector('#html_banner');
+if(window.MRGCanvas) {
+	MRGCanvas.on('open', function(){
+		setTimeout(function() {banner.className = 'animate'}, 1);
+	});
+	MRGCanvas.on('close', function(){
+		banner.className = 'stop';
+	});
+} else {
+	setTimeout(function() {banner.className = 'animate'}, 1);
+}
+</script>
+
+<!-- <div class="show" onclick="document.querySelector('#html_banner').className = 'animate'">show</div>
+<div class="hide" onclick="document.querySelector('#html_banner').className = 'stop'">hide</div> -->
+
+</body>
+</html>

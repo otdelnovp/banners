@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=100%,height=67">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="normalize.css">
+	<title>mts</title>
+	<style>
+		.s-container {
+			position: relative;
+			width: 100%;
+			height: 67px;
+			background: #e30611;
+			overflow: hidden;
+		}
+		.s-container_link {
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+		.s-container_title {
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 33%;
+			left: 7%;
+			width: 70%;
+			height: 35%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url(title.png);
+			-webkit-background-size: contain;
+			background-size: contain;
+		}
+		.s-container_money {
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 0%;
+			left: 78%;
+			width: 15%;
+			height: 100%;
+			background-position: 50% 0%;
+			background-repeat: no-repeat;
+			background-image: url(money.png);
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		@media(max-width: 400px) {
+			.s-container_money {
+				width: 16.6%;
+			}
+		}
+		@media(max-width: 350px) {
+			.s-container_money {
+				width: 19.5%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="s-container">
+		<a class="s-container_link" href="%link1%" target="_blank">
+			<span class="s-container_title"></span>
+			<span class="s-container_money"></span>
+    </a>
+	</div>
+</body>
+
+</html>

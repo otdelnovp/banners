@@ -1,0 +1,211 @@
+html, body { margin: 0; padding: 0; font-size: 10px; width: 100%; height: 100%; background: transparent; overflow: hidden; }
+
+#html_banner img {display: block; margin: 0 auto;}
+#html_banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+}
+
+#html_banner.stop,
+#html_banner.stop * {
+	opacity: 0;
+	visibility: hidden;
+	animation: none !important;
+	transition: none !important;
+}
+
+#html_banner.animate {
+	opacity: 1;
+	visibility: visible !important;
+	transition: opacity 500ms, visibility 500ms;
+}
+
+/**/
+
+.html_banner_link {
+	display:block;
+	position: relative;
+	width:100%;
+	height:100%;
+	text-decoration: none;
+}
+
+.html_banner_close {
+	position: absolute;
+	z-index: 111;
+	top: 0;
+	right: 0;
+	width: 15vw;
+	height: 15vw;
+	font-size: 15vw;
+	line-height: 1;
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	text-align: center;
+	color: #000;
+	cursor: crosshair;
+}
+
+.show,
+.hide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1111;
+	padding: 20px;
+	color: #fff;
+	background: #000;
+	cursor: pointer;
+}
+.hide {
+	top: auto;
+	bottom: 0;
+}
+
+/**/
+
+.html_banner_bg1 {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/bg.jpg) center no-repeat;
+	background-size: cover;
+	opacity: 0.8;
+}
+.html_banner_bg2 {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/bg.png) 50% 100% no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+/**/
+
+.html_banner_logo {
+	position: absolute;
+	z-index: 11;
+	top: 11vw;
+	left: 0;
+	width: 100%;
+	height: 4.7%;
+	background: url(img/logo.png) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+/**/
+
+.html_banner_image {
+	position: absolute;
+	z-index: 5;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.html_banner_image_item {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/image_1.png) 50% 50% no-repeat;
+	background-size: contain;
+	opacity: 0;
+}
+.html_banner_image_item__2 {
+	background-image: url(img/image_2.png);
+}
+.html_banner_image_item__3 {
+	background-image: url(img/image_3.png);
+	background-position: 50% 40%;
+}
+
+/**/
+
+.html_banner_text {
+	position: absolute;
+	z-index: 11;
+	bottom: 8%;
+	left: 0;
+	width: 100%;
+	height: 30.6%;
+}
+.html_banner_text_item {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/text_1.png) 50% 50% no-repeat;
+	background-size: contain;
+	opacity: 0;
+}
+.html_banner_text_item__2 {
+	background-image: url(img/text_2.png);
+}
+.html_banner_text_item__3 {
+	background-image: url(img/text_3.png);
+}
+
+/**/
+
+.animate .html_banner_image_item,
+.animate .html_banner_text_item {
+	animation: slide 9s cubic-bezier(0.4, 0.0, 0.2, 1) Infinite;
+}
+
+.animate .html_banner_image_item__2,
+.animate .html_banner_text_item__2 {animation-delay: 3s;}
+.animate .html_banner_image_item__3,
+.animate .html_banner_text_item__3 {animation-delay: 6s;}
+
+@keyframes slide {
+	0%, 36% {opacity: 0;}
+	3%, 31% {opacity: 1;}
+}
+
+/**/
+
+.html_banner_note {
+	display: block;
+	position: absolute;
+	z-index: 111;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 4vw 0;
+	font-size: 3.3vw;
+	line-height: 0;
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+	color: #6e6e6e;
+	background: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.html_banner_note div {
+	display: inline-block;
+	padding-left: 100%;
+}
+
+.animate .html_banner_note div {
+	animation: note 30s infinite linear;
+}
+@keyframes note {
+	0% {transform: translate(0, 0)}
+	100% {transform: translate(-100%, 0)}
+}
