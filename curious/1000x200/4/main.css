@@ -7,7 +7,7 @@ html, body { margin: 0; padding: 0; }
 	text-align: center;
 	margin: 0;
 	width: 100%;
-	min-width: 960px;
+	min-width: 400px;
 	height: 200px;
 	font-size: 0;
 	color: #fff;
@@ -24,3 +24,12 @@ html, body { margin: 0; padding: 0; }
 #html_banner .html_banner_btn {display: block; position: absolute; z-index: 11; bottom: 30px; left: 50%; margin: 0 0 0 -60px; width: 150px; height: 41px; background: #a33efe url(img/btn.png) center no-repeat; -webkit-background-size: contain; background-size: contain; -webkit-border-radius: 20px; border-radius: 20px; transition: background 300ms, transform 100ms;}
 #html_banner .html_banner_btn:hover {background-color: #9a2cfc;}
 #html_banner .html_banner_btn:active {transform: translateY(1px);}
+
+@media (max-width: 959px) {
+
+	#html_banner {background-image: url(img/bgs.jpg);}
+	#html_banner .html_banner_logo {top: 18px; margin: 0 0 0 -185px; width: 100px; height: 22px;}
+	#html_banner .html_banner_title {top: 90px; margin: 0 0 0 -102px; width: 300px; height: 22px; -webkit-background-size: contain; background-size: contain;}
+	#html_banner .html_banner_btn {bottom: 15px; margin: 0 0 0 -102px;}
+
+}
