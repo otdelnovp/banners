@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=100%,height=134">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="normalize.css">
+	<title>anim</title>
+	<style>
+		.s-container {
+			position: relative;
+			width: 100%;
+			height: 134px;
+			background: #c2b1aa;
+			overflow: hidden;
+		}
+		.s-container_link {
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background-position: 66% 50%;
+			background-repeat: no-repeat;
+			background-image: url(bg.jpg);
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		.s-container_title {
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 36%;
+			left: 6.6%;
+			width: 60%;
+			height: 17%;
+			background-position: 0 50%;
+			background-repeat: no-repeat;
+			background-image: url(title.png);
+			-webkit-background-size: contain;
+			background-size: contain;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="s-container">
+		<a class="s-container_link" href="%link1%" target="_blank">
+			<span class="s-container_title"></span>
+    </a>
+	</div>
+</body>
+
+</html>

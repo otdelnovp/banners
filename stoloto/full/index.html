@@ -22,5 +22,14 @@
 		</a>
 	</div>
 
+	<script>
+	function preventScroll() {
+		document.documentElement.addEventListener('touchmove', function(e) {
+			e.preventDefault();
+		}, {passive: false});
+	}
+	preventScroll();
+	</script>
+
 </body>
 </html>
