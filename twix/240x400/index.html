@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="ad.size" content="width=240,height=400">
+	<meta name="viewport" content="width=240, height=400, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>twix</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div id="html_banner">
+	<a class="html_banner_link" href="%link1%" target="_blank">
+		<div class="html_banner_logo"></div>
+		<div class="html_banner_frame">
+			<div class="html_banner_photo">
+				<div class="html_banner_photo_item html_banner_photo_item__1"></div>
+				<div class="html_banner_photo_item html_banner_photo_item__2"></div>
+			</div>
+			<div class="html_banner_share"></div>
+			<div class="html_banner_hashtag"></div>
+		</div>
+		<div class="html_banner_text">
+			<div class="html_banner_text_item html_banner_text_item__1"></div>
+			<div class="html_banner_text_item html_banner_text_item__2"></div>
+			<div class="html_banner_text_item html_banner_text_item__3"></div>
+		</div>
+		<span class="html_banner_btn"></span>
+	</a>
+</div>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", animate);
+function animate() {
+
+	var banner = document.querySelector('#html_banner');
+
+	var i=0, timer = setInterval(function() {
+		i++;
+		if(i==-1) {
+			banner.classList.remove('step_3');
+			banner.classList.add('step_0');
+		}
+		if(i==1) {
+			banner.classList.remove('step_0');
+			banner.classList.add('step_1');
+		}
+		if(i==6) {
+			banner.classList.remove('step_1');
+			banner.classList.add('step_2');
+		}
+		if(i==11) {
+			banner.classList.remove('step_2');
+			banner.classList.add('step_3');
+		}
+		if(i==17) i=-2;
+	}, 500);
+
+}
+</script>
+
+</body>
+</html>
