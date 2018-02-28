@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=100%,height=80">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="normalize.css">
+	<title>ildebote</title>
+	<style>
+		.s-container {
+			position: relative;
+			width: 100%;
+			min-width: 640px;
+			height: 80px;
+			background: #704275 url(bg.png) 0 0 repeat-x;
+			overflow: hidden;
+		}
+		.s-container:after {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 50%;
+			width: 50%;
+			height: 100%;
+			background: #2c394e;
+		}
+		.s-container_link {
+			display: block;
+			position: relative;
+			z-index: 3;
+			width: 100%;
+			height: 100%;
+		}
+		.s-container_link img {
+			display: block;
+			margin: 0 auto;
+			height: 100%;
+			width: 640px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="s-container">
+		<a class="s-container_link" href="%link1%" target="_blank">
+			<img src="img.jpg" alt="">
+    </a>
+	</div>
+</body>
+
+</html>
