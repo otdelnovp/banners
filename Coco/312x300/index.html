@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="ad.size" content="width=312,height=300">
+<title>Banner preview</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="normalize.css">
+<style type="text/css">
+#html_banner,#html_banner .full,#html_banner .half{width:312px;height:300px}
+#html_banner{overflow:hidden;position:relative}
+#html_banner a{display: block; position: relative; width: 100%; height: 100%;}
+#html_banner *{border:0;margin:0;padding:0}
+#html_banner img{display:block}
+#background {	width: 312px;	height: 300px; background-image:url(images/background.jpg); position: absolute;animation: appeara 4s ;}
+#logo { width: 312px; height: 300px; background-image:url(images/claim.png); position: absolute;animation: appearb 4s ;}
+@keyframes appeara { 0% {opacity: 0;} 50% {opacity: 1;}}
+@keyframes appearb { 0% {opacity: 0;} 25% {opacity: 0;} 75% {opacity: 1;}}
+@keyframes appearc { 0% {opacity: 0;} 50% {opacity: 0;} 100% {opacity: 1;}}
+</style>
+</head>
+<body>
+
+<div id="html_banner">
+	<a href="%link1%" target="_blank">
+		<div id="background">
+		<div id="logo"></div>
+	</div>
+	</a>
+</div>
+
+</body>
+</html>
