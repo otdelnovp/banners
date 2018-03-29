@@ -148,7 +148,7 @@ html, body {
 	pointer-events: none;
 }
 .city:hover {
-	transform: scale(1.2);
+	transform: scale(1.3);
 }
 .city:hover span {
 	opacity: 1;
