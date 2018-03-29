@@ -1,0 +1,10 @@
+{
+  "name": "Randezvous 100% 100",
+  "group": "Randezvous",
+  "public": false,
+  "animation": true,
+  "size": {
+    "width": 375,
+    "height": 100
+  }
+}

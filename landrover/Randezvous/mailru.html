@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <title>Mail.Ru</title>
+        <meta name="viewport" content="user-scalable=no, maximum-scale=1.0, initial-scale=1.0, minimum-scale=1.0">
+        <meta name="referrer" content="always">
+        <meta name="description" content="Главная страница Mail.Ru для мобильных телефонов и смартфонов">
+        <meta name="keywords" content="мобильный портал mail.ru, мобильная почта, почта для телефонов, мобильная версия, версия для смартфонов, версия для телефонов">
+        <meta name="theme-color" content="#168DE2">
+    </head>
+    <body>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html, body {
+                /*overflow: hidden;*/
+            }
+
+            .list {
+                display: block;
+                position: relative;
+                height: auto;
+                width: 100%;
+                background: #fff;
+                max-height: 100%;
+                overflow: scroll;
+            }
+
+            .list__item {
+                display: block;
+                position: relative;
+                height: 50px;
+                border-bottom: 1px solid #ccc;
+                line-height: 50px;
+                padding-left: 20px;
+                font-family: sans-serif;
+            }
+
+            #iframe {
+                display: block;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                height: 100px;
+                width: 100%;
+                z-index: 1000;
+            }
+
+            #center{
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                z-index: 1001;
+                background-color: red;
+                width: 1px;
+                height: 100%;
+            }
+        </style>
+
+
+        <div class="list">
+            <div id="center"></div>
+            <div class="list__item">0</div>
+            <div class="list__item">1</div>
+            <div class="list__item">2</div>
+            <div class="list__item">3</div>
+            <div class="list__item">4</div>
+            <div class="list__item">5</div>
+            <div class="list__item">6</div>
+            <div class="list__item">7</div>
+            <div class="list__item">8</div>
+            <div class="list__item">9</div>
+            <div class="list__item">10</div>
+            <div class="list__item">11</div>
+            <div class="list__item">12</div>
+            <div class="list__item">13</div>
+            <div class="list__item">14</div>
+            <div class="list__item">15</div>
+            <div class="list__item">16</div>
+            <div class="list__item">17</div>
+            <div class="list__item">18</div>
+            <div class="list__item">19</div>
+            <div class="list__item">20</div>
+            <div class="list__item">21</div>
+            <div class="list__item">22</div>
+            <div class="list__item">23</div>
+            <div class="list__item">24</div>
+            <div class="list__item">25</div>
+            <div class="list__item">26</div>
+            <div class="list__item">27</div>
+            <div class="list__item">28</div>
+            <div class="list__item">29</div>
+            <div class="list__item">30</div>
+            <div class="list__item">31</div>
+            <div class="list__item">32</div>
+            <div class="list__item">33</div>
+            <div class="list__item">34</div>
+            <div class="list__item">35</div>
+            <div class="list__item">36</div>
+            <div class="list__item">37</div>
+            <div class="list__item">38</div>
+            <div class="list__item">39</div>
+            <div class="list__item">40</div>
+            <div class="list__item">41</div>
+            <div class="list__item">42</div>
+            <div class="list__item">43</div>
+            <div class="list__item">44</div>
+            <div class="list__item">45</div>
+            <div class="list__item">46</div>
+            <div class="list__item">47</div>
+            <div class="list__item">48</div>
+            <div class="list__item">49</div>
+        </div>
+
+        <iframe id="iframe" name="target" frameborder="0"></iframe>
+
+        <script>
+            if (window.history && 'scrollRestoration' in history) {
+                window.history.scrollRestoration = 'manual';
+            }
+
+            var targetIframe = window.frames.target;
+            var k = document.body.clientHeight - document.documentElement.clientHeight;
+
+            document.getElementById('iframe').src = './index.html';
+
+            window.addEventListener('scroll', function (e) {
+                const percent = window.pageYOffset / k * 100;
+                targetIframe.postMessage('animation:' + percent, "http://" + location.host + '/');
+            });
+
+            window.addEventListener('message', function (e) {
+                console.warn(e);
+            });
+        </script>
+    </body>
+</html>

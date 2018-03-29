@@ -1,0 +1,8 @@
+#banner-html
+{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;display:block;width:100%;min-width:640px;height:80px;background-color:#E1D6D4;background-size:50px;overflow:hidden}
+
+#banner-html .inner{position:relative;width:640px;height:100%;margin-right:auto;margin-left:auto;background-size:contain;background-position:center right;background-repeat:no-repeat}
+
+#banner-html .inner>div{position:absolute; width:100%}
+
+#banner-html .image{display: block; margin: 0 auto; height:80px;}

@@ -1,0 +1,414 @@
+.banner, .slide.slide-text {
+	font-size: 0
+}
+
+.cloud-2, .slide-2 {
+	text-align: center
+}
+
+@font-face {
+	font-family: FiraSans;
+	src: local('ktstheraflu'), url(../fonts/firasans-bold-webfont.woff) format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: fallback
+}
+
+body, html {
+	width: 300px;
+	height: 300px;
+	margin: 0;
+	padding: 0;
+	font-family: FiraSans, Roboto, Panton, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	cursor: pointer;
+	color: #fff;
+	border: 0
+}
+
+.banner {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	text-decoration: none;
+}
+
+.slide {
+	position: absolute;
+	display: none;
+	max-width: 100%
+}
+
+.text {
+	display: inline-block
+}
+
+.link {
+	z-index: 200;
+	text-decoration: none
+}
+
+.link-hero {
+	z-index: 100;
+	top: 0;
+	left: 0;
+	display: block;
+	background: rgba(0, 0, 0, 0)
+}
+
+.slide-1 {
+	position: relative;
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+	background: url(../images/bg.jpg) 50% 50% no-repeat;
+	background-size: cover
+}
+
+@keyframes slide11 {
+	100%, 45% {
+		opacity: 1
+	}
+	50%, 95% {
+		opacity: 0
+	}
+}
+
+.slide-1-1 {
+	position: absolute;
+	opacity: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg2.jpg) center no-repeat;
+	background-size: cover;
+	animation: slide11 13s linear infinite
+}
+
+.cloud-1, .cloud-2, .virus-1, .virus-2 {
+	top: 0;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	width: 100%
+}
+
+.cloud, .virus {
+	animation: slide11 13s linear infinite
+}
+
+@keyframes virus1 {
+	0%, 100% {
+		transform: translate(0, 0)
+	}
+	2% {
+		transform: translate(5px, -3px)
+	}
+	4% {
+		transform: translate(10px, -6px)
+	}
+	6% {
+		transform: translate(15px, -3px)
+	}
+	8% {
+		transform: translate(20px, 0)
+	}
+	10% {
+		transform: translate(25px, 3px)
+	}
+	12% {
+		transform: translate(30px, 6px)
+	}
+	14% {
+		transform: translate(35px, 3px)
+	}
+	16% {
+		transform: translate(40px, 0)
+	}
+	18% {
+		transform: translate(45px, -3px)
+	}
+	20% {
+		transform: translate(50px, -6px)
+	}
+	22% {
+		transform: translate(55px, -3px)
+	}
+	24% {
+		transform: translate(60px, 0)
+	}
+	26% {
+		transform: translate(65px, 3px)
+	}
+	28% {
+		transform: translate(70px, 6px)
+	}
+	30% {
+		transform: translate(75px, 3px)
+	}
+	32% {
+		transform: translate(80px, 0)
+	}
+	34% {
+		transform: translate(85px, -3px)
+	}
+	36% {
+		transform: translate(90px, -6px)
+	}
+	38% {
+		transform: translate(95px, -3px)
+	}
+	40% {
+		transform: translate(100px, 0)
+	}
+	42% {
+		transform: translate(105px, 3px)
+	}
+	44% {
+		transform: translate(110px, 6px)
+	}
+	46% {
+		transform: translate(115px, 3px)
+	}
+	48% {
+		transform: translate(120px, 0)
+	}
+	50% {
+		transform: translate(125px, -3px)
+	}
+	55%, 80% {
+		transform: translate(130px, -6px)
+	}
+	90% {
+		transform: translate(-25px, -3px)
+	}
+	92% {
+		transform: translate(-20px, 0)
+	}
+	94% {
+		transform: translate(-15px, 3px)
+	}
+	96% {
+		transform: translate(-10px, 6px)
+	}
+	98% {
+		transform: translate(-5px, 3px)
+	}
+}
+
+.virus-1 {
+	background: url(../images/virus-1.png) 125px 65px no-repeat;
+	background-size: 153px 147px;
+	animation: virus1 13s cubic-bezier(.53,.34,.53,.72) infinite
+}
+
+@keyframes virus2 {
+	0%, 100% {
+		transform: translate(0, 0)
+	}
+	60% {
+		transform: translate(-40px, -20px)
+	}
+	80% {
+		transform: translate(14px, 6px)
+	}
+}
+
+.virus-2 {
+	background: url(../images/virus-2.png) 40px 125px no-repeat;
+	background-size: 54px 52px;
+	animation: virus2 13s cubic-bezier(.53,.34,.53,.72) infinite
+}
+
+@keyframes cloud {
+	0% {
+		transform: translateX(-100%)
+	}
+	100% {
+		transform: translateX(100%)
+	}
+}
+
+.cloud-1 {
+	background: url(../images/cloud-1.png) 0 100% no-repeat;
+	background-size: 229px 202px;
+	animation: cloud 100s linear -90s infinite
+}
+
+.cloud-2 {
+	background: url(../images/cloud-2.png) 0 100% no-repeat;
+	background-size: 310px 226px;
+	animation: cloud 100s linear -70s infinite reverse;
+	min-width: 310px
+}
+
+.slide-2 {
+	position: absolute;
+	top: 33px;
+	left: 0;
+	width: 100%;
+	font-size: 28px;
+	line-height: 32px;
+	color: #FFE900;
+	letter-spacing: .65px;
+	text-transform: uppercase
+}
+
+.slide-2-3, .slide-3 {
+	left: 50%;
+}
+
+@keyframes slide21 {
+	100%, 30%, 5% {
+		opacity: 0
+	}
+	10%, 25% {
+		opacity: 1
+	}
+}
+
+.slide-2-1 {
+	opacity: 0;
+	animation: slide21 13s linear infinite
+}
+
+.region {
+	font-size: 16px;
+}
+
+.slide-2-2, .slide-2-3 {
+	position: absolute;
+	width: 100%;
+	top: 0
+}
+
+@keyframes slide22 {
+	100%, 25%, 50% {
+		opacity: 0
+	}
+	30%, 45% {
+		opacity: 1
+	}
+}
+
+.slide-2-2 {
+	opacity: 0;
+	animation: slide22 13s linear infinite
+}
+
+@keyframes slide23 {
+	0%, 45%, 90% {
+		opacity: 0
+	}
+	50%, 85% {
+		opacity: 1
+	}
+}
+
+.slide-2-3 {
+	color: #1F3588;
+	opacity: 0;
+	animation: slide23 13s linear infinite;
+	transform: translateX(-50%)
+}
+
+@keyframes slide3 {
+	0%, 100%, 5%, 50% {
+		opacity: 0
+	}
+	10%, 45% {
+		opacity: 1
+	}
+}
+
+.slide-3 {
+	opacity: 0;
+	z-index: 1000;
+	position: absolute
+}
+
+.slide-3 {
+	bottom: 40px;
+	transform: translateX(-50%);
+	width: 162px;
+	height: 35px;
+	animation: slide3 13s linear infinite
+}
+
+.slide-3:after {
+	content: ' ';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url(../images/btn.png) 50% 50% no-repeat;
+	background-size: contain;
+	transition: opacity .2s linear
+}
+
+.slide-3:hover:after {
+	opacity: 0.7
+}
+
+.logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -40px 0 0;
+	width: 149px;
+	height: 100px;
+	background: url(../images/logo.png) 50% 50% no-repeat;
+	background-size: contain;
+	transform: translateX(-50%);
+	opacity: 0;
+	animation: slide22 13s linear infinite
+}
+
+@keyframes footer {
+	45%, 90% {
+		opacity: 0
+	}
+	50%, 85% {
+		opacity: 1
+	}
+}
+
+.footer, .gsk, .theraflu {
+	position: absolute;
+	opacity: 0
+}
+
+.footer {
+	width: 98%;
+	left: 1%;
+	bottom: 2px;
+	background: url(../images/footer.png) no-repeat;
+	background-size: contain;
+	height: 75px;
+	animation: footer 13s linear infinite
+}
+
+.theraflu {
+	background: url(../images/theraflu.png) 50% 50% no-repeat;
+	background-size: contain;
+	height: 120px;
+	top: 90px;
+	width: 100%;
+	animation: slide23 13s linear infinite
+}
+
+.gsk {
+	top: 10px;
+	right: 15px;
+	width: 28px;
+	height: 24px;
+	background: url(../images/gsk.png) no-repeat;
+	background-size: contain;
+	animation: slide23 13s linear infinite
+}

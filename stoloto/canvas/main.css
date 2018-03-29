@@ -1,0 +1,321 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Regular.eot');
+    src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Regular.woff2') format('woff2'),
+        url('Roboto-Regular.woff') format('woff'),
+        url('Roboto-Regular.ttf') format('truetype'),
+        url('Roboto-Regular.svg#Roboto-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Medium.eot');
+    src: url('Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Medium.woff2') format('woff2'),
+        url('Roboto-Medium.woff') format('woff'),
+        url('Roboto-Medium.ttf') format('truetype'),
+        url('Roboto-Medium.svg#Roboto-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Bold.eot');
+    src: url('Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Bold.woff2') format('woff2'),
+        url('Roboto-Bold.woff') format('woff'),
+        url('Roboto-Bold.ttf') format('truetype'),
+        url('Roboto-Bold.svg#Roboto-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main {
+	display: block;
+	box-sizing: border-box;
+	position: relative;
+	padding: 7rem 0 15rem;
+	min-height: 100%;
+	background: #ffcf28 url(img/bg.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.link {
+	display: block;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+
+.logo {
+	position: absolute;
+	z-index: 11;
+	left: 50%;
+	top: 2rem;
+	margin: 0 0 0 -47rem;
+	width: 11.5rem;
+	height: 6.1rem;
+	background: url(img/logo.png) center no-repeat;
+	background-size: cover;
+}
+
+.title {
+	position: absolute;
+	z-index: 10;
+	top: -0.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 3.8rem;
+	line-height: 1;
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+/**/
+
+.map {
+	display: block;
+	position: absolute;
+	z-index: 111;
+	top: 50%;
+	left: 50%;
+	margin: -33rem 0 0 -41.5rem;
+	width: 83rem;
+	height: 46rem;
+	background: url(img/map.png) center no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	text-decoration: none;
+	color: #000;
+}
+
+@keyframes city {
+	0%, 100% {
+		transform: scale(1);
+	}
+	40% {
+		transform: scale(1.1);
+	}
+}
+.city {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2.2rem;
+	height: 2.9rem;
+	color: #000;
+	background: url(img/city.png) center no-repeat;
+	background-size: contain;
+	transition: transform 0.5s;
+	transform: scale(1);
+}
+.map.animate .city{
+	animation: city 1.5s ease-in-out infinite;
+}
+
+.city span {
+	display: block;
+	position: absolute;
+	top: 62%;
+	left: 100%;
+	transform: translate(0.5rem, -50%);
+	font-size: 1rem;
+	line-height: 1.2;
+	white-space: nowrap;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 300ms, visibility 300ms;
+	pointer-events: none;
+}
+.city:hover {
+	transform: scale(1.1);
+}
+.city:hover span {
+	opacity: 1;
+	visibility: visible;
+}
+.city.top span {
+	top: auto;
+	bottom: 100%;
+	left: 50%;
+	transform: translate(-50%, -0.1rem);
+	text-align: center;
+}
+.city.bot span {
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, 0.1rem);
+	text-align: center;
+}
+.city.left span {
+	top: 62%;
+	left: auto;
+	right: 100%;
+	transform: translate(-0.3rem, -50%);
+	text-align: right;
+}
+.city.max {
+	color: #b30101;
+}
+.city span b {
+	display: block;
+}
+
+.city.kalin {top: 11.5rem; left: 1.3rem;}
+.city.msk {top: 20rem; left: 11rem;}
+.city.spb {top: 14.7rem; left: 7.3rem;}
+.city.nn {top: 19rem; left: 15rem;}
+.city.kazan {top: 19.7rem; left: 19rem;}
+.city.voronezh {top: 23rem; left: 9rem;}
+.city.saratov {top: 24rem; left: 13rem;}
+.city.perm {top: 22.5rem; left: 25rem;}
+.city.yalta {top: 24rem; left: -1.5rem;}
+.city.sochi {top: 29rem; left: 3rem;}
+.city.stavropol {top: 28rem; left: 7rem;}
+.city.nalchik {top: 31.5rem; left: 5rem;}
+.city.cyktyvkar {top: 17rem; left: 26rem;}
+.city.surgut {top: 20rem; left: 31rem;}
+.city.tumen {top: 27.5rem; left: 22.5rem;}
+.city.novosib {top: 29rem; left: 37rem;}
+.city.nizhnevart {top: 23.5rem; left: 36rem;}
+.city.omsk {top: 31.2rem; left: 27.5rem;}
+.city.barnaul {top: 33rem; left: 34rem;}
+.city.krasnoyarsk {top: 30rem; left: 41rem;}
+.city.bratsk {top: 31rem; left: 47rem;}
+.city.ulanude {top: 35.7rem; left: 51rem;}
+.city.blagoveshensk {top: 35.5rem; left: 61.5rem;}
+.city.habarovsk {top: 37rem; left: 67rem;}
+.city.murmansk {top: 6.2rem; left: 17.5rem;}
+.city.magadan {top: 17rem; left: 74rem;}
+
+/**/
+
+.info {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 9rem 0 0 -47rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 94rem
+}
+.info_item {
+	display: block;
+	width: 16rem;
+	font-size: 1.35rem;
+	line-height: 1.7rem;
+}
+.info_item:before {
+	content: '';
+	display: block;
+	margin: 0 auto 1rem;
+	width: 9rem;
+	height: 8rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.info_item__1:before {background-image: url(img/info_1.png)}
+.info_item__2:before {background-image: url(img/info_2.png)}
+.info_item__3:before {background-image: url(img/info_3.png)}
+.info_item__4:before {background-image: url(img/info_4.png)}
+
+
+.bottom {
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 5rem;
+	left: 0;
+	padding: 1rem 0 0;
+	width: 100%;
+	height: 10rem;
+	line-height: 1.6rem;
+	font-size: 1.2rem;
+	color: #000;
+	background: #ffd830 url(img/bottom.jpg) 50% 10% no-repeat;
+	background-size: cover;
+}
+
+.bottom_gosloto {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -2.5rem 0 0 -47rem;
+	height: 5rem;
+	width: 20rem;
+	background: url(img/gosloto.png) 0 50% no-repeat;
+	background-size: contain;
+}
+
+.bottom_prize {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -4rem 0 0 -11rem;
+	font-size: 2rem;
+	line-height: 1;
+	font-weight: 700;
+	white-space: nowrap;
+}
+.bottom_prize b {
+	display: block;
+	margin: 0.7rem 0 0 -2rem;
+	padding: 0.7rem 2rem 0.6rem;
+	font-size: 4rem;
+	line-height: 1;
+	background: #fff;
+	border-radius: 2.2rem;
+}
+
+.bottom_btn {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	margin: -2rem -47rem 0 0;
+	padding: 1.2rem 2.5rem;
+	font-size: 1.5rem;
+	line-height: 1;
+	font-weight: 700;
+	white-space: nowrap;
+	color: #fff;
+	background: #5fad0c;
+	box-shadow: 0 0.4rem rgba(0,0,0,0.2);
+	border-radius: 2.2rem;
+}
+
+
+.disklaimer {
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 1rem 0 0;
+	width: 100%;
+	height: 5rem;
+	line-height: 1.6rem;
+	font-size: 1.2rem;
+	text-align: center;
+	color: #000;
+	background: #fff;
+}

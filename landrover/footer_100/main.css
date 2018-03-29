@@ -1,0 +1,71 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background: transparent;
+}
+
+#html_banner {
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+}
+
+#html_banner .link {
+	display: block;
+	position: relative;
+	z-index: 1;
+	top: 100%;
+	width: 100%;
+	height: 100%;
+	background: url(img/bg.png) 50% 0 no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	transition: top 100ms linear;
+}
+
+#html_banner .car {
+	position: absolute;
+	z-index: 2;
+	top: 33%;
+	left: 3%;
+	margin-left: 100%;
+	width: 45%;
+	height: 75%;
+	background: url(img/car.png) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	transition: margin 100ms linear;
+}
+
+#html_banner .text {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 50%;
+	margin-left: 50%;
+	width: 50%;
+	height: 100%;
+	background: #fff url(img/text.png) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	transition: margin 100ms linear;
+}
+
+#html_banner .logo {
+	position: absolute;
+	z-index: 5;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff url(img/logo.png) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	transition: top 100ms linear;
+}
