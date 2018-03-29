@@ -126,7 +126,7 @@ html, body {
 	color: #000;
 	background: url(img/city.png) center no-repeat;
 	background-size: contain;
-	transition: transform 0.5s;
+	transition: transform 300ms;
 	transform: scale(1);
 }
 .map.animate .city{
@@ -148,7 +148,7 @@ html, body {
 	pointer-events: none;
 }
 .city:hover {
-	transform: scale(1.1);
+	transform: scale(1.2);
 }
 .city:hover span {
 	opacity: 1;
