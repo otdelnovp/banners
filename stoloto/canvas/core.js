@@ -13,6 +13,7 @@ function remCalibrate() {
 remCalibrate()
 window.addEventListener('resize', remCalibrate, false)
 
+
 // pulse
 var map = document.querySelector('.map');
 var city = document.querySelectorAll('.city');
@@ -25,9 +26,3 @@ for (var i = 0; i < city.length; ++i) {
 	  map.className = 'map animate'
 	};
 }
-// city.onmouseover = function(event) {
-//   map.className = 'map'
-// };
-// city.onmouseout = function(event) {
-//   map.className = 'map animate'
-// };
