@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=240,height=400">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="normalize.css">
+	<title>pioneer</title>
+	<style>
+		.s-container {
+			position: relative;
+			width: 240px;
+			height: 400px;
+			background: #fff;
+			overflow: hidden;
+		}
+		.s-container_link {
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background: url(ban.jpg) center no-repeat;
+		}
+		.s-container_link:before {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			box-shadow: inset 0 0 0 1px #ccc;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="s-container">
+		<a class="s-container_link" href="%link1%" target="_blank"></a>
+	</div>
+</body>
+
+</html>
