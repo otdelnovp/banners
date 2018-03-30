@@ -37,12 +37,35 @@ body {
 	top: 33%;
 	left: 3%;
 	margin-left: 100%;
-	width: 45%;
-	height: 75%;
+	width: 140px;
+	height: 75px;
 	background: url(img/car.png) center no-repeat;
 	-webkit-background-size: contain;
 	background-size: contain;
 	transition: margin 100ms linear;
+}
+#html_banner .wheel1,
+#html_banner .wheel2 {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 3;
+	top: 41px;
+	left: 70px;
+	width: 27px;
+	height: 27px;
+	background: url(img/disk.png) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	transition: transform 50ms linear;
+	transform: scaleX(0.37) skewX(-15deg);
+}
+#html_banner .wheel2 {
+	top: 42px;
+	left: 116px;
+	width: 24px;
+	height: 24px;
+	transform: scaleX(0.28) skewX(-20deg);
 }
 
 #html_banner .text {

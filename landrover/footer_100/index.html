@@ -12,7 +12,10 @@
 
 <div id="html_banner">
   <a class="link" href="%link1%" target="_blank">
-    <div class="car"></div>
+    <div class="car">
+      <div class="wheel1"></div>
+      <div class="wheel2"></div>
+    </div>
     <div class="text"></div>
     <div class="logo"></div>
   </a>
@@ -20,26 +23,44 @@
 
 <script>
 
+  var transformElement = function (element, transformCmd) {
+    element.style.MozTransform = transformCmd;
+    element.style.WebkitTransform = transformCmd;
+    element.style.OTransform = transformCmd;
+    element.style.MsTransform = transformCmd;
+    element.style.transform = transformCmd;
+  };
+
   var link = document.querySelector('.link'),
     car = document.querySelector('.car'),
     text = document.querySelector('.text'),
-    logo = document.querySelector('.logo');
+    logo = document.querySelector('.logo'),
+    wheel1 = document.querySelector('.wheel1'),
+    wheel2 = document.querySelector('.wheel2');
 
   function setAnimationPercent(percent) {
 
     if(percent <= 5) link.style.top = (100 - percent*20) + '%';
       else link.style.top = 0;
 
-    if(percent > 5 && percent <= 30) car.style.marginLeft = (100 - (percent-5)*4) + '%';
-      else if(percent > 30) car.style.marginLeft = 0;
+    if(percent > 5 && percent <= 30) {
+      car.style.marginLeft = (100 - (percent-5)*4) + '%';
+      transformElement(wheel1, 'scaleX(0.37) skewX(-15deg) rotate(-' + (percent-5)*15 + 'deg)');
+      transformElement(wheel2, 'scaleX(0.28) skewX(-20deg) rotate(-' + (percent-5)*15 + 'deg)');
+    } else if(percent > 30) {
+      car.style.marginLeft = 0;
+      transformElement(wheel1, 'scaleX(0.37) skewX(-15deg) rotate(-500deg)');
+      transformElement(wheel2, 'scaleX(0.28) skewX(-20deg) rotate(-500deg)');
+    }
 
     if(percent > 30 && percent <= 55) text.style.marginLeft = (50 - (percent-30)*2) + '%';
       else if(percent > 55) text.style.marginLeft = 0;
 
-    if(percent > 55 && percent <= 80) text.style.marginLeft = (0 + (percent-55)*2) + '%';
-     else if(percent > 80) text.style.marginLeft = "50%";
+    if(percent > 60 && percent <= 80) text.style.marginLeft = ((percent-60)*2.5) + '%';
+      else if(percent <= 30 || percent > 80) text.style.marginLeft = "50%";
 
     if(percent > 80 && percent <= 100) logo.style.top = (100 - (percent-80)*5) + '%';
+      else logo.style.top = '100%';
 
   }
 
@@ -51,11 +72,11 @@
     }
   });
 
-  // var i = 0, timerId = setInterval(function() {
+  // var i = 1, timerId = setInterval(function() {
   //   setAnimationPercent(i);
   //   i++;
   //   if(i>100) clearInterval(timerId);
-  // }, 30);
+  // }, 50);
 
 </script>
 

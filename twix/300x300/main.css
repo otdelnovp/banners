@@ -36,11 +36,9 @@ html, body { margin: 0; padding: 0; position: relative; }
 	-webkit-background-size: cover;
 	background-size: cover;
 
-	animation: shake 1s cubic-bezier(.36,.07,.19,.97) infinite;
-  transform: translate3d(0, 0, 0);
+	animation: shake 1s ease-in-out infinite;
+  transform: translateX(0);
 	transition: transform 200ms;
-  backface-visibility: hidden;
-  perspective: 1000px;
 }
 #html_banner .html_banner_btn:hover {
 	animation: none;
@@ -48,18 +46,15 @@ html, body { margin: 0; padding: 0; position: relative; }
 
 @keyframes shake {
   10%, 90% {
-    transform: translate3d(-0.5px, 0, 0);
+    transform: translateX(-0.5px);
   }
-
   20%, 80% {
-    transform: translate3d(1px, 0, 0);
+    transform: translateX(1px);
   }
-
   30%, 50%, 70% {
-    transform: translate3d(-2px, 0, 0);
+    transform: translateX(-2px);
   }
-
   40%, 60% {
-    transform: translate3d(2px, 0, 0);
+    transform: translateX(2px);
   }
 }
