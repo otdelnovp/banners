@@ -17,7 +17,6 @@ window.addEventListener('resize', remCalibrate, false)
 // pulse
 var map = document.querySelector('.map');
 var city = document.querySelectorAll('.city');
-console.log(city);
 for (var i = 0; i < city.length; ++i) {
 	city[i].onmouseover = function(event) {
 	  map.className = 'map'
