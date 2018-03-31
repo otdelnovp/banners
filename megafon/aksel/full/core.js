@@ -4,13 +4,13 @@ function init_gn() {
 
   gn = new GyroNorm();
 
-  gn.init(args).then(function() {
+  gn.init().then(function() {
     var isAvailable = gn.isAvailable();
     gn.start(gnCallBack);
   }).catch(function(e){
     console.log(e);
   });
-	
+
 }
 
 function gnCallBack(data) {
