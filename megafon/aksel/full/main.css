@@ -1,3 +1,21 @@
+#do_gamma {
+	display: block;
+	position: absolute;
+	z-index: 111;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100px;
+	padding: 10px;
+	font-size: 20px;
+	line-height: 1;
+	color: #000;
+	background: #fff;
+	text-align: center;
+	border: 0;
+}
+
+
 html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: transparent; }
 
 #html_banner {
@@ -64,19 +82,14 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 }
 
 
-.html_banner_top {
+.html_banner_title_1 {
+	display: block;
 	position: absolute;
 	z-index: 11;
 	top: 4.3%;
 	left: 0;
 	width: 100vw;
-}
-
-.html_banner_title_1 {
-	display: block;
-	margin: 0 0 3.5vw;
-	width: 100vw;
-	height: 9.75vh;
+	height: 9.75%;
 	background: url(img/title_1.png) center no-repeat;
 	background-size: contain;
 	animation: slide ease-in-out 1s 1.5s both;
@@ -85,9 +98,12 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 
 .html_banner_title_2 {
 	display: block;
-	margin: 0 0 4.5vw;
+	position: absolute;
+	z-index: 11;
+	top: 15%;
+	left: 0;
 	width: 100vw;
-	height: 2.85vh;
+	height: 2.85%;
 	background: url(img/title_2.png) center no-repeat;
 	background-size: contain;
 	animation: slide ease-in-out 1s 1.7s both;
@@ -96,8 +112,12 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 
 .html_banner_btn {
 	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 20%;
+	left: 0;
 	width: 100vw;
-	height: 7.33vh;
+	height: 7.33%;
 	background: url(img/btn.png) center no-repeat;
 	background-size: contain;
 	animation: slide ease-in-out 1s 1.8s both;
@@ -108,10 +128,10 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 .html_banner_bottom {
 	position: absolute;
 	z-index: 11;
-	bottom: 2vh;
+	bottom: 2%;
 	left: 0;
 	width: 100vw;
-	height: 17.3vh;
+	height: 17.3%;
 	background: url(img/bottom.png) center no-repeat;
 	background-size: contain;
 	animation: fadein 1s 2s both;
@@ -122,30 +142,15 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 .html_banner_uma {
 	position: absolute;
 	z-index: 11;
-	top: 55;
+	top: 15%;
 	left: -10%;
-	margin: -30vh 0 0;
 	width: 120vw;
-	height: 60vh;
+	height: 66%;
 	transform: translateX(150vw);
 	overflow: hidden;
 	background: url(img/sequence/sequence_18.png) center no-repeat;
 	background-size: contain;
 	animation: uma ease-in-out 0.6s 0.3s both;
-}
-
-#do_gamma {
-	display: block;
-	position: absolute;
-	z-index: 111;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	padding: 10px;
-	font-size: 20px;
-	line-height: 1;
-	color: #000;
-	background: #fff;
 }
 
 /**/
