@@ -100,7 +100,7 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	display: block;
 	position: absolute;
 	z-index: 11;
-	top: 15.3%;
+	top: 15.7%;
 	left: 0;
 	width: 100vw;
 	height: 2.85%;
@@ -114,7 +114,7 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	display: block;
 	position: absolute;
 	z-index: 11;
-	top: 20%;
+	top: 21%;
 	left: 0;
 	width: 100vw;
 	height: 7.33%;
@@ -145,7 +145,7 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	top: 15%;
 	left: -10%;
 	width: 120vw;
-	height: 66%;
+	height: 68%;
 	transform: translateX(150vw);
 	overflow: hidden;
 	background: url(img/sequence/sequence_18.png) center no-repeat;
