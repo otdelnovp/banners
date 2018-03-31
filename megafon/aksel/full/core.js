@@ -14,5 +14,5 @@ function init_gn() {
 }
 
 function gnCallBack(data) {
-  document.getElementById('do_gamma').value = data.do.gamma;
+  document.getElementById('gamma').value = data.do.gamma;
 }
