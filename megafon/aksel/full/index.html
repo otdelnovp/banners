@@ -6,7 +6,7 @@
 	<meta name="ad.size" content="width=100%,height=100%">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="main.css" />
+	<link rel="stylesheet" href="main.css?1" />
 	<title>megafon</title>
 </head>
 <body onload="init()">
@@ -78,7 +78,7 @@
 	function init() {
 
 		var args = {
-			frequency: 300
+			frequency: 200
 		};
 
 		gn = new GyroNorm();
@@ -124,7 +124,7 @@
 					document.querySelector('.html_banner_uma div.show').classList.remove('show');
 					document.querySelector('.html_banner_uma_' + current).classList.add('show');
 				}
-		  }, 150);
+		  }, 100);
 		}
 	}
 
