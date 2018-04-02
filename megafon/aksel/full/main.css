@@ -173,7 +173,7 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 
 
 
-#slide {
+#current {
 	display: block;
 	position: absolute;
 	z-index: 111;
