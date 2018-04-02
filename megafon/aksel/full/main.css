@@ -131,10 +131,58 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	height: 68%;
 	transform: translateX(150vw);
 	overflow: hidden;
-	background: url(img/sequence/sequence_18.png) center no-repeat;
-	background-size: contain;
 	animation: uma ease-in-out 0.6s 0.3s both;
 }
+.html_banner_uma div {
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/sequence/sequence_18.png) center no-repeat;
+	background-size: contain;
+	opacity: 0;
+	transition: opacity 50ms;
+}
+.html_banner_uma div.show {
+	opacity: 1;
+}
+.html_banner_uma_1 {background-image: url(img/sequence/sequence_1.png) !important}
+.html_banner_uma_2 {background-image: url(img/sequence/sequence_2.png) !important}
+.html_banner_uma_3 {background-image: url(img/sequence/sequence_3.png) !important}
+.html_banner_uma_4 {background-image: url(img/sequence/sequence_4.png) !important}
+.html_banner_uma_5 {background-image: url(img/sequence/sequence_5.png) !important}
+.html_banner_uma_6 {background-image: url(img/sequence/sequence_6.png) !important}
+.html_banner_uma_7 {background-image: url(img/sequence/sequence_7.png) !important}
+.html_banner_uma_8 {background-image: url(img/sequence/sequence_8.png) !important}
+.html_banner_uma_9 {background-image: url(img/sequence/sequence_9.png) !important}
+.html_banner_uma_10 {background-image: url(img/sequence/sequence_10.png) !important}
+.html_banner_uma_11 {background-image: url(img/sequence/sequence_11.png) !important}
+.html_banner_uma_12 {background-image: url(img/sequence/sequence_12.png) !important}
+.html_banner_uma_13 {background-image: url(img/sequence/sequence_13.png) !important}
+.html_banner_uma_14 {background-image: url(img/sequence/sequence_14.png) !important}
+.html_banner_uma_15 {background-image: url(img/sequence/sequence_15.png) !important}
+.html_banner_uma_16 {background-image: url(img/sequence/sequence_16.png) !important}
+.html_banner_uma_17 {background-image: url(img/sequence/sequence_17.png) !important}
+.html_banner_uma_18 {background-image: url(img/sequence/sequence_18.png) !important}
+.html_banner_uma_19 {background-image: url(img/sequence/sequence_19.png) !important}
+.html_banner_uma_20 {background-image: url(img/sequence/sequence_20.png) !important}
+.html_banner_uma_21 {background-image: url(img/sequence/sequence_21.png) !important}
+.html_banner_uma_22 {background-image: url(img/sequence/sequence_22.png) !important}
+.html_banner_uma_23 {background-image: url(img/sequence/sequence_23.png) !important}
+.html_banner_uma_24 {background-image: url(img/sequence/sequence_24.png) !important}
+.html_banner_uma_25 {background-image: url(img/sequence/sequence_25.png) !important}
+.html_banner_uma_26 {background-image: url(img/sequence/sequence_26.png) !important}
+.html_banner_uma_27 {background-image: url(img/sequence/sequence_27.png) !important}
+.html_banner_uma_28 {background-image: url(img/sequence/sequence_28.png) !important}
+.html_banner_uma_29 {background-image: url(img/sequence/sequence_29.png) !important}
+.html_banner_uma_30 {background-image: url(img/sequence/sequence_30.png) !important}
+.html_banner_uma_31 {background-image: url(img/sequence/sequence_31.png) !important}
+.html_banner_uma_32 {background-image: url(img/sequence/sequence_32.png) !important}
+.html_banner_uma_33 {background-image: url(img/sequence/sequence_33.png) !important}
+.html_banner_uma_34 {background-image: url(img/sequence/sequence_34.png) !important}
+.html_banner_uma_35 {background-image: url(img/sequence/sequence_35.png) !important}
 
 /**/
 
@@ -177,9 +225,8 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	display: block;
 	position: absolute;
 	z-index: 111;
-	bottom: 51%;
-	left: 50%;
-	transform: translateX(-50%);
+	bottom: 0;
+	left: 0;
 	width: 30px;
 	padding: 10px;
 	font-size: 20px;
@@ -194,9 +241,8 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	display: block;
 	position: absolute;
 	z-index: 111;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%);
+	bottom: 0;
+	right: 0;
 	width: 60px;
 	padding: 10px 5px;
 	font-size: 16px;

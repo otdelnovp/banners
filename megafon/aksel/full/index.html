@@ -21,7 +21,43 @@
 			<div class="html_banner_title_2"></div>
 			<div class="html_banner_btn"></div>
 			<div class="html_banner_bottom"></div>
-			<span class="html_banner_uma" id="uma"></span>
+			<div class="html_banner_uma" id="uma">
+				<div class="html_banner_uma_1"></div>
+				<div class="html_banner_uma_2"></div>
+				<div class="html_banner_uma_3"></div>
+				<div class="html_banner_uma_4"></div>
+				<div class="html_banner_uma_5"></div>
+				<div class="html_banner_uma_6"></div>
+				<div class="html_banner_uma_7"></div>
+				<div class="html_banner_uma_8"></div>
+				<div class="html_banner_uma_9"></div>
+				<div class="html_banner_uma_10"></div>
+				<div class="html_banner_uma_11"></div>
+				<div class="html_banner_uma_12"></div>
+				<div class="html_banner_uma_13"></div>
+				<div class="html_banner_uma_14"></div>
+				<div class="html_banner_uma_15"></div>
+				<div class="html_banner_uma_16"></div>
+				<div class="html_banner_uma_17"></div>
+				<div class="html_banner_uma_18"></div>
+				<div class="html_banner_uma_19"></div>
+				<div class="html_banner_uma_20"></div>
+				<div class="html_banner_uma_21"></div>
+				<div class="html_banner_uma_22"></div>
+				<div class="html_banner_uma_23"></div>
+				<div class="html_banner_uma_24"></div>
+				<div class="html_banner_uma_25"></div>
+				<div class="html_banner_uma_26"></div>
+				<div class="html_banner_uma_27"></div>
+				<div class="html_banner_uma_28"></div>
+				<div class="html_banner_uma_29"></div>
+				<div class="html_banner_uma_30"></div>
+				<div class="html_banner_uma_31"></div>
+				<div class="html_banner_uma_32"></div>
+				<div class="html_banner_uma_33"></div>
+				<div class="html_banner_uma_34"></div>
+				<div class="html_banner_uma_35"></div>
+			</div>
 		</a>
 		<input type="text" id="slide" disabled placeholder="#">
 		<input type="text" id="gamma" disabled placeholder="gamma">
@@ -37,6 +73,7 @@
 	var uma = document.getElementById('uma');
 
 	currentInput.value = current;
+	document.querySelector('.html_banner_uma_' + current).classList.add('show');
 
 	function init() {
 
@@ -81,7 +118,8 @@
 				else {
 			    current = current + step;
 			    currentInput.value = current;
-					uma.style.backgroundImage = "url('img/sequence/sequence_" + current + ".png')";
+					document.querySelector('.html_banner_uma div.show').classList.remove('show');
+					document.querySelector('.html_banner_uma_' + current).classList.add('show');
 				}
 		  }, 150);
 		}
