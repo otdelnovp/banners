@@ -114,7 +114,7 @@
 			prev = step;
 	    clearInterval(timer);
 			timer = setInterval(function() {
-				if(current =< 1 || current >= count) clearInterval(timer);
+				if(current <= 1 || current >= count) clearInterval(timer);
 				else {
 			    current = current + step;
 			    currentInput.value = current;
