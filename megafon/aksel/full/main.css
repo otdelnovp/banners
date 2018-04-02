@@ -143,7 +143,7 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	background: url(img/sequence/sequence_18.png) center no-repeat;
 	background-size: contain;
 	opacity: 0;
-	transition: opacity 50ms;
+	/*transition: opacity 50ms;*/
 }
 .html_banner_uma div.show {
 	opacity: 1;
