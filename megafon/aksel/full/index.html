@@ -35,13 +35,17 @@
 	var gn, count = 35, current = 18, gamma = 0, step = 0, prev, timer;
 	var currentInput = document.getElementById('slide'), gammaInput = document.getElementById('gamma');
 
+	var args = {
+		frequency: 350
+	};
+
 	currentInput.value = current;
 
 	function init() {
 
 	  gn = new GyroNorm();
 
-	  gn.init().then(function() {
+	  gn.init(args).then(function() {
 	    var isAvailable = gn.isAvailable();
 	    gn.start(gnCallBack);
 	  }).catch(function(e){
@@ -73,8 +77,6 @@
 			prev = step;
 			timer = setInterval(function() {
 		    current = current + step;
-		    console.log('current',current);
-		    console.log('step',step);
 		    currentInput.value = current;
 		    if(current <= 1 || current >= count) clearInterval(timer);
 		  }, 300);
