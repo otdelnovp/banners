@@ -32,19 +32,19 @@
 
 	<script type="text/javascript">
 
-	var gn, count = 35, current = 18, gamma = 0, step = 0, prev, timer;
+	var gn, count = 35, current = 18, gamma = 0, step = 0, prev = 0, timer;
 	var currentInput = document.getElementById('slide'), gammaInput = document.getElementById('gamma');
-	var uma = document.getElementById('gamma');
-
-	var args = {
-		frequency: 300
-	};
+	var uma = document.getElementById('uma');
 
 	currentInput.value = current;
 
 	function init() {
 
-	  gn = new GyroNorm();
+		var args = {
+			frequency: 300
+		};
+
+		gn = new GyroNorm();
 
 	  gn.init(args).then(function() {
 	    var isAvailable = gn.isAvailable();
@@ -71,16 +71,19 @@
 	}
 
 	function slider() {
+		console.log('step', step);
+		console.log('prev', prev);
 	  if(prev !== step) {
 			prev = step;
 	    clearInterval(timer);
 			timer = setInterval(function() {
-				if(current <= 1 || current >= count) clearInterval(timer);
-		    current = current + step;
-		    currentInput.value = current;
-				uma.style.backgroundImage = "url('img/sequence/sequence_" + current + ".png')";
+				if(current < 1 || current > count) clearInterval(timer);
+				else {
+			    current = current + step;
+			    currentInput.value = current;
+					uma.style.backgroundImage = "url('img/sequence/sequence_" + current + ".png')";
+				}
 		  }, 150);
-		  console.log('timer', timer);
 		}
 	}
 
