@@ -78,7 +78,7 @@
 	function init() {
 
 		var args = {
-			frequency: 100
+			frequency: 300
 		};
 
 		gn = new GyroNorm();
@@ -114,14 +114,17 @@
 			prev = step;
 	    clearInterval(timer);
 			timer = setInterval(function() {
-				if(current < 1 || current > count) clearInterval(timer);
+				if(current < 1 || current > count) {
+					current < 1 ? 1 : count;
+					clearInterval(timer);
+				}
 				else {
 			    current = current + step;
 			    currentInput.value = current;
 					document.querySelector('.html_banner_uma div.show').classList.remove('show');
 					document.querySelector('.html_banner_uma_' + current).classList.add('show');
 				}
-		  }, 50);
+		  }, 150);
 		}
 	}
 
