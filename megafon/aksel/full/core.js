@@ -1,6 +1,8 @@
 var gn, count = 35, current = 18, gamma = 0, step = 0, timer;
 var currentInput = document.getElementById('slide'), gammaInput = document.getElementById('gamma');
 
+console.log('timer0', timer);
+
 currentInput.value = current;
 
 function init() {
@@ -35,9 +37,13 @@ function gnCallBack(data) {
 }
 
 function slider() {
+  console.log('slider');
   timer = setInterval(function() {
     current = current + step;
+    console.log('current',current);
+    console.log('step',step);
     currentInput.value = current;
     if(current == 1 || current == count) clearInterval(timer);
   }, 300);
+  console.log('timer', timer);
 }
