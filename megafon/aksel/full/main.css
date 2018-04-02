@@ -173,6 +173,23 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 
 
 
+#slide {
+	display: block;
+	position: absolute;
+	z-index: 111;
+	bottom: 51%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 30px;
+	padding: 10px;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 700;
+	color: #000;
+	background: #fff;
+	text-align: center;
+	border: 0;
+}
 #gamma {
 	display: block;
 	position: absolute;
@@ -180,9 +197,9 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 100px;
-	padding: 10px;
-	font-size: 20px;
+	width: 60px;
+	padding: 10px 5px;
+	font-size: 16px;
 	line-height: 1;
 	color: #000;
 	background: #fff;
