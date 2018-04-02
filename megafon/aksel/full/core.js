@@ -1,5 +1,5 @@
-var gn, count = 35, current = 18, step = 0;
-var currentInput = document.getElementById('current'), gamma = document.getElementById('gamma'), timer;
+var gn, count = 35, current = 18, gamma = 0, step = 0;
+var currentInput = document.getElementById('current'), gammaInput = document.getElementById('gamma'), timer;
 
 function init() {
 
@@ -15,12 +15,13 @@ function init() {
 }
 
 function gnCallBack(data) {
-  gamma.value = data.do.gamma;
-  if(gamma.value > 10) {
+  gamma = data.do.gamma;
+  gammaInput.value = gamma;
+  if(gammaInput.value > 10) {
     step = 1;
     clearInterval(timer);
     slider();
-  } else if(gamma.value < -10) {
+  } else if(gammaInput.value < -10) {
     step = -1;
     clearInterval(timer);
     slider();
