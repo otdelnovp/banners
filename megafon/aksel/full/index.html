@@ -57,15 +57,15 @@
 	  gammaInput.value = gamma;
 	  if(gamma > 10) {
 	    step = 1;
-	    clearInterval(timer);
+	    // clearInterval(timer);
 	    slider();
 	  } else if(gamma < -10) {
 	    step = -1;
-	    clearInterval(timer);
+	    // clearInterval(timer);
 	    slider();
 	  } else {
 	    step = 0;
-	    clearInterval(timer);
+	    // clearInterval(timer);
 	    slider();
 	  }
 	}
@@ -77,11 +77,11 @@
 	    console.log('current',current);
 	    console.log('step',step);
 	    currentInput.value = current;
-	    if(current == 1 || current == count) clearInterval(timer);
+	    // if(current == 1 || current == count) clearInterval(timer);
 	  }, 300);
 	  console.log('timer', timer);
 	}
-	
+
 	</script>
 
 </body>
