@@ -1,5 +1,5 @@
-var gn, count = 35, current = 18, gamma = 0, step = 0;
-var currentInput = document.getElementById('current'), gammaInput = document.getElementById('gamma'), timer;
+var gn, count = 35, current = 18, gamma = 0, step = 0, timer;
+var currentInput = document.getElementById('slide'), gammaInput = document.getElementById('gamma');
 
 function init() {
 
