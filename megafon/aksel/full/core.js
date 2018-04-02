@@ -1,4 +1,5 @@
-var gn, count = 35, current = 18, step = 0, gamma = document.getElementById('gamma'), timer;
+var gn, count = 35, current = 18, step = 0;
+var currentInput = document.getElementById('current'), gamma = document.getElementById('gamma'), timer;
 
 function init() {
 
@@ -33,6 +34,7 @@ function gnCallBack(data) {
 function slider() {
   timer = setInterval(function() {
     current = current + step;
+    currentInput.value = current;
     if(current == 1 || current == count) clearInterval(timer);
   }, 300);
 }
