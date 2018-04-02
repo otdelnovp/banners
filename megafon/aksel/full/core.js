@@ -17,11 +17,11 @@ function init() {
 function gnCallBack(data) {
   gamma = data.do.gamma;
   gammaInput.value = gamma;
-  if(gammaInput.value > 10) {
+  if(gamma > 10) {
     step = 1;
     clearInterval(timer);
     slider();
-  } else if(gammaInput.value < -10) {
+  } else if(gamma < -10) {
     step = -1;
     clearInterval(timer);
     slider();
