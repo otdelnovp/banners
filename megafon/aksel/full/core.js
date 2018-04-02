@@ -1,6 +1,8 @@
 var gn, count = 35, current = 18, gamma = 0, step = 0, timer;
 var currentInput = document.getElementById('slide'), gammaInput = document.getElementById('gamma');
 
+currentInput.value = current;
+
 function init() {
 
   gn = new GyroNorm();
