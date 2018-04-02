@@ -21,10 +21,10 @@
 			<div class="html_banner_title_2"></div>
 			<div class="html_banner_btn"></div>
 			<div class="html_banner_bottom"></div>
-			<span class="html_banner_uma"></span>
+			<span class="html_banner_uma" id="uma"></span>
 		</a>
-		<input type="text" id="slide" disabled placeholder="#">
-		<input type="text" id="gamma" disabled placeholder="gamma">
+		<!-- <input type="text" id="slide" disabled placeholder="#">
+		<input type="text" id="gamma" disabled placeholder="gamma"> -->
 	</div>
 
 	<script type="text/javascript" src="prefixfree.min.js"></script>
@@ -34,6 +34,7 @@
 
 	var gn, count = 35, current = 18, gamma = 0, step = 0, prev, timer;
 	var currentInput = document.getElementById('slide'), gammaInput = document.getElementById('gamma');
+	var uma = document.getElementById('gamma');
 
 	var args = {
 		frequency: 300
@@ -74,9 +75,10 @@
 			prev = step;
 	    clearInterval(timer);
 			timer = setInterval(function() {
+				if(current <= 1 || current >= count) clearInterval(timer);
 		    current = current + step;
 		    currentInput.value = current;
-		    if(current <= 1 || current >= count) clearInterval(timer);
+				uma.style.backgroundImage = "url('img/sequence/sequence_" + current + ".png')";
 		  }, 150);
 		  console.log('timer', timer);
 		}
