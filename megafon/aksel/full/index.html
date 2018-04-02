@@ -36,7 +36,7 @@
 	var currentInput = document.getElementById('slide'), gammaInput = document.getElementById('gamma');
 
 	var args = {
-		frequency: 350
+		frequency: 300
 	};
 
 	currentInput.value = current;
@@ -59,15 +59,12 @@
 	  gammaInput.value = gamma;
 	  if(gamma > 10) {
 	    step = 1;
-	    clearInterval(timer);
 	    slider();
 	  } else if(gamma < -10) {
 	    step = -1;
-	    clearInterval(timer);
 	    slider();
 	  } else {
 	    step = 0;
-	    clearInterval(timer);
 	    slider();
 	  }
 	}
@@ -75,11 +72,12 @@
 	function slider() {
 	  if(prev !== step) {
 			prev = step;
+	    clearInterval(timer);
 			timer = setInterval(function() {
 		    current = current + step;
 		    currentInput.value = current;
 		    if(current <= 1 || current >= count) clearInterval(timer);
-		  }, 300);
+		  }, 150);
 		  console.log('timer', timer);
 		}
 	}
