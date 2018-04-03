@@ -1,0 +1,217 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: transparent; }
+
+#html_banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+}
+
+.close {
+	display: block;
+	position: absolute;
+	z-index: 111;
+	top: 0;
+	right: 0;
+	width: 13vw;
+	height: 13vw;
+	max-width: 60px;
+	max-height: 60px;
+	background: url(img/close.png) center no-repeat;
+	background-size: contain;
+}
+
+#html_banner .html_banner_link {display:block; position: relative; width:100%; height:100%; text-decoration: none;}
+
+.html_banner_dinam {
+	position: absolute;
+	z-index: 11;
+	top: 55%;
+	left: 50%;
+	margin: 0 -23.5vw;
+	width: 47vw;
+	height: 47vw;
+	max-height: 30%;
+	background: url(img/dinam.png) center no-repeat;
+	background-size: contain;
+	border-radius: 50%;
+	overflow: hidden;
+	transform: translateY(-50%);
+}
+
+.html_banner_bg {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #00b956;
+}
+
+.html_banner_circle {
+	position: absolute;
+	z-index: 11;
+	top: 55%;
+	left: 0;
+	margin: -23.5vw -26vw;
+	width: 47vw;
+	height: 47vw;
+	background: #731982;
+	border-radius: 0 50% 50% 0;
+}
+.html_banner_circle__2 {
+	left: auto;
+	right: 0;
+	border-radius: 50% 0 0 50%;
+}
+
+
+.html_banner_title_1 {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 4.2%;
+	left: 0;
+	width: 100vw;
+	height: 9.75%;
+	background: url(img/title_1.png) center no-repeat;
+	background-size: contain;
+}
+
+.html_banner_title_2 {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 15.7%;
+	left: 0;
+	width: 100vw;
+	height: 2.85%;
+	background: url(img/title_2.png) center no-repeat;
+	background-size: contain;
+}
+
+.html_banner_btn {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 21%;
+	left: 0;
+	width: 100vw;
+	height: 7.33%;
+	background: url(img/btn.png) center no-repeat;
+	background-size: contain;
+}
+
+
+.html_banner_bottom {
+	position: absolute;
+	z-index: 11;
+	bottom: 2%;
+	left: 0;
+	width: 100vw;
+	height: 17.3%;
+	background: url(img/bottom.png) center no-repeat;
+	background-size: contain;
+}
+
+
+.html_banner_uma {
+	position: absolute;
+	z-index: 11;
+	top: 15%;
+	left: -10%;
+	width: 120vw;
+	height: 68%;
+	overflow: hidden;
+}
+.html_banner_uma div {
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/sequence/sequence_18.png) center no-repeat;
+	background-size: contain;
+	opacity: 0;
+	/*transition: opacity 50ms;*/
+}
+.html_banner_uma div.show {
+	opacity: 1;
+}
+.html_banner_uma_1 {background-image: url(img/sequence/sequence_1.png) !important}
+.html_banner_uma_2 {background-image: url(img/sequence/sequence_2.png) !important}
+.html_banner_uma_3 {background-image: url(img/sequence/sequence_3.png) !important}
+.html_banner_uma_4 {background-image: url(img/sequence/sequence_4.png) !important}
+.html_banner_uma_5 {background-image: url(img/sequence/sequence_5.png) !important}
+.html_banner_uma_6 {background-image: url(img/sequence/sequence_6.png) !important}
+.html_banner_uma_7 {background-image: url(img/sequence/sequence_7.png) !important}
+.html_banner_uma_8 {background-image: url(img/sequence/sequence_8.png) !important}
+.html_banner_uma_9 {background-image: url(img/sequence/sequence_9.png) !important}
+.html_banner_uma_10 {background-image: url(img/sequence/sequence_10.png) !important}
+.html_banner_uma_11 {background-image: url(img/sequence/sequence_11.png) !important}
+.html_banner_uma_12 {background-image: url(img/sequence/sequence_12.png) !important}
+.html_banner_uma_13 {background-image: url(img/sequence/sequence_13.png) !important}
+.html_banner_uma_14 {background-image: url(img/sequence/sequence_14.png) !important}
+.html_banner_uma_15 {background-image: url(img/sequence/sequence_15.png) !important}
+.html_banner_uma_16 {background-image: url(img/sequence/sequence_16.png) !important}
+.html_banner_uma_17 {background-image: url(img/sequence/sequence_17.png) !important}
+.html_banner_uma_18 {background-image: url(img/sequence/sequence_18.png) !important}
+.html_banner_uma_19 {background-image: url(img/sequence/sequence_19.png) !important}
+.html_banner_uma_20 {background-image: url(img/sequence/sequence_20.png) !important}
+.html_banner_uma_21 {background-image: url(img/sequence/sequence_21.png) !important}
+.html_banner_uma_22 {background-image: url(img/sequence/sequence_22.png) !important}
+.html_banner_uma_23 {background-image: url(img/sequence/sequence_23.png) !important}
+.html_banner_uma_24 {background-image: url(img/sequence/sequence_24.png) !important}
+.html_banner_uma_25 {background-image: url(img/sequence/sequence_25.png) !important}
+.html_banner_uma_26 {background-image: url(img/sequence/sequence_26.png) !important}
+.html_banner_uma_27 {background-image: url(img/sequence/sequence_27.png) !important}
+.html_banner_uma_28 {background-image: url(img/sequence/sequence_28.png) !important}
+.html_banner_uma_29 {background-image: url(img/sequence/sequence_29.png) !important}
+.html_banner_uma_30 {background-image: url(img/sequence/sequence_30.png) !important}
+.html_banner_uma_31 {background-image: url(img/sequence/sequence_31.png) !important}
+.html_banner_uma_32 {background-image: url(img/sequence/sequence_32.png) !important}
+.html_banner_uma_33 {background-image: url(img/sequence/sequence_33.png) !important}
+.html_banner_uma_34 {background-image: url(img/sequence/sequence_34.png) !important}
+.html_banner_uma_35 {background-image: url(img/sequence/sequence_35.png) !important}
+
+
+
+#slide {
+	display: none;
+	position: absolute;
+	z-index: 111;
+	bottom: 0;
+	left: 0;
+	width: 30px;
+	padding: 10px;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 700;
+	color: #000;
+	background: #fff;
+	text-align: center;
+	border: 0;
+}
+#gamma {
+	display: none;
+	position: absolute;
+	z-index: 111;
+	bottom: 0;
+	right: 0;
+	width: 60px;
+	padding: 10px 5px;
+	font-size: 16px;
+	line-height: 1;
+	color: #000;
+	background: #fff;
+	text-align: center;
+	border: 0;
+}
