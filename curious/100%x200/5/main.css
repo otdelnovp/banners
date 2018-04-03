@@ -11,7 +11,7 @@ html, body { margin: 0; padding: 0; }
 	height: 200px;
 	font-size: 0;
 	color: #fff;
-	background: #141414 url(img/bg.jpg) center no-repeat;
+	background: #D8DDE1 url(img/bg.jpg) center no-repeat;
 	border: 0;
 }
 
@@ -29,7 +29,7 @@ html, body { margin: 0; padding: 0; }
 
 	#html_banner {background-image: url(img/bgs.jpg);}
 	#html_banner .html_banner_logo {top: 18px; margin: 0 0 0 -185px; width: 100px; height: 22px;}
-	#html_banner .html_banner_title {top: 60px; margin: 0 0 0 -102px; width: 300px; height: 46px; -webkit-background-size: contain; background-size: contain;}
-	#html_banner .html_banner_btn {bottom: 15px; margin: 0 0 0 -102px;}
+	#html_banner .html_banner_title {top: 55px; margin: 0 0 0 -52px; width: 250px; height: 69px; background-image: url(img/titles.png);}
+	#html_banner .html_banner_btn {bottom: 15px; margin: 0 0 0 -52px;}
 
 }

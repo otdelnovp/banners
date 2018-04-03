@@ -43,8 +43,10 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	border-radius: 50%;
 	overflow: hidden;
 	transform: scale(1) translateY(-50%);
-	animation: dinam ease-in-out 2s both;
+	opacity: 0;
 }
+#html_banner.animate .html_banner_dinam { animation: dinam ease-in-out 2s both; }
+
 
 .html_banner_bg {
 	position: absolute;
@@ -57,8 +59,8 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	background: #00b956;
 	border-radius: 50%;
 	opacity: 0;
-	animation: bg ease-in-out 2s 0.3s both;
 }
+#html_banner.animate .html_banner_bg { animation: bg ease-in-out 2s 0.3s both; }
 
 .html_banner_circle {
 	position: absolute;
@@ -70,13 +72,13 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	height: 47vw;
 	background: #731982;
 	border-radius: 0 50% 50% 0;
-	animation: circle ease-in-out 1s 1s both;
 }
 .html_banner_circle__2 {
 	left: auto;
 	right: 0;
 	border-radius: 50% 0 0 50%;
 }
+#html_banner.animate .html_banner_circle { animation: circle ease-in-out 1s 1s both; }
 
 
 .html_banner_title_1 {
@@ -89,9 +91,9 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	height: 9.75%;
 	background: url(img/title_1.png) center no-repeat;
 	background-size: contain;
-	animation: slide ease-in-out 1s 1.5s both;
 	opacity: 0;
 }
+#html_banner.animate .html_banner_title_1 { animation: slide ease-in-out 1s 1.5s both; }
 
 .html_banner_title_2 {
 	display: block;
@@ -103,9 +105,9 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	height: 2.85%;
 	background: url(img/title_2.png) center no-repeat;
 	background-size: contain;
-	animation: slide ease-in-out 1s 1.7s both;
 	opacity: 0;
 }
+#html_banner.animate .html_banner_title_2 { animation: slide ease-in-out 1s 1.7s both; }
 
 .html_banner_btn {
 	display: block;
@@ -117,9 +119,9 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	height: 7.33%;
 	background: url(img/btn.png) center no-repeat;
 	background-size: contain;
-	animation: slide ease-in-out 1s 1.8s both;
 	opacity: 0;
 }
+#html_banner.animate .html_banner_btn { animation: slide ease-in-out 1s 1.8s both; }
 
 
 .html_banner_bottom {
@@ -131,9 +133,9 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	height: 17.3%;
 	background: url(img/bottom.png) center no-repeat;
 	background-size: contain;
-	animation: fadein 1s 2s both;
 	opacity: 0;
 }
+#html_banner.animate .html_banner_bottom { animation: fadein 1s 2s both; }
 
 
 .html_banner_uma {
@@ -145,8 +147,9 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	height: 68%;
 	transform: translateX(150vw);
 	overflow: hidden;
-	animation: uma ease-in-out 0.6s 0.3s both;
 }
+#html_banner.animate .html_banner_uma { animation: uma ease-in-out 0.6s 0.3s both; }
+
 .html_banner_uma div {
 	position: absolute;
 	z-index: 11;
@@ -157,7 +160,6 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	background: url(img/sequence/sequence_18.png) center no-repeat;
 	background-size: contain;
 	opacity: 0;
-	/*transition: opacity 50ms;*/
 }
 .html_banner_uma div.show {
 	opacity: 1;

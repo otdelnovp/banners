@@ -9,10 +9,10 @@
 	<link rel="stylesheet" href="main.css?3" />
 	<title>megafon</title>
 </head>
-<body onload="init()">
+<body onload="init();">
 
 	<div id="html_banner">
-		<div class="close" onclick="parent.postMessage('canvas:close', '*')"></div>
+		<div class="close" onclick="stop()"></div>
 		<a class="html_banner_link" href="%link1%" target="_blank">
 			<div class="html_banner_dinam"></div>
 			<div class="html_banner_bg"></div>
@@ -59,25 +59,34 @@
 				<div class="html_banner_uma_34"></div>
 				<div class="html_banner_uma_35"></div>
 			</div>
-			<input type="text" id="slide" disabled placeholder="#">
 		</a>
 	</div>
 
 	<script type="text/javascript" src="prefixfree.min.js"></script>
 	<script type="text/javascript">
+
+	var count, current, step, timer;
+
+	function stop() {
+		clearInterval(timer);
+		document.getElementById('html_banner').classList.remove('animate');
+		parent.postMessage('canvas:close', '*');
+	}
+
 	function init() {
 
-		var count = 35, current = 1, step = 1, timer;
-		var currentInput = document.getElementById('slide');
+		document.getElementById('html_banner').classList.remove('animate');
+		document.getElementById('html_banner').classList.add('animate');
 
-		currentInput.value = current;
+		count = 35;
+		current = 1;
+		step = 1;
 
 		setTimeout(function() {
 
 			timer = setInterval(function() {
 
 				current = current + step;
-				currentInput.value = current;
 
 				document.querySelector('.html_banner_uma div.show').classList.remove('show');
 				document.querySelector('.html_banner_uma_' + current).classList.add('show');
@@ -89,11 +98,14 @@
 
 		}, 1000);
 
-		setTimeout(function() {
-			clearInterval(timer);
-		}, 600000);
-
 	};
+
+	window.addEventListener('message', function (event) {
+		if (event.data === 'fullscreen:open') {
+			init();
+		}
+	});
+
 	</script>
 
 </body>

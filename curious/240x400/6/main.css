@@ -1,0 +1,25 @@
+html, body { margin: 0; padding: 0; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 240px;
+	height: 400px;
+	font-size: 0;
+	color: #fff;
+	background: #0D0D0D url(img/bg.jpg) center no-repeat;
+	border: 0;
+}
+
+#html_banner .html_banner_link {display: block; position: relative; width: 100%; height: 100%; text-decoration: none;}
+
+#html_banner .html_banner_logo {display: block; position: absolute; z-index: 2; top: 30px; left: 69px; width: 105px; height: 23px; background: url(img/logo.png) 0 0 no-repeat; -webkit-background-size: contain; background-size: contain; }
+
+#html_banner .html_banner_btn {display: block; position: absolute; z-index: 11; bottom: 30px; left: 50%; margin: 0 0 0 -75px; width: 150px; height: 41px; background: #a33efe url(img/btn.png) center no-repeat; -webkit-background-size: contain; background-size: contain; -webkit-border-radius: 20px; border-radius: 20px; transition: background 300ms, transform 100ms;}
+#html_banner .html_banner_btn:hover {background-color: #9a2cfc;}
+#html_banner .html_banner_btn:active {transform: translateY(1px);}
+
+#html_banner .html_banner_title {display: block; position: absolute; z-index: 2; top: 170px; left: 0; width: 100%; height: 59px; background: url(img/title.png) 50% 0 no-repeat; -webkit-background-size: contain; background-size: contain;}
