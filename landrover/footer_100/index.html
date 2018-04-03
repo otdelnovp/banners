@@ -53,11 +53,11 @@
       transformElement(wheel2, 'scaleX(0.28) skewX(-20deg) rotate(-500deg)');
     }
 
-    if(percent > 30 && percent <= 55) text.style.marginLeft = (50 - (percent-30)*2) + '%';
-      else if(percent > 55) text.style.marginLeft = 0;
+    if(percent > 15 && percent <= 40) text.style.marginLeft = (50 - (percent-15)*2) + '%';
+      else if(percent > 40) text.style.marginLeft = 0;
 
     if(percent > 60 && percent <= 80) text.style.marginLeft = ((percent-60)*2.5) + '%';
-      else if(percent <= 30 || percent > 80) text.style.marginLeft = "50%";
+      else if(percent <= 15 || percent > 80) text.style.marginLeft = "50%";
 
     if(percent > 80 && percent <= 100) logo.style.top = (100 - (percent-80)*5) + '%';
       else logo.style.top = '100%';
@@ -72,11 +72,11 @@
     }
   });
 
-  // var i = 1, timerId = setInterval(function() {
-  //   setAnimationPercent(i);
-  //   i++;
-  //   if(i>100) clearInterval(timerId);
-  // }, 50);
+  var i = 1, timerId = setInterval(function() {
+    setAnimationPercent(i);
+    i++;
+    if(i>100) clearInterval(timerId);
+  }, 50);
 
 </script>
 

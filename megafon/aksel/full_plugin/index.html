@@ -6,10 +6,10 @@
 	<meta name="ad.size" content="width=100%,height=100%">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="main.css?3" />
+	<link rel="stylesheet" href="main.css?2" />
 	<title>megafon</title>
 </head>
-<body>
+<body onload="init()">
 
 	<div id="html_banner">
 		<div class="close" onclick="parent.postMessage('canvas:close', '*')"></div>
@@ -65,19 +65,37 @@
 	</div>
 
 	<script type="text/javascript" src="prefixfree.min.js"></script>
+	<script type="text/javascript" src="gyronorm.complete.min.js"></script>
+
 	<script type="text/javascript">
 
-	var count = 35, current = 18, gamma = 0, step = 0, prev = 0, timer;
+	var gn, count = 35, current = 18, gamma = 0, step = 0, prev = 0, timer;
 	var currentInput = document.getElementById('slide'), gammaInput = document.getElementById('gamma');
+	var uma = document.getElementById('uma');
 
 	currentInput.value = current;
 	document.querySelector('.html_banner_uma_' + current).classList.add('show');
 
-	window.addEventListener("message", function(t) {
+	function init() {
 
-	  gamma = t.data.gamma;
+		var args = {
+			frequency: 200
+		};
+
+		gn = new GyroNorm();
+
+	  gn.init(args).then(function() {
+	    var isAvailable = gn.isAvailable();
+	    gn.start(gnCallBack);
+	  }).catch(function(e){
+	    // console.log(e);
+	  });
+
+	}
+
+	function gnCallBack(data) {
+	  gamma = data.do.gamma;
 	  gammaInput.value = gamma;
-
 	  if(gamma > 5) {
 	    step = 1;
 	    slider();
@@ -88,8 +106,7 @@
 	    step = 0;
 	    slider();
 	  }
-
-	});
+	}
 
 	function slider() {
 	  if(prev !== step) {
