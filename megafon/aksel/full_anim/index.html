@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="main.css?3" />
 	<title>megafon</title>
 </head>
-<body onload="init();">
+<body onload="init()">
 
 	<div id="html_banner">
 		<div class="close" onclick="stop()"></div>
@@ -44,20 +44,6 @@
 				<div class="html_banner_uma_19"></div>
 				<div class="html_banner_uma_20"></div>
 				<div class="html_banner_uma_21"></div>
-				<div class="html_banner_uma_22"></div>
-				<div class="html_banner_uma_23"></div>
-				<div class="html_banner_uma_24"></div>
-				<div class="html_banner_uma_25"></div>
-				<div class="html_banner_uma_26"></div>
-				<div class="html_banner_uma_27"></div>
-				<div class="html_banner_uma_28"></div>
-				<div class="html_banner_uma_29"></div>
-				<div class="html_banner_uma_30"></div>
-				<div class="html_banner_uma_31"></div>
-				<div class="html_banner_uma_32"></div>
-				<div class="html_banner_uma_33"></div>
-				<div class="html_banner_uma_34"></div>
-				<div class="html_banner_uma_35"></div>
 			</div>
 		</a>
 	</div>
@@ -78,7 +64,7 @@
 		document.getElementById('html_banner').classList.remove('animate');
 		document.getElementById('html_banner').classList.add('animate');
 
-		count = 35;
+		count = 21;
 		current = 1;
 		step = 1;
 
@@ -94,7 +80,7 @@
 				if(current <= 1) step = 1;
 				if(current >= count) step = -1;
 
-			}, 80);
+			}, 100);
 
 		}, 1000);
 
