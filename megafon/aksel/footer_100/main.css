@@ -1,0 +1,124 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+}
+
+#html_banner {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+}
+
+#html_banner .link {
+	display: block;
+	position: relative;
+	z-index: 1;
+	top: 100%;
+	width: 100%;
+	height: 100%;
+	transition: top 100ms linear;
+}
+
+#html_banner .bg {
+	position: absolute;
+	z-index: 1;
+	top: 46px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #00b956;
+}
+
+#html_banner .equalizer {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 44.5px;
+	background: url(img/equalizer/1.png) center repeat-x;
+	background-size: 100% 100%;
+	animation: equalizer linear 1s infinite;
+}
+@keyframes equalizer {
+	0%       {background-image: url(img/equalizer/1.png)}
+	10%, 90% {background-image: url(img/equalizer/2.png)}
+	20%, 80% {background-image: url(img/equalizer/3.png)}
+	30%, 70% {background-image: url(img/equalizer/4.png)}
+	40%, 60% {background-image: url(img/equalizer/5.png)}
+	50%      {background-image: url(img/equalizer/6.png)}
+}
+
+#html_banner .uma {
+	position: absolute;
+	z-index: 5;
+	top: -30px;
+	right: 50%;
+	margin: 0 100% 0 0;
+	width: 135px;
+	height: 135px;
+	background: url(img/uma/1.png) center repeat-x;
+	background-size: contain;
+	transition: margin 100ms linear;
+	animation: uma linear 2s infinite;
+}
+@keyframes uma {
+	0%       {background-image: url(img/uma/1.png)}
+	5%,  95% {background-image: url(img/uma/2.png)}
+	10%, 90% {background-image: url(img/uma/3.png)}
+	15%, 85% {background-image: url(img/uma/4.png)}
+	20%, 80% {background-image: url(img/uma/5.png)}
+	25%, 75% {background-image: url(img/uma/6.png)}
+	30%, 70% {background-image: url(img/uma/7.png)}
+	35%, 65% {background-image: url(img/uma/8.png)}
+	40%, 60% {background-image: url(img/uma/9.png)}
+	45%, 55% {background-image: url(img/uma/10.png)}
+	50%      {background-image: url(img/uma/11.png)}
+}
+
+#html_banner .title {
+	position: absolute;
+	z-index: 4;
+	top: 100%;
+	right: 0%;
+	width: 50%;
+	height: 40px;
+	margin: 53px 5px 0 0;
+	background: url(img/title.png) center no-repeat;
+	background-size: contain;
+	transition: top 100ms linear;
+}
+
+#html_banner .dinam {
+	position: absolute;
+	z-index: 3;
+	top: 100%;
+	right: 50%;
+	margin: 50px 20px 0 0;
+	width: 45px;
+	height: 45px;
+	background: url(img/dinam.png) center no-repeat;
+	background-size: contain;
+	transition: top 100ms linear;
+}
+#html_banner .dinam:before,
+#html_banner .dinam:after {
+	content: '';
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	right: 51px;
+	width: 100%;
+	height: 100%;
+	background: url(img/circle.png) center no-repeat;
+	background-size: contain;
+}
+#html_banner .dinam:after {
+	right: 102px;
+}

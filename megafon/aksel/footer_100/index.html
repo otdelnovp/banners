@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=100%,height=100">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Banner preview</title>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div id="html_banner">
+  <a class="link" href="%link1%" target="_blank">
+    <div class="bg"></div>
+    <div class="equalizer"></div>
+    <div class="uma"></div>
+    <div class="dinam"></div>
+    <div class="title"></div>
+  </a>
+</div>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script>
+
+  var transformElement = function (element, transformCmd) {
+    element.style.MozTransform = transformCmd;
+    element.style.WebkitTransform = transformCmd;
+    element.style.OTransform = transformCmd;
+    element.style.MsTransform = transformCmd;
+    element.style.transform = transformCmd;
+  };
+
+  var link = document.querySelector('.link'),
+    uma = document.querySelector('.uma'),
+    title = document.querySelector('.title'),
+    dinam = document.querySelector('.dinam');
+
+  function setAnimationPercent(percent) {
+
+    if(percent <= 5) link.style.top = (100 - percent*20) + '%';
+      else link.style.top = 0;
+
+    if(percent > 10 && percent <= 30) {
+      uma.style.marginRight = (100 - (percent-10)*5) + '%';
+    } else if(percent > 38) {
+      uma.style.marginRight = 0;
+    }
+
+    if(percent > 5 && percent <= 25) {
+      title.style.top = (100 - (percent-5)*5) + '%';
+      dinam.style.top = (100 - (percent-5)*5) + '%';
+    } else if(percent > 25) {
+      title.style.top = 0;
+      dinam.style.top = 0;
+    }
+
+  }
+
+  window.addEventListener('message', function(e) {
+    var data = e.data;
+    var command = data.split(':');
+    if (command[0] === 'animation' && !isNaN(parseInt(command[1], 10))) {
+      setAnimationPercent(parseInt(command[1], 10));
+    }
+  });
+
+  var i = 1, timerId = setInterval(function() {
+    setAnimationPercent(i);
+    i++;
+    if(i>100) clearInterval(timerId);
+  }, 50);
+
+</script>
+
+</body>
+</html>
