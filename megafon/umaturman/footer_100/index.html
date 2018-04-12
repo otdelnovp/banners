@@ -38,18 +38,21 @@
 
   function setAnimationPercent(percent) {
 
-    if(percent <= 5) link.style.top = (100 - percent*20) + '%';
-      else link.style.top = 0;
+    if(percent <= 5) {
+      link.style.top = (100 - percent*20) + '%';
+    } else {
+      link.style.top = 0;
+    }
 
-    if(percent <= 20) {
-      uma.style.marginRight = (100 - percent*5) + '%';
+    if(percent <= 15) {
+      uma.style.marginRight = (100 - percent*6.66) + '%';
     } else {
       uma.style.marginRight = 0;
     }
 
-    if(percent <= 15) {
-      title.style.top = (100 - percent*6.66) + '%';
-      dinam.style.top = (100 - percent*6.66) + '%';
+    if(percent <= 10) {
+      title.style.top = (100 - percent*10) + '%';
+      dinam.style.top = (100 - percent*10) + '%';
     } else {
       title.style.top = 0;
       dinam.style.top = 0;
