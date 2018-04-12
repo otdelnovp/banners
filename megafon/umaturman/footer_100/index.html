@@ -41,16 +41,16 @@
     if(percent <= 5) link.style.top = (100 - percent*20) + '%';
       else link.style.top = 0;
 
-    if(percent > 10 && percent <= 30) {
-      uma.style.marginRight = (100 - (percent-10)*5) + '%';
-    } else if(percent > 38) {
+    if(percent <= 20) {
+      uma.style.marginRight = (100 - percent*5) + '%';
+    } else {
       uma.style.marginRight = 0;
     }
 
-    if(percent > 5 && percent <= 25) {
-      title.style.top = (100 - (percent-5)*5) + '%';
-      dinam.style.top = (100 - (percent-5)*5) + '%';
-    } else if(percent > 25) {
+    if(percent <= 15) {
+      title.style.top = (100 - percent*6.66) + '%';
+      dinam.style.top = (100 - percent*6.66) + '%';
+    } else {
       title.style.top = 0;
       dinam.style.top = 0;
     }
