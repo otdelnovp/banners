@@ -20,8 +20,12 @@ body, html {
 	display: block;
 	position: relative;
 	overflow: hidden;
-	width: 300px;
-	height: 300px;
+	width: 100%;
+	height: 100%;
+	min-width: 300px;
+	min-height: 250px;
+	max-width: 600px;
+	max-height: 500px;
 	color: #1d4a91;
 	background: #ffffff;
 	background: -moz-linear-gradient(top, #ffffff 0%, #3595d5 100%);
@@ -48,9 +52,9 @@ body, html {
 
 .title {
 	position: absolute;
-	bottom: 166px;
-	left: 20px;
-	right: 20px;
+	bottom: 57%;
+	left: 6.66%;
+	right: 6.66%;
 	color: #04439C;
 	font: bold 20px/22px "Futura PT", Arial, sans-serif;
 	text-transform: uppercase;
@@ -58,9 +62,9 @@ body, html {
 
 .region {
 	position: absolute;
-	top: 155px;
-	left: 20px;
-	right: 20px;
+	top: 50%;
+	left: 6.66%;
+	right: 6.66%;
 	text-align: right;
 	color: #F40400;
 	font: bold 20px/22px "Futura PT", Arial, sans-serif;
@@ -97,4 +101,27 @@ body, html {
 	35%, 98% {
 		opacity: 0;
 	}
+}
+
+
+@media (min-width: 400px) {
+  .title,
+  .region {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+@media (min-width: 500px) {
+  .title,
+  .region {
+    font-size: 34px;
+    line-height: 38px;
+  }
+}
+@media (min-width: 600px) {
+  .title,
+  .region {
+    font-size: 40px;
+    line-height: 45px;
+  }
 }

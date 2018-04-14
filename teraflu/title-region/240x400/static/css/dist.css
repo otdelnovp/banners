@@ -20,8 +20,8 @@ body, html {
 	display: block;
 	position: relative;
 	overflow: hidden;
-	width: 300px;
-	height: 300px;
+	width: 240px;
+	height: 400px;
 	color: #1d4a91;
 	background: #ffffff;
 	background: -moz-linear-gradient(top, #ffffff 0%, #3595d5 100%);
@@ -48,22 +48,22 @@ body, html {
 
 .title {
 	position: absolute;
-	bottom: 166px;
+	bottom: 222px;
 	left: 20px;
 	right: 20px;
 	color: #04439C;
-	font: bold 20px/22px "Futura PT", Arial, sans-serif;
+	font: bold 17px/20px "Futura PT", Arial, sans-serif;
 	text-transform: uppercase;
 }
 
 .region {
 	position: absolute;
-	top: 155px;
+	top: 190px;
 	left: 20px;
 	right: 20px;
 	text-align: right;
 	color: #F40400;
-	font: bold 20px/22px "Futura PT", Arial, sans-serif;
+	font: bold 17px/20px "Futura PT", Arial, sans-serif;
 	text-transform: uppercase;
 }
 
