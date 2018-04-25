@@ -35,7 +35,7 @@
 	cursor: pointer;
 	color: #fff;
 }
-.html_banner_heineken_title {
+.html_banner_heineken_title_wrapper {
 	display: block;
 	position: absolute;
 	top: 90px;
@@ -50,6 +50,9 @@
 	color: #fff;
 	text-shadow: 0 0 5px #000;
 	overflow: hidden;
+}
+.html_banner_heineken_title {
+	display: block;
 }
 .html_banner_heineken_slide_1,
 .html_banner_heineken_slide_2,
@@ -110,27 +113,14 @@
 	<div class="html_banner_heineken_slide_2">
 		<a class="html_banner_heineken_link" href="#2" target="_blank" onclick="bannerLoadPixel()">
 			<div class="html_banner_heineken_pixelurl" id="html_banner_heineken_pixelurl"><!-- ссылка на пиксель --></div>
-			<span class="html_banner_heineken_title" id="html_banner_heineken_title">Будь в курсе последних новостей футбола и не пропусти важные матчи</span>
+			<div class="html_banner_heineken_title_wrapper"><span class="html_banner_heineken_title" id="html_banner_heineken_title">Будь в курсе последних новостей футбола и не пропусти важные матчи</span></div>
 		</a>
 	</div>
 	<div class="html_banner_heineken_slide_3">
 		<a class="html_banner_heineken_link" href="#3" target="_blank"></a>
 	</div>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", bannerFontSizeChange);
-function bannerFontSizeChange() {
-	var html_banner_heineken_title = document.getElementById('html_banner_heineken_title'),
-	    html_banner_heineken_title_length = html_banner_heineken_title.innerHTML.length;
-	if(html_banner_heineken_title_length > 50) html_banner_heineken_title.style.fontSize = (23 * 50 / html_banner_heineken_title_length) + 'px';
-}
-function bannerLoadPixel() {
-	var html_banner_heineken_pixelurl = document.getElementById('html_banner_heineken_pixelurl').innerHTML;
-	var html_banner_heineken_pixel = new Image();
-	html_banner_heineken_pixel.addEventListener('load', function() { html_banner_heineken_pixel.style = 'width:0;height:0;position:absolute;visibility:hidden' });
-	html_banner_heineken_pixel.src = html_banner_heineken_pixelurl;
-}
-</script>
+<script src="core.js"></script>
 
 
 
