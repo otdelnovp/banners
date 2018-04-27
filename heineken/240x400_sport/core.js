@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function(){
+(function(){
 	addContent();
 	bannerFontsize();
-});
+}());
 
 // loadpixel
 function bannerLoadPixel() {
@@ -9,6 +9,7 @@ function bannerLoadPixel() {
 	var html_banner_heineken_pixel = new Image();
 	html_banner_heineken_pixel.addEventListener('load', function() { html_banner_heineken_pixel.style = 'width:0;height:0;position:absolute;visibility:hidden' });
 	html_banner_heineken_pixel.src = html_banner_heineken_pixelurl;
+	console.log(html_banner_heineken_pixel.src);
 }
 
 // add content

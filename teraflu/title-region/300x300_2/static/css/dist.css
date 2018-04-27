@@ -98,19 +98,18 @@ body, html {
   background: url(../images/bg_1.png) center no-repeat;
   background-size: cover;
 	opacity: 0;
-	animation: slide 8s infinite;
+	animation: slide_1 8s infinite;
 }
 .slide__2 {
-	animation-delay: 2s;
+	animation-name: slide_2;
 }
 .slide__3 {
-	animation-delay: 4s;
+	animation-name: slide_3;
 }
-
 .slide__4 {
-  z-index: 11;
-	animation-delay: 6s;
+  animation-name: slide_4;
 	background-image: url(../images/bg_2.png);
+  z-index: 11;
 }
 .slide__4:before {
   content: '';
@@ -125,11 +124,35 @@ body, html {
   background-size: cover;
 }
 
-@keyframes slide {
-	3%, 23% {
+@keyframes slide_1 {
+	5%, 10% {
 		opacity: 1;
 	}
-	27%, 97% {
+	0%, 13% {
+		opacity: 0;
+	}
+}
+@keyframes slide_2 {
+	13%, 30% {
+		opacity: 1;
+	}
+	10%, 33% {
+		opacity: 0;
+	}
+}
+@keyframes slide_3 {
+	33%, 50% {
+		opacity: 1;
+	}
+	30%, 55% {
+		opacity: 0;
+	}
+}
+@keyframes slide_4 {
+	55%, 95% {
+		opacity: 1;
+	}
+	0%, 50%, 100% {
 		opacity: 0;
 	}
 }
