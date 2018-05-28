@@ -183,7 +183,7 @@ body, html {
 
 .percent {
 	opacity: 0;
-	animation: percent 1s 1s both;
+	animation: percent 1.5s 1s both;
 }
 @keyframes percent {
 	0 {
@@ -195,14 +195,14 @@ body, html {
 }
 
 .logo_prognoz {
-	transform: scale(1);
-	animation: prognoz 2.5s 2s both;
+	opacity: 0;
+	animation: prognoz 1.5s 0.5s both;
 }
 @keyframes prognoz {
-	0%, 40%, 60%, 100% {
-		transform: scale(1);
+	0 {
+		opacity: 0;
 	}
-	20%, 80% {
-		transform: scale(1.1);
+	100% {
+		opacity: 1;
 	}
 }
