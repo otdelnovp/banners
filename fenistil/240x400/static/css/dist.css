@@ -181,6 +181,19 @@ body, html {
 	}
 }
 
+.percent {
+	opacity: 0;
+	animation: percent 1s 1s both;
+}
+@keyframes percent {
+	0 {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 .logo_prognoz {
 	transform: scale(1);
 	animation: prognoz 2.5s 2s both;
