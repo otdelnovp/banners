@@ -501,16 +501,16 @@ var region = {
 		1846: 'Сорокский район'
 	},
 	percent = {
-		1: '10% - Не слышно ни писка!',
-		2: '20% - Не слышно ни писка!',
-		3: '30% - Не слышно ни писка!',
-		4: '40% - Не слышно ни писка!',
-		5: '50% - Комары уже тут!',
-		6: '60% - Отмахиваемся энергичнее!',
-		7: '70% - Обмотайтесь в москитную сетку!',
-		8: '80% - Комары везде!',
-		9: '90% - От комаров никуда не спрятаться!',
-		10: '100% - Комариный беспредел!'
+		1: 'Не слышно ни писка!',
+		2: 'Не слышно ни писка!',
+		3: 'Не слышно ни писка!',
+		4: 'Не слышно ни писка!',
+		5: 'Комары уже тут!',
+		6: 'Отмахиваемся энергичнее!',
+		7: 'Обмотайтесь в москитную сетку!',
+		8: 'Комары везде!',
+		9: 'От комаров никуда не спрятаться!',
+		10: 'Комариный беспредел!'
 	},
 	App = {
 		init: function() {
@@ -519,7 +519,9 @@ var region = {
 			document.getElementById("region").innerHTML = (region[regionId] || "");
 
 			var index = getParameterByName("percent") || 5;
-			document.getElementById("percent").innerHTML = (percent[index] || "");
+			document.getElementById("slogan").innerHTML = (percent[index] || "");
+
+			document.getElementById("percent").innerHTML = (index || "");
 
 			var color = Number(index) >=8 ? 3 : Number(index) >= 6 ? 2 : 1;
 			document.getElementById("banner").classList.add("banner_color" + color);
