@@ -62,20 +62,25 @@ body, html {
 .region {
 	position: absolute;
 	top: 214px;
-	left: 50%;
+	left: 18px;
+	right: 18px;
+	line-height: 0;
+	text-align: center;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+.region span {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
 	padding: 6px 10px 7px;
 	height: 26px;
-	max-width: 280px;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
-	transform: translateX(-50%);
+	max-width: 200px;
 	text-align: center;
 	white-space: nowrap;
+	text-overflow: ellipsis;
 	color: #fff;
 	background: #74b633;
 	-webkit-border-radius: 20px;
@@ -140,11 +145,7 @@ body, html {
 	left: 50%;
 	width: 53px;
 	height: 53px;
-	-webkit-transform: translate(-50%,-50%);
-	-moz-transform: translate(-50%,-50%);
-	-ms-transform: translate(-50%,-50%);
-	-o-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
+	margin: -26px;
 	background: #74b633 url(../images/komar.png) center no-repeat;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -167,11 +168,11 @@ body, html {
 
 .komar {
 	opacity: 0;
-	-webkit-transform: translate(-50%,-50%) scale(0) rotate(-180deg);
-	-moz-transform: translate(-50%,-50%) scale(0) rotate(-180deg);
-	-ms-transform: translate(-50%,-50%) scale(0) rotate(-180deg);
-	-o-transform: translate(-50%,-50%) scale(0) rotate(-180deg);
-	transform: translate(-50%,-50%) scale(0) rotate(-180deg);
+	-webkit-transform: scale(0) rotate(-180deg);
+	-moz-transform: scale(0) rotate(-180deg);
+	-ms-transform: scale(0) rotate(-180deg);
+	-o-transform: scale(0) rotate(-180deg);
+	transform: scale(0) rotate(-180deg);
 	-webkit-animation: komar 1s both;
 	-moz-animation: komar 1s both;
 	-o-animation: komar 1s both;
@@ -180,63 +181,58 @@ body, html {
 @-webkit-keyframes komar {
 	0 {
 		opacity: 0;
-		-webkit-transform: translate(-50%,-50%) scale(0) rotate(-180deg);
-		transform: translate(-50%,-50%) scale(0) rotate(-180deg);
+		-webkit-transform: scale(0) rotate(-180deg);
+		transform: scale(0) rotate(-180deg);
 	}
 	100% {
 		opacity: 1;
-		-webkit-transform: translate(-50%,-50%) scale(1) rotate(0deg);
-		transform: translate(-50%,-50%) scale(1) rotate(0deg);
+		-webkit-transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0deg);
 	}
 }
 @-moz-keyframes komar {
 	0 {
 		opacity: 0;
-		-moz-transform: translate(-50%,-50%) scale(0) rotate(-180deg);
-		transform: translate(-50%,-50%) scale(0) rotate(-180deg);
+		-moz-transform: scale(0) rotate(-180deg);
+		transform: scale(0) rotate(-180deg);
 	}
 	100% {
 		opacity: 1;
-		-moz-transform: translate(-50%,-50%) scale(1) rotate(0deg);
-		transform: translate(-50%,-50%) scale(1) rotate(0deg);
+		-moz-transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0deg);
 	}
 }
 @-o-keyframes komar {
 	0 {
 		opacity: 0;
-		-o-transform: translate(-50%,-50%) scale(0) rotate(-180deg);
-		transform: translate(-50%,-50%) scale(0) rotate(-180deg);
+		-o-transform: scale(0) rotate(-180deg);
+		transform: scale(0) rotate(-180deg);
 	}
 	100% {
 		opacity: 1;
-		-o-transform: translate(-50%,-50%) scale(1) rotate(0deg);
-		transform: translate(-50%,-50%) scale(1) rotate(0deg);
+		-o-transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0deg);
 	}
 }
 @keyframes komar {
 	0 {
 		opacity: 0;
-		-webkit-transform: translate(-50%,-50%) scale(0) rotate(-180deg);
-		-moz-transform: translate(-50%,-50%) scale(0) rotate(-180deg);
-		-o-transform: translate(-50%,-50%) scale(0) rotate(-180deg);
-		transform: translate(-50%,-50%) scale(0) rotate(-180deg);
+		-webkit-transform: scale(0) rotate(-180deg);
+		-moz-transform: scale(0) rotate(-180deg);
+		-o-transform: scale(0) rotate(-180deg);
+		transform: scale(0) rotate(-180deg);
 	}
 	100% {
 		opacity: 1;
-		-webkit-transform: translate(-50%,-50%) scale(1) rotate(0deg);
-		-moz-transform: translate(-50%,-50%) scale(1) rotate(0deg);
-		-o-transform: translate(-50%,-50%) scale(1) rotate(0deg);
-		transform: translate(-50%,-50%) scale(1) rotate(0deg);
+		-webkit-transform: scale(1) rotate(0deg);
+		-moz-transform: scale(1) rotate(0deg);
+		-o-transform: scale(1) rotate(0deg);
+		transform: scale(1) rotate(0deg);
 	}
 }
 
-.region {
+.region span {
 	color: transparent;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
-	transform: translateX(-50%);
 	max-width: 0;
 	opacity: 0;
 	-webkit-animation: region ease-in 0.75s 0.75s both;
@@ -247,8 +243,6 @@ body, html {
 @-webkit-keyframes region {
 	0 {
 		color: transparent;
-		-webkit-transform: translateX(-50%);
-		transform: translateX(-50%);
 		max-width: 0;
 		opacity: 0;
 	}
@@ -261,16 +255,12 @@ body, html {
 	100% {
 		opacity: 1;
 		color: #fff;
-		-webkit-transform: translateX(-50%);
-		transform: translateX(-50%);
-		max-width: 200px;
+		max-width: 250px;
 	}
 }
 @-moz-keyframes region {
 	0 {
 		color: transparent;
-		-moz-transform: translateX(-50%);
-		transform: translateX(-50%);
 		max-width: 0;
 		opacity: 0;
 	}
@@ -283,16 +273,12 @@ body, html {
 	100% {
 		opacity: 1;
 		color: #fff;
-		-moz-transform: translateX(-50%);
-		transform: translateX(-50%);
-		max-width: 200px;
+		max-width: 250px;
 	}
 }
 @-o-keyframes region {
 	0 {
 		color: transparent;
-		-o-transform: translateX(-50%);
-		transform: translateX(-50%);
 		max-width: 0;
 		opacity: 0;
 	}
@@ -305,18 +291,12 @@ body, html {
 	100% {
 		opacity: 1;
 		color: #fff;
-		-o-transform: translateX(-50%);
-		transform: translateX(-50%);
-		max-width: 200px;
+		max-width: 250px;
 	}
 }
 @keyframes region {
 	0 {
 		color: transparent;
-		-webkit-transform: translateX(-50%);
-		-moz-transform: translateX(-50%);
-		-o-transform: translateX(-50%);
-		transform: translateX(-50%);
 		max-width: 0;
 		opacity: 0;
 	}
@@ -329,11 +309,7 @@ body, html {
 	100% {
 		opacity: 1;
 		color: #fff;
-		-webkit-transform: translateX(-50%);
-		-moz-transform: translateX(-50%);
-		-o-transform: translateX(-50%);
-		transform: translateX(-50%);
-		max-width: 200px;
+		max-width: 250px;
 	}
 }
 
