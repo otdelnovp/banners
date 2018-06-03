@@ -519,11 +519,12 @@ var region = {
 			document.getElementById("region").innerHTML = (region[regionId] || "");
 
 			var index = getParameterByName("percent") || 5;
+			if(index < 5 || index > 10) index = 5;
 			document.getElementById("slogan").innerHTML = (percent[index] || "");
 
 			document.getElementById("percent").innerHTML = (index || "");
 
-			var color = Number(index) >=8 ? 3 : Number(index) >= 6 ? 2 : 1;
+			var color = index >=8 ? 3 : index >= 6 ? 2 : 1;
 			document.getElementById("banner").classList.add("banner_color" + color);
 
 		}
