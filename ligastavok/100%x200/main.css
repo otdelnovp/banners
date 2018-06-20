@@ -1,0 +1,75 @@
+html, body { margin: 0; padding: 0; position: relative; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	min-width: 400px;
+	height: 200px;
+	font-size: 0;
+	color: #fff;
+	background: #00674c url(bg.png) center top repeat-x;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+	border: 0;
+}
+
+#html_banner .html_banner_link {display: block; position: relative; width: 100%; height: 100%; text-decoration: none;}
+#html_banner .html_banner_slide {display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+	opacity: 0;
+	-webkit-animation: slider 10s infinite;
+	animation: slider 10s infinite;
+	background: url(bg.png) center top repeat-x;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+}
+#html_banner .html_banner_slide div {display: block; position: relative; width: 100%; height: 100%;
+	background: url(bg1.png) center top no-repeat;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+}
+#html_banner .html_banner_slide__2 {
+	-webkit-animation-delay: 2.5s;
+	animation-delay: 2.5s;
+}
+#html_banner .html_banner_slide__2 div {
+	background-image: url(bg2.png);
+}
+#html_banner .html_banner_slide__3 {
+	-webkit-animation-delay: 5s;
+	animation-delay: 5s;
+}
+#html_banner .html_banner_slide__3 div {
+	background-image: url(bg3.png);
+}
+#html_banner .html_banner_slide__4 {
+	-webkit-animation-delay: 7.5s;
+	animation-delay: 7.5s;
+}
+#html_banner .html_banner_slide__4 div {
+	background-image: url(bg4.png);
+}
+
+@-webkit-keyframes slider {
+	3%, 23% {
+		z-index: 3;
+		opacity: 1;
+	}
+	27%, 98% {
+		z-index: 1;
+		opacity: 0;
+	}
+}
+@keyframes slider {
+	3%, 23% {
+		z-index: 3;
+		opacity: 1;
+	}
+	27%, 98% {
+		z-index: 1;
+		opacity: 0;
+	}
+}

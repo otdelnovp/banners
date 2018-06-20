@@ -10,10 +10,9 @@
 	<script type="text/javascript" src="prefixfree.min.js"></script>
 	<title>megafon</title>
 </head>
-<body onload="init()">
+<body>
 
-	<div id="html_banner">
-		<div class="close" onclick="close()"></div>
+	<div id="html_banner" class="opened">
 		<a class="html_banner_link" href="%link1%" target="_blank">
 			<div class="html_banner_bg">
 				<div class="html_banner_circle html_banner_circle__1"></div>
@@ -25,26 +24,6 @@
 			<div class="html_banner_footer"></div>
 		</a>
 	</div>
-
-	<script type="text/javascript">
-	
-	function close() {
-		document.getElementById('html_banner').classList.remove('opened');
-		parent.postMessage('canvas:close', '*');
-	}
-
-	function init() {
-		document.getElementById('html_banner').classList.remove('opened');
-		document.getElementById('html_banner').classList.add('opened');
-	}
-
-	window.addEventListener('message', function (event) {
-		if (event.data === 'canvas:open') {
-			init();
-		}
-	});
-
-	</script>
 
 </body>
 
