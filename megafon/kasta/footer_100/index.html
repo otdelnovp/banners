@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=100%,height=100">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Banner preview</title>
+<link rel="stylesheet" href="main.css?1">
+</head>
+<body>
+
+<div id="html_banner">
+  <a class="link" href="%link1%" target="_blank">
+    <div class="bg"></div>
+    <div class="title"></div>
+    <div class="men"></div>
+    <div class="circle circle__1"></div>
+    <div class="circle circle__2"></div>
+  </a>
+</div>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script>
+
+  var transformElement = function (element, transformCmd) {
+    element.style.MozTransform = transformCmd;
+    element.style.WebkitTransform = transformCmd;
+    element.style.OTransform = transformCmd;
+    element.style.MsTransform = transformCmd;
+    element.style.transform = transformCmd;
+  };
+
+  var link = document.querySelector('.link'),
+      bg = document.querySelector('.bg'),
+      men = document.querySelector('.men');
+
+  function setAnimationPercent(percent) {
+
+    if(percent <= 15) {
+      transformElement(bg, 'translateY(100px)');
+    } else if(percent <= 55) {
+      transformElement(bg, 'translateY(' + (100 - ((percent-15)*2.5)) + 'px)');
+    } else {
+      transformElement(bg, 'translateY(0)');
+    }
+
+    if(percent <= 40) {
+      transformElement(men, 'translateX(' + (100 - percent*2.5) + 'px)');
+    } else {
+      transformElement(men, 'translateX(0)');
+    }
+
+    if(percent < 50) {
+      link.classList.remove('final');
+    } else {
+      link.classList.add('final');
+    }
+
+  }
+
+  window.addEventListener('message', function(e) {
+    var data = e.data;
+    var command = data.split(':');
+    if (command[0] === 'animation' && !isNaN(parseInt(command[1], 10))) {
+      setAnimationPercent(parseInt(command[1], 10));
+    }
+  });
+
+  // var i = 1, timerId = setInterval(function() {
+  //   setAnimationPercent(i);
+  //   i++;
+  //   if(i>100) clearInterval(timerId);
+  // }, 20);
+
+  // var i = 100, timerId = setInterval(function() {
+  //   setAnimationPercent(i);
+  //   i--;
+  //   if(i===0) clearInterval(timerId);
+  // }, 20);
+
+</script>
+
+</body>
+</html>
