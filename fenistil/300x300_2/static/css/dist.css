@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+  position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	color: #fff;
+	border: 0;
+}
+
+.banner {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width: 300px;
+	height: 300px;
+	color: #1d4a91;
+	background: #fff  url(../images/bg_1.jpg) center no-repeat;
+	background-size: cover;
+	text-decoration: none;
+}
+.banner_color2 {
+	background-image: url(../images/bg_2.jpg);
+}
+.banner_color3 {
+	background-image: url(../images/bg_3.jpg);
+}
+
+.banner:before {
+	content:'';
+	display:block;
+	position: absolute;
+	width:100%;
+	height:100%;
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2);
+}
+
+
+.percent {
+	position: absolute;
+	top: 70px;
+	left: 5px;
+	right: 5px;
+	color: #fff;
+	text-align: center;
+	font: normal 15px/1 "OpenSans", Arial, sans-serif;
+	letter-spacing: -0.2px;
+}
+.percent b {
+	display: block;
+	font-weight: normal;
+	margin: 0 0 3px;
+	font-size: 24px;
+	letter-spacing: 0;
+}
+.banner_color2 .percent {
+	color: #000;
+}
+
+.region {
+	position: absolute;
+	top: 124px;
+	left: 10px;
+	right: 10px;
+	line-height: 0;
+	text-align: center;
+	box-sizing: border-box;
+}
+.region div {
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	padding: 7px 10px 7px;
+	height: 50px;
+	max-width: 250px;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #000;
+	background: url(../images/btn.png) center no-repeat;
+	background-size: 100% 100%;
+	border-radius: 30px;
+	font: normal 10px/0.95 "OpenSans", Arial, sans-serif;
+	text-transform: uppercase;
+	overflow: hidden;
+}
+.region b {
+	display: block;
+	margin: 0 0 7px;
+	text-transform: none;
+	font: normal 15px/1.1 "OpenSans", Arial, sans-serif;
+}
+
+.gsk {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/gsk.png) center no-repeat;
+	background-size: contain;
+}
+
+.footer {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/footer.png) center no-repeat;
+	background-size: contain;
+}
+
+.pack {
+	display: block;
+	position: absolute;
+	z-index: 0;
+	top: 188px;
+	left: 0;
+	width: 100%;
+	height: 46px;
+	background: url(../images/pack.png) center no-repeat;
+	background-size: contain;
+}
+
+.komar {
+	display: block;
+	position: absolute;
+	z-index: 0;
+	top: 33px;
+	left: 50%;
+	width: 54px;
+	height: 54px;
+	margin: -27px;
+	background: #fff url(../images/k_1.png) center no-repeat;
+	background-size: contain;
+	border-radius: 50%;
+}
+.banner_color2 .komar {
+	background-image: url(../images/k_2.png);
+}
+.banner_color3 .komar {
+	background-image: url(../images/k_3.png);
+}
+
+/* anim */
+
+.komar {
+	opacity: 0;
+	transform: scale(0.5) rotate(-360deg);
+	animation: komar ease-in-out 1s both;
+}
+@keyframes komar {
+	0 {
+		opacity: 0;
+		transform: scale(0.5) rotate(-360deg);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) rotate(0deg);
+	}
+}
+
+.percent {
+	opacity: 0;
+	animation: percent ease-in-out 0.8s 0.8s both;
+}
+@keyframes percent {
+	0 {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.region div {
+	color: transparent;
+	width: 0;
+	opacity: 0;
+	animation: region ease-in-out 1s 1.3s both;
+}
+@keyframes region {
+	0 {
+		color: transparent;
+		width: 0;
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	80% {
+		color: transparent;
+	}
+	100% {
+		opacity: 1;
+		color: #000;
+		width: 250px;
+	}
+}
+
+.pack {
+	opacity: 0;
+	animation: pack ease-in-out 1s 2s both;
+	transform: scale(0);
+}
+@keyframes pack {
+	0 {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
