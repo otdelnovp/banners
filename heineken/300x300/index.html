@@ -5,17 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<style>body,html{padding: 0; margin: 0; position: relative;}</style>
 </head>
 <body>
+
+
+
+
+<!-- start banner -->
+
+
+
 
 <style>
 .html_banner_heineken_333457 {
 	display: block;
 	position: relative;
-	width: 240px;
-	height: 400px;
+	width: 300px;
+	height: 300px;
 	overflow: hidden;
 	background: #07341f url(bg.jpg) center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.html_banner_heineken_333457_logo {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background: url(logo.png) center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -25,6 +45,7 @@
 .html_banner_heineken_333457_link {
 	display: block;
 	position: relative;
+	z-index: 2;
 	width: 100%;
 	height: 100%;
 	text-decoration: none;
@@ -34,10 +55,10 @@
 .html_banner_heineken_333457_title_wrapper {
 	display: block;
 	position: absolute;
-	top: 90px;
-	left: 20px;
-	width: 200px;
-	height: 140px;
+	top: 73px;
+	left: 40px;
+	width: 220px;
+	height: 110px;
 	text-align: center;
 	font: bold 23px/28px Arial, "Helvetica Neue", Helvetica, sans-serif;
 	text-transform: uppercase;
@@ -49,9 +70,6 @@
 }
 .html_banner_heineken_333457_title {
 	display: block;
-	position: relative;
-	width: 200px;
-	height: 140px;
 }
 .html_banner_heineken_333457_slide_1,
 .html_banner_heineken_333457_slide_2,
@@ -67,38 +85,38 @@
 	background-size: cover;
 	opacity: 0;
 	visibility: hidden;
-	-webkit-animation: html_banner_heineken_333457_animation 8s infinite;
-	animation: html_banner_heineken_333457_animation 8s infinite;
+	-webkit-animation: html_banner_heineken_333457_animation 9s infinite;
+	animation: html_banner_heineken_333457_animation 9s infinite;
 }
 .html_banner_heineken_333457_slide_2 {
-	-webkit-animation-delay: 0s;
-	animation-delay: 0s;
+	-webkit-animation-delay: 3s;
+	animation-delay: 3s;
 	background-image: url(slide_2.png);
 }
 .html_banner_heineken_333457_slide_3 {
-	-webkit-animation-delay: 4s;
-	animation-delay: 4s;
-	background-image: url(slide_3.jpg);
+	-webkit-animation-delay: 6s;
+	animation-delay: 6s;
+	background-image: url(slide_3.png);
 }
 @-webkit-keyframes html_banner_heineken_333457_animation {
-	3%, 48% {
+	3%, 31% {
 		z-index: 3;
 		opacity: 1;
 		visibility: visible;
 	}
-	52%, 98% {
+	35%, 98% {
 		z-index: 1;
 		opacity: 0;
 		visibility: hidden;
 	}
 }
 @keyframes html_banner_heineken_333457_animation {
-	3%, 48% {
+	3%, 31% {
 		z-index: 3;
 		opacity: 1;
 		visibility: visible;
 	}
-	52%, 98% {
+	35%, 98% {
 		z-index: 1;
 		opacity: 0;
 		visibility: hidden;
@@ -107,18 +125,20 @@
 </style>
 <div class="html_banner_heineken_333457">
 
+	<div class="html_banner_heineken_333457_logo"></div>
+
 	<div class="html_banner_heineken_333457_hide">
 		<div id="html_banner_heineken_333457_pixelurl"><!-- ссылка на пиксель --></div>
 		<div id="html_banner_heineken_333457_addurl">{{url}}</div>
 		<div id="html_banner_heineken_333457_addtitle">{{title}}</div>
 	</div>
 
-	<!-- <div class="html_banner_heineken_333457_slide_1">
-		<a class="html_banner_heineken_333457_link" href="http://r.mail.ru/n274529736" target="_blank"></a>
-	</div> -->
+	<div class="html_banner_heineken_333457_slide_1">
+		<a class="html_banner_heineken_333457_link" href="http://r.mail.ru/n279385901" target="_blank"></a>
+	</div>
 
 	<div class="html_banner_heineken_333457_slide_2">
-		<a class="html_banner_heineken_333457_link" id="html_banner_heineken_333457_link" href="http://r.mail.ru/n274529740" target="_blank" onclick="bannerLoadPixel_333457()">
+		<a class="html_banner_heineken_333457_link" id="html_banner_heineken_333457_link" href="http://r.mail.ru/n279206042" target="_blank" onclick="bannerLoadPixel_333457()">
 			<div class="html_banner_heineken_333457_title_wrapper">
 				<span class="html_banner_heineken_333457_title" id="html_banner_heineken_333457_title">Будь в курсе последних новостей футбола и не пропусти важные матчи</span>
 			</div>
@@ -126,9 +146,22 @@
 	</div>
 
 	<div class="html_banner_heineken_333457_slide_3">
-		<a class="html_banner_heineken_333457_link" href="http://r.mail.ru/n274529737" target="_blank"></a>
+		<a class="html_banner_heineken_333457_link" href="http://r.mail.ru/n279385917" target="_blank"></a>
 	</div>
 
 </div>
-<script src="https://unpkg.com/fancy-textfill@1.2.4/dist/fancy-text-fill.js"></script>
+
 <script src="core.js"></script>
+
+
+
+
+
+<!-- end banner -->
+
+
+
+
+
+</body>
+</html>
