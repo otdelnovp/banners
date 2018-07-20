@@ -1,0 +1,179 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: transparent; overflow: hidden; }
+
+#html_banner img {display: block; margin: 0 auto;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	min-width: 640px;
+	height: 80px;
+	font-size: 0;
+	opacity: 1;
+	background: #000 url(img/bg.jpg) center no-repeat;
+	background-size: auto 100%;
+}
+
+#html_banner .link {display:block; position: relative; width:100%; height:100%; text-decoration: none;}
+
+.box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	transition: transform 500ms;
+}
+.box__left {
+	z-index: 3;
+	background-image: url(img/left.png);
+}
+.box__right {
+	z-index: 1;
+	background-image: url(img/right.png);
+}
+
+.circle {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/circle.png) center no-repeat;
+	background-size: auto 100%;
+}
+.flash {
+	position: absolute;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/flash.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.start {
+	position: absolute;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	margin: 0 0 0 3px;
+	width: 100%;
+	height: 100%;
+	background: url(img/start.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.there {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/there.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+
+.title {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/title.png) center no-repeat;
+	background-size: auto 100%;
+}
+.logo {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/logo.png) center no-repeat;
+	background-size: auto 100%;
+}
+.when {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/when.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+
+/**** anim ****/
+
+
+.box__left,
+.box__right {
+	transform: translateX(0);
+	transition: transform 500ms ease-in-out;
+}
+.step_2 .box__left,
+.step_3 .box__left {
+	transform: translateX(-100px);
+}
+.step_2 .box__right,
+.step_3 .box__right {
+	transform: translateX(70px);
+}
+
+
+.circle,
+.flash {
+	opacity: 0;
+	transform: translateY(-20px);
+}
+.step_1 .circle,
+.step_1 .flash {
+	animation: circle 1200ms 300ms ease-in-out both;
+}
+@keyframes circle {
+	0% { opacity: 0; transform: translateY(-20px); }
+	20% { opacity: 1; }
+	90% { opacity: 1; transform: translateY(80px); }
+	100% { opacity: 0; transform: translateY(80px); }
+}
+
+
+.start,
+.there,
+.logo,
+.when,
+.title {
+	opacity: 0;
+	transition: opacity 200ms ease-in-out;
+}
+
+.step_1 .start {
+	opacity: 1;
+}
+.step_2 .there {
+	opacity: 1;
+	transition: opacity 300ms 300ms ease-in-out;
+}
+.step_3 .title {
+	opacity: 1;
+	transition: opacity 300ms 400ms ease-in-out;
+}
+.step_3 .logo {
+	opacity: 1;
+	transition: opacity 200ms 500ms ease-in-out;
+}
+.step_3 .when {
+	opacity: 1;
+	transition: opacity 200ms 550ms ease-in-out;
+}

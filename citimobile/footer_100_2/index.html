@@ -6,21 +6,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>Banner preview</title>
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="main.css?1">
 </head>
 <body>
 
 <div id="html_banner">
   <a class="link" href="%link1%" target="_blank">
+    <div class="bg"></div>
     <div class="car">
       <div class="wheel1"></div>
       <div class="wheel2"></div>
     </div>
-    <div class="text"></div>
-    <div class="logo"></div>
+    <div class="title"></div>
   </a>
 </div>
 
+<script type="text/javascript" src="prefixfree.min.js"></script>
 <script>
 
   var transformElement = function (element, transformCmd) {
@@ -32,35 +33,41 @@
   };
 
   var link = document.querySelector('.link'),
+    bg = document.querySelector('.bg'),
     car = document.querySelector('.car'),
-    text = document.querySelector('.text'),
-    logo = document.querySelector('.logo'),
+    title = document.querySelector('.title'),
     wheel1 = document.querySelector('.wheel1'),
     wheel2 = document.querySelector('.wheel2');
 
   function setAnimationPercent(percent) {
 
-    if(percent <= 5) link.style.top = (100 - percent*20) + '%';
-      else link.style.top = 0;
-
-    if(percent > 5 && percent <= 38) {
-      car.style.marginLeft = (100 - (percent-5)*3) + '%';
-      transformElement(wheel1, 'scaleX(0.37) skewX(-15deg) rotate(-' + (percent-5)*15 + 'deg)');
-      transformElement(wheel2, 'scaleX(0.28) skewX(-20deg) rotate(-' + (percent-5)*15 + 'deg)');
-    } else if(percent > 38) {
-      car.style.marginLeft = 0;
-      transformElement(wheel1, 'scaleX(0.37) skewX(-15deg) rotate(-500deg)');
-      transformElement(wheel2, 'scaleX(0.28) skewX(-20deg) rotate(-500deg)');
+    if(percent <= 10) {
+      transformElement(link, 'translateY(' + (100 - percent*10) + 'px)');
+    } else {
+      transformElement(link, 'translateY(0)');
     }
 
-    if(percent > 20 && percent <= 45) text.style.marginLeft = (50 - (percent-20)*2) + '%';
-      else if(percent > 45) text.style.marginLeft = 0;
+    if(percent <= 50) {
+      transformElement(bg, 'translateX(-' + (percent*0.9) + '%)');
+    } else {
+      transformElement(bg, 'translateX(-45%)');
+    }
 
-    if(percent > 60 && percent <= 80) text.style.marginLeft = ((percent-60)*2.5) + '%';
-      else if(percent <= 20 || percent > 80) text.style.marginLeft = "50%";
+    if(percent > 15 && percent <= 40) {
+      transformElement(car, 'translateX(' + ((percent-15)*4 - 100) + '%)');
+      transformElement(wheel1, 'rotate(' + (percent-15)*20 + 'deg)');
+      transformElement(wheel2, 'rotate(' + (percent-15)*20 + 'deg)');
+    } else if(percent > 40) {
+      transformElement(car, 'translateX(0)');
+      transformElement(wheel1, 'rotate(400deg)');
+      transformElement(wheel2, 'rotate(400deg)');
+    }
 
-    if(percent > 80 && percent <= 100) logo.style.top = (100 - (percent-80)*5) + '%';
-      else logo.style.top = '100%';
+    if(percent > 40 && percent <= 50) {
+      transformElement(title, 'translateX(' + (100 - (percent-40)*10) + 'px)');
+    } else if(percent > 50) {
+      transformElement(title, 'translateX(0)');
+    }
 
   }
 

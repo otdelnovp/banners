@@ -1,0 +1,55 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=100%,height=80">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="main.css" />
+	<title>tv3</title>
+</head>
+<body>
+
+	<div id="html_banner">
+		<a class="link" href="%link1%" target="_blank">
+			<div class="box box__left"></div>
+			<div class="box box__right"></div>
+			<div class="circle"></div>
+			<div class="flash"></div>
+			<div class="start"></div>
+			<div class="there"></div>
+			<div class="title"></div>
+			<div class="logo"></div>
+			<div class="when"></div>
+		</a>
+	</div>
+
+	<script type="text/javascript" src="prefixfree.min.js"></script>
+	<script type="text/javascript">
+	var banner = document.getElementById('html_banner');
+	setTimeout(function() {
+		banner.classList.add('step_1');
+	},10)
+	var i=0, timer = setInterval(function() {
+		i++;
+		if(i==0) {
+			banner.classList.remove('step_3');
+		}
+		if(i==1) {
+			banner.classList.add('step_1');
+		}
+		if(i==3) {
+			banner.classList.remove('step_1');
+			banner.classList.add('step_2');
+		}
+		if(i==6) {
+			banner.classList.remove('step_2');
+			banner.classList.add('step_3');
+		}
+		if(i==10) i=-2;
+	}, 500);
+	// setTimeout(function(){ banner.classList.add('step_5') },100);
+	</script>
+</body>
+</html>
