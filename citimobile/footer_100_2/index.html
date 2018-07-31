@@ -44,29 +44,37 @@
     if(percent <= 10) {
       transformElement(link, 'translateY(' + (100 - percent*10) + 'px)');
     } else {
-      transformElement(link, 'translateY(0)');
+      transformElement(link, 'translateY(0px)');
     }
 
-    if(percent <= 50) {
-      transformElement(bg, 'translateX(-' + (percent*0.9) + '%)');
+    if(percent <= 60) {
+      transformElement(bg, 'translateX(-' + (percent*0.75) + '%)');
     } else {
       transformElement(bg, 'translateX(-45%)');
     }
 
     if(percent > 15 && percent <= 40) {
       transformElement(car, 'translateX(' + ((percent-15)*4 - 100) + '%)');
-      transformElement(wheel1, 'rotate(' + (percent-15)*20 + 'deg)');
-      transformElement(wheel2, 'rotate(' + (percent-15)*20 + 'deg)');
     } else if(percent > 40) {
-      transformElement(car, 'translateX(0)');
+      transformElement(car, 'translateX(0%)');
+    } else if(percent <= 15) {
+      transformElement(car, 'translateX(-100%)');
+    }
+
+    if(percent > 0 && percent <= 60) {
+      transformElement(wheel1, 'rotate(' + (percent)*15 + 'deg)');
+      transformElement(wheel2, 'rotate(' + (percent)*15 + 'deg)');
+    } else if(percent > 60) {
       transformElement(wheel1, 'rotate(400deg)');
       transformElement(wheel2, 'rotate(400deg)');
     }
 
-    if(percent > 40 && percent <= 50) {
-      transformElement(title, 'translateX(' + (100 - (percent-40)*10) + 'px)');
-    } else if(percent > 50) {
-      transformElement(title, 'translateX(0)');
+    if(percent > 60 && percent <= 65) {
+      transformElement(title, 'translateX(' + (100 - (percent-60)*20) + '%)');
+    } else if(percent > 65) {
+      transformElement(title, 'translateX(0%)');
+    } else if(percent <= 60) {
+      transformElement(title, 'translateX(100%)');
     }
 
   }
@@ -79,11 +87,11 @@
     }
   });
 
-  var i = 1, timerId = setInterval(function() {
-    setAnimationPercent(i);
-    i++;
-    if(i>100) clearInterval(timerId);
-  }, 30);
+  // var i = 1, timerId = setInterval(function() {
+  //   setAnimationPercent(i);
+  //   i++;
+  //   if(i>100) clearInterval(timerId);
+  // }, 30);
 
 </script>
 
