@@ -1,0 +1,46 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; position: relative; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	min-width: 940px;
+	height: 250px;
+	font-size: 0;
+	border: 0;
+	overflow: hidden;
+}
+
+#html_banner .html_banner_link {display: block; position: relative; width: 100%; height: 100%; text-decoration: none; overflow: hidden;}
+#html_banner .html_banner_center {display: block; position: absolute; z-index: 11; left: 0; top: 0; width: 100%; height: 100%; text-decoration: none; background: url(center.png) center no-repeat; -webkit-background-size: contain; background-size: contain;}
+
+#html_banner .html_banner_left,
+#html_banner .html_banner_right {display: block; position: absolute; right: 50%; top: 0; width: 50%; min-width: 700px; height: 100%; text-decoration: none; background: #00CDBE url(left.jpg) left center no-repeat; -webkit-background-size: contain; background-size: contain;}
+#html_banner .html_banner_right {left: 50%; right: 0; background-color: #DB365E; background-image: url(right.jpg); background-position: right center;}
+
+#html_banner .html_banner_left:before,
+#html_banner .html_banner_right:before {content: ''; display: block; position: absolute; z-index: 5; right: 170px; top: 0; width: 180px; height: 100%; text-decoration: none; background: url(people.jpg) center no-repeat; -webkit-background-size: contain; background-size: contain;}
+#html_banner .html_banner_right:before {width: 270px; left: 180px; background-image: url(chair.jpg);}
+
+#html_banner .html_banner_car {display: block; position: absolute; z-index: 10; bottom: 0; left: 50%; width: 430px; height: 100%; margin: 0 0 0 -215px;
+	background: url(car.png) center no-repeat;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+	-webkit-transform: translateX(0px);
+	transform: translateX(0px);
+	-webkit-transition: transform 0.8s linear;
+	transition: transform 0.8s linear;
+}
+#html_banner .html_banner_wheel {display: block; position: absolute; bottom: 11px; left: 90.5px; width: 40px; height: 40px;
+	background: url(wheel.png) center no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	-webkit-transition: transform 0.8s linear;
+	transition: transform 0.8s linear;
+}
+#html_banner .html_banner_wheel__2 {
+	left: 312.5px;
+}

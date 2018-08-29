@@ -1,0 +1,123 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+}
+
+#html_banner {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+}
+
+#html_banner .link {
+	display: block;
+	position: relative;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateY(100%);
+	transition: transform 500ms linear;
+}
+
+#html_banner .bg1,
+#html_banner .bg2,
+#html_banner .bg3 {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 50%;
+	width: 320px;
+	height: 100%;
+	margin: 0 0 0 -188px;
+	background: url(img/bg1.png) center no-repeat;
+	background-size: 100% 100%;
+	transform: translate(-25%,75%);
+	transition: transform 500ms linear;
+}
+#html_banner .bg2 {
+	z-index: 2;
+	width: 115px;
+	margin: 0 0 0 72px;
+	background-image: url(img/bg2.png);
+	transform: translateY(25%);
+}
+#html_banner .bg3 {
+	z-index: 3;
+	width: 210px;
+	margin: 0 0 0 -102px;
+	background-image: url(img/bg3.png);
+	transform: translateY(20%);
+}
+
+#html_banner .car {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 50%;
+	width: 200px;
+	height: 100%;
+	margin: 0 0 0 -20px;
+	background: url(img/car.png) center no-repeat;
+	background-size: contain;
+}
+
+#html_banner .logo {
+	position: absolute;
+	z-index: 10;
+	top: 12px;
+	left: 50%;
+	width: 107px;
+	height: 20px;
+	margin: 0 0 0 -147px;
+	background: url(img/logo.png) center no-repeat;
+	background-size: contain;
+	transform: translateX(-100%);
+	transition: transform 500ms linear;
+}
+
+#html_banner .slogan {
+	position: absolute;
+	z-index: 11;
+	top: 41px;
+	left: 50%;
+	width: 157px;
+	height: 16px;
+	margin: 0 0 0 -172px;
+	background: url(img/slogan.png) center no-repeat;
+	background-size: contain;
+	transform: translate(-25%,75%);
+	transition: transform 500ms linear;
+}
+
+#html_banner .price {
+	position: absolute;
+	z-index: 12;
+	top: 61px;
+	left: 50%;
+	width: 100px;
+	height: 22px;
+	margin: 0 0 0 -150px;
+	background: url(img/price.png) center no-repeat;
+	background-size: contain;
+	transform: translate(25%,75%);
+	transition: transform 500ms linear;
+}
+
+@media (max-width: 330px) {
+	#html_banner .logo {
+		margin: 0 0 0 -140px;
+	}
+	#html_banner .slogan {
+		width: 133px;
+		height: 16px;
+		margin: 0 0 0 -155px;
+	}
+}

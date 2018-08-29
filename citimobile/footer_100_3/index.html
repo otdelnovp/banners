@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=100%,height=100">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Banner preview</title>
+<link rel="stylesheet" href="main.css?1">
+</head>
+<body>
+
+<div id="html_banner">
+  <a class="link" href="%link1%" target="_blank">
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+    <div class="car"></div>
+    <div class="logo"></div>
+    <div class="slogan"></div>
+    <div class="price"></div>
+  </a>
+</div>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script>
+
+  var transformElement = function (element, transformCmd) {
+    element.style.MozTransform = transformCmd;
+    element.style.WebkitTransform = transformCmd;
+    element.style.OTransform = transformCmd;
+    element.style.MsTransform = transformCmd;
+    element.style.transform = transformCmd;
+  };
+
+  var link = document.querySelector('.link'),
+    bg1 = document.querySelector('.bg1'),
+    bg2 = document.querySelector('.bg2'),
+    bg3 = document.querySelector('.bg3'),
+    logo = document.querySelector('.logo'),
+    slogan = document.querySelector('.slogan');
+    price = document.querySelector('.price');
+
+  function setAnimationPercent(percent) {
+
+    if(percent <= 10) {
+      transformElement(link, 'translateY(' + (100 - percent*10) + '%)');
+    } else {
+      transformElement(link, 'translateY(0%)');
+    }
+
+    if(percent <= 25) {
+      transformElement(bg1, 'translate(' + (percent - 25) + '%,' + (75 - percent*3) + '%)');
+      transformElement(slogan, 'translate(' + (percent - 25) + '%,' + (75 - percent*3) + '%)');
+      transformElement(price, 'translate(' + (25 - percent) + '%,' + (75 - percent*3) + '%)');
+    } else {
+      transformElement(bg1, 'translate(0%,0%)');
+      transformElement(slogan, 'translate(0%,0%)');
+      transformElement(price, 'translate(0%,0%)');
+    }
+
+    if(percent <= 25) {
+      transformElement(bg2, 'translateY(' + (25 - percent) + '%)');
+      transformElement(logo, 'translateX(' + (percent*4 - 100) + '%)');
+    } else {
+      transformElement(bg2, 'translateY(0%)');
+      transformElement(logo, 'translateX(0%)');
+    }
+
+    if(percent <= 20) {
+      transformElement(bg3, 'translateY(' + (20 - percent*0.5) + '%)');
+    } else {
+      transformElement(bg3, 'translateY(0%)');
+    }
+
+  }
+
+  window.addEventListener('message', function(e) {
+    var data = e.data;
+    var command = data.split(':');
+    if (command[0] === 'animation' && !isNaN(parseInt(command[1], 10))) {
+      setAnimationPercent(parseInt(command[1], 10));
+    }
+  });
+
+  // var i = 1, timerId = setInterval(function() {
+  //   setAnimationPercent(i);
+  //   i++;
+  //   if(i>100) clearInterval(timerId);
+  // }, 30);
+
+</script>
+
+</body>
+</html>

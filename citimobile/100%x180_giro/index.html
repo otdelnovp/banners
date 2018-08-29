@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=100%,height=180">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>citim</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div id="html_banner">
+	<a class="html_banner_link" href="%link1%" target="_blank">
+		<div id="frontlayer" class="html_banner_front"></div>
+	</a>
+</div>
+
+<script type="text/javascript">
+
+var transformElement = function (element, transformCmd) {
+	element.style.MozTransform = transformCmd;
+	element.style.WebkitTransform = transformCmd;
+	element.style.OTransform = transformCmd;
+	element.style.MsTransform = transformCmd;
+	element.style.transform = transformCmd;
+};
+
+var frontLayer = document.getElementById('frontlayer');
+
+window.addEventListener("message", function(t) {
+	transformElement(frontLayer, 'translateX(' + t.data.gamma + 'px)');
+});
+
+</script>
+
+</body>
+</html>
