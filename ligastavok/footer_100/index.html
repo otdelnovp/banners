@@ -47,6 +47,8 @@
 
   function setAnimationPercent(percent) {
 
+    percent = percent * 1.5;
+
     if(percent <= 10) {
       transformElement(link, 'translateY(' + (100 - percent*10) + '%)');
     } else {
