@@ -162,10 +162,10 @@ html, body {
     animation: people 10s ease-in-out 1s infinite;
 }
 .run .item_1 .people {
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 .run .item_2 .people {
-    animation-delay: 2.8s;
+    animation-delay: 2.3s;
 }
 .run .item_3 .people {
     animation-delay: 3.5s;
@@ -184,8 +184,17 @@ html, body {
     animation: car 10s ease-in-out 1s infinite;
 }
 @keyframes car {
-    0%, 10% {
+    0% {
         transform: translateX(-100%);
+    }
+    10% {
+        transform: translateX(-30%);
+    }
+    23% {
+        transform: translateX(60%);
+    }
+    36% {
+        transform: translateX(148%);
     }
     50%, 90% {
         transform: translateX(233%);
@@ -199,13 +208,22 @@ html, body {
     animation: wheel 10s ease-in-out 1s infinite;
 }
 @keyframes wheel {
-    0%, 10% {
+    0% {
         transform: rotate(0);
     }
-    50%, 90% {
+    10% {
+        transform: rotate(500deg);
+    }
+    23% {
         transform: rotate(1000deg);
     }
-    100% {
+    36% {
         transform: rotate(1500deg);
+    }
+    50%, 90% {
+        transform: rotate(2000deg);
+    }
+    100% {
+        transform: rotate(3000deg);
     }
 }
