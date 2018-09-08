@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=100%,height=100">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Banner preview</title>
+<link rel="stylesheet" href="main.css?1">
+</head>
+<body>
+
+<div id="html_banner">
+  <a class="link" href="%link1%" target="_blank">
+    <div class="bg bg_left_1"></div>
+    <div class="bg bg_left_2"></div>
+    <div class="bg bg_left_3"></div>
+    <div class="bg bg_left_4"></div>
+    <div class="bg bg_right_1"></div>
+    <div class="bg bg_right_2"></div>
+    <div class="bg bg_right_3"></div>
+    <div class="bg bg_right_4"></div>
+    <div class="logo"></div>
+    <div class="title"></div>
+    <div class="price"></div>
+    <div class="car"></div>
+    <div class="people"></div>
+  </a>
+</div>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script type="text/javascript">
+    var banner = document.querySelector('#html_banner');
+    setTimeout(function() {banner.className = 'show'}, 500);
+    setTimeout(function() {banner.className = ''}, 5500);
+    setTimeout(function() {banner.className = 'show'}, 7000);
+    setTimeout(function() {banner.className = ''}, 12000);
+    setTimeout(function() {banner.className = 'show'}, 13500);
+</script>
+
+</body>
+</html>
