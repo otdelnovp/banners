@@ -1,0 +1,63 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; position: relative; }
+
+#html_banner * {border:0; margin:0; padding:0; display: block;}
+#html_banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	min-width: 640px;
+	height: 80px;
+	font-size: 0;
+	color: #fff;
+	background: #A1E364 url(bg.png) center no-repeat;
+	background-size: auto 100%;
+	border: 0;
+}
+
+#html_banner .html_banner_link {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 10px;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: 0 0 0 110px;
+	text-decoration: none;
+	background: url(icon1.png) center no-repeat;
+	background-size: contain;
+	animation: move 6s cubic-bezier(.53,.34,.53,.72) Infinite;
+}
+#html_banner .html_banner_link__2 {
+	margin: 0 0 0 180px;
+	background-image: url(icon2.png);
+	animation-delay: 2s;
+}
+#html_banner .html_banner_link__3 {
+	margin: 0 0 0 250px;
+	background-image: url(icon3.png);
+	animation-delay: 4s;
+}
+
+@keyframes move {
+	0%, 30%, 100% {
+	  transform: translate(0, 0) rotateZ(0);
+	}
+	10% {
+	  transform: translate(-3px, -3px) rotateZ(-5deg);
+	}
+	20% {
+	  transform: translate(4px, 2px) rotateZ(10deg);
+	}
+}
+
+#html_banner .html_banner_link__girl {
+	top: 0;
+	margin: 0 0 0 -320px;
+	height: 100%;
+	width: 130px;
+	background: none;
+	animation: none;
+}

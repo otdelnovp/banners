@@ -56,7 +56,7 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	left: 50%;
 	width: 55%;
 	height: 35%;
-	background: url(img/people.png) center no-repeat;
+	background: url(img/people.png) 90% 50% no-repeat;
 	background-size: contain;
 }
 
@@ -103,4 +103,29 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	transform: translateX(-100%);
 	transition: transform 1000ms, opacity 300ms;
 	transition-delay: 500ms;
+}
+
+
+@media all and (orientation: landscape) {
+	.html_banner_title {
+		top: 5%;
+		left: 5%;
+		width: 35%;
+		height: 90%;
+	}
+	
+	.html_banner_car {
+		bottom: 5%;
+		left: 55%;
+		width: 40%;
+		height: 50%;
+	}
+	
+	.html_banner_people {
+		bottom: 15%;
+		left: 88%;
+		width: 55%;
+		height: 50%;
+		background-position: center;
+	}
 }

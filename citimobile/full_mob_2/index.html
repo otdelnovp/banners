@@ -31,6 +31,9 @@
 			banner.className = '';
 		}
 	});
+	banner.addEventListener('click', function(e) {
+		window.parent.postMessage('fullscreen:click', '*');
+	});
 	</script>
 
 	<script type="text/javascript" src="prefixfree.min.js"></script>

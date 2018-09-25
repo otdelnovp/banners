@@ -26,6 +26,7 @@ function onTouchStart(changedTouches) {
     // stopWagering();
     if (changedTouches) {
         lastClientY = changedTouches[0].clientY;
+        window.parent.postMessage("banner:expand", "*");
     }
 }
 
@@ -63,6 +64,7 @@ function onTouchEnd() {
 
     lastClientY = null;
     maskPos = -100;
+    window.parent.postMessage("banner:collapse", "*")
 }
 
 ['pointerstart', 'touchstart'].forEach(function (item) {
@@ -73,6 +75,7 @@ function onTouchEnd() {
 
 ['pointermove', 'touchmove'].forEach(function (item) {
     wrapper.addEventListener(item, function (e) {
+        e.preventDefault();
         onTouchMove(e.changedTouches);
     });
 });
@@ -84,3 +87,7 @@ function onTouchEnd() {
 wrapper.addEventListener('click', function(e) {
     window.parent.postMessage("banner:click", "*");
 });
+
+document.documentElement.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+}, {passive: false});
