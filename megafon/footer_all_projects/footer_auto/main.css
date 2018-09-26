@@ -103,9 +103,10 @@ html, body {
 	z-index: 3;
 	top: 45%;
 	left: 50%;
-	margin: 0 0 0 -150px;
+	margin: 0 0 0 -152px;
 	width: 70%;
 	font: 700 12px/1.1 'GTWalsheimBold', Arial, Helvetica, sans-serif;
+	word-spacing: -1.5px;
 	white-space: nowrap;
 	color: #fff;
 	transform: translateX(-100%);

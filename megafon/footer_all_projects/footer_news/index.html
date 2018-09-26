@@ -19,7 +19,7 @@
       <div class="circle_2"></div>
     </div>
     <div class="text">
-      Читай Авто сколько хочешь<br/>
+      Читай Новости сколько хочешь<br/>
       <span>с безлимитным интернетом<br/> от МегаФона!</span>
     </div>
   </a>
@@ -73,10 +73,16 @@
 
     if(percent < 3) {
       transformElement(circle, 'translate(0%,200%) scale(0.5)');
+      transformElement(circle_1, 'translateX(0%)');
+      transformElement(circle_2, 'translateX(0%)');
     } else if(percent <= 8) {
       transformElement(circle, 'translate(0%,' + (200 - (percent - 3)*40) + '%) scale(0.5)');
+      transformElement(circle_1, 'translateX(0%)');
+      transformElement(circle_2, 'translateX(0%)');
     } else if(percent <= 30) {
       transformElement(circle, 'translate(0%,0%) scale(0.5)');
+      transformElement(circle_1, 'translateX(0%)');
+      transformElement(circle_2, 'translateX(0%)');
     } else if(percent <= 40) {
       transformElement(circle, 'translate(' + (percent - 30)*13 + '%,0%) scale(' + (0.5 + (percent - 30)*0.05) + ')');
       transformElement(circle_1, 'translateX(' + (percent - 30)*10 + '%)');
@@ -97,11 +103,11 @@
     }
   });
 
-  var i = 1, timerId = setInterval(function() {
-    setAnimationPercent(i);
-    i++;
-    if(i>100) clearInterval(timerId);
-  }, 30);
+  // var i = 1, timerId = setInterval(function() {
+  //   setAnimationPercent(i);
+  //   i++;
+  //   if(i>100) clearInterval(timerId);
+  // }, 30);
 
 </script>
 

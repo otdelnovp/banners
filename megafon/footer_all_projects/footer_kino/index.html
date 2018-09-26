@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=100%,height=100">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Banner preview</title>
+<link rel="stylesheet" href="main.css?1">
+</head>
+<body>
+
+<div id="html_banner">
+  <a class="link" href="%link1%" target="_blank">
+    <div class="bg"></div>
+    <div class="main"></div>
+    <div class="circle">
+      <div class="circle_1"></div>
+      <div class="circle_2"></div>
+    </div>
+    <div class="text">
+      Читай Кино сколько хочешь<br/>
+      <span>с безлимитным интернетом<br/> от МегаФона!</span>
+    </div>
+  </a>
+</div>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script>
+
+  var transformElement = function (element, transformCmd) {
+    element.style.MozTransform = transformCmd;
+    element.style.WebkitTransform = transformCmd;
+    element.style.OTransform = transformCmd;
+    element.style.MsTransform = transformCmd;
+    element.style.transform = transformCmd;
+  };
+
+  var bg = document.querySelector('.bg'),
+    circle = document.querySelector('.circle'),
+    circle_1 = document.querySelector('.circle_1'),
+    circle_2 = document.querySelector('.circle_2'),
+    main = document.querySelector('.main'),
+    text = document.querySelector('.text');
+
+  function setAnimationPercent(percent) {
+
+    if(percent <= 5) {
+      transformElement(bg, 'translateY(' + (100 - percent*20) + '%)');
+    } else {
+      transformElement(bg, 'translateY(0%)');
+    }
+
+    if(percent < 5) {
+      transformElement(main, 'translate(0%,100%)');
+    } else if(percent <= 10) {
+      transformElement(main, 'translate(0%,' + (100 - (percent - 5)*20) + '%)');
+    } else if(percent <= 30) {
+      transformElement(main, 'translate(0%,0%)');
+    } else if(percent <= 40) {
+      transformElement(main, 'translate(' + (percent - 30)*13.15 + '%,0%)');
+    } else {
+      transformElement(main, 'translate(131.5%,0%)');
+    }
+
+    if(percent < 30) {
+      transformElement(text, 'translateX(-100%)');
+    } else if(percent <= 40) {
+      transformElement(text, 'translateX(' + ((percent - 30)*10 - 100) + '%)');
+    } else {
+      transformElement(text, 'translateX(0%)');
+    }
+
+    if(percent < 3) {
+      transformElement(circle, 'translate(0%,200%) scale(0.5)');
+      transformElement(circle_1, 'translateX(0%)');
+      transformElement(circle_2, 'translateX(0%)');
+      circle_2.style.display = 'block';
+    } else if(percent <= 8) {
+      transformElement(circle, 'translate(0%,' + (200 - (percent - 3)*40) + '%) scale(0.5)');
+      transformElement(circle_1, 'translateX(0%)');
+      transformElement(circle_2, 'translateX(0%)');
+      circle_2.style.display = 'block';
+    } else if(percent <= 30) {
+      transformElement(circle, 'translate(0%,0%) scale(0.5)');
+      transformElement(circle_1, 'translateX(0%)');
+      transformElement(circle_2, 'translateX(0%)');
+      circle_2.style.display = 'block';
+    } else if(percent <= 40) {
+      transformElement(circle, 'translate(' + (percent - 30)*13 + '%,0%) scale(' + (0.5 + (percent - 30)*0.05) + ')');
+      transformElement(circle_1, 'translateX(' + (percent - 30)*10 + '%)');
+      transformElement(circle_2, 'translateX(' + (percent - 30)*20 + '%)');
+      circle_2.style.display = 'none';
+    } else {
+      transformElement(circle, 'translate(130%,0%) scale(1)');
+      transformElement(circle_1, 'translateX(100%)');
+      transformElement(circle_2, 'translateX(200%)');
+    }
+
+  }
+
+  window.addEventListener('message', function(e) {
+    var data = e.data;
+    var command = data.split(':');
+    if (command[0] === 'animation' && !isNaN(parseInt(command[1], 10))) {
+      setAnimationPercent(parseInt(command[1], 10));
+    }
+  });
+
+  // var i = 1, timerId = setInterval(function() {
+  //   setAnimationPercent(i);
+  //   i++;
+  //   if(i>100) clearInterval(timerId);
+  // }, 30);
+
+</script>
+
+</body>
+</html>
