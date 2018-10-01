@@ -11,7 +11,9 @@ html, body { margin: 0; padding: 0; }
 	height: 250px;
 	font-size: 0;
 	color: #fff;
-	background: #EEEDEB url(bg.jpg) center no-repeat;
+	background: #D0B3DF url(bg.jpg) center no-repeat;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
 	border: 0;
 }
 

@@ -45,6 +45,8 @@
 
   function setAnimationPercent(percent) {
 
+    percent = percent * 5;
+
     if(percent <= 5) {
       transformElement(bg, 'translateY(' + (100 - percent*20) + '%)');
     } else {
@@ -107,7 +109,7 @@
   //   setAnimationPercent(i);
   //   i++;
   //   if(i>100) clearInterval(timerId);
-  // }, 30);
+  // }, 60);
 
 </script>
 

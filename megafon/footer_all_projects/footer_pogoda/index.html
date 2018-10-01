@@ -44,6 +44,8 @@
     text = document.querySelector('.text');
 
   function setAnimationPercent(percent) {
+    
+    percent = percent * 5;
 
     if(percent <= 5) {
       transformElement(bg, 'translateY(' + (100 - percent*20) + '%)');
@@ -107,7 +109,7 @@
   //   setAnimationPercent(i);
   //   i++;
   //   if(i>100) clearInterval(timerId);
-  // }, 30);
+  // }, 70);
 
 </script>
 
