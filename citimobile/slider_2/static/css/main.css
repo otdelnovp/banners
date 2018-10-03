@@ -1,4 +1,5 @@
 html, body {
+    position: relative;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -7,50 +8,40 @@ html, body {
     font-style: normal;
     cursor: pointer;
     color: #fff;
+    background: transparent;
     border: 0;
-}
-
-.slider {
-    position: relative;
-    display: inline-block;
-    overflow-x: auto;
-    width: 175%;
-    padding: 0 5px 20px;
-    font-size: 0;
-    vertical-align: top;
-    white-space: nowrap;
 }
 
 .banner {
     overflow: hidden;
     width: 100%;
-    max-height: calc(100vw * 1.75 * 0.25 * 0.9 * (0.85 + 0.3));
 }
 
-.carousel {
+.slider {
     position: relative;
-    z-index: 2;
+    margin: 0 auto;
+    height: auto;
+    margin: 0 0 -30px;
+    padding: 0 3px 30px;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding-bottom: 20px;
+    font-size: 0;
+    vertical-align: top;
+    white-space: nowrap;
 }
-
 
 .item {
     position: relative;
     display: inline-block;
-    width: 25%;
+    width: 44vw;
     box-sizing: border-box;
     padding: 0 7px;
     vertical-align: top;
     text-decoration: none;
 }
-.item:before {
+.item:before,
+.item:after {
     content: '';
     position: absolute;
     z-index: 15;
@@ -59,7 +50,11 @@ html, body {
     width: 14px;
     height: 100%;
     margin: 0 -7px;
-    background: #e9eaef;
+    background: #e5e5e5;
+}
+.item:after {
+    left: auto;
+    right: 0;
 }
 @media (max-width: 375px) {
     .item {
@@ -109,11 +104,11 @@ html, body {
 
 .item__text {
     width: 100%;
-    height: calc(100vw * 1.75 * 0.25 * 0.9 * 0.3);
+    height: 11vw;
     box-sizing: border-box;
     padding: 7%;
     background: #fff;
-    font-size: calc(100vw * 1.75 * 0.25 * 0.9 * 0.07);
+    font-size: 2.8vw;
     line-height: 1.2;
     white-space: normal;
     color: black;

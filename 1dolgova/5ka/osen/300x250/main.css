@@ -33,7 +33,15 @@ html, body {position: relative; width: 100%; height: 100%; margin: 0; padding: 0
 	background: url(img/logo.png) center no-repeat;
 	background-size: contain;
 	opacity: 0;
-	animation: fadein 0.5s ease-in-out both;
+	animation: logo 10s ease-in-out Infinite;
+}
+@keyframes logo {
+	0%, 90%, 100% {
+		opacity: 0;
+	}
+	10%, 88% {
+		opacity: 1;
+	}
 }
 
 .flower {
@@ -48,19 +56,19 @@ html, body {position: relative; width: 100%; height: 100%; margin: 0; padding: 0
 	background: url(img/flower.png) center no-repeat;
 	background-size: contain;
 	opacity: 0;
-	animation: flower 10s 0.2s linear both;
+	animation: flower 10s linear Infinite;
 }
 @keyframes flower {
-	0% {
+	0%, 2%, 90%, 100% {
 		opacity: 0;
 		transform: rotate(0deg);
 	}
 	10% {
 		opacity: 1;
 	}
-	100% {
+	60% {
 		opacity: 1;
-		transform: rotate(700deg);
+		transform: rotate(200deg);
 	}
 }
 
@@ -77,19 +85,18 @@ html, body {position: relative; width: 100%; height: 100%; margin: 0; padding: 0
 	background-size: contain;
 	opacity: 0;
 	transform: scale(0.2);
-	animation: title 6s 1s ease-in-out both;
+	animation: title 10s ease-in-out Infinite;
 }
 @keyframes title {
-	0%, 100% {
+	0%, 55%, 100% {
 		opacity: 0;
 		transform: scale(0.2);
 	}
-	20%, 80% {
+	10%, 45% {
 		opacity: 1;
 		transform: scale(1);
 	}
 }
-
 
 .product {
 	display: block;
@@ -102,14 +109,13 @@ html, body {position: relative; width: 100%; height: 100%; margin: 0; padding: 0
 	background: #034924 url(img/product.png) center no-repeat;
 	background-size: contain;
 	opacity: 0;
-	animation: fadein 0.5s 7s ease-in-out both;
+	animation: product 10s ease-in-out Infinite;
 }
-
-@keyframes fadein {
-	0% {
+@keyframes product {
+	0%, 50%, 100% {
 		opacity: 0;
 	}
-	100% {
+	55%, 95% {
 		opacity: 1;
 	}
 }
