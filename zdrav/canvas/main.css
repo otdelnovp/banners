@@ -1,0 +1,38 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: transparent; overflow: hidden; }
+
+.banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #FAFBFF url(bg.jpg) center bottom no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.link {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	background: url(img.png) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+.note {
+	display: block;
+	position: absolute;
+	bottom: 2%;
+	left: 0;
+	width: 100%;
+	height: 5%;
+	text-decoration: none;
+	background: url(note.png) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
