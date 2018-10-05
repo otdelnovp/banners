@@ -1,0 +1,20 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: transparent; overflow: hidden; }
+
+.banner {
+	position: relative;
+	width: 100%;
+	height: 67px;
+	overflow: hidden;
+	background: #C7E2E9 url(bg.png) center repeat-x;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+}
+.link {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(img.png) center no-repeat;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+}

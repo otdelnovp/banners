@@ -12,6 +12,8 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	position: relative;
 	width: 100%;
 	height: 100%;
+	color: #fff;
+	text-decoration: none;
 	background: url(img.png) center no-repeat;
 	-webkit-background-size: auto 100%;
 	background-size: auto 100%;
@@ -26,6 +28,16 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	width: 100%;
 	height: 100%;
 	box-shadow: inset 0 0 1px #999;
+}
+
+.timer {
+	position: absolute;
+	top: 77px;
+	left: 0;
+	width: 100%;
+	font: 700 50px/1 Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+	text-align: center;
 }
 
 .hover {

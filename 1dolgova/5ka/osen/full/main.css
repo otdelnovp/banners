@@ -1,0 +1,160 @@
+html, body {position: relative; width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; background: transparent;}
+
+.banner * {border:0; margin:0; padding:0; display: block;}
+.banner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	color: #fff;
+	background: #02471b;
+	border: 0;
+}
+
+.link {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+
+.logo {
+	display: block;
+	position: absolute;
+	z-index: 3;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 25%;
+	background: url(img/logo.png) top center no-repeat;
+	background-size: contain;
+	opacity: 0;
+	animation: logo 10s ease-in-out Infinite;
+	will-change: transform;
+}
+.note {
+	display: block;
+	position: absolute;
+	z-index: 3;
+	bottom: 0%;
+	left: 0%;
+	width: 100%;
+	height: 19%;
+	background: url(img/note.png) center bottom no-repeat;
+	background-size: contain;
+	opacity: 0;
+	animation: logo 10s ease-in-out Infinite;
+	will-change: transform;
+}
+@keyframes logo {
+	0%, 90%, 100% {
+		opacity: 0;
+	}
+	10%, 88% {
+		opacity: 1;
+	}
+}
+
+.flower {
+	display: block;
+	position: absolute;
+	z-index: 0;
+	top: 15%;
+	left: -16%;
+	width: 132%;
+	height: 88%;
+	background: url(img/flower.png) center no-repeat;
+	background-size: contain;
+	opacity: 0;
+	animation: flower 10s linear Infinite;
+	will-change: transform;
+}
+@keyframes flower {
+	0%, 2%, 90%, 100% {
+		opacity: 0;
+		transform: rotate(0deg);
+	}
+	10% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 1;
+		transform: rotate(200deg);
+	}
+}
+
+.title {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	top: 36%;
+	left: 0%;
+	width: 100%;
+	height: 42%;
+	background: url(img/title.png) center no-repeat;
+	background-size: contain;
+	opacity: 0;
+	transform: scale(0.2);
+	animation: title 10s ease-in-out Infinite;
+	will-change: transform;
+}
+@keyframes title {
+	0%, 55%, 100% {
+		opacity: 0;
+		transform: scale(0.2);
+	}
+	10%, 45% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.product {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background: #02471b url(img/product_vert.jpg) center no-repeat;
+	background-size: contain;
+	opacity: 0;
+	animation: product 10s ease-in-out Infinite;
+	will-change: transform;
+}
+@keyframes product {
+	0%, 50%, 100% {
+		opacity: 0;
+	}
+	55%, 95% {
+		opacity: 1;
+	}
+}
+
+
+@media all and (orientation: landscape) {
+	.logo {
+		height: 40%;
+	}
+	.note {
+		display: none;
+	}
+	.flower {
+		top: 10%;
+		left: 12.5%;
+		width: 75%;
+		height: 125%;
+	}
+	.title {
+		top: 44%;
+		height: 52%;
+	}
+	.product {
+		background-image: url(img/product_hor.jpg);
+	}
+}

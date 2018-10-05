@@ -1,5 +1,4 @@
 html, body {
-    position: relative;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -8,71 +7,66 @@ html, body {
     font-style: normal;
     cursor: pointer;
     color: #fff;
-    background: transparent;
     border: 0;
+    background: transparent;
+}
+
+.no-flick {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform:translateZ(0.1px);
+    transform: translateZ(0.1px); /* needs an actual value */
 }
 
 .banner {
     overflow: hidden;
     width: 100%;
+    max-height: calc(100vw * 1.75 * 0.25 * 0.9 * (0.85 + 0.3));
+}
+
+.carousel {
+    position: relative;
+    z-index: 2;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 .slider {
     position: relative;
-    margin: 0 auto;
-    height: auto;
-    margin: 0 0 -30px;
-    padding: 0 3px 30px;
+    display: inline-block;
     overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
+    width: 220%;
+    padding: 0 0 20px;
     font-size: 0;
     vertical-align: top;
     white-space: nowrap;
 }
 
 .item {
-    position: relative;
     display: inline-block;
-    width: 44vw;
+    width: 20%;
     box-sizing: border-box;
-    padding: 0 7px;
+    padding: 0 1%;
     vertical-align: top;
     text-decoration: none;
 }
-.item:before,
-.item:after {
-    content: '';
-    position: absolute;
-    z-index: 15;
-    top: 0;
-    left: 0;
-    width: 14px;
-    height: 100%;
-    margin: 0 -7px;
-    background: #e5e5e5;
-}
-.item:after {
-    left: auto;
-    right: 0;
-}
-@media (max-width: 375px) {
-    .item {
-        padding: 0 6px;
-    }
-    .item:before {
-        width: 12px;
-        margin: 0 -6px;
-    }
-}
-@media (max-width: 325px) {
-    .item {
-        padding: 0 5px;
-    }
-    .item:before {
-        width: 10px;
-        margin: 0 -5px;
-    }
+
+.item__img {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 85%;
+    background: #7B41C0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .item__img {
@@ -125,6 +119,7 @@ html, body {
     height: 100%;
     background: url('../images/logo.png') no-repeat center;
     background-size: contain;
+    will-change: transform;
 }
 
 .autumn,
@@ -140,10 +135,15 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     transform: translateX(-10%);
+    will-change: transform;
 }
 .autumn_2 {
     transform: translateX(-50%);
     background-image: url('../images/autumn_2.png');
+    will-change: transform;
+}
+.item_3 .autumn {
+    margin-left: -110%;
 }
 
 
@@ -154,25 +154,45 @@ html, body {
     left: 0;
     width: 128%;
     height: 100%;
-    background: url('../images/car.png') no-repeat center;
-    background-size: contain;
     -webkit-backface-visibility: hidden;
     transform: translateX(-85%);
+    will-change: transform;
+}
+.item_2 .car {
+    margin-left: -110%;
+}
+.item_3 .car {
+    margin-left: -220%;
+}
+.car img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    will-change: transform;
 }
 
 .wheel {
     content: '';
     display: block;
     position: absolute;
-    bottom: 4.5%;
+    bottom: 4.4%;
     left: 15%;
     width: 12%;
     height: 16%;
-	background: url('../images/wheel.png') center no-repeat;
-	background-size: contain;
+    will-change: transform;
 }
 .wheel_2 {
     left: 75%;
+}
+.car .wheel img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%,-50%);
 }
 
 

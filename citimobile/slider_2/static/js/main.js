@@ -18,3 +18,14 @@ window.addEventListener('message', function(e) {
         }, 1500);
     }
 });
+
+var currentWidth = window.innerWidth;
+window.addEventListener("resize", function() {
+    if(window.innerWidth !== currentWidth) {
+        document.documentElement.className = '';
+        setTimeout(function() {
+            document.documentElement.className = 'run';
+        },100);
+        currentWidth = window.innerWidth;
+    }
+}, false);

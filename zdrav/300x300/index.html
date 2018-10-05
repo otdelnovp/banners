@@ -12,10 +12,25 @@
 <body>
 	<div class="banner">
 		<a class="link" href="%link1%" target="_blank">
+			<div class="timer">00:<span id="timer">21</span></div>
 			<div class="hover"></div>
 			<div class="arrow"></div>
 		</a>
 	</div>
-</body>
 
+	<script type="text/javascript">
+	var timer = document.getElementById("timer");
+	var i = 21;
+	var timerId = setInterval(function() {
+		if(i >= 10) timer.innerHTML = i;
+		else timer.innerHTML = '0' + i;
+		i = i - 1;
+		if(i < 0) i = 21;
+	}, 1000);
+	setTimeout(function() {
+		clearInterval(timerId);
+	}, 300000);
+	</script>
+
+</body>
 </html>
