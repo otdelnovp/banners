@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="ad.size" content="width=300,height=300">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="main.css" />
+	<title>teraflu</title>
+</head>
+<body>
+	<div class="banner">
+		<a class="link" href="%link1%" target="_blank">
+			<div class="title"></div>
+			<div class="btn"></div>
+			<div class="track track_1" id="track">
+				<div class="value"></div>
+				<div class="text text_1"></div>
+				<div class="text text_2"></div>
+				<div class="text text_3"></div>
+			</div>
+		</a>
+	</div>
+
+	<script src="prefixfree.min.js"></script>
+	<script type="text/javascript">
+	var track = document.getElementById("track");
+	var i = 1, delta = 1;
+	var timerTrack = setInterval(function() {
+		track.classList.remove('track_' + i);
+		i = i + delta;
+		if(i >= 3) delta = -1;
+		if(i <= 1) delta = 1;
+		track.classList.add('track_' + i);
+	}, 2000);
+	setTimeout(function() {
+		clearInterval(timerTrack);
+	}, 300000);
+	</script>
+
+</body>
+</html>

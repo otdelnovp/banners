@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="ad.size" content="width=300,height=300">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="main.css" />
+	<title>teraflu</title>
+</head>
+<body>
+	<div class="banner">
+		<a class="link slider slider_1" href="%link1%" target="_blank" id="slider">
+			<div class="slide slide_1">
+				<div class="title"></div>
+				<div class="btn"></div>
+				<div class="track track_1" id="track">
+					<div class="value"></div>
+					<div class="text text_1"></div>
+					<div class="text text_2"></div>
+					<div class="text text_3"></div>
+				</div>
+			</div>
+			<div class="slide slide_2">
+				<div class="product"></div>
+			</div>
+			<div class="slide slide_3">
+				<div class="note"></div>
+			</div>
+		</a>
+	</div>
+
+	<script src="prefixfree.min.js"></script>
+	<script type="text/javascript">
+	var track = document.getElementById("track"), timerTrack;
+	var j = -1, slider = document.getElementById("slider");
+	var timerSlider = setInterval(function() {
+		j = j + 1;
+		if(j <= 4) {
+			if(!j) {
+				var i = 1, delta = 1;
+				timerTrack = setInterval(function() {
+					track.classList.remove('track_' + i);
+					i = i + delta;
+					if(i >= 3) delta = -1;
+					if(i <= 1) delta = 1;
+					track.classList.add('track_' + i);
+				}, 2000);
+			}
+			slider.classList.remove('slider_3');
+			slider.classList.add('slider_1');
+		} else if(j <= 7) {
+			clearInterval(timerTrack);
+			slider.classList.remove('slider_1');
+			slider.classList.add('slider_2');
+		} else {
+			slider.classList.remove('slider_2');
+			slider.classList.add('slider_3');
+			track.classList.add('track_1');
+			track.classList.remove('track_2');
+			track.classList.remove('track_3');
+			j = -1;
+		}
+	}, 1000);
+
+	setTimeout(function() {
+		clearInterval(timerSlider);
+	}, 300000);
+	</script>
+
+</body>
+</html>

@@ -1,4 +1,6 @@
 'use strict';
+document.addEventListener('touchend', function(){});
+
 window.addEventListener('message', function(e) {
     if (e.data === 'carousel:viewable') {
         document.documentElement.className = 'run';
