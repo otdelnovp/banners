@@ -1,0 +1,297 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: transparent; overflow: hidden; }
+
+.banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #00b956;
+}
+
+.link {
+	display:block;
+	position: relative;
+	width:100%;
+	height:100%;
+	text-decoration: none;
+}
+
+
+.first {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.girl {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: -50%;
+	width: 200%;
+	height: 100%;
+	background: url(img/girl.jpg) center no-repeat;
+	background-size: auto 100%;
+}
+
+.shadow {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.5) 100%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.5) 100%);
+}
+
+.title {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/title.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.logo {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/logo.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.label-empty {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/label_empty.png) center no-repeat;
+	background-size: auto 100%;
+}
+.label {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/label.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.circle {
+	position: absolute;
+	z-index: 15;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/circle_violet.png) center no-repeat;
+	background-size: auto 100%;
+}
+.circle_1 {
+	background-position: 100% 50%;
+}
+.circle_2 {
+	background-position: 0% 50%;
+}
+.circle_0 {
+	background-image: url(img/circle_green.png);
+	opacity: 0;
+}
+
+.white {
+	position: absolute;
+	z-index: 15;
+	top: -25%;
+	left: -150%;
+	width: 400%;
+	height: 250%;
+	background: #fff;
+	border-radius: 50%;
+}
+
+
+.second {
+	position: absolute;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #00b956;
+}
+
+.slogan {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/slogan.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.btn {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/btn.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.note {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/note.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+
+/**/
+
+
+.banner {
+	opacity: 0;
+	transition: opacity 500ms;
+}
+.animate.banner {
+	opacity: 1;
+}
+
+
+.girl {
+	opacity: 0;
+	transform: translateX(-50px);
+	transition: opacity 1000ms 200ms, transform 1000ms 200ms;
+}
+.animate .girl {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+
+.title {
+	opacity: 0;
+	transform: translateY(-20px);
+	transition: opacity 1000ms 1000ms, transform 1000ms 1000ms;
+}
+.animate .title {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+
+.white {
+	transform: scale(0);
+	transition: transform 500ms 3500ms;
+}
+.animate .white {
+	transform: scale(1);
+}
+
+
+.circle_0,
+.circle_1,
+.circle_2 {
+	opacity: 0;
+	transform: translate(0%,0%);
+}
+.animate .circle_1 {
+	animation: circle_1 4000ms 500ms linear both;
+}
+.animate .circle_2 {
+	animation: circle_2 4000ms 500ms linear both;
+}
+.animate .circle_0 {
+	animation: circle_0 4000ms 500ms linear both;
+}
+@keyframes circle_1 {
+	0% {opacity: 0; transform: translate(0%,0%);}
+	10% {opacity: 1; transform: translate(0%,0%);}
+	20%, 85% {opacity: 1; transform: translate(-50%,0%);}
+	100% {opacity: 1; transform: translate(0%,-30%) scale(0.07);}
+}
+@keyframes circle_2 {
+	0% {opacity: 0; transform: translate(0%,0%);}
+	10% {opacity: 1; transform: translate(0%,0%);}
+	20%, 85% {opacity: 1; transform: translate(50%,0%);}
+	100% {opacity: 1; transform: translate(10%,-30%) scale(0.07);}
+}
+@keyframes circle_0 {
+	0%, 83% {opacity: 0; transform: translate(0%,0%);}
+	84% {opacity: 1; transform: translate(0%,0%);}
+	100% {opacity: 1; transform: translate(5%,-30%) scale(0.07);}
+}
+
+
+.label-empty {
+	opacity: 0;
+	transform: translate(100px,-20px);
+	transition: opacity 1000ms 500ms, transform 1000ms 500ms;
+}
+.animate .label-empty {
+	opacity: 1;
+	transform: translate(-66%,15px);
+}
+.label {
+	transform: translate(-66%,15px);
+	transition: transform 1000ms 1300ms;
+}
+.animate .label {
+	transform: translate(0,0);
+}
+
+
+.second {
+	opacity: 0;
+	transition: opacity 300ms 4400ms;
+}
+.animate .second {
+	opacity: 1;
+}
+
+
+.btn {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 800ms 5000ms, transform 800ms 5000ms;
+}
+.animate .btn {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.note {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 800ms 5300ms, transform 800ms 5300ms;
+}
+.animate .note {
+	opacity: 1;
+	transform: translateY(0);
+}

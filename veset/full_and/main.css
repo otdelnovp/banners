@@ -1,0 +1,225 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: transparent; overflow: hidden; }
+
+.banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #cd3d29;
+}
+
+.link {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+.link:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 22.5%;
+	background: #fff;
+}
+
+.city {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.city-bg {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 3000%;
+	height: 100%;
+	background: url(img/city.png) 0 0 repeat-x;
+	background-size: auto 100%;
+}
+
+.logo {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/logo.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.slogan {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/slogan.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.sale {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/sale.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.btn {
+	position: absolute;
+	z-index: 10;
+	bottom: 8%;
+	left: 0;
+	width: 100%;
+	height: 14.8%;
+	background: url(img/btn.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.note {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/note.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.car {
+	position: absolute;
+	z-index: 11;
+	bottom: 21%;
+	left: 0;
+	height: 26vh;
+	width: 52vh;
+	max-width: 90vw;
+	max-height: 45vw;
+	background: url(img/car.png) center no-repeat;
+	background-size: auto 100%;
+}
+.wheel {
+	position: absolute;
+	z-index: 11;
+	top: 51.3%;
+	left: 53%;
+	height: 30%;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.wheel img {
+	display: block;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: 100%;
+}
+
+
+/**/
+
+
+.banner {
+	opacity: 0;
+	transition: opacity 800ms;
+}
+.animate.banner {
+	opacity: 1;
+}
+
+
+.city {
+	transform: translateX(100%);
+	transition: transform 2s ease-out;
+}
+.animate .city {
+	transform: translateX(0);
+}
+.city-bg {
+	transform: translateX(5%);
+}
+.animate .city-bg {
+	animation: city 60s linear infinite;
+}
+@keyframes city {
+	0% {transform: translateX(5%);}
+	100% {transform: translateX(-100%);}
+}
+
+.car {
+	transform: translateX(-100%);
+	transition: transform 1.2s 0.3s;
+}
+.animate .car {
+	transform: translateX(0%);
+}
+.wheel {
+	transform: rotate(0deg);
+}
+.animate .wheel {
+	animation: wheel 1s linear infinite;
+}
+@keyframes wheel {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+
+.logo {
+	transform: translateX(-50%);
+	transition: transform 1s 0.3s;
+}
+.animate .logo {
+	transform: translateX(0);
+}
+
+.slogan {
+	transform: translateX(100%);
+	transition: transform 1s 0.3s;
+}
+.animate .slogan {
+	transform: translateX(0);
+}
+
+.sale {
+	transform: translateY(-30%);
+	transition: transform 1s 0.3s;
+}
+.animate .sale {
+	transform: translateY(0);
+}
+
+.btn {
+	transform: scale(0);
+	transition: transform 1s 0.3s;
+}
+.animate .btn {
+	transform: scale(1);
+}
+
+.note {
+	opacity: 0;
+	transition: opacity 1s 0.8s;
+}
+.animate .note {
+	opacity: 1;
+}
+
