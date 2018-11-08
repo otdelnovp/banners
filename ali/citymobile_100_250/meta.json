@@ -1,0 +1,10 @@
+{
+  "name": "Главная 1",
+  "group": "Мегафон",
+  "public": false,
+  "animation": true,
+  "size": {
+    "width": 300,
+    "height": 300
+  }
+}

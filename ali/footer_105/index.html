@@ -21,6 +21,51 @@
 </div>
 
 <script type="text/javascript" src="prefixfree.min.js"></script>
+<script type="text/javascript">
+
+  var transformElement = function (element, transformCmd) {
+    element.style.MozTransform = transformCmd;
+    element.style.WebkitTransform = transformCmd;
+    element.style.OTransform = transformCmd;
+    element.style.MsTransform = transformCmd;
+    element.style.transform = transformCmd;
+  };
+
+  var link = document.querySelector('.link');
+
+  function setAnimationPercent(percent) {
+
+    if(percent < 50) {
+      transformElement(link, 'translateY(' + (100 - percent*2) + '%)');
+    } else {
+      transformElement(link, 'translateY(0%)');
+    }
+
+  }
+
+  (function() {
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.requestAnimationFrame = requestAnimationFrame;
+  })();
+
+  window.addEventListener('message', function(e) {
+    var data = e.data;
+    var command = data.split(':');
+    if (command[0] === 'animation' && !isNaN(parseInt(command[1], 10))) {
+      window.requestAnimationFrame(function() {
+        setAnimationPercent(parseInt(command[1], 10));
+      });
+    }
+  });
+
+  // var i = 1, timerId = setInterval(function() {
+  //   setAnimationPercent(i);
+  //   i++;
+  //   if(i>100) clearInterval(timerId);
+  // }, 50);
+
+</script>
 
 </body>
 </html>

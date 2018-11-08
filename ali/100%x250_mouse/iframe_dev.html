@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            html, body, iframe {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            iframe {
+                width: 100%;
+                height: 250px;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe id="iframe" height="250" width="100%"></iframe>
+        <script>
+            var iframe = document.getElementById('iframe');
+            function post(e) {
+                iframe.contentWindow.postMessage(
+                    JSON.stringify({
+                        x: e.clientX,
+                        viewportWidth: e.view.innerWidth
+                    }), '*'
+                )
+            }
+            iframe.onload = function() {
+                window.addEventListener('mousemove', post);
+            };
+            iframe.src = './index.html?' + Date.now();
+        </script>
+    </body>
+</html>

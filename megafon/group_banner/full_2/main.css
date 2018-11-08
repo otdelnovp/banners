@@ -1,0 +1,346 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: transparent; overflow: hidden; }
+
+.banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #1BAA50;
+}
+
+.link {
+	display:block;
+	position: relative;
+	width:100%;
+	height:100%;
+	text-decoration: none;
+}
+
+
+.first {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.girl {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: -50%;
+	width: 200%;
+	height: 100%;
+	background: url(img/girl.jpg) center no-repeat;
+	background-size: auto 100%;
+}
+
+.title {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/title_1.png) center no-repeat;
+	background-size: auto 100%;
+}
+.title_2 {background-image: url(img/title_2.png);}
+.title_3 {background-image: url(img/title_3.png);}
+.title_4 {background-image: url(img/title_4.png);}
+
+.icon {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+.icon_1 {background-image: url(img/icon_youtube.png); background-position: 20% 80%; background-size: auto 10%;}
+.icon_2 {background-image: url(img/icon_live.png); background-position: 60% 85%; background-size: auto 5%;}
+.icon_3 {background-image: url(img/icon_smile.png); background-position: 40% 75%; background-size: auto 11%;}
+.icon_4 {background-image: url(img/icon_sound.png); background-position: 70% 60%; background-size: auto 13%;}
+.icon_5 {background-image: url(img/icon_youtube.png); background-position: 60% 77%; background-size: auto 8%;}
+.icon_6 {background-image: url(img/icon_live.png); background-position: 35% 66%; background-size: auto 7%;}
+.icon_7 {background-image: url(img/icon_smile.png); background-position: 30% 88%; background-size: auto 11%;}
+.icon_8 {background-image: url(img/icon_sound.png); background-position: 40% 70%; background-size: auto 15%;}
+
+.logo {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/logo.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.label-empty {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/label_empty.png) center no-repeat;
+	background-size: auto 100%;
+}
+.label {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/label.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.circle {
+	position: absolute;
+	z-index: 15;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/circle_violet.png) center no-repeat;
+	background-size: auto 100%;
+}
+.circle_1 {
+	background-position: 100% 50%;
+}
+.circle_2 {
+	background-position: 0% 50%;
+}
+.circle_0 {
+	background-image: url(img/circle_green.png);
+	opacity: 0;
+}
+
+.white {
+	position: absolute;
+	z-index: 15;
+	top: -25%;
+	left: -150%;
+	width: 400%;
+	height: 250%;
+	background: #fff;
+	border-radius: 50%;
+}
+
+
+.second {
+	position: absolute;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #1BAA50;
+}
+
+.logo-final {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/logo_final.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.slogan {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/slogan.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.btn {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/btn.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.note {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/note.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+
+/**/
+
+
+.banner {
+	opacity: 0;
+	transition: opacity 500ms;
+}
+.animate.banner {
+	opacity: 1;
+}
+
+
+.title {
+	transform: translateX(100%);
+	transition: opacity 1000ms 1000ms, transform 1000ms 1000ms;
+}
+.animate .title {
+	animation: title 2s ease-in-out both;
+}
+.animate .title_2 { animation-delay: 1.5s; }
+.animate .title_3 { animation-delay: 3s; }
+.animate .title_4 { animation-delay: 4.5s; animation-name: title_last; }
+@keyframes title {
+	0% {transform: translateX(100%);}
+	44%, 56% {transform: translateX(0%);}
+	100% {transform: translateX(-100%);}
+}
+@keyframes title_last {
+	0% {transform: translateX(100%);}
+	44%, 100% {transform: translateX(0%);}
+}
+
+
+.icon {
+	transform: translateX(100%);
+}
+.animate .icon {
+	animation: icon 2.5s ease-in-out both;
+}
+.animate .icon_1 { animation-delay: 1.5s; }
+.animate .icon_2 { animation-delay: 1.7s; }
+.animate .icon_3 { animation-delay: 1.9s; }
+.animate .icon_4 { animation-delay: 2s; }
+.animate .icon_5 { animation-delay: 2.2s; }
+.animate .icon_6 { animation-delay: 2.5s; }
+.animate .icon_7 { animation-delay: 2.8s; }
+.animate .icon_8 { animation-delay: 3.1s; }
+@keyframes icon {
+	0% {transform: translateX(100%);}
+	100% {transform: translateX(-100%);}
+}
+
+
+.white {
+	transform: scale(0);
+	transition: transform 0.5s 8s;
+}
+.animate .white {
+	transform: scale(1);
+}
+
+
+.circle_0 {
+	opacity: 0;
+	transform: translate(0%,0%);
+}
+.circle_1 {
+	opacity: 0;
+	transform: translate(-100%,0%) scale(0.5);
+}
+.circle_2 {
+	opacity: 0;
+	transform: translate(100%,0%) scale(0.5);
+}
+.animate .circle_0 {animation: circle_0 4s 5s linear both;}
+.animate .circle_1 {animation: circle_1 4s 5s linear both;}
+.animate .circle_2 {animation: circle_2 4s 5s linear both;}
+@keyframes circle_0 {
+	0%, 83% {opacity: 0; transform: translate(0%,0%);}
+	84% {opacity: 1; transform: translate(0%,0%);}
+	100% {opacity: 1; transform: translate(-35%,-40%) scale(0.07);}
+}
+@keyframes circle_1 {
+	0% {opacity: 0; transform: translate(-100%,0%) scale(0.5);}
+	20% {opacity: 1; transform: translate(-50%,0%) scale(1);}
+	30%, 85% {opacity: 1; transform: translate(-50%,0%) scale(1);}
+	100% {opacity: 1; transform: translate(-40%,-40%) scale(0.07);}
+}
+@keyframes circle_2 {
+	0% {opacity: 0; transform: translate(100%,0%) scale(0.5);}
+	22% {opacity: 1; transform: translate(50%,0%) scale(1);}
+	33%, 85% {opacity: 1; transform: translate(50%,0%) scale(1);}
+	100% {opacity: 1; transform: translate(-30%,-40%) scale(0.07);}
+}
+
+
+.label-empty {
+	opacity: 0;
+	transform: translate(100px,-20px);
+	transition: opacity 1s 5s, transform 1s 5s;
+}
+.animate .label-empty {
+	opacity: 1;
+	transform: translate(-80%,15px);
+}
+.label {
+	transform: translate(-80%,15px);
+	transition: transform 1s 5.7s;
+}
+.animate .label {
+	transform: translate(0,0);
+}
+
+
+.second {
+	opacity: 0;
+	transition: opacity 0.3s 8.8s;
+}
+.animate .second {
+	opacity: 1;
+}
+
+.slogan {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 800ms 9s, transform 800ms 9s;
+}
+.animate .slogan {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.btn {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 800ms 9.3s, transform 800ms 9.3s;
+}
+.animate .btn {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.note {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 800ms 9.6s, transform 800ms 9.6s;
+}
+.animate .note {
+	opacity: 1;
+	transform: translateY(0);
+}

@@ -1,0 +1,262 @@
+html, body {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 250px;
+    max-width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    font-weight: normal;
+    font-style: normal;
+
+    color: white;
+    border: 0;
+}
+
+.banner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+}
+
+.link {
+    z-index: 200;
+
+    text-decoration: none;
+}
+
+.link-hero {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0);
+}
+
+/***************************************/
+
+.bg {
+    position: absolute;
+    background: url('../images/bg-min.png') no-repeat center;
+    background-size: cover;
+    top: 0;
+    left: -50px;
+}
+
+.content {
+    width: 940px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.logo {
+    width: 263px;
+    height: 50px;
+    background: url('../images/logo-min.png') no-repeat center;
+    background-size: contain;
+    top: 15px;
+    left: calc(50% - 132px);
+    z-index: 1;
+    position: absolute;
+}
+
+.came_up {
+    width: 255px;
+    height: 70px;
+    background: url('../images/text.svg') no-repeat center;
+    background-size: contain;
+    top: 85px;
+    position: absolute;
+    left: 0;
+}
+
+.car {
+    width: 390px;
+    height: 170px;
+    background: url('../images/car-min.png') no-repeat center;
+    background-size: contain;
+    bottom: 0;
+    left: 50%;
+    margin-left: -195px;
+    z-index: 1;
+    position: absolute;
+}
+
+.button {
+    width: 150px;
+    height: 40px;
+    z-index: 1;
+    background: url('../images/button.svg') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+}
+
+.banner:hover .button {
+    background-image: url('../images/button_hover.svg');
+}
+
+.kacheli {
+    background: url('../images/kachel-min.png') no-repeat center;
+    background-size: contain;
+    width: 161px;
+    height: 147px;
+    position: absolute;
+    bottom: -30px;
+    right: 170px;
+}
+
+.family {
+    background: url('../images/family-min.png') no-repeat center;
+    background-size: contain;
+    width: 145px;
+    height: 152px;
+    position: absolute;
+    bottom: 41px;
+    right: 100px;
+    opacity: 1;
+}
+
+.rub {
+    background: url('../images/rub-min.png') no-repeat center;
+    background-size: contain;
+    width: 167px;
+    height: 37px;
+    position: absolute;
+    top: 85px;
+    right: 220px;
+}
+
+.house {
+    position: absolute;
+    opacity: .7;
+    width: 449px;
+    height: 100%;
+    background: url('../images/house-min.png') no-repeat center;
+    background-size: cover;
+    left: -100px;
+    top: 0;
+}
+
+.karusel {
+    position: absolute;
+    opacity: .5;
+    width: 300px;
+    height: 210px;
+    background: url('../images/karusel_n-min.png') no-repeat center;
+    background-size: cover;
+    right: -200px;
+    top: 0;
+}
+
+.preload {
+    background: #fbae17;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 560px;
+    height: 170px;
+}
+
+.load-title {
+    background: url('../images/load-title.png') no-repeat center;
+    background-size: contain;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 70px;
+}
+
+.load-progress {
+    width: 100%;
+    height: 55px;
+    border-radius: 27px;
+    border: 1px solid white;
+    overflow: hidden;
+    position: relative;
+}
+
+.load-progress__inner {
+    width: 0;
+    transition: width 0.1s linear;
+    background: white;
+    left: 0;
+    height: 100%;
+}
+
+@media screen and (min-width: 1400px) {
+    .logo {
+        left: calc(50% - 169px);
+    }
+    
+    .came_up {
+        width: 305px;
+        height: 101px;
+        left: -200px;
+    }
+    
+    .car {
+        margin-left: -215px;
+    }
+    
+    .kacheli {
+        right: 73px;
+    }
+    
+    .family {
+        right: 0px;
+    }
+    
+    .rub {
+        right: 195px;
+    }
+
+    .button {
+        right: -195px;
+    }
+
+    .karusel {
+        right: -100px
+    }
+}

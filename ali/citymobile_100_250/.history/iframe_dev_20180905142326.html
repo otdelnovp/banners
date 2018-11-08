@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            html, body, iframe {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            iframe {
+                width: 100%;
+                height: 250px;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+            }
+
+            #a1 {
+                position: fixed;
+                height: 100%;
+                width: 1px;
+                top: 0;
+                /*background: #f00;*/
+                pointer-events: none;
+            }
+
+            #a2 {
+                position: fixed;
+                height: 1px;
+                width: 100%;
+                left: 0;
+                /*background: #f00;*/
+                pointer-events: none;
+            }
+
+            #a3 {
+                position: fixed;
+                height: 1px;
+                width: 100%;
+                top: 0;
+                transform-origin: 100% 0;
+                /*background: #f00;*/
+                pointer-events: none;
+            }
+
+            #canvas-close {
+                position: fixed;
+                right: 30px;
+                top: 30px;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <iframe id="iframe" height="250" width="100%"></iframe>
+
+        <script>
+            if (!window.location.origin) {
+                window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+            }
+            var iframe = document.getElementById('iframe');
+
+            function post(e) {
+                iframe.contentWindow.postMessage(
+                    JSON.stringify({
+                        x: e.clientX,
+                        y: e.clientY
+                    }),
+                    location.origin
+                )
+            }
+
+            iframe.onload = function() {
+                window.addEventListener('mousemove', post);
+            };
+            iframe.src = 'http://' + location.host + '/index.html?' + Date.now();
+        </script>
+    </body>
+</html>

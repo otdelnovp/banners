@@ -25,6 +25,8 @@ html, body {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	transform: translateY(99%);
+	transition: transform 500ms linear;
 }
 
 .bg {
