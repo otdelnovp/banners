@@ -12,13 +12,21 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 }
 
 .link {
-	display:block;
+	display: block;
 	position: relative;
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
 	text-decoration: none;
 }
 
+.inner {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	max-height: 180vw;
+}
 
 .first {
 	position: absolute;
@@ -27,15 +35,13 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	left: 0;
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
 }
 
 .girl {
 	position: absolute;
 	z-index: 0;
 	top: 0;
-	left: -50%;
-	width: 200%;
+	width: 100%;
 	height: 100%;
 	background: url(img/girl.jpg) center no-repeat;
 	background-size: auto 100%;
@@ -73,16 +79,31 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 .icon_7 {background-image: url(img/icon_smile.png); background-position: 30% 88%; background-size: auto 11%;}
 .icon_8 {background-image: url(img/icon_sound.png); background-position: 40% 70%; background-size: auto 15%;}
 
+
 .logo {
+	position: absolute;
+	z-index: 5;
+	bottom: 3.5%;
+	left: 6.2%;
+	width: 80%;
+	height: 6.86%;
+	background: url(img/logo.png) left no-repeat;
+	background-size: auto 100%;
+}
+.logo-ball {
 	position: absolute;
 	z-index: 5;
 	top: 0;
 	left: 0;
-	width: 100%;
 	height: 100%;
-	background: url(img/logo.png) center no-repeat;
-	background-size: auto 100%;
 }
+.logo-ball img {
+	display: block;
+	height: 100%;
+	width: auto;
+	border: 0;
+}
+
 
 .label-empty {
 	position: absolute;
@@ -147,16 +168,21 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 	height: 100%;
 	background: #1BAA50;
 }
-
-.logo-final {
+.second:before {
+	content: '';
+	display: block;
 	position: absolute;
-	z-index: 5;
-	top: 0;
+	z-index: 20;
+	bottom: 100%;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: url(img/logo_final.png) center no-repeat;
-	background-size: auto 100%;
+	background: #1BAA50;
+}
+
+.logo_second {
+	top: 6.66%;
+	bottom: auto;
 }
 
 .slogan {
@@ -289,6 +315,28 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 }
 
 
+.animate .logo_first .logo-ball_1 {animation: logo_ball_1 1s 1s linear both;}
+.animate .logo_first .logo-ball_2 {animation: logo_ball_2 1s 1.3s linear both;}
+.animate .logo_first .logo-ball_3 {animation: logo_ball_3 1s 1.6s linear both;}
+
+.animate .logo_second .logo-ball_1 {animation: logo_ball_1 1s 9s linear both;}
+.animate .logo_second .logo-ball_2 {animation: logo_ball_2 1s 9.3s linear both;}
+.animate .logo_second .logo-ball_3 {animation: logo_ball_3 1s 9.6s linear both;}
+
+@keyframes logo_ball_1 {
+	0%, 100% {transform: scale(1) translate(0,0);}
+	50% {transform: scale(1.4) translate(-1.5%,-6%);}
+}
+@keyframes logo_ball_2 {
+	0%, 100% {transform: scale(1) translate(0,0);}
+	50% {transform: scale(1.4) translate(-6%,-6%);}
+}
+@keyframes logo_ball_3 {
+	0%, 100% {transform: scale(1) translate(0,0);}
+	50% {transform: scale(1.4) translate(-9%,-6%);}
+}
+
+
 .label-empty {
 	opacity: 0;
 	transform: translate(100px,-20px);
@@ -296,10 +344,10 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: trans
 }
 .animate .label-empty {
 	opacity: 1;
-	transform: translate(-80%,15px);
+	transform: translate(-90%,15px);
 }
 .label {
-	transform: translate(-80%,15px);
+	transform: translate(-90%,15px);
 	transition: transform 1s 5.7s;
 }
 .animate .label {
