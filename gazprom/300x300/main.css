@@ -1,0 +1,98 @@
+html, body { margin: 0; padding: 0; }
+
+.banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	text-align: center;
+	margin: 0;
+	width: 300px;
+	height: 300px;
+	font-size: 0;
+	background: #00ADEF url(bg.png) center no-repeat;
+	background-size: cover;
+}
+
+.link {
+	display:block;
+	position: relative;
+	width:100%;
+	height:100%;
+	text-decoration: none;
+}
+
+.note {
+	display: block;
+	position: absolute;
+	z-index: 15;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/note.png) center no-repeat;
+	background-size: contain;
+	transition: opacity 0.5s;
+}
+/* .link:hover .note {
+	opacity: 0;
+} */
+
+.arr {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/arr.png) 100% 50% no-repeat;
+	background-size: contain;
+	transition: transform 1s cubic-bezier(0.4, 0.0, 0.2, 1);
+	transform: translateX(32px);
+}
+.link:hover .arr {
+	transform: translateX(0);
+}
+
+.title {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/title.png) center no-repeat;
+	background-size: contain;
+	opacity: 1;
+	transition: opacity 0.5s;
+	animation: title 6s infinite;
+}
+.link:hover .title {
+	opacity: 0 !important;
+}
+@keyframes title {
+	0%, 34%, 66%, 100% {opacity: 1;}
+	40%, 60% {opacity: 0;}
+}
+
+.prize {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/prize.png) center no-repeat;
+	background-size: contain;
+	transition: transform 0.5s;
+	transform: translateY(-100%);
+	animation: prize 6s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+@keyframes prize {
+	0%, 33% {transform: translateY(-100%)}
+	66%, 100% {transform: translateY(100%)}
+}

@@ -1,0 +1,28 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #fff; overflow: hidden; }
+
+.banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	background: #fff url(bg.jpg) center no-repeat;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+}
+
+.link {
+	display:block;
+	position: relative;
+	width:100%;
+	height:100%;
+	text-decoration: none;
+	background: url(text.png) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
