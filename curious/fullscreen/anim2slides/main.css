@@ -45,10 +45,10 @@ body, html {
 }
 
 .banner {
-	animation: fadein 500ms ease-in-out both;
+	animation: fadein 1000ms ease-in-out both;
 }
 .claim {
-	animation: fadein 500ms 800ms ease-in-out both;
+	animation: fadein 1000ms 800ms ease-in-out both;
 }
 
 @keyframes fadein {
