@@ -1,0 +1,81 @@
+html, body { margin: 0; padding: 0; }
+
+.banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	text-align: center;
+	margin: 0;
+	width: 300px;
+	height: 300px;
+	font-size: 0;
+	background: #fff url(img/bg.png) center no-repeat;
+	background-size: cover;
+}
+
+.link {
+	display:block;
+	position: relative;
+	width:100%;
+	height:100%;
+	text-decoration: none;
+}
+
+.note {
+	display: block;
+	position: absolute;
+	z-index: 15;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/note.png) center no-repeat;
+	background-size: contain;
+	transition: opacity 0.5s;
+}
+/* .link:hover .note {
+	opacity: 0;
+} */
+
+.arr {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/arr.png) 100% 50% no-repeat;
+	background-size: contain;
+	transition: transform 1s cubic-bezier(0.4, 0.0, 0.2, 1);
+	transform: translateX(32px);
+}
+.link:hover .arr {
+	transform: translateX(0);
+}
+
+.title {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/title.png) center no-repeat;
+	background-size: contain;
+}
+
+.product {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/product.png) center no-repeat;
+	background-size: contain;
+}

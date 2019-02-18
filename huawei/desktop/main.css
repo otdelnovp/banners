@@ -1,0 +1,325 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; font-size: 10px; background: #fff; overflow: hidden; }
+
+.banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	background: #fff url(img/bg.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.title {
+	display: block;
+	position: absolute;
+	z-index: 15;
+	top: 3rem;
+	left: 50%;
+	margin: 0 0 0 -35rem;
+	width: 70rem;
+	height: 4.7rem;
+	background: url(img/title_start.png) center no-repeat;
+	background-size: contain;
+	transition: transform 1s;
+}
+.title__final {
+	transform: translateY(-20rem);
+	height: 10rem;
+	background-image: url(img/title_final.png);
+}
+
+.btn {
+	display: block;
+	position: absolute;
+	z-index: 15;
+	bottom: 2.5rem;
+	left: 50%;
+	margin: 0 0 0 -6.6rem;
+	width: 13.1rem;
+	height: 4rem;
+	background: url(img/btn_next.png) center no-repeat;
+	background-size: contain;
+	cursor: pointer;
+	transition: transform 1s, opacity 0.5s;
+}
+.btn__final {
+	transform: translateY(10rem);
+	margin: 0 0 0 -16rem;
+	width: 31.5rem;
+	background-image: url(img/btn_final.png);
+}
+.btn:hover {
+	transform: scale(1.02);
+}
+.btn.disabled {
+	opacity: 0.2;
+	cursor: default;
+	pointer-events: none;
+}
+
+
+.icon {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	top: 50%;
+	left: 50%;
+	background-color: #7FC2CB;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: transform 0.5s, box-shadow 0.3s, opacity 0.5s, visibility 0.5s;
+	animation: icon 4s cubic-bezier(.53,.34,.53,.72) Infinite;
+}
+@keyframes icon {
+	0%, 100% { transform: translateY(0%); }
+	50% { transform: translateY(10%) }
+}
+
+.icon:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/blick.png) 50% 0 no-repeat;
+	background-size: contain;
+	opacity: 0.5;
+}
+
+.icon span {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, 2rem);
+	padding: 0.5rem 1rem;
+	font: 400 1.6rem/1 Arial, "Helvetica Neue", Helvetica, sans-serif;
+	white-space: nowrap;
+	border-radius: 0.6rem;
+	background: #FCFCFC;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s, visibility 0.5s;
+}
+.icon:hover span,
+.icon.selected span {
+	opacity: 1;
+	visibility: visible;
+}
+
+.icon__proc {
+	z-index: 10;
+	margin: 10rem -32rem;
+	width: 20rem;
+	height: 20rem;
+	box-shadow: 0 0 0 1.2rem #C4E1E4;
+	background-image: url(img/icon_proc.png);
+}
+.icon__proc:hover,
+.icon__proc.selected {
+	box-shadow: 0 0 0 0.7rem #E20714;
+}
+.icon__chrg {
+	z-index: 10;
+	margin: -3rem 23rem;
+	width: 20rem;
+	height: 20rem;
+	box-shadow: 0 0 0 1.2rem #C4E1E4;
+	background-image: url(img/icon_chrg.png);
+	animation-delay: 0.5s;
+}
+.icon__chrg:hover,
+.icon__chrg.selected {
+	box-shadow: 0 0 0 0.7rem #E20714;
+}
+.icon__cam {
+	margin: -10rem -13rem;
+	width: 14rem;
+	height: 14rem;
+	box-shadow: 0 0 0 0.8rem #C4E1E4;
+	background-image: url(img/icon_cam.png);
+	animation-delay: 1s;
+}
+.icon__cam:hover,
+.icon__cam.selected {
+	box-shadow: 0 0 0 0.5rem #E20714;
+}
+.icon__batr {
+	margin: -22rem 11rem;
+	width: 13rem;
+	height: 13rem;
+	box-shadow: 0 0 0 0.8rem #C4E1E4;
+	background-image: url(img/icon_batr.png);
+	animation-delay: 2s;
+}
+.icon__batr:hover,
+.icon__batr.selected {
+	box-shadow: 0 0 0 0.5rem #E20714;
+}
+.icon__lens {
+	margin: -19rem -37rem;
+	width: 10rem;
+	height: 10rem;
+	box-shadow: 0 0 0 0.7rem #C4E1E4;
+	background-image: url(img/icon_lens.png);
+	animation-delay: 1s;
+}
+.icon__lens:hover,
+.icon__lens.selected {
+	box-shadow: 0 0 0 0.4rem #E20714;
+}
+
+
+.shadow {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	top: 50%;
+	left: 50%;
+	background: url(img/shadow.png) 50% 100% no-repeat;
+	background-size: contain;
+	transition: opacity 0.5s, visibility 0.5s;
+	animation: shadow 4s cubic-bezier(.53,.34,.53,.72) Infinite;
+}
+@keyframes shadow {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.1); }
+}
+.shadow__proc {
+	z-index: 10;
+	margin: 33rem -32rem;
+	width: 20rem;
+	height: 10rem;
+}
+.shadow__chrg {
+	z-index: 10;
+	margin: 29rem 23rem;
+	width: 20rem;
+	height: 10rem;
+	animation-delay: 0.5s;
+}
+.shadow__cam {
+	margin: 27rem -13rem;
+	width: 14rem;
+	height: 7rem;
+	animation-delay: 1s;
+}
+.shadow__batr {
+	margin: 16rem 11rem;
+	width: 13rem;
+	height: 6.5rem;
+	opacity: 0.7;
+	animation-delay: 2s;
+}
+.shadow__lens {
+	margin: 15rem -37rem;
+	width: 10rem;
+	height: 5rem;
+	opacity: 0.4;
+	animation-delay: 1s;
+}
+
+
+.product {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	margin: -18rem -16rem;
+	width: 32rem;
+	height: 36rem;
+	background: url(img/product.png) center no-repeat;
+	background-size: contain;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(10%);
+	transition: transform 1s 0.3s, opacity 0.5s 0.3s, visibility 0.5s 0.3s;
+}
+.product:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: -5%;
+	width: 110%;
+	height: 10rem;
+	background: url(img/shadow_product.png) 50% 100% no-repeat;
+	background-size: contain;
+}
+
+.final-icons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 1rem 0 0 -26rem;
+	opacity: 0;
+	visibility: hidden;
+	transform: translate(-50%, -50%);
+	transition: transform 1s 0.3s, opacity 0.5s 0.3s, visibility 0.5s 0.3s;
+}
+.final-icons .icon {
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0 0 2rem;
+	width: 7rem;
+	height: 7rem;
+	box-shadow: 0 0 0 0.4rem #C4E1E4 !important;
+	cursor: default;
+	animation: none;
+	display: none;
+}
+.final-icons .icon.selected {
+	display: block;
+}
+
+
+/***/
+
+
+.final .title__start {
+	transform: translateY(-20rem);
+}
+.final .title__final {
+	transform: translateY(0);
+}
+
+.final .btn__next {
+	transform: translateY(10rem) !important;
+}
+.final .btn__final {
+	transform: translateY(0);
+}
+.final .btn__final:hover {
+	transform: scale(1.02);
+}
+
+.final .product {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0%);
+}
+
+.final .select-icon,
+.final .shadow {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.final .final-icons {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0%, -50%);
+}
