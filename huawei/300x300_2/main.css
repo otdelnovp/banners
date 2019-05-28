@@ -1,0 +1,162 @@
+html, body { margin: 0; padding: 0; }
+
+.banner {
+	overflow: hidden;
+	position: fixed;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	text-align: center;
+	margin: 0;
+	width: 300px;
+	height: 300px;
+	font-size: 0;
+	background: #fff url(img/bg.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.link {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+
+.arr {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/arr.png) 100% 50% no-repeat;
+	background-size: contain;
+	transition: opacity 300ms 500ms;
+	animation: arr 2.5s cubic-bezier(.53,.34,.53,.72) Infinite;
+}
+@keyframes arr {
+	0%, 100% { transform: translate(5px,5px); }
+	50% { transform: translate(-5px,-5px); }
+}
+.link:hover .arr {
+	opacity: 0;
+	transition: opacity 300ms;
+}
+
+.title {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/title.png) center no-repeat;
+	background-size: contain;
+	transition: opacity 300ms 500ms;
+}
+.link:hover .title {
+	opacity: 0;
+	transition: opacity 300ms;
+}
+
+.box {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: 40px;
+	left: 40px;
+	width: 220px;
+	height: 260px;
+	background: url(img/phone.png) center no-repeat;
+	background-size: contain;
+	opacity: 0;
+	transform: translateY(100%);
+	transition: opacity 300ms, transform 700ms cubic-bezier(.53,.34,.53,.72);
+}
+.link:hover .box {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.phone {
+	display: block;
+	position: absolute;
+	z-index: 7;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/phone.png) center no-repeat;
+	background-size: contain;
+}
+
+.moon {
+	display: block;
+	position: relative;
+	z-index: 3;
+	margin: 8px 5px;
+	height: 200px;
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity 300ms;
+}
+.link:hover .moon {
+	opacity: 1;
+	transition: opacity 300ms 700ms;
+}
+.moon-inner {
+	display: block;
+	position: relative;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+}
+.link:hover .moon-inner {
+	animation: moon 2.5s 1.7s cubic-bezier(.53,.34,.53,.72) Infinite;
+}
+@keyframes moon {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.1); }
+}
+.moon-bg {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	top: 17%;
+	left: 50%;
+	margin: 0 0 0 1px;
+	width: 114px;
+	height: 114px;
+	background: url(img/moon.png) center no-repeat;
+	background-size: contain;
+	overflow: hidden;
+	transform: translate(-50%, -50%) scale(1);
+	transition: transform 300ms;
+}
+.link:hover .moon-bg {
+	transform: translate(-50%, -50%) scale(2.7);
+	transition: transform 700ms 1s;
+}
+
+.btn {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/btn.png) center no-repeat;
+	background-size: contain;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 300ms, transform 300ms cubic-bezier(.53,.34,.53,.72);
+}
+.link:hover .btn {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 300ms 1s, transform 700ms 1s cubic-bezier(.53,.34,.53,.72);
+}

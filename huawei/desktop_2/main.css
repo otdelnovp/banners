@@ -1,0 +1,64 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; font-size: 10px; background: #fff; overflow: hidden; }
+
+.banner {
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+.bg {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 90%;
+	height: 100%;
+	background: url(img/bg.jpg) center right no-repeat;
+	background-size: auto 100%;
+}
+
+.text {
+	display: block;
+	position: absolute;
+	z-index: 15;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/text.png) top center no-repeat;
+	background-size: contain;
+}
+
+.right {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	width: 10%;
+	height: 100%;
+	background: url(img/right.png) center right no-repeat;
+	background-size: contain;
+}
+
+.btn {
+	display: block;
+	position: absolute;
+	z-index: 15;
+	top: 38%;
+	left: 30%;
+	width: 40%;
+	height: 7.7%;
+	background: url(img/btn.png) center no-repeat;
+	background-size: contain;
+	cursor: pointer;
+	transition: transform 1s;
+}
+/* .btn:hover {
+	transform: scale(1.02);
+} */
