@@ -1,0 +1,129 @@
+@font-face {
+	font-family: FiraSans;
+	src: local('firasans'), url(../fonts/firasans-bold-webfont.woff) format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: fallback
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: FiraSans, Roboto, Panton, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	cursor: pointer;
+	color: #fff;
+	border: 0
+}
+
+.banner {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	width: 300px;
+	height: 300px;
+	color: #fff;
+	background: #389f3c;
+	text-decoration: none;
+}
+
+.slide {
+	position: absolute;
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+	background: url(../images/slide_1.jpg) center no-repeat;
+	background-size: cover;
+	animation: slide 8s ease-in-out infinite;
+}
+
+.slide__2 {
+	background-image: url(../images/slide_2.jpg);
+	animation-delay: 4s;
+}
+
+@keyframes slide {
+	2%, 48% {
+		opacity: 1;
+	}
+	52%, 98% {
+		opacity: 0;
+	}
+}
+
+.region {
+	position: absolute;
+	opacity: 1;
+	top: 40px;
+	left: 15px;
+	width: 280px;
+	background-size: cover;
+	font: bold 23px/1 FiraSans, Roboto, Panton, sans-serif;
+}
+.region.small {
+	margin-top: 4px;
+	font-size: 19px;
+}
+.region.nano {
+	margin-top: -2px;
+	font-size: 17px;
+}
+
+.arrow {
+	position: absolute;
+	opacity: 1;
+	top: 180px;
+	left: 15px;
+	width: 110px;
+	height: 75px;
+}
+.arrow:before,
+.arrow:after {
+	content: '';
+	display: block;
+	position: absolute;
+	opacity: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/arrow.png) center no-repeat;
+	background-size: cover;
+}
+.arrow:before {
+	opacity: 1;
+	animation: arrow 8s linear infinite;
+}
+@keyframes arrow {
+	0%, 25%, 50% {
+		transform: translateX(0px)
+	}
+	12%, 37%, 62% {
+		transform: translateX(10px)
+	}
+}
+
+.line {
+	position: absolute;
+	opacity: 1;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	font: bold 13px/12px FiraSans, Roboto, Panton, sans-serif;
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: #1f4924;
+	animation: line 4s linear infinite;
+}
+@keyframes line {
+	0% {
+		transform: translateX(-200px)
+	}
+	100% {
+		transform: translateX(0px)
+	}
+}

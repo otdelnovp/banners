@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=100%,height=100">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Banner preview</title>
+<link rel="stylesheet" href="main.css?1">
+</head>
+<body>
+
+<div id="banner" class="banner">
+  <a class="link" href="%link1%" target="_blank">
+    <div class="logo"></div>
+    <div class="floor"></div>
+    <div class="car"></div>
+    <div class="home1"></div>
+    <div class="home2"></div>
+    <div class="home3"></div>
+  </a>
+</div>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script type="text/javascript">
+    var banner = document.querySelector('#banner');
+    setTimeout(function() {banner.classList.add('show')}, 500);
+    setTimeout(function() {banner.classList.remove('show')}, 8500);
+    setTimeout(function() {banner.classList.add('show')}, 11000);
+    setTimeout(function() {banner.classList.remove('show')}, 20500);
+    setTimeout(function() {banner.classList.add('show')}, 23000);
+</script>
+
+</body>
+</html>

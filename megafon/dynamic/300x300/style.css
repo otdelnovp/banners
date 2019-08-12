@@ -1,0 +1,485 @@
+@font-face {
+  font-family: "MFfont";
+  src: url("http://r.mradx.net/img/61/E5BE24.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+.mfbanr {
+  border: 1px solid #EEE;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  background: #00b956;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+.mfbanr.mfstp_1,
+.mfbanr.mfstp_2,
+.mfbanr.mfstp_3,
+.mfbanr.mfstp_4 {
+  opacity: 1;
+}
+
+.mflink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999999999999999;
+}
+.opened .mflink {
+  pointer-events: auto;
+}
+
+.mfscrn {
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.mfstp_1 .mfscrn_1,
+.mfstp_2 .mfscrn_1,
+.mfstp_3 .mfscrn_1 {
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+.mfstp_3 .mfscrn_2,
+.mfstp_4 .mfscrn_2 {
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+.mfstp_4 .mfscrn_3 {
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+
+.mfttl {
+  position: absolute;
+  z-index: 15;
+  top: 15px;
+  left: 20px;
+  width: 0;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  font: 900 24px/22px "MFfont", system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue;
+  -webkit-transition: width 600ms 100ms linear;
+  transition: width 600ms 100ms linear;
+}
+.mfttl_str3 {
+  overflow: hidden;
+  width: 0;
+  color: #733781;
+  line-height: 28px;
+  -webkit-transition: width 500ms linear;
+  transition: width 500ms linear;
+}
+
+.mfstp_1 .mfttl_1 {
+  width: 280px;
+  -webkit-transition: width 1000ms linear;
+  transition: width 1000ms linear;
+}
+.mfstp_1 .mfttl_1 .mfttl_str3 {
+  width: 280px;
+  -webkit-transition: width 1000ms 1500ms linear;
+  transition: width 1000ms 1500ms linear;
+}
+
+.mfstp_2 .mfttl_2,
+.mfstp_3 .mfttl_2 {
+  width: 280px;
+  -webkit-transition: width 800ms 1000ms linear;
+  transition: width 800ms 1000ms linear;
+}
+.mfstp_2 .mfttl_2 .mfttl_str3,
+.mfstp_3 .mfttl_2 .mfttl_str3 {
+  width: 280px;
+  -webkit-transition: width 1000ms 1100ms linear;
+  transition: width 1000ms 1100ms linear;
+}
+
+.mfstp_dynam .mfttl_2 {
+  width: 0;
+  -webkit-transition: width 200ms 100ms linear;
+  transition: width 200ms 100ms linear;
+}
+.mfstp_dynam .mfttl_2 .mfttl_str3 {
+  width: 0;
+  -webkit-transition: width 200ms 0ms linear;
+  transition: width 200ms 0ms linear;
+}
+.mfstp_dynam .mfttl_dynam {
+  width: 280px;
+  -webkit-transition: width 800ms 500ms linear;
+  transition: width 800ms 500ms linear;
+}
+.mfstp_dynam .mfttl_dynam .mfttl_str3 {
+  width: 280px;
+  -webkit-transition: width 1000ms 600ms linear;
+  transition: width 1000ms 600ms linear;
+}
+
+.mfstp_4 .mfttl_3 {
+  width: 280px;
+  -webkit-transition: width 800ms 2000ms linear;
+  transition: width 800ms 2000ms linear;
+}
+.mfstp_4 .mfttl_3 .mfttl_str2 {
+  color: #733781;
+}
+.mfstp_4 .mfttl_3 .mfttl_str3 {
+  width: 280px;
+  -webkit-transition: width 1000ms 2100ms linear;
+  transition: width 1000ms 2100ms linear;
+}
+
+.mfscrn_1 .mflog {
+  position: absolute;
+  z-index: 15;
+  bottom: 20px;
+  left: 20px;
+  width: 25px;
+  height: 23px;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+.mfscrn_1 .mflog_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 100%;
+  background: url(img/logo.png) 0 0 no-repeat;
+  background-size: auto 100%;
+}
+.mfscrn_1 .mflog_right {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 0;
+  height: 100%;
+  background: url(img/logo.png) 100% 0 no-repeat;
+  background-size: auto 100%;
+}
+.mfstp_1 .mfscrn_1 .mflog,
+.mfstp_2 .mfscrn_1 .mflog,
+.mfstp_3 .mfscrn_1 .mflog {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 300ms 200ms, -webkit-transform 70ms 300ms ease-out;
+  transition: opacity 300ms 200ms, -webkit-transform 70ms 300ms ease-out;
+  transition: transform 70ms 300ms ease-out, opacity 300ms 200ms;
+  transition: transform 70ms 300ms ease-out, opacity 300ms 200ms,
+    -webkit-transform 70ms 300ms ease-out;
+}
+.mfstp_1 .mfscrn_1 .mflog_right,
+.mfstp_2 .mfscrn_1 .mflog_right,
+.mfstp_3 .mfscrn_1 .mflog_right {
+  width: 105px;
+  -webkit-transition: width 700ms 500ms ease-in-out;
+  transition: width 700ms 500ms ease-in-out;
+}
+
+.mfgrl {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(img/girl.png) center no-repeat;
+  background-size: contain;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.mfstp_1 .mfgrl,
+.mfstp_2 .mfgrl,
+.mfstp_3 .mfgrl {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 1000ms;
+  transition: -webkit-transform 1000ms;
+  transition: transform 1000ms;
+  transition: transform 1000ms, -webkit-transform 1000ms;
+}
+
+.mfbagr {
+  position: absolute;
+  z-index: 1;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+}
+.mfstp_1 .mfbagr_1,
+.mfstp_2 .mfbagr_1,
+.mfstp_3 .mfbagr_1 {
+  z-index: 1;
+  background-image: url(./img/bg_1.png);
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 300ms, -webkit-transform 2000ms ease-out;
+  transition: opacity 300ms, -webkit-transform 2000ms ease-out;
+  transition: transform 2000ms ease-out, opacity 300ms;
+  transition: transform 2000ms ease-out, opacity 300ms,
+    -webkit-transform 2000ms ease-out;
+  -webkit-transition-delay: 2000ms;
+  transition-delay: 2000ms;
+}
+.mfstp_1 .mfbagr_2,
+.mfstp_2 .mfbagr_2,
+.mfstp_3 .mfbagr_2 {
+  z-index: 5;
+  background-image: url(./img/bg_2.png);
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 1000ms, -webkit-transform 4000ms ease-out;
+  transition: opacity 1000ms, -webkit-transform 4000ms ease-out;
+  transition: transform 4000ms ease-out, opacity 1000ms;
+  transition: transform 4000ms ease-out, opacity 1000ms,
+    -webkit-transform 4000ms ease-out;
+  -webkit-transition-delay: 2000ms;
+  transition-delay: 2000ms;
+}
+.mfstp_1 .mfbagr_3,
+.mfstp_2 .mfbagr_3,
+.mfstp_3 .mfbagr_3 {
+  z-index: 6;
+  background-image: url(./img/bg_3.png);
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 500ms, -webkit-transform 5000ms ease-out;
+  transition: opacity 500ms, -webkit-transform 5000ms ease-out;
+  transition: transform 5000ms ease-out, opacity 500ms;
+  transition: transform 5000ms ease-out, opacity 500ms,
+    -webkit-transform 5000ms ease-out;
+  -webkit-transition-delay: 2000ms;
+  transition-delay: 2000ms;
+}
+.mfbagr_4 {
+  -webkit-transform: translate(-50px, 50px) scale(0.8);
+  transform: translate(-50px, 50px) scale(0.8);
+}
+.mfstp_1 .mfbagr_4,
+.mfstp_2 .mfbagr_4,
+.mfstp_3 .mfbagr_4 {
+  z-index: 7;
+  background-image: url(./img/bg_4.png);
+  opacity: 1;
+  -webkit-transform: translate(0, 0) scale(1);
+  transform: translate(0, 0) scale(1);
+  -webkit-transition: opacity 500ms, -webkit-transform 5000ms ease-out;
+  transition: opacity 500ms, -webkit-transform 5000ms ease-out;
+  transition: transform 5000ms ease-out, opacity 500ms;
+  transition: transform 5000ms ease-out, opacity 500ms,
+    -webkit-transform 5000ms ease-out;
+  -webkit-transition-delay: 2000ms;
+  transition-delay: 2000ms;
+}
+
+.mfcrcl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -65px 0 0 -66.5px;
+  width: 132px;
+  height: 133px;
+  border-radius: 50%;
+  background: #fff;
+}
+.mfcrcl_2 {
+  margin-left: -216.5px;
+  background: #733781;
+}
+.mfcrcl_3 {
+  margin-left: 83.5px;
+  background: #733781;
+}
+
+.mfscrn_1 .mfcrcl {
+  z-index: 2;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+.mfstp_2 .mfscrn_1 .mfcrcl {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 200ms ease-in-out,
+    -webkit-transform 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out,
+    -webkit-transform 200ms ease-in-out;
+}
+.mfstp_2 .mfscrn_1 .mfcrcl_2 {
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+.mfstp_2 .mfscrn_1 .mfcrcl_3 {
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+}
+
+.mfscrn_2 .mfcrcl {
+  z-index: 25;
+  background: #00b956;
+}
+.mfscrn_2 .mfcrcl_2 {
+  background: #00b956;
+}
+.mfscrn_2 .mfcrcl_3 {
+  background: #733781;
+}
+.mfstp_4 .mfscrn_2 .mfcrcl {
+  -webkit-transition: -webkit-transform 400ms 200ms ease-in-out;
+  transition: -webkit-transform 400ms 200ms ease-in-out;
+  transition: transform 400ms 200ms ease-in-out;
+  transition: transform 400ms 200ms ease-in-out,
+    -webkit-transform 400ms 200ms ease-in-out;
+}
+.mfstp_4 .mfscrn_2 .mfcrcl_1 {
+  -webkit-transform: translate(-115px, 50px) scale(0);
+  transform: translate(-115px, 50px) scale(0);
+  -webkit-transition-delay: 250ms;
+  transition-delay: 250ms;
+}
+.mfstp_4 .mfscrn_2 .mfcrcl_2 {
+  -webkit-transform: translate(20px, 50px) scale(0);
+  transform: translate(20px, 50px) scale(0);
+}
+.mfstp_4 .mfscrn_2 .mfcrcl_3 {
+  -webkit-transform: translate(-260px, 50px) scale(0);
+  transform: translate(-260px, 50px) scale(0);
+  -webkit-transition-delay: 300ms;
+  transition-delay: 300ms;
+}
+
+.mffon {
+  position: absolute;
+  z-index: 20;
+  bottom: -100%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.mfstp_3 .mffon {
+  -webkit-transform: scale(4);
+  transform: scale(4);
+  -webkit-transition: all 400ms ease-in;
+  transition: all 400ms ease-in;
+}
+.mfstp_4 .mffon {
+  bottom: -45px;
+  left: -80px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 400ms 200ms ease-in;
+  transition: all 400ms 200ms ease-in;
+}
+
+.mfscrn_3 .mflog {
+  position: absolute;
+  z-index: 15;
+  bottom: 20px;
+  left: 20px;
+  width: 130px;
+  height: 23px;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  background: url(img/logo.png) 0 0 no-repeat;
+  background-size: auto 100%;
+}
+.mfstp_4 .mfscrn_3 .mflog {
+  -webkit-transform: translate(0, -90px);
+  transform: translate(0, -90px);
+  -webkit-transition: -webkit-transform 700ms 300ms ease-in-out;
+  transition: -webkit-transform 700ms 300ms ease-in-out;
+  transition: transform 700ms 300ms ease-in-out;
+  transition: transform 700ms 300ms ease-in-out,
+    -webkit-transform 700ms 300ms ease-in-out;
+}
+
+.mfscrn_3 .mfdsclmr {
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: url(img/disclaimer.png) 0 0 no-repeat;
+  background-size: contain;
+}
+.mfstp_4 .mfscrn_3 .mfdsclmr {
+  opacity: 1;
+  -webkit-transition: all 500ms 1300ms;
+  transition: all 500ms 1300ms;
+}
+
+.btn-wrapper {
+  position: absolute;
+  z-index: 15;
+  top: 105px;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.mfscrn_3 .btn {
+  position: relative;
+  margin: 0 auto;
+  width: 37px;
+  height: 37px;
+  background: #733781 url(img/btn.png) center no-repeat;
+  background-size: auto 100%;
+  border-radius: 20px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.mfstp_4 .mfscrn_3 .btn {
+  width: 136px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 500ms 3000ms, -webkit-transform 300ms 2650ms ease-in;
+  transition: all 500ms 3000ms, -webkit-transform 300ms 2650ms ease-in;
+  transition: all 500ms 3000ms, transform 300ms 2650ms ease-in;
+  transition: all 500ms 3000ms, transform 300ms 2650ms ease-in,
+    -webkit-transform 300ms 2650ms ease-in;
+}

@@ -1,0 +1,154 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.banner {
+	position: relative;
+	display: block;
+	width: 240px;
+	height: 100%;
+	overflow: hidden;
+	background: #fff;
+	transition: height 500ms ease-in-out;
+	cursor: pointer;
+	background: url(img/bg.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.link {
+	display: block;
+	position: absolute;
+	z-index: 111;
+	width: 100%;
+	height: 100%;
+	box-shadow: inset 0 0 0 1px #C7C7C7;
+}
+
+.screen {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.screen_1 {
+	animation: screen_1 12s linear Infinite;
+}
+.screen_2 {
+	animation: screen_2 12s linear Infinite;
+	opacity: 0;
+}
+@keyframes screen_1 {
+	2%, 31% {opacity: 1;}
+	35%, 98% {opacity: 0;}
+}
+@keyframes screen_2 {
+	2%, 31% {opacity: 0;}
+	35%, 98% {opacity: 1;}
+}
+
+.logo {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/logo.png) center bottom no-repeat;
+	background-size: contain;
+}
+
+.bg {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 8.33%;
+	width: 83.33%;
+	height: 66.66%;
+	background: #e0e3ed url(img/bg_1.jpg) 50% 30% no-repeat;
+	background-size: cover;
+}
+.screen_2 .bg {
+	background-image: url(img/bg_2.jpg);
+}
+
+.title {
+	position: absolute;
+	z-index: 10;
+	top: 57px;
+	left: 35px;
+	width: 170px;
+	height: 50px;
+	background: url(img/title_1.png) 0 0 no-repeat;
+	background-size: contain;
+}
+.screen_2 .title {
+	background-image: url(img/title_2.png);
+}
+
+.label {
+	position: absolute;
+	z-index: 10;
+	top: 120px;
+	left: 0;
+	width: 200px;
+	height: 34px;
+	background: url(img/label_1.png) center no-repeat;
+	background-size: contain;
+}
+.screen_2 .label {
+	top: auto;
+	bottom: 33.33%;
+	left: 85px;
+	margin: 0 0 5px;
+	width: 130px;
+	height: 32px;
+	background-image: url(img/label_2.png);
+}
+
+.note {
+	position: absolute;
+	z-index: 10;
+	top: 67%;
+	left: 0;
+	width: 100%;
+	height: 45px;
+	background: url(img/note_1.png) center no-repeat;
+	background-size: contain;
+}
+.screen_2 .note {
+	background-image: url(img/note_2.png);
+}
+
+
+.screen_1 .label {
+	transform: translateX(-100%);
+	animation: label_1 12s ease-in-out Infinite;
+}
+@keyframes label_1 {
+	6%, 30% {transform: translateX(0%);}
+	1%, 35%, 100% {transform: translateX(-100%);}
+}
+
+.screen_2 .title {
+	opacity: 0;
+	animation: title_2 12s linear Infinite;
+}
+@keyframes title_2 {
+	0%, 37% {opacity: 0;}
+	40%, 100% {opacity: 1;}
+}
+
+.screen_2 .label {
+	opacity: 0;
+	animation: label_2 12s linear Infinite;
+}
+@keyframes label_2 {
+	0%, 50% {opacity: 0;}
+	53%, 100% {opacity: 1;}
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=240,height=400">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Banner preview</title>
+<link rel="stylesheet" href="main.css?1">
+</head>
+<body>
+
+<div id="banner" class="banner">
+  <div id="close" class="close none">&times;</div>
+  <a class="link" href="%link1%" target="_blank">
+    <div class="bg"></div>
+    <div class="title"></div>
+    <div class="timer"><span id="second">3</span></div>
+    <div class="donut donut_1"></div>
+    <div class="donut donut_2"></div>
+    <div class="donut donut_3"></div>
+    <div class="donut donut_4"></div>
+  </a>
+</div>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script type="text/javascript">
+  'use strict';
+  var banner = document.querySelector('#banner');
+  var close = document.querySelector('#close');
+  var second = document.querySelector('#second');
+  var t = false;
+  var s = 3;
+
+  banner.addEventListener("mouseenter", function() {
+    t = setInterval(function() {
+      if (s > 1) {
+        s = s - 1;
+        second.innerHTML = s;
+      } else {
+        window.parent.postMessage('banner:expand', '*');
+        banner.classList.add('opened');
+        s = 3;
+        second.innerHTML = s;
+        clearInterval(t);
+      }
+    }, 1000)
+  });
+
+  banner.addEventListener("mouseleave", function() {
+    s = 3;
+    second.innerHTML = s;
+    clearInterval(t);
+  });
+
+  close.addEventListener('click', function(e) {
+    banner.classList.remove('opened');
+    window.parent.postMessage('banner:close', '*');
+    close.classList.add('none');
+  });
+
+  window.addEventListener('message', function(e) {
+    if (e.data === 'expand:open') {
+      close.classList.remove('none');
+    }
+  });
+</script>
+
+</body>
+</html>

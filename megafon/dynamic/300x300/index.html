@@ -1,0 +1,803 @@
+<style>
+@font-face {
+  font-family: "MFfont";
+  src: url("http://r.mradx.net/img/61/E5BE24.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+.mfbanr {
+  border: 1px solid #EEE;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  background: #00b956;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+.mfbanr.mfstp_1,
+.mfbanr.mfstp_2,
+.mfbanr.mfstp_3,
+.mfbanr.mfstp_4 {
+  opacity: 1;
+}
+
+.mflink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999999999999999;
+}
+.opened .mflink {
+  pointer-events: auto;
+}
+
+.mfscrn {
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.mfstp_1 .mfscrn_1,
+.mfstp_2 .mfscrn_1,
+.mfstp_3 .mfscrn_1 {
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+.mfstp_3 .mfscrn_2,
+.mfstp_4 .mfscrn_2 {
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+.mfstp_4 .mfscrn_3 {
+  opacity: 1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+
+.mfttl {
+  position: absolute;
+  z-index: 15;
+  top: 15px;
+  left: 20px;
+  width: 0;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  font: 900 24px/22px "MFfont", system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue;
+  -webkit-transition: width 600ms 100ms linear;
+  transition: width 600ms 100ms linear;
+}
+.mfttl_str3 {
+  overflow: hidden;
+  width: 0;
+  color: #733781;
+  line-height: 28px;
+  -webkit-transition: width 500ms linear;
+  transition: width 500ms linear;
+}
+
+.mfstp_1 .mfttl_1 {
+  width: 280px;
+  -webkit-transition: width 1000ms linear;
+  transition: width 1000ms linear;
+}
+.mfstp_1 .mfttl_1 .mfttl_str3 {
+  width: 280px;
+  -webkit-transition: width 1000ms 1500ms linear;
+  transition: width 1000ms 1500ms linear;
+}
+
+.mfstp_2 .mfttl_2,
+.mfstp_3 .mfttl_2 {
+  width: 280px;
+  -webkit-transition: width 800ms 1000ms linear;
+  transition: width 800ms 1000ms linear;
+}
+.mfstp_2 .mfttl_2 .mfttl_str3,
+.mfstp_3 .mfttl_2 .mfttl_str3 {
+  width: 280px;
+  -webkit-transition: width 1000ms 1100ms linear;
+  transition: width 1000ms 1100ms linear;
+}
+
+.mfstp_dynam .mfttl_2 {
+  width: 0;
+  -webkit-transition: width 200ms 100ms linear;
+  transition: width 200ms 100ms linear;
+}
+.mfstp_dynam .mfttl_2 .mfttl_str3 {
+  width: 0;
+  -webkit-transition: width 200ms 0ms linear;
+  transition: width 200ms 0ms linear;
+}
+.mfstp_dynam .mfttl_dynam {
+  width: 280px;
+  -webkit-transition: width 800ms 500ms linear;
+  transition: width 800ms 500ms linear;
+}
+.mfstp_dynam .mfttl_dynam .mfttl_str3 {
+  width: 280px;
+  -webkit-transition: width 1000ms 600ms linear;
+  transition: width 1000ms 600ms linear;
+}
+
+.mfstp_4 .mfttl_3 {
+  width: 280px;
+  -webkit-transition: width 800ms 2000ms linear;
+  transition: width 800ms 2000ms linear;
+}
+.mfstp_4 .mfttl_3 .mfttl_str2 {
+  color: #733781;
+}
+.mfstp_4 .mfttl_3 .mfttl_str3 {
+  width: 280px;
+  -webkit-transition: width 1000ms 2100ms linear;
+  transition: width 1000ms 2100ms linear;
+}
+
+.mfscrn_1 .mflog {
+  position: absolute;
+  z-index: 15;
+  bottom: 20px;
+  left: 20px;
+  width: 25px;
+  height: 23px;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+.mfscrn_1 .mflog_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 100%;
+  background: url(img/logo.png) 0 0 no-repeat;
+  background-size: auto 100%;
+}
+.mfscrn_1 .mflog_right {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 0;
+  height: 100%;
+  background: url(img/logo.png) 100% 0 no-repeat;
+  background-size: auto 100%;
+}
+.mfstp_1 .mfscrn_1 .mflog,
+.mfstp_2 .mfscrn_1 .mflog,
+.mfstp_3 .mfscrn_1 .mflog {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 300ms 200ms, -webkit-transform 70ms 300ms ease-out;
+  transition: opacity 300ms 200ms, -webkit-transform 70ms 300ms ease-out;
+  transition: transform 70ms 300ms ease-out, opacity 300ms 200ms;
+  transition: transform 70ms 300ms ease-out, opacity 300ms 200ms,
+    -webkit-transform 70ms 300ms ease-out;
+}
+.mfstp_1 .mfscrn_1 .mflog_right,
+.mfstp_2 .mfscrn_1 .mflog_right,
+.mfstp_3 .mfscrn_1 .mflog_right {
+  width: 105px;
+  -webkit-transition: width 700ms 500ms ease-in-out;
+  transition: width 700ms 500ms ease-in-out;
+}
+
+.mfgrl {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(img/girl.png) center no-repeat;
+  background-size: contain;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.mfstp_1 .mfgrl,
+.mfstp_2 .mfgrl,
+.mfstp_3 .mfgrl {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 1000ms;
+  transition: -webkit-transform 1000ms;
+  transition: transform 1000ms;
+  transition: transform 1000ms, -webkit-transform 1000ms;
+}
+
+.mfbagr {
+  position: absolute;
+  z-index: 1;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+}
+.mfstp_1 .mfbagr_1,
+.mfstp_2 .mfbagr_1,
+.mfstp_3 .mfbagr_1 {
+  z-index: 1;
+  background-image: url(./img/bg_1.png);
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 300ms, -webkit-transform 2000ms ease-out;
+  transition: opacity 300ms, -webkit-transform 2000ms ease-out;
+  transition: transform 2000ms ease-out, opacity 300ms;
+  transition: transform 2000ms ease-out, opacity 300ms,
+    -webkit-transform 2000ms ease-out;
+  -webkit-transition-delay: 2000ms;
+  transition-delay: 2000ms;
+}
+.mfstp_1 .mfbagr_2,
+.mfstp_2 .mfbagr_2,
+.mfstp_3 .mfbagr_2 {
+  z-index: 5;
+  background-image: url(./img/bg_2.png);
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 1000ms, -webkit-transform 4000ms ease-out;
+  transition: opacity 1000ms, -webkit-transform 4000ms ease-out;
+  transition: transform 4000ms ease-out, opacity 1000ms;
+  transition: transform 4000ms ease-out, opacity 1000ms,
+    -webkit-transform 4000ms ease-out;
+  -webkit-transition-delay: 2000ms;
+  transition-delay: 2000ms;
+}
+.mfstp_1 .mfbagr_3,
+.mfstp_2 .mfbagr_3,
+.mfstp_3 .mfbagr_3 {
+  z-index: 6;
+  background-image: url(./img/bg_3.png);
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 500ms, -webkit-transform 5000ms ease-out;
+  transition: opacity 500ms, -webkit-transform 5000ms ease-out;
+  transition: transform 5000ms ease-out, opacity 500ms;
+  transition: transform 5000ms ease-out, opacity 500ms,
+    -webkit-transform 5000ms ease-out;
+  -webkit-transition-delay: 2000ms;
+  transition-delay: 2000ms;
+}
+.mfbagr_4 {
+  -webkit-transform: translate(-50px, 50px) scale(0.8);
+  transform: translate(-50px, 50px) scale(0.8);
+}
+.mfstp_1 .mfbagr_4,
+.mfstp_2 .mfbagr_4,
+.mfstp_3 .mfbagr_4 {
+  z-index: 7;
+  background-image: url(./img/bg_4.png);
+  opacity: 1;
+  -webkit-transform: translate(0, 0) scale(1);
+  transform: translate(0, 0) scale(1);
+  -webkit-transition: opacity 500ms, -webkit-transform 5000ms ease-out;
+  transition: opacity 500ms, -webkit-transform 5000ms ease-out;
+  transition: transform 5000ms ease-out, opacity 500ms;
+  transition: transform 5000ms ease-out, opacity 500ms,
+    -webkit-transform 5000ms ease-out;
+  -webkit-transition-delay: 2000ms;
+  transition-delay: 2000ms;
+}
+
+.mfcrcl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -65px 0 0 -66.5px;
+  width: 132px;
+  height: 133px;
+  border-radius: 50%;
+  background: #fff;
+}
+.mfcrcl_2 {
+  margin-left: -216.5px;
+  background: #733781;
+}
+.mfcrcl_3 {
+  margin-left: 83.5px;
+  background: #733781;
+}
+
+.mfscrn_1 .mfcrcl {
+  z-index: 2;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+.mfstp_2 .mfscrn_1 .mfcrcl {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 200ms ease-in-out,
+    -webkit-transform 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out,
+    -webkit-transform 200ms ease-in-out;
+}
+.mfstp_2 .mfscrn_1 .mfcrcl_2 {
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+.mfstp_2 .mfscrn_1 .mfcrcl_3 {
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+}
+
+.mfscrn_2 .mfcrcl {
+  z-index: 25;
+  background: #00b956;
+}
+.mfscrn_2 .mfcrcl_2 {
+  background: #00b956;
+}
+.mfscrn_2 .mfcrcl_3 {
+  background: #733781;
+}
+.mfstp_4 .mfscrn_2 .mfcrcl {
+  -webkit-transition: -webkit-transform 700ms 200ms ease-in;
+  transition: -webkit-transform 700ms 200ms ease-in;
+  transition: transform 700ms 200ms ease-in;
+  transition: transform 700ms 200ms ease-in,
+    -webkit-transform 700ms 200ms ease-in;
+}
+.mfstp_4 .mfscrn_2 .mfcrcl_1 {
+  -webkit-transform: translate(-115px, 70px) scale(0);
+  transform: translate(-115px, 70px) scale(0);
+  -webkit-transition-delay: 250ms;
+  transition-delay: 250ms;
+}
+.mfstp_4 .mfscrn_2 .mfcrcl_2 {
+  -webkit-transform: translate(20px, 70px) scale(0);
+  transform: translate(20px, 70px) scale(0);
+}
+.mfstp_4 .mfscrn_2 .mfcrcl_3 {
+  -webkit-transform: translate(-260px, 70px) scale(0);
+  transform: translate(-260px, 70px) scale(0);
+  -webkit-transition-delay: 300ms;
+  transition-delay: 300ms;
+}
+
+.mffon {
+  position: absolute;
+  z-index: 20;
+  bottom: -100%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.mfstp_3 .mffon {
+  -webkit-transform: scale(4);
+  transform: scale(4);
+  -webkit-transition: all 400ms ease-in;
+  transition: all 400ms ease-in;
+}
+.mfstp_4 .mffon {
+  bottom: -45px;
+  left: -80px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 700ms 200ms ease-in;
+  transition: all 700ms 200ms ease-in;
+}
+
+.mfscrn_3 .mflog {
+  position: absolute;
+  z-index: 15;
+  bottom: 20px;
+  left: 20px;
+  width: 130px;
+  height: 23px;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  background: url(img/logo.png) 0 0 no-repeat;
+  background-size: auto 100%;
+}
+.mfstp_4 .mfscrn_3 .mflog {
+  -webkit-transform: translate(0, -90px);
+  transform: translate(0, -90px);
+  -webkit-transition: -webkit-transform 700ms 500ms ease-in;
+  transition: -webkit-transform 700ms 500ms ease-in;
+  transition: transform 700ms 500ms ease-in;
+  transition: transform 700ms 500ms ease-in,
+    -webkit-transform 700ms 500ms ease-in;
+}
+
+.mfscrn_3 .mfdsclmr {
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: url(img/disclaimer.png) 0 0 no-repeat;
+  background-size: contain;
+}
+.mfstp_4 .mfscrn_3 .mfdsclmr {
+  opacity: 1;
+  -webkit-transition: all 500ms 1300ms;
+  transition: all 500ms 1300ms;
+}
+
+.btn-wrapper {
+  position: absolute;
+  z-index: 15;
+  top: 105px;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.mfscrn_3 .btn {
+  position: relative;
+  margin: 0 auto;
+  width: 37px;
+  height: 37px;
+  background: #733781 url(img/btn.png) center no-repeat;
+  background-size: auto 100%;
+  border-radius: 20px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.mfstp_4 .mfscrn_3 .btn {
+  width: 136px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 500ms 3000ms, -webkit-transform 300ms 2650ms ease-in;
+  transition: all 500ms 3000ms, -webkit-transform 300ms 2650ms ease-in;
+  transition: all 500ms 3000ms, transform 300ms 2650ms ease-in;
+  transition: all 500ms 3000ms, transform 300ms 2650ms ease-in,
+    -webkit-transform 300ms 2650ms ease-in;
+}
+</style>
+
+<div id='mfbanr' class="mfbanr">
+
+    <a id="mflink" class="mflink" href="%link1%" target="_blank"></a>
+        <div class="mfscrn mfscrn_1">
+
+			<!-- IF Reklama/Target(16669) || Reklama/Target(11042) || Reklama/Target(11043) || Reklama/Target(8487) -->
+				<div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк</div>
+					<div class="mfttl_str2">на то, что тебе</div>
+					<div class="mfttl_str3">ПОДХОДИТ</div>
+				</div>
+				<img src="//rs.mail.ru/d43358857.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+				<script>
+            if (document.readyState == "complete" || document.readyState == "interactive") {
+              document.getElementById('mflink').href = "//r.mail.ru/n306049070"
+            } else {
+              document.addEventListener("DOMContentLoaded",function(){
+                document.getElementById('mflink').href = "//r.mail.ru/n306049070"
+              })
+            }
+        </script>
+        
+
+
+			<!-- ELSEIF Reklama/Target(10251) || Reklama/Target(10012) || Reklama/Target(10014) || Reklama/Target(10015) || Reklama/Target(8489) || Reklama/Target(8492) || Reklama/Target(14392) || Reklama/Target(10881) || Reklama/Target(8879) || Reklama/Target(7387) || Reklama/Target(7388) -->
+				<div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк</div>
+					<div class="mfttl_str2">на доступ к</div>
+					<div class="mfttl_str3">МегаФон Книги</div>
+				</div>
+				<img src="//rs.mail.ru/d43358858.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+				<script>
+          if (document.readyState == "complete" || document.readyState == "interactive") {
+            document.getElementById('mflink').href = "//r.mail.ru/n306049075"
+          } else {
+            document.addEventListener("DOMContentLoaded",function(){
+              document.getElementById('mflink').href = "//r.mail.ru/n306049075"
+            })
+          }
+        </script>
+        
+
+
+
+			<!-- ELSEIF Reklama/Target(12849) || Reklama/Target(9281) || Reklama/Target(9282) || Reklama/Target(9283) || Reklama/Target(9284) || Reklama/Target(9285) || Reklama/Target(12633) || Reklama/Target(12634) || Reklama/Target(9310) || Reklama/Target(20599) || Reklama/Target(25267) || Reklama/Target(25268) || Reklama/Target(7400) || Reklama/Target(7401) || Reklama/Target(7402) || Reklama/Target(7403) || Reklama/Target(7404) -->
+				<div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк</div>
+					<div class="mfttl_str2">на то, что тебе</div>
+					<div class="mfttl_str3">ПОДХОДИТ</div>
+				</div>
+				<img src="//rs.mail.ru/d43358859.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+				<script>
+          if (document.readyState == "complete" || document.readyState == "interactive") {
+            document.getElementById('mflink').href = "//r.mail.ru/n306049076"
+          } else {
+            document.addEventListener("DOMContentLoaded",function(){
+              document.getElementById('mflink').href = "//r.mail.ru/n306049076"
+            })
+          }
+        </script>
+        
+
+
+
+			<!-- ELSEIF Reklama/Target(8486) || Reklama/Target(13170) || Reklama/Target(23178) || Reklama/Target(23192) || Reklama/Target(7411) || Reklama/Target(7412) || Reklama/Target(7413) || Reklama/Target(7414) -->
+        <div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк</div>
+					<div class="mfttl_str2">на то, что тебе</div>
+					<div class="mfttl_str3">ПОДХОДИТ</div>
+				</div>
+				<img src="//rs.mail.ru/d43358860.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+				<script>
+          if (document.readyState == "complete" || document.readyState == "interactive") {
+            document.getElementById('mflink').href = "//r.mail.ru/n306049077"
+          } else {
+            document.addEventListener("DOMContentLoaded",function(){
+              document.getElementById('mflink').href = "//r.mail.ru/n306049077"
+            })
+          }
+        </script>
+        
+
+
+
+			<!-- ELSEIF Reklama/Target(8484) || Reklama/Target(13166) || Reklama/Target(7361) || Reklama/Target(7362) || Reklama/Target(7363) || Reklama/Target(7364) || Reklama/Target(11213) -->
+        <div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк</div>
+					<div class="mfttl_str2">на то, что тебе</div>
+					<div class="mfttl_str3">ПОДХОДИТ</div>
+				</div>
+				<img src="//rs.mail.ru/d43358861.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+        <script>
+          if (document.readyState == "complete" || document.readyState == "interactive") {
+            document.getElementById('mflink').href = "//r.mail.ru/n306049078"
+          } else {
+            document.addEventListener("DOMContentLoaded",function(){
+              document.getElementById('mflink').href = "//r.mail.ru/n306049078"
+            })
+          }
+        </script>
+        
+
+
+			<!-- ELSEIF Reklama/Target(10277) || Reklama/Target(8790) || Reklama/Target(8791) || Reklama/Target(8792) || Reklama/Target(8793) || Reklama/Target(8794) || Reklama/Target(9671) || Reklama/Target(7375) || Reklama/Target(9450) || Reklama/Target(9451) || Reklama/Target(9452) || Reklama/Target(9453) || Reklama/Target(7410) -->
+        <div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк</div>
+					<div class="mfttl_str2">на то, что тебе</div>
+					<div class="mfttl_str3">ПОДХОДИТ</div>
+				</div>
+				<img src="//rs.mail.ru/d43358862.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+				<script>
+          if (document.readyState == "complete" || document.readyState == "interactive") {
+            document.getElementById('mflink').href = "//r.mail.ru/n306049079"
+          } else {
+            document.addEventListener("DOMContentLoaded",function(){
+              document.getElementById('mflink').href = "//r.mail.ru/n306049079"
+            })
+          }
+        </script>
+        
+
+
+
+			<!-- ELSEIF Reklama/Target(25167) || Reklama/Target(25168) || Reklama/Target(25169) || Reklama/Target(25170) || Reklama/Target(25171) || Reklama/Target(25172) || Reklama/Target(25173) || Reklama/Target(25174) || Reklama/Target(25175) -->
+				<div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк</div>
+					<div class="mfttl_str2">на доступ к Звуку</div>
+					<div class="mfttl_str3">и Яндекс.Музыке</div>
+				</div>
+				<img src="//rs.mail.ru/d43358866.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+				<script>
+          if (document.readyState == "complete" || document.readyState == "interactive") {
+            document.getElementById('mflink').href = "//r.mail.ru/n306049080"
+          } else {
+            document.addEventListener("DOMContentLoaded",function(){
+              document.getElementById('mflink').href = "//r.mail.ru/n306049080"
+            })
+          }
+        </script>
+        
+
+
+
+			<!-- ELSEIF Reklama/Target(10249) || Reklama/Target(11044) || Reklama/Target(11045) || Reklama/Target(11046) || Reklama/Target(11047) || Reklama/Target(11048) || Reklama/Target(11049) || Reklama/Target(11050) || Reklama/Target(11051) || Reklama/Target(11052) || Reklama/Target(10053) || Reklama/Target(7378) || Reklama/Target(7379) || Reklama/Target(7380) || Reklama/Target(7382) -->
+        <div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк на</div>
+					<div class="mfttl_str2">покупку смартфона</div>
+					<div class="mfttl_str3">или планшета</div>
+				</div>
+				<img src="//rs.mail.ru/d43358867.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+				<script>
+          if (document.readyState == "complete" || document.readyState == "interactive") {
+            document.getElementById('mflink').href = "//r.mail.ru/n306049090"
+          } else {
+            document.addEventListener("DOMContentLoaded",function(){
+              document.getElementById('mflink').href = "//r.mail.ru/n306049090"
+            })
+          }
+        </script>
+        
+
+
+
+			<!-- ELSEIF Reklama/Target(10266) -->
+        <div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк</div>
+					<div class="mfttl_str2">на то, что тебе</div>
+					<div class="mfttl_str3">ПОДХОДИТ</div>
+				</div>
+				<img src="//rs.mail.ru/d43358871.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+				<script>
+          if (document.readyState == "complete" || document.readyState == "interactive") {
+            document.getElementById('mflink').href = "//r.mail.ru/n306049097"
+          } else {
+            document.addEventListener("DOMContentLoaded",function(){
+              document.getElementById('mflink').href = "//r.mail.ru/n306049097"
+            })
+          }
+        </script>
+        
+
+
+
+      
+			<!-- ELSEIF Reklama/Target(14861) -->
+        <div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк</div>
+					<div class="mfttl_str2">на то, что тебе</div>
+					<div class="mfttl_str3">ПОДХОДИТ</div>
+				</div>
+				<img src="//rs.mail.ru/d43358872.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+				<script>
+          if (document.readyState == "complete" || document.readyState == "interactive") {
+            document.getElementById('mflink').href = "//r.mail.ru/n306049167"
+          } else {
+            document.addEventListener("DOMContentLoaded",function(){
+              document.getElementById('mflink').href = "//r.mail.ru/n306049167"
+            })
+          }
+        </script>
+        
+
+
+			<!-- ELSEIF Reklama/Target(20262) || Reklama/Target(27005) || Reklama/Target(7806) || Reklama/Target(21385) || Reklama/Target(7358) || Reklama/Target(7359) || Reklama/Target(7360) || Reklama/Target(26847) -->
+        <div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк на</div>
+					<div class="mfttl_str2">покупку смартфона</div>
+					<div class="mfttl_str3">или планшета</div>
+				</div>
+				<img src="//rs.mail.ru/d43358876.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+				<script>
+          if (document.readyState == "complete" || document.readyState == "interactive") {
+            document.getElementById('mflink').href = "//r.mail.ru/n306049083"
+          } else {
+            document.addEventListener("DOMContentLoaded",function(){
+              document.getElementById('mflink').href = "//r.mail.ru/n306049083"
+            })
+          }
+        </script>
+        
+
+
+
+			<!-- ELSE -->
+        <div class="mfttl mfttl_dynam">
+					<div class="mfttl_str1">Потрать кэшбэк</div>
+					<div class="mfttl_str2">на то, что тебе</div>
+					<div class="mfttl_str3">ПОДХОДИТ</div>
+				</div>
+				<img src="//rs.mail.ru/d43358885.gif" style="width:0;height:0;position:absolute;visibility:hidden;" alt="" />
+				<script>
+          if (document.readyState == "complete" || document.readyState == "interactive") {
+            document.getElementById('mflink').href = "//r.mail.ru/n306049411"
+          } else {
+            document.addEventListener("DOMContentLoaded",function(){
+              document.getElementById('mflink').href = "//r.mail.ru/n306049411"
+            })
+          }
+        </script>
+			<!-- /IF -->
+
+
+            <div class="mfttl mfttl_1">
+              <div class="mfttl_str1">Про такой</div>
+              <div class="mfttl_str2">кэшбэк нужно</div>
+              <div class="mfttl_str3">КРИЧАТЬ!</div>
+            </div>
+            <div class="mfttl mfttl_2">
+                <div class="mfttl_str1">Вернём 100%</div>
+                <div class="mfttl_str2">денег за связь</div>
+                <div class="mfttl_str3">в первый месяц</div>
+            </div>
+            <div class="mfgrl"></div>
+            <div class="mflog">
+                <div class="mflog_left"></div>
+                <div class="mflog_right"></div>
+            </div>
+            <div class="mfbagr mfbagr_1"></div>
+            <div class="mfbagr mfbagr_2"></div>
+            <div class="mfbagr mfbagr_3"></div>
+            <div class="mfbagr mfbagr_4"></div>
+            <div class="mfcrcl mfcrcl_1"></div>
+            <div class="mfcrcl mfcrcl_2"></div>
+            <div class="mfcrcl mfcrcl_3"></div>
+        </div>
+        <div class="mfscrn mfscrn_2">
+            <div class="mffon"></div>
+            <div class="mfcrcl mfcrcl_1"></div>
+            <div class="mfcrcl mfcrcl_2"></div>
+            <div class="mfcrcl mfcrcl_3"></div>
+        </div>
+        <div class="mfscrn mfscrn_3">
+            <div class="mfttl mfttl_3">
+                <div class="mfttl_str1">Кэшбэк 100%</div>
+                <div class="mfttl_str2">на тарифах</div>
+                <div class="mfttl_str3">«Включайся!»</div>
+            </div>
+            <div class="btn-wrapper"><div class="btn"></div></div>
+            <div class="mflog"></div>
+            <div class="mfdsclmr"></div>
+        </div>
+
+</div>
+
+<script type="text/javascript">
+    var mfbanr = document.getElementById('mfbanr');
+    setTimeout(function () {
+        mfbanr.classList.add('mfstp_1');
+    }, 10)
+    var i = 0,
+        timer = setInterval(function () {
+            i++;
+            if (i == 0) {
+                mfbanr.classList.remove('mfstp_4');
+                mfbanr.classList.add('mfstp_1');
+            }
+            if (i == 7) {
+                mfbanr.classList.remove('mfstp_1');
+                mfbanr.classList.add('mfstp_2');
+            }
+            if (i == 15) {
+                mfbanr.classList.add('mfstp_dynam');
+            }
+            if (i == 22) {
+                mfbanr.classList.remove('mfstp_2');
+                mfbanr.classList.add('mfstp_3');
+            }
+            if (i == 24) {
+                mfbanr.classList.remove('mfstp_dynam');
+                mfbanr.classList.remove('mfstp_3');
+                mfbanr.classList.add('mfstp_4');
+            }
+            if (i == 40) i = -1;
+		}, 500);
+</script>

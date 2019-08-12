@@ -1,0 +1,121 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-width: 1000px;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+}
+
+.banner {
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	min-width: 1000px;
+	overflow: hidden;
+}
+
+.link {
+	display: block;
+	position: relative;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateY(100px);
+	transition: transform 300ms ease-out;
+}
+.show .link {
+	transform: translateY(0) !important;
+}
+
+.logo {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url(img/logo.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.floor {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/floor.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.car {
+	position: absolute;
+	z-index: 15;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/car.png) center no-repeat;
+	background-size: auto 100%;
+	transform: translateX(-30px) scale(0.95);
+	transition: transform 700ms 700ms ease-out;
+}
+.show .car {
+	transform: translateX(0px) scale(1) !important;
+}
+
+.home1 {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/home1.png) center no-repeat;
+	background-size: auto 100%;
+	transform: translateY(100px);
+	transition: transform 300ms 200ms ease-out;
+}
+.show .home1 {
+	transform: translateY(0) !important;
+}
+
+.home2 {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/home2.png) center no-repeat;
+	background-size: auto 100%;
+	transform: translateY(100px);
+	transition: transform 300ms 250ms ease-out;
+}
+.show .home2 {
+	transform: translateY(0) !important;
+}
+
+.home3 {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/home3.png) center no-repeat;
+	background-size: auto 100%;
+	transform: translateY(100px);
+	transition: transform 300ms 300ms ease-out;
+}
+.show .home3 {
+	transform: translateY(0) !important;
+}

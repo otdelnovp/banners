@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=100%,height=250">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Banner preview</title>
+<link rel="stylesheet" href="main.css?1">
+</head>
+<body>
+
+<div id="banner" class="banner">
+  <a class="link" href="%link1%" target="_blank">
+    <div class="title"></div>
+    <div class="donut donut_1"></div>
+    <div class="donut donut_2"></div>
+  </a>
+</div>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script type="text/javascript">
+  'use strict';
+
+  var transformElement = function (element, transformCmd) {
+    element.style.MozTransform = transformCmd;
+    element.style.WebkitTransform = transformCmd;
+    element.style.OTransform = transformCmd;
+    element.style.MsTransform = transformCmd;
+    element.style.transform = transformCmd;
+  };
+
+  var banner = document.querySelector('.banner'),
+    title = document.querySelector('.title'),
+    donut_1 = document.querySelector('.donut_1'),
+    donut_2 = document.querySelector('.donut_2');
+
+  function setAnimationPercent(percent) {
+
+    banner.style.height = (250 - percent * 1.5) + 'px';
+
+    transformElement(title, 'translateY(' + (-percent * 2 / 10) + 'px)');
+
+    transformElement(donut_1, 'translate(' + (-percent / 2) + 'px,' + (-percent / 2.2) + 'px) scale(' + (1 - percent / 2000) + ')');
+
+    transformElement(donut_2, 'translate(' + (percent / 2) + 'px,' + (-percent / 2) + 'px) scale(' + (1 - percent / 500) + ')');
+
+  }
+
+  window.addEventListener('message', function(e) {
+    var data = e.data;
+    var command = data.split(':');
+    if (command[0] === 'animation' && !isNaN(parseInt(command[1], 10))) {
+      setAnimationPercent(parseInt(command[1], 10));
+    }
+  });
+
+  // var i = 1, timerId = setInterval(function() {
+  //   setAnimationPercent(i);
+  //   i++;
+  //   if(i>100) clearInterval(timerId);
+  // }, 30);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-width: 940px;
+	margin: 0;
+	padding: 0;
+}
+
+.banner {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	background: #025EF6;
+	transition: height 300ms linear;
+	cursor: pointer;
+}
+
+.link {
+	display: block;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+.opened .link {
+	pointer-events: auto;
+}
+
+.title {
+	position: absolute;
+	z-index: 15;
+	top: 0;
+	left: 50%;
+	margin: 40px 0 0 -470px;
+	width: 260px;
+	height: 58px;
+	background: url(img/title.png) center bottom no-repeat;
+	background-size: contain;
+	transition: transform 300ms linear;
+}
+
+.donut {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	transition: transform 300ms linear;
+}
+.donut_1 {
+	width: 117px;
+	height: 119px;
+	margin: 37px 0 0 -140px;
+	background-image: url(img/donut_1.png);
+}
+.donut_2 {
+	width: 191px;
+	height: 189px;
+	margin: 40px 0 0 135px;
+	background-image: url(img/donut_2.png);
+}
+

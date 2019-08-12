@@ -1,0 +1,134 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-width: 350px;
+	margin: 0;
+	padding: 0;
+}
+
+.banner {
+	position: relative;
+	display: block;
+	width: 240px;
+	height: 400px;
+	overflow: hidden;
+	background: #fff;
+	cursor: pointer;
+}
+.banner.opened {
+	height: 100%;
+}
+
+.close {
+	display: none;
+	position: absolute;
+	z-index: 111;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	font: bold 50px/30px "Times New Roman", Times, Baskerville, Georgia, serif;
+	color: #fff;
+	cursor: pointer;
+}
+.opened .close {
+	display: block;
+}
+
+.link {
+	display: block;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+.bg {
+	display: block;
+	position: absolute;
+	z-index: 0;
+	bottom: 100%;
+	width: 100%;
+	height: 100%;
+	background: #025EF6;
+	transform: translateY(400px);
+	transition: transform 1s ease-in-out;
+}
+.opened .bg {
+	transform: translateY(100%);
+}
+
+.title {
+	position: absolute;
+	z-index: 11;
+	top: 30px;
+	left: 40px;
+	width: 150px;
+	height: 94px;
+	background: url(img/title.png) center bottom no-repeat;
+	background-size: contain;
+}
+
+
+.donut {
+	position: absolute;
+	top: 0;
+	left: 0;
+	left: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	transition: all 0s ease-in-out;
+}
+
+.donut_1 {
+	margin: -110px 0 0;
+	top: 400px;
+	left: 10px;
+	width: 220px;
+	height: 220px;
+	background-image: url(img/donut_1.png);
+}
+.opened .donut_1 {
+	top: 97%;
+	transition-duration: 500ms;
+}
+
+.donut_2 {
+	top: 100px;
+	left: 200px;
+	width: 150px;
+	height: 150px;
+	background-image: url(img/donut_2.png);
+}
+.opened .donut_2 {
+	left: 100px;
+	top: 40%;
+	transition-duration: 800ms;
+}
+
+.donut_3 {
+	top: 100px;
+	left: -300px;
+	width: 180px;
+	height: 180px;
+	background-image: url(img/donut_3.png);
+}
+.opened .donut_3 {
+	top: 20%;
+	left: -100px;
+	transition-duration: 700ms;
+}
+
+.donut_4 {
+	top: 150px;
+	left: 20px;
+	width: 180px;
+	height: 180px;
+	background-image: url(img/donut_4.png);
+}
+.opened .donut_4 {
+	top: 60%;
+	transition-duration: 600ms;
+}
+
