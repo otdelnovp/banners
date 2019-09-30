@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=100%,height=67">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Banner preview</title>
+<link rel="stylesheet" href="style.css?1">
+</head>
+<body>
+
+<div id="banner" class="banner">
+  <a class="link" href="%link1%" target="_blank">
+    <div class="bg"></div>
+    <div class="car">
+		<div class="disk disk_1"></div>
+		<div class="disk disk_2"></div>
+	</div>
+    <div class="btn"></div>
+    <div class="text text_1"></div>
+    <div class="text text_2"></div>
+    <div class="years"></div>
+  </a>
+</div>
+
+<script type="text/javascript">
+  var banner = document.getElementById('banner');
+  setTimeout(function () {
+    banner.classList.add('start');
+  }, 10);
+  setInterval(function () {
+    banner.classList.remove('start');
+	setTimeout(function () {
+		banner.classList.add('start');
+	}, 10);
+  }, 6000);
+</script>
+
+</body>
+</html>

@@ -13,10 +13,7 @@
 <div id="html_banner">
   <a class="link" href="%link1%" target="_blank">
     <div class="bg"></div>
-    <div class="car">
-      <div class="wheel wheel_1"></div>
-      <div class="wheel wheel_2"></div>
-    </div>
+    <div class="car"></div>
     <div class="logo"></div>
     <div class="title"></div>
   </a>
@@ -36,8 +33,6 @@
   var
     bg = document.querySelector('.bg'),
     car = document.querySelector('.car'),
-    wheel_1 = document.querySelector('.wheel_1'),
-    wheel_2 = document.querySelector('.wheel_2'),
     logo = document.querySelector('.logo'),
     title = document.querySelector('.title');
 
@@ -52,37 +47,25 @@
     }
 
     if(percent <= 50) {
-      transformElement(car, 'translate(' + (percent - 50) + 'px,' + (100 - percent*2) + '%)');
-      transformElement(wheel_1, 'rotateX(' + (percent*4 - 200) + 'deg) rotateY(65deg)');
-      transformElement(wheel_2, 'rotateX(' + (percent*4 - 200) + 'deg) rotateY(65deg)');
+      transformElement(car, 'translateY(' + (100 - percent*2) + '%)');
     } else {
-      transformElement(car, 'translate(0px,0%)');
-      transformElement(wheel_1, 'rotateX(0deg) rotateY(65deg)');
-      transformElement(wheel_2, 'rotateX(0deg) rotateY(65deg)');
+      transformElement(car, 'translateY(0%)');
     }
 
     if(percent <= 40) {
-      transformElement(logo, 'translateX(-100%)');
+      transformElement(logo, 'translateX(-200px)');
     } else if(percent <= 60) {
-      transformElement(logo, 'translateX(' + ((percent - 60)*2.5 - 50) + '%)');
+      transformElement(logo, 'translateX(' + ((percent - 40)*10 - 200) + '%)');
     } else {
       transformElement(logo, 'translateX(0%)');
     }
 
     if(percent <= 30) {
-      transformElement(title, 'translateX(-100%)');
+      transformElement(title, 'translateX(-200px)');
     } else if(percent <= 50) {
-      transformElement(title, 'translateX(' + ((percent - 50)*2.5 - 50) + '%)');
+      transformElement(title, 'translateX(' + ((percent - 30)*10 - 200) + '%)');
     } else {
       transformElement(title, 'translateX(0%)');
-    }
-
-    if(percent <= 40) {
-      logo.style.opacity = 0;
-      title.style.opacity = 0;
-    } else {
-      logo.style.opacity = 1;
-      title.style.opacity = 1;
     }
 
   }
@@ -95,11 +78,11 @@
     }
   });
 
-  var i = 1, timerId = setInterval(function() {
-    setAnimationPercent(i);
-    i++;
-    if(i>100) clearInterval(timerId);
-  }, 30);
+  // var i = 1, timerId = setInterval(function() {
+  //   setAnimationPercent(i);
+  //   i++;
+  //   if(i>100) clearInterval(timerId);
+  // }, 100);
 
 </script>
 

@@ -1,0 +1,190 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+}
+
+.banner {
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: 0;
+	width: 240px;
+	height: 100%;
+	overflow: hidden;
+	background: #fff;
+}
+
+.link {
+	display: block;
+	position: relative;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.link:after {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 1111;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+	display: block;
+	position: absolute;
+	z-index: 111;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(./img/logo_white.png) top no-repeat;
+	background-size: contain;
+}
+.step_1 .logo,
+.step_4 .logo {
+	background-image: url(./img/logo.png);
+}
+
+.note {
+	display: block;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff url(./img/note.png) top no-repeat;
+	background-size: contain;
+	opacity: 0;
+	transition: all 300ms ease-out;
+}
+.step_4 .note {
+	opacity: 1;
+}
+
+.phone {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	top: 50%;
+	left: 50%;
+	width: 210px;
+	height: 440px;
+	background: url(./img/phone.jpg) center no-repeat;
+	background-size: contain;
+	transform: translate(-50%, -50%) rotate(0) scale(2.2);
+	transition: all 500ms ease-out;
+}
+.step_1 .phone {
+	top: 0;
+	left: 0;
+	transform: translate(24px, 220px) rotate(10deg) scale(1);
+}
+.step_2 .phone {
+	transform: translate(-250px, 220px) rotate(10deg) scale(1);
+}
+.step_3 .phone {
+	transform: translate(-60px, 220px) rotate(10deg) scale(0.85);
+}
+
+.watch {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 0;
+	width: 101px;
+	height: 575px;
+	background: url(./img/watch.jpg) center no-repeat;
+	background-size: contain;
+	transform: translate(500px, -30%) rotate(15deg) scale(1.5);
+	transition: all 500ms ease-out;
+}
+.step_2 .watch {
+	top: 50%;
+	transform: translate(60px, -30%) rotate(15deg) scale(1.5);
+}
+.step_3 .watch {
+	top: 0;
+	transform: translate(130px, 190px) rotate(15deg) scale(1);
+}
+
+.grad {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	opacity: 0;
+	transition: all 300ms ease-out;
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+}
+.step_2 .grad {
+	opacity: 1;
+}
+.step_3 .grad {
+	opacity: 0;
+}
+
+.text,
+.btn {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	opacity: 0;
+	transition: all 300ms ease-out;
+	transform: translateY(-5px);
+}
+.text_1 {
+	background-image: url(./img/text_1.png);
+}
+.text_2 {
+	background-image: url(./img/text_2.png);
+}
+.text_3 {
+	background-image: url(./img/text_3.png);
+}
+.btn {
+	background-image: url(./img/btn.png);
+}
+
+.step_1 .text_1,
+.step_2 .text_2,
+.step_3 .text_3 {
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 500ms;
+}
+.step_2 .text_1,
+.step_3 .text_2,
+.step_4 .text_3 {
+	opacity: 0;
+	transform: translateY(-5px);
+	transition-delay: 0ms;
+}
+.step_3 .btn {
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 1000ms;
+}

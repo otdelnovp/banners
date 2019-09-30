@@ -1,11 +1,3 @@
-@font-face {
-	font-family: FiraSans;
-	src: local('firasans'), url(../fonts/firasans-bold-webfont.woff) format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: fallback
-}
-
 body, html {
 	width: 100%;
 	height: 100%;
@@ -62,7 +54,8 @@ body, html {
 	left: 15px;
 	width: 280px;
 	background-size: cover;
-	font: bold 23px/1 FiraSans, Roboto, Panton, sans-serif;
+	font: bold 22px/1 system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;
+	letter-spacing: -0.5px;
 }
 .region.small {
 	margin-top: 4px;
@@ -113,7 +106,7 @@ body, html {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	font: bold 13px/12px FiraSans, Roboto, Panton, sans-serif;
+	font: bold 13px/1 system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;
 	text-transform: uppercase;
 	white-space: nowrap;
 	color: #1f4924;
