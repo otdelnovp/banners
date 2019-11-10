@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=240,height=400">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>hp</title>
+<link rel="stylesheet" href="main.css?1">
+</head>
+<body>
+
+<div class="banner" id="banner">
+  <div class="close none" id="close">&times;</div>
+  <a class="link" href="%link1%" target="_blank">
+    <div class="bg"></div>
+
+    <div class="text-start"></div>
+    <div class="hover"></div>
+    <div class="notebook-start">
+      <div class="notebook-locker"></div>
+    </div>
+    <div class="timer" id="timer"><span class="second" id="second">3</span></div>
+
+    <div class="girl"></div>
+    <div class="notebook"></div>
+    <div class="slogan"></div>
+    <div class="title"></div>
+    <div class="description"></div>
+    <div class="btn"></div>
+    <div class="logo"></div>
+  </a>
+</div>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script type="text/javascript">
+  'use strict';
+  var banner = document.querySelector('#banner');
+  var timer = document.querySelector('#timer');
+  var close = document.querySelector('#close');
+  var second = document.querySelector('#second');
+  var t = false;
+  var s = 3;
+
+  function startTimer() {
+    console.log('enter');
+    t = setInterval(function() {
+      if (s > 1) {
+        s = s - 1;
+        second.innerHTML = s;
+      } else {
+        window.parent.postMessage('banner:expand', '*');
+        banner.classList.add('opened');
+        s = 3;
+        second.innerHTML = s;
+        clearInterval(t);
+        bannerOpened()
+      }
+    }, 1000)
+  }
+
+  function stopTimer() {
+    console.log('leave');
+    s = 3;
+    second.innerHTML = s;
+    clearInterval(t);
+  }
+
+  function bannerClosed(){
+    banner.classList.add('closed');
+    banner.addEventListener("mouseenter", startTimer);
+    banner.addEventListener("mouseleave", stopTimer);
+    setTimeout(function() {
+      timer.classList.remove('disabled');
+    }, 1000);
+  }
+
+  function bannerOpened(){
+    banner.classList.remove('closed');
+    timer.classList.add('disabled');
+    banner.removeEventListener("mouseenter", startTimer);
+    banner.removeEventListener("mouseleave", stopTimer);
+  }
+
+  close.addEventListener('click', function(e) {
+    banner.classList.remove('opened');
+    window.parent.postMessage('banner:close', '*');
+    close.classList.add('none');
+    setTimeout(bannerClosed, 100);
+  });
+
+  window.addEventListener('message', function(e) {
+    if (e.data === 'expand:open') {
+      close.classList.remove('none');
+    }
+  });
+  
+  bannerClosed();
+</script>
+
+</body>
+</html>

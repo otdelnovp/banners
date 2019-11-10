@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=100%,height=250">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>citim</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div class="banner">
+	<a class="link" href="%link1%" target="_blank">
+		<div class="text"></div>
+		<div class="disklaimer">
+			<sup>*</sup>Цена указана при заказе по тарифу “Эконом” в Краснодаре. Подробности на сайте city-mobil.ru. ООО «Сити-Мобил» — информационный сервис,<br>
+			не является перевозчиком. 117393, г. Москва, ул. Архитектора Власова, д. 55. ОГРН 1097746203785
+		</div>
+		<div id="man" class="man"><img src="./img/man.png" alt="man"></div>
+		<div id="car" class="car">
+			<img src="./img/car.png" alt="car">
+			<div id="wheel_1" class="wheel wheel__1"><img src="./img/wheel.png" alt="wheel"></div>
+			<div id="wheel_2" class="wheel wheel__2"><img src="./img/wheel.png" alt="wheel"></div>
+		</div>
+	</a>
+</div>
+
+<script type="text/javascript">
+
+var innerWidth = window.innerWidth;
+var oldPosition = 0;
+var direction = 'left';
+var oldDirection = 'left';
+var stop = false;
+
+var man = document.getElementById('man');
+var car = document.getElementById('car');
+var wheel_1 = document.getElementById('wheel_1');
+var wheel_2 = document.getElementById('wheel_2');
+
+var transformElement = function(element, transformCmd) {
+	element.style.MozTransform = transformCmd;
+	element.style.WebkitTransform = transformCmd;
+	element.style.OTransform = transformCmd;
+	element.style.MsTransform = transformCmd;
+	element.style.transform = transformCmd;
+};
+
+var move = function(shiftX) {
+	transformElement(man, 'translate3d(' + (-shiftX/2) + 'px,0,0)');
+	transformElement(car, 'translate3d(' + shiftX + 'px,0,0)');
+	transformElement(wheel_1, 'rotate(' + shiftX*3 + 'deg)');
+	transformElement(wheel_2, 'rotate(' + shiftX*3 + 'deg)');
+}
+
+var calc = function(data) {
+	var position = data.x / innerWidth * 100 - 50;
+
+	if (position > 0) direction = 'right';
+	else direction = 'left';
+
+	if (direction !== oldDirection && !stop) {
+		oldDirection = direction;
+		stop = true;
+
+		var shiftX = 50;
+		if (position < 0) shiftX = -shiftX;
+
+		move(shiftX);
+		
+		setTimeout(function() {
+			stop = false;
+		}, 1000);
+	}
+};
+
+window.addEventListener("message", function(e) {
+	calc(JSON.parse(e.data));
+});
+
+// document.addEventListener("mousemove", function(e) {
+// 	calc({x: e.clientX, viewportWidth: innerWidth});
+// });
+
+</script>
+
+</body>
+</html>

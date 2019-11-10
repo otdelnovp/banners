@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=100%,height=100">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Banner preview</title>
+<link rel="stylesheet" href="main.css?1">
+</head>
+<body>
+
+<div class="banner">
+  <a class="link" href="%link1%" target="_blank">
+    <div class="bg"></div>
+    <div class="car carl"></div>
+    <div class="car carm"></div>
+    <div class="car carr"></div>
+    <div class="logo"></div>
+    <div class="title"></div>
+  </a>
+</div>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script>
+
+  var transformElement = function (element, transformCmd) {
+    element.style.MozTransform = transformCmd;
+    element.style.WebkitTransform = transformCmd;
+    element.style.OTransform = transformCmd;
+    element.style.MsTransform = transformCmd;
+    element.style.transform = transformCmd;
+  };
+
+  var
+    link = document.querySelector('.link'),
+    logo = document.querySelector('.logo'),
+    bg = document.querySelector('.bg'),
+    carl = document.querySelector('.carl'),
+    carm = document.querySelector('.carm'),
+    carr = document.querySelector('.carr'),
+    title = document.querySelector('.title');
+
+  function setAnimationPercent(percent) {
+
+    if(percent <= 0) {
+      transformElement(link, 'translateY(100%)');
+    } else if(percent <= 12.5) {
+      transformElement(link, 'translateY(' + (100 - percent*8) + '%)');
+    } else {
+      transformElement(link, 'translateY(0%)');
+    }
+
+    if(percent <= 20) {
+      transformElement(logo, 'translateY(' + (100 - percent*5) + 'px)');
+    } else if(percent <= 50) {
+      transformElement(logo, 'translateY(0%)');
+    } else if(percent <= 60) {
+      transformElement(logo, 'translateY(' + ((percent - 50)*10) + 'px)');
+    } else {
+      transformElement(logo, 'translateY(100px)');
+    }
+
+    if(percent <= 55) {
+      transformElement(bg, 'translateY(100px)');
+    } else if(percent <= 65) {
+      transformElement(bg, 'translateY(' + (100 - (percent - 55)*10) + 'px)');
+    } else {
+      transformElement(bg, 'translateY(0px)');
+    }
+
+    if(percent <= 55) {
+      transformElement(title, 'translateY(100px)');
+    } else if(percent <= 75) {
+      transformElement(title, 'translateY(' + (100 - (percent - 55)*5) + 'px)');
+    } else {
+      transformElement(title, 'translateY(0px)');
+    }
+
+    if(percent <= 60) {
+      transformElement(carl, 'translate(40px,100px)');
+      transformElement(carm, 'translateY(100px)');
+      transformElement(carr, 'translate(-40px,100px)');
+    } else if(percent <= 80) {
+      transformElement(carl, 'translate(' + (40 - (percent - 60)*2) + 'px,' + (100 - (percent - 60)*5) + 'px)');
+      transformElement(carm, 'translateY(' + (100 - (percent - 60)*5) + 'px)');
+      transformElement(carr, 'translate(' + ((percent - 60)*2 - 40) + 'px,' + (100 - (percent - 60)*5) + 'px)');
+    } else {
+      transformElement(carl, 'translate(0px,0px)');
+      transformElement(carm, 'translateY(0px)');
+      transformElement(carr, 'translate(0px,0px)');
+    }
+
+  }
+
+  window.addEventListener('message', function(e) {
+    var data = e.data;
+    var command = data.split(':');
+    if (command[0] === 'animation' && !isNaN(parseInt(command[1], 10))) {
+      setAnimationPercent(parseInt(command[1], 10));
+    }
+  });
+
+  // var i = 1, timerId = setInterval(function() {
+  //   setAnimationPercent(i);
+  //   i++;
+  //   if(i>100) clearInterval(timerId);
+  // }, 50);
+
+</script>
+
+</body>
+</html>
