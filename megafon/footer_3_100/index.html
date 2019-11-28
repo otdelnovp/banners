@@ -17,6 +17,7 @@
     <div class="man"></div>
     <div class="rocket"></div>
     <div class="title"></div>
+    <div class="logo"></div>
   </a>
 </div>
 
@@ -33,6 +34,7 @@
 
   var
     link = document.querySelector('.link');
+    logo = document.querySelector('.logo');
     man = document.querySelector('.man');
     ball = document.querySelector('.ball');
     rocket = document.querySelector('.rocket');
@@ -46,6 +48,17 @@
       transformElement(link, 'translateY(' + (100 - percent*10) + '%)');
     } else {
       transformElement(link, 'translateY(0%)');
+    }
+
+    if(percent <= 10) {
+      logo.style.opacity = 0;
+      transformElement(logo, 'translateY(10px)');
+    } else if(percent <= 20) {
+      logo.style.opacity = 1;
+      transformElement(logo, 'translateY(' + (10 - (percent - 10)) + 'px)');
+    } else {
+      logo.style.opacity = 1;
+      transformElement(logo, 'translateY(0px)');
     }
 
     if(percent <= 0) {
@@ -96,7 +109,7 @@
   //   setAnimationPercent(i);
   //   i++;
   //   if(i>100) clearInterval(timerId);
-  // }, 50);
+  // }, 30);
 
 </script>
 

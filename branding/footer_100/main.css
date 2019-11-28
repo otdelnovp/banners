@@ -1,0 +1,176 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-width: 1000px;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+}
+
+.banner {
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	min-width: 1000px;
+	overflow: hidden;
+}
+
+.link {
+	display: block;
+	position: relative;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/bg.png) center no-repeat;
+	background-size: auto 100%;
+	transform: translateY(100%);
+	transition: transform 1s ease-in-out;
+}
+.show .link {
+	transform: translateY(0) !important;
+}
+
+.text {
+	position: relative;
+	z-index: 101;
+	width: 100%;
+	height: 100%;
+	background: url(img/text.png) center no-repeat;
+	background-size: auto 100%;
+	transform: translateY(100%);
+	transition: transform 1s 1s ease-in-out;
+}
+.show .text {
+	transform: translate(0,0) !important;
+}
+
+
+.trash,
+.batt,
+.light {
+	position: absolute;
+	display: block;
+	z-index: 5;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	transition-duration: 1s;
+	transition-property: transform;
+	transition-timing-function: ease-in-out;
+}
+.show .trash,
+.show .batt {
+	transform: translate(0,0) rotate(0) !important;
+}
+
+.trash_left_1 {
+	z-index: 4;
+	background-image: url(img/l1.png);
+	transform: translate(-200px,200px) rotate(10deg);
+	transition-delay: 0ms;
+}
+
+.trash_left_2 {
+	z-index: 2;
+	background-image: url(img/l2.png);
+	transform: translate(-200px,200px) rotate(-20deg);
+	transition-delay: 100ms;
+}
+
+.trash_right_1 {
+	z-index: 4;
+	background-image: url(img/r1.png);
+	transform: translate(100px,100px);
+	transition-delay: 100ms;
+}
+
+.trash_right_2 {
+	z-index: 2;
+	background-image: url(img/r2.png);
+	transform: translate(200px,200px) rotate(20deg);
+	transition-delay: 200ms;
+}
+
+.trash_right_3 {
+	z-index: 10;
+	background-image: url(img/r3.png);
+	transform: translate(200px,200px) rotate(20deg);
+	transition-delay: 200ms;
+}
+
+
+.batt_1 {
+	background-image: url(img/batt1.png);
+	transform: translate(-200px,200px) rotate(20deg);
+	transition-delay: 300ms;
+}
+
+.batt_2 {
+	background-image: url(img/batt2.png);
+	transform: translate(-200px,200px) rotate(-20deg);
+	transition-delay: 400ms;
+}
+
+.batt_3 {
+	z-index: 3;
+	background-image: url(img/batt3.png);
+	transform: translate(-200px,200px) rotate(15deg);
+	transition-delay: 500ms;
+}
+
+.batt_4 {
+	background-image: url(img/batt4.png);
+	transform: translate(200px,200px) rotate(-15deg);
+	transition-delay: 300ms;
+}
+
+.batt_5 {
+	background-image: url(img/batt5.png);
+	transform: translate(200px,200px) rotate(20deg);
+	transition-delay: 400ms;
+}
+
+.batt_6 {
+	z-index: 3;
+	background-image: url(img/batt6.png);
+	transform: translate(200px,200px) rotate(-15deg);
+	transition-delay: 500ms;
+}
+
+
+.light {
+	z-index: 6;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.light_1 {
+	background-image: url(img/light_1.png);
+}
+
+.light_2 {
+	z-index: 3;
+	background-image: url(img/light_2.png);
+}
+
+.show .light {
+	animation: light 3s 3s ease infinite;
+}
+@keyframes light {
+	0%, 100% {
+		opacity: 0;
+	}
+	40%, 60% {
+		opacity: 1;
+	}
+}

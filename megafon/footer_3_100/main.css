@@ -42,7 +42,8 @@ html, body {
 .man,
 .ball,
 .rocket,
-.title {
+.title,
+.logo {
 	z-index: 5;
 	position: absolute;
 	z-index: 10;
@@ -74,4 +75,11 @@ html, body {
 	z-index: 10;
 	transform: translateY(100px);
 	background-image: url(img/title.png);
+}
+.logo {
+	z-index: 10;
+	opacity: 0;
+	transform: translateY(10px);
+	background-image: url(img/logo.png);
+	transition: transform 500ms linear, opacity 1000ms;
 }
