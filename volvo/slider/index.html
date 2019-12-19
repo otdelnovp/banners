@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head lang="ru">
+        <meta charset="UTF-8">
+        <meta name="ad.size" content="width=100%,height=298">
+        <meta name="viewport" content="user-scalable=no, maximum-scale=1.0, initial-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>slider</title>
+        <link type="text/css" href="./main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="banner" id="banner">
+            <div class="slider">
+                <a href="%link1%" class="item item_1" target="_blank">
+                    <div class="item__img">
+                        <div class="car">
+                            <div class="wheel wheel_1"></div>
+                            <div class="wheel wheel_2"></div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="item__text">Шведское мастерство</div>
+                </a>
+                <a href="%link1%" class="item item_2" target="_blank">
+                    <div class="item__img">
+                        <div class="car">
+                            <div class="wheel wheel_1"></div>
+                            <div class="wheel wheel_2"></div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="item__text">Инновационные технологии</div>
+                </a>
+                <a href="%link1%" class="item item_3" target="_blank">
+                    <div class="item__img">
+                        <div class="car">
+                            <div class="wheel wheel_1"></div>
+                            <div class="wheel wheel_2"></div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="item__text">Впечатляющие дизайнерские решения</div>
+                </a>
+                <a href="%link1%" class="item item_4" target="_blank">
+                    <div class="item__img"></div>
+                    <div class="item__text">Специальная серия<br> 3 370 000 рублей</div>
+                </a>
+                <a href="%link1%" class="item item_5" target="_blank">
+                    <div class="item__img"></div>
+                    <div class="item__text"></div>
+                </a>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="./prefixfree.min.js"></script>
+        <script type="text/javascript">
+        var check = function(data) {
+            if (data.type === "page:resize") {
+                if (data.banner.viewability) {
+                    document.getElementById("banner").classList.add('run');
+                }
+            }
+        };
+        window.addEventListener("message", function(e) {
+            check(JSON.parse(e.data));
+        });
+        </script>
+    </body>
+</html>
