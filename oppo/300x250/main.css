@@ -1,0 +1,148 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; position: relative; background: #fff;}
+
+.bnr {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 300px;
+	height: 250px;
+	font-size: 0;
+	color: #fff;
+	background: #492cb9 url(img/bg.png) center no-repeat;
+	background-size: cover;
+	border: 0;
+}
+
+.link {
+	display: block;
+	position: relative;
+	width: 100%; 
+	height: 100%; 
+	text-decoration: none;
+}
+
+.phone {
+	display: block; 
+	position: absolute;
+	z-index: 5; 
+	top: 47px; 
+	left: 196px; 
+	width: 93px;
+	height: 174px;
+	background: url(img/phone-front.png) center no-repeat;
+	background-size: contain;
+	animation: phone-front 5s infinite;
+}
+@keyframes phone-front {
+	15%, 85% {
+		opacity: 1;
+	}
+	20%, 80% {
+		opacity: 1;
+		transform: rotate(0);
+	}
+	0%, 5%, 95%, 100% {
+		opacity: 0;
+		transform: rotate(-15deg);
+	}
+}
+
+.phone_back {
+	z-index: 3;
+	top: 50px;
+	left: 168px;
+	width: 50px;
+	height: 142px;
+	background-image: url(img/phone-back.png);
+	animation: phone-back 5s infinite;
+}
+@keyframes phone-back {
+	20%, 80% {
+		opacity: 1;
+	}
+	25%, 75% {
+		opacity: 1;
+		transform: rotate(0) translate(0,0);
+	}
+	0%, 10%, 90%, 100% {
+		opacity: 0;
+		transform: rotate(10deg) translate(30px,10px);
+	}
+}
+
+
+
+.label {
+	display: block; 
+	position: absolute;
+	z-index: 10; 
+	top: 150px; 
+	left: 210px; 
+	width: 70px;
+	height: 42px;
+	background: url(img/label.png) center no-repeat;
+	background-size: contain;
+	animation: label 5s infinite;
+}
+@keyframes label {
+	15%, 80% {
+		opacity: 1;
+	}
+	20%, 78% {
+		opacity: 1;
+		transform: rotate(0) translate(0,0);
+	}
+	0%, 8%, 90%, 100% {
+		opacity: 0;
+		transform: rotate(5deg) translate(10px,10px);
+	}
+}
+
+
+.lines {
+	display: block; 
+	position: absolute;
+	z-index: 1; 
+	top: 30px; 
+	left: 210px; 
+	width: 17px;
+	height: 20px;
+	background: url(img/lines-top.png) center no-repeat;
+	background-size: contain;
+	animation: lines-top 5s infinite;
+}
+@keyframes lines-top {
+	27%, 73% {
+		opacity: 1;
+	}
+	27%, 73% {
+		opacity: 1;
+		transform: translate(0,0);
+	}
+	0%, 17%, 83%, 100% {
+		opacity: 0;
+		transform: translate(25px,-5px);
+	}
+}
+.lines_bottom {
+	top: 177px;
+	left: 155px;
+	width: 15px;
+	height: 13px;
+	background-image: url(img/lines-bottom.png);
+	animation: lines-bottom 5s infinite;
+}
+@keyframes lines-bottom {
+	20%, 80% {
+		opacity: 1;
+	}
+	25%, 75% {
+		opacity: 1;
+		transform: translate(0,0);
+	}
+	0%, 10%, 90%, 100% {
+		opacity: 0;
+		transform: translate(-10px,10px);
+	}
+}

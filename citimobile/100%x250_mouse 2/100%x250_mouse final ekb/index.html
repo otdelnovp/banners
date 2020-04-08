@@ -79,9 +79,9 @@ window.addEventListener("message", function(e) {
 	calc(JSON.parse(e.data));
 });
 
-// document.addEventListener("mousemove", function(e) {
-// 	calc({x: e.clientX, viewportWidth: innerWidth});
-// });
+document.addEventListener("mousemove", function(e) {
+	calc({x: e.clientX, viewportWidth: innerWidth});
+});
 
 </script>
 

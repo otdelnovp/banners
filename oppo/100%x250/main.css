@@ -1,0 +1,186 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; position: relative; }
+
+.bnr {
+	overflow: hidden;
+	position: relative;
+	text-align: left;
+	margin: 0;
+	width: 100%;
+	min-width: 940px;
+	height: 250px;
+	font-size: 0;
+	border: 0;
+	overflow: hidden;
+	background: #fff;
+	transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    -webkit-transform-style: flat;
+    transform-style: flat;
+}
+
+.link {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	overflow: hidden;
+	box-shadow: inset 0 0 1px 1px rgba(0,0,0, 0.2);
+}
+.link:before {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: #4831B6;
+}
+
+.bg {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/bg.png) center no-repeat;
+	background-size: auto 100%;
+	transition: transform 1s;
+	transform: translateX(-50px);
+}
+.bnr.right .bg {
+	transform: translateX(50px);
+}
+
+.logo {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 50%;
+	margin: 32px 0 0 -434px;
+	width: 103px;
+	height: 26px;
+	background: url(img/logo.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.text {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 50%;
+	margin: 80px 0 0 -434px;
+	width: 453px;
+	height: 67px;
+	background: url(img/text.png) center no-repeat;
+	background-size: auto 100%;
+}
+
+.btn {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 50%;
+	margin: 170px 0 0 -434px;
+	width: 195px;
+	height: 50px;
+	background: #FF0B72 url(img/btn.png) center no-repeat;
+	background-size: contain;
+	border-radius: 25px;
+	transition: transform 1s;
+	transform: scale(0.95);
+}
+.bnr.right .btn {
+	transform: scale(1.03);
+}
+.btn:hover {
+	transform: scale(1);
+}
+
+.phones {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 50%;
+	margin: 0 0 0 120px;
+}
+
+.phone {
+	display: block; 
+	position: absolute;
+	z-index: 5; 
+	top: 13px; 
+	left: 36px; 
+	width: 125px;
+	height: 232px;
+	background: url(img/phone-front.png) center no-repeat;
+	background-size: contain;
+	transition: transform 1s;
+	transform: rotate(-15deg);
+}
+.bnr.right .phone {
+	transform: rotate(0);
+}
+.phone_back {
+	z-index: 3;
+	top: 15px;
+	left: 0px;
+	width: 67px;
+	height: 189px;
+	background-image: url(img/phone-back.png);
+}
+
+.label {
+	display: block; 
+	position: absolute;
+	z-index: 10; 
+	top: 115px; 
+	left: 52px; 
+	width: 135px;
+	height: 82px;
+	background: url(img/label.png) center no-repeat;
+	background-size: contain;
+	transition: transform 1s;
+	transform: translate(21px,-80px);
+}
+.bnr.right .label {
+	transform: translate(0,0);
+}
+
+.lines {
+	display: block; 
+	position: absolute;
+	z-index: 1; 
+	top: 3px; 
+	left: 165px; 
+	width: 27px;
+	height: 33px;
+	background: url(img/lines-top.png) center no-repeat;
+	background-size: contain;
+	transition: transform 1s, opacity 300ms 500ms;
+	transform: translate(10px,-10px);
+	opacity: 0;
+}
+.bnr.right .lines {
+	transition: transform 1s, opacity 300ms;
+	transform: translate(0,0);
+	opacity: 1;
+}
+.lines_bottom {
+	top: 182px;
+	left: -15px;
+	width: 24px;
+	height: 21px;
+	background-image: url(img/lines-bottom.png);
+	transform: translate(-10px,10px);
+}
+.bnr.right .lines_bottom {
+	transform: translate(0,0);
+}

@@ -1,0 +1,90 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	overflow: hidden;
+}
+
+.banner {
+	position: relative;
+	display: block;
+	width: 100%;
+	min-width: 320px;
+	height: 100px;
+	overflow: hidden;
+}
+
+.link {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateY(100px);
+	transition: transform 500ms linear;
+}
+
+.bg {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url(img/bg.png) center bottom no-repeat;
+	background-size: auto 100%;
+}
+
+.line,
+.snow,
+.prod,
+.logo,
+.title {
+	z-index: 5;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	transition: transform 500ms linear;
+	transform: translateY(100px);
+}
+.line {
+	z-index: 2;
+	background-image: url(img/line.png);
+}
+.snow {
+	z-index: 5;
+	background-image: url(img/snow.png);
+}
+.prod {
+	z-index: 4;
+	background-image: url(img/prod.png);
+}
+.logo {
+	z-index: 10;
+	background-image: url(img/logo.png);
+}
+.title {
+	z-index: 5;
+	background-image: url(img/title.png);
+}
+
+@media screen and (max-width: 320px) {
+	.logo {
+		width: 109%;
+		left: -9%;
+	}
+	.title {
+		width: 105%;
+	}
+}

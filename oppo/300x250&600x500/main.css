@@ -1,0 +1,153 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; position: relative; background: #fff;}
+
+.bnr {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	min-width: 300px;
+	min-height: 250px;
+	max-width: 600px;
+	max-height: 500px;
+	font-size: 0;
+	color: #fff;
+	background: #fff url(img/bg.png) center no-repeat;
+	background-size: contain;
+	border: 0;
+}
+
+.link {
+	display: block;
+	position: relative;
+	width: 100%; 
+	height: 100%; 
+	text-decoration: none;
+	box-shadow: inset 0 0 1px 1px rgba(0,0,0, 0.4);
+}
+
+.phone {
+	display: block; 
+	position: absolute;
+	z-index: 5; 
+	top: 18.88%; 
+	left: 65.33%; 
+	width: 31%;
+	height: 69.6%;
+	background: url(img/phone-front.png) center no-repeat;
+	background-size: contain;
+	animation: phone-front 5s infinite;
+}
+@keyframes phone-front {
+	15%, 85% {
+		opacity: 1;
+	}
+	20%, 80% {
+		opacity: 1;
+		transform: rotate(0);
+	}
+	0%, 5%, 95%, 100% {
+		opacity: 0;
+		transform: rotate(-15deg);
+	}
+}
+
+.phone_back {
+	z-index: 3;
+	top: 20%;
+	left: 56%;
+	width: 16.67%;
+	height: 56.8%;
+	background-image: url(img/phone-back.png);
+	animation: phone-back 5s infinite;
+}
+@keyframes phone-back {
+	20%, 80% {
+		opacity: 1;
+	}
+	25%, 75% {
+		opacity: 1;
+		transform: rotate(0) translate(0,0);
+	}
+	0%, 10%, 90%, 100% {
+		opacity: 0;
+		transform: rotate(10deg) translate(30px,10px);
+	}
+}
+
+
+
+.label {
+	display: block; 
+	position: absolute;
+	z-index: 10; 
+	top: 60%; 
+	left: 70%; 
+	width: 23.33%;
+	height: 16.8%;
+	background: url(img/label.png) center no-repeat;
+	background-size: contain;
+	animation: label 5s infinite;
+}
+@keyframes label {
+	15%, 80% {
+		opacity: 1;
+	}
+	20%, 78% {
+		opacity: 1;
+		transform: rotate(0) translate(0,0);
+	}
+	0%, 8%, 90%, 100% {
+		opacity: 0;
+		transform: rotate(5deg) translate(10px,10px);
+	}
+}
+
+
+.lines {
+	display: block; 
+	position: absolute;
+	z-index: 1; 
+	top: 12%; 
+	left: 70%; 
+	width: 5.67%;
+	height: 8%;
+	background: url(img/lines-top.png) center no-repeat;
+	background-size: contain;
+	animation: lines-top 5s infinite;
+}
+@keyframes lines-top {
+	27%, 73% {
+		opacity: 1;
+	}
+	27%, 73% {
+		opacity: 1;
+		transform: translate(0,0);
+	}
+	0%, 17%, 83%, 100% {
+		opacity: 0;
+		transform: translate(25px,-5px);
+	}
+}
+.lines_bottom {
+	top: 70.8%;
+	left: 51.67%;
+	width: 5%;
+	height: 5.2%;
+	background-image: url(img/lines-bottom.png);
+	animation: lines-bottom 5s infinite;
+}
+@keyframes lines-bottom {
+	20%, 80% {
+		opacity: 1;
+	}
+	25%, 75% {
+		opacity: 1;
+		transform: translate(0,0);
+	}
+	0%, 10%, 90%, 100% {
+		opacity: 0;
+		transform: translate(-10px,10px);
+	}
+}
