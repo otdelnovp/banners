@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=300,height=250">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>poll</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div class="bnr">
+	<div class="adv">Реклама</div>
+	<div class="label">Опрос</div>
+	<div class="question">Что самое важное в&nbsp;автомобиле?</div>
+	<div class="answers">
+		<div class="col">
+			<div class="answer" data-link="https://r.mail.ru/n325757686">Дизайн</div>
+			<div class="answer" data-link="https://r.mail.ru/n325757687">Стоимость</div>
+			<div class="answer" data-link="https://r.mail.ru/n325757688">Безопасность</div>
+		</div>
+		<div class="col">
+			<div class="answer" data-link="https://r.mail.ru/n325757823">Двигатель</div>
+			<div class="answer" data-link="https://r.mail.ru/n325757824">Другое</div>
+		</div>
+	</div>
+	<a class="btn disabled" href="#" target="_blank">Ответить</a>
+</div>
+
+<script type="text/javascript">
+	var answers = document.querySelectorAll('.answer');
+	answers.forEach(function(answer) {
+		answer.addEventListener('click', function() {
+			answers.forEach(function(item) {item.classList.remove('selected')});
+			answer.classList.add('selected');
+			var btn = document.querySelector('.btn');
+			btn.classList.remove('disabled');
+			btn.href = answer.dataset.link;
+		});
+	});
+</script>
+
+</body>
+</html>

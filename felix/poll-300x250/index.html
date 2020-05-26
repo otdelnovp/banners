@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=300,height=250">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>poll</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div class="bnr">
+	<div class="question">
+		<div class="answers">
+			<div class="answer" data-link="d62551062">сыр</div>
+			<div class="answer" data-link="d62551064">свекла</div>
+			<div class="answer" data-link="d62551063">ягоды</div>
+			<div class="answer" data-link="d62551065">сельдерей</div>
+		</div>
+	</div>
+	<div class="result"></div>
+</div>
+
+<script type="text/javascript">
+	var answers = document.querySelectorAll('.answer');
+	answers.forEach(function(answer) {
+		answer.addEventListener('click', function() {
+			loadPixel(answer.dataset.link);
+			document.querySelector('.result').classList.add('show');
+		});
+	});
+	function loadPixel(id) {
+		var counter = new Image();
+		counter.addEventListener('load', () => counter.style = 'width:0;height:0;position:absolute;visibility:hidden;');
+		counter.src = '//rs.mail.ru/' + id + '.gif';
+	};
+</script>
+
+</body>
+</html>

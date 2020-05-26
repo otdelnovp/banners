@@ -1,0 +1,47 @@
+html, body {width: 100%; height: 100%; margin: 0; padding: 0; position: relative; overflow: hidden;}
+.bnr {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	color: #fff;
+	background: #2F663F;
+	border: 0;
+	text-decoration: none;
+}
+.bnr:after {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 50%;
+	background: #000;
+}
+.bnr-img {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background: url(bg.jpg) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+.bnr-note {
+	position: absolute;
+	z-index: 3;
+	bottom: 0;
+	right: 0;
+	margin: 20px;
+	width: 152px;
+	height: 9px;
+	background: url(note.png) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
