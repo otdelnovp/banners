@@ -1,0 +1,136 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; position: relative; background: #FBFBFD;}
+
+.bnr {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+	width: 300px;
+	height: 300px;
+	font-size: 0;
+	border: 0;
+	text-decoration: none;
+	color: #000;
+	background: #0171ff;
+	background: -moz-linear-gradient(top,  #0171ff 0%, #0440c4 100%);
+	background: -webkit-linear-gradient(top,  #0171ff 0%,#0440c4 100%);
+	background: linear-gradient(to bottom,  #0171ff 0%,#0440c4 100%);
+}
+
+.label {
+	position: absolute;
+	z-index: 11;
+	top: 13px;
+	right: 7px;
+	width: 21px;
+	height: 11px;
+	background: url(img/12.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	overflow: hidden;
+}
+
+.main {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/main.png) center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	opacity: 0;
+	z-index: 11;
+	animation: main 10s infinite;
+}
+
+@keyframes main {
+	0%, 48%, 95% {
+		opacity: 0;
+	}
+	52%, 90% {
+		opacity: 1;
+	}
+}
+
+
+.icon {
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	width: 214px;
+	height: 180px;
+	background: url(img/logo.png) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	overflow: hidden;
+	animation: icon 10s infinite;
+	transform: translateY(-300px);
+}
+.icon_1 {
+	animation-delay: 0ms;
+	margin: 200px 0 0 -107px;
+	background-image: url(img/1.png);
+	z-index: 1;
+}
+.icon_2 {
+	animation-delay: 100ms;
+	margin: 150px 0 0 -107px;
+	background-image: url(img/2.png);
+	z-index: 2;
+}
+.icon_3 {
+	animation-delay: 200ms;
+	margin: 100px 0 0 -107px;
+	background-image: url(img/3.png);
+	z-index: 3;
+}
+.icon_4 {
+	animation-delay: 300ms;
+	margin: 50px 0 0 -107px;
+	background-image: url(img/4.png);
+	z-index: 4;
+}
+.icon_5 {
+	animation-delay: 400ms;
+	margin: 0px 0 0 -107px;
+	background-image: url(img/5.png);
+	z-index: 5;
+}
+.icon_6 {
+	animation-delay: 500ms;
+	margin: -50px 0 0 -107px;
+	background-image: url(img/6.png);
+	z-index: 6;
+}
+
+@keyframes icon {
+	0% {
+		transform: translateY(-300px);
+	}
+	15%, 35% {
+		transform: translateY(100px);
+	}
+	50%, 100% {
+		transform: translateY(400px);
+	}
+}
+
+.icon_logo {
+	animation: logo 10s 700ms infinite;
+	margin: -100px 0 0 -107px;
+	z-index: 10;
+}
+
+@keyframes logo {
+	0% {
+		transform: translateY(-300px);
+	}
+	15%, 85% {
+		transform: translateY(100px);
+	}
+	100% {
+		transform: translateY(400px);
+	}
+}

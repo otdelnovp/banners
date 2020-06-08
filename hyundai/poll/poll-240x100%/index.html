@@ -17,28 +17,14 @@
 		<div class="label">Опрос</div>
 		<div class="question">Что самое важное в&nbsp;автомобиле?</div>
 		<div class="answers">
-			<div class="answer" data-link="https://r.mail.ru/n325757626">Дизайн</div>
-			<div class="answer" data-link="https://r.mail.ru/n325757663">Стоимость</div>
-			<div class="answer" data-link="https://r.mail.ru/n325757664">Безопасность</div>
-			<div class="answer" data-link="https://r.mail.ru/n325757665">Двигатель</div>
-			<div class="answer" data-link="https://r.mail.ru/n325757666">Другое</div>
+			<a class="answer" href="%link1%" target="_blank">Дизайн</a>
+			<a class="answer" href="%link2%" target="_blank">Стоимость</a>
+			<a class="answer" href="%link3%" target="_blank">Безопасность</a>
+			<a class="answer" href="%link4%" target="_blank">Двигатель</a>
+			<a class="answer" href="%link5%" target="_blank">Другое</a>
 		</div>
-		<a class="btn disabled" href="#" target="_blank">Ответить</a>
 	</div>
 </div>
-
-<script type="text/javascript">
-	var answers = document.querySelectorAll('.answer');
-	answers.forEach(function(answer) {
-		answer.addEventListener('click', function() {
-			answers.forEach(function(item) {item.classList.remove('selected')});
-			answer.classList.add('selected');
-			var btn = document.querySelector('.btn');
-			btn.classList.remove('disabled');
-			btn.href = answer.dataset.link;
-		});
-	});
-</script>
 
 </body>
 </html>

@@ -1,0 +1,117 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; position: relative; background: #FBFBFD;}
+
+.bnr {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+	width: 500px;
+	height: 200px;
+	font-size: 0;
+	border: 0;
+	text-decoration: none;
+	color: #000;
+	background: #0171ff;
+	background: -moz-linear-gradient(top,  #0171ff 0%, #0440c4 100%);
+	background: -webkit-linear-gradient(top,  #0171ff 0%,#0440c4 100%);
+	background: linear-gradient(to bottom,  #0171ff 0%,#0440c4 100%);
+}
+
+.label {
+	position: absolute;
+	z-index: 11;
+	top: 13px;
+	right: 7px;
+	width: 21px;
+	height: 11px;
+	background: url(img/12.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	overflow: hidden;
+}
+
+.main {
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/main.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	overflow: hidden;
+}
+
+.carousel {
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 20px;
+	width: 200px;
+	height: 200px;
+}
+.bnr.hover .carousel {
+	animation: carousel 6s infinite;
+}
+
+@keyframes carousel {
+	0%, 50% {
+		transform: rotate(0deg);
+	}
+	50%, 100% {
+		transform: rotate(360deg);
+	}
+}
+
+.circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 48px;
+	height: 48px;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 12px 12px rgba(0, 6, 146, 0.2);
+}
+.circle_1 {
+	margin: -88px 0 0 -24px;
+	background-image: url(img/1.png);
+}
+.circle_2 {
+	margin: -56px 0 0 41px;
+	background-image: url(img/2.png);
+}
+.circle_3 {
+	margin: 9px 0 0 41px;
+	background-image: url(img/3.png);
+}
+.circle_4 {
+	margin: 38px 0 0 -24px;
+	background-image: url(img/4.png);
+}
+.circle_5 {
+	margin: 9px 0 0 -88px;
+	background-image: url(img/5.png);
+}
+.circle_6 {
+	margin: -56px 0 0 -88px;
+	background-image: url(img/6.png);
+}
+
+.bnr.hover .circle {
+	animation: circle 6s infinite;
+}
+
+@keyframes circle {
+	0%, 50% {
+		transform: rotate(0deg);
+	}
+	50%, 100% {
+		transform: rotate(-360deg);
+	}
+}

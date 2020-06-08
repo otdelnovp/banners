@@ -1,0 +1,95 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; position: relative; background: #FBFBFD;}
+
+.bnr {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+	width: 500px;
+	height: 200px;
+	font-size: 0;
+	border: 0;
+	text-decoration: none;
+	color: #000;
+	background: #ffd12f;
+	background: -moz-linear-gradient(top,  #ffd12f 0%, #ffd12f 23%, #ffaa00 100%);
+	background: -webkit-linear-gradient(top,  #ffd12f 0%,#ffd12f 23%,#ffaa00 100%);
+	background: linear-gradient(to bottom,  #ffd12f 0%,#ffd12f 23%,#ffaa00 100%);
+}
+
+.label {
+	position: absolute;
+	z-index: 11;
+	top: 12px;
+	right: 7px;
+	width: 21px;
+	height: 11px;
+	background: url(img/12.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	overflow: hidden;
+}
+
+.slide {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	opacity: 0;
+}
+
+.slide_1 {
+	opacity: 1;
+	background-image: url(img/1.png);
+}
+.slide_2 {
+	background-image: url(img/2.png);
+}
+.slide_3 {
+	background-image: url(img/3.png);
+}
+.slide_4 {
+	background-image: url(img/4.png);
+}
+
+.bnr:hover .slide {
+	opacity: 0;
+	animation: slider 12.5s infinite;
+}
+.bnr:hover .slide_1 {
+	animation-delay: 10s;
+}
+.bnr:hover .slide_2 {
+	animation-delay: 0s;
+}
+.bnr:hover .slide_3 {
+	animation-delay: 2.5s;
+}
+.bnr:hover .slide_4 {
+	animation-delay: 5s;
+	animation-name: slider_last;
+}
+
+@keyframes slider {
+	2%, 18% {
+		opacity: 1;
+	}
+	20%, 98% {
+		opacity: 0;
+	}
+}
+
+@keyframes slider_last {
+	2%, 38% {
+		opacity: 1;
+	}
+	40%, 98% {
+		opacity: 0;
+	}
+}

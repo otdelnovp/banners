@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=500,height=200">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>anim</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<a href="%link1%" target="_blank" class="bnr">
+	<div class="label">12+</div>
+	<div class="main"></div>
+	<div class="icon icon_logo"></div>
+	<div class="icon icon_1"></div>
+	<div class="icon icon_2"></div>
+	<div class="icon icon_3"></div>
+	<div class="icon icon_4"></div>
+	<div class="icon icon_5"></div>
+	<div class="icon icon_6"></div>
+</a>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script type="text/javascript">
+	var bnr = document.querySelector('.bnr');
+	var hover = false;
+	bnr.addEventListener('mouseover', function() {
+		if (!hover) {
+			hover = true;
+			bnr.classList.add('hover');
+			setTimeout(function() {
+				hover = false;
+				bnr.classList.remove('hover');
+			}, 10000);
+		}
+	});
+</script>
+
+</body>
+</html>

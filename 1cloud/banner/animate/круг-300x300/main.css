@@ -1,0 +1,152 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; position: relative; background: #FBFBFD;}
+
+.bnr {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+	width: 300px;
+	height: 300px;
+	font-size: 0;
+	border: 0;
+	text-decoration: none;
+	color: #000;
+	background: #0171ff;
+	background: -moz-linear-gradient(top,  #0171ff 0%, #0440c4 100%);
+	background: -webkit-linear-gradient(top,  #0171ff 0%,#0440c4 100%);
+	background: linear-gradient(to bottom,  #0171ff 0%,#0440c4 100%);
+}
+
+.label {
+	position: absolute;
+	z-index: 11;
+	top: 13px;
+	right: 7px;
+	width: 21px;
+	height: 11px;
+	background: url(img/12.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	overflow: hidden;
+}
+
+.slide {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	animation: slider 9s infinite;
+	opacity: 0;
+}
+
+.slide_1 {
+	background-image: url(img/main.png);
+}
+.slide_2 {
+	animation-delay: 3s;
+	animation-name: slider2;
+}
+
+@keyframes slider {
+	2%, 30% {
+		opacity: 1;
+	}
+	35%, 98% {
+		opacity: 0;
+	}
+}
+@keyframes slider2 {
+	2%, 60% {
+		opacity: 1;
+	}
+	65%, 98% {
+		opacity: 0;
+	}
+}
+
+.logo {
+	position: absolute;
+	z-index: 11;
+	top: 111px;
+	left: 70px;
+	width: 161px;
+	height: 128px;
+	background: url(img/logo.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	overflow: hidden;
+}
+
+.carousel {
+	position: absolute;
+	z-index: 11;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation: carousel 9s infinite;
+}
+
+@keyframes carousel {
+	0%, 33% {
+		transform: rotate(0deg);
+	}
+	66%, 100% {
+		transform: rotate(360deg);
+	}
+}
+
+.circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 72px;
+	height: 72px;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 12px 12px rgba(0, 6, 146, 0.2);
+	animation: circle 9s infinite;
+}
+.circle_1 {
+	margin: -128px 0 0 -36px;
+	background-image: url(img/1.png);
+}
+.circle_2 {
+	margin: -86px 0 0 60px;
+	background-image: url(img/2.png);
+}
+.circle_3 {
+	margin: 14px 0 0 60px;
+	background-image: url(img/3.png);
+}
+.circle_4 {
+	margin: 56px 0 0 -36px;
+	background-image: url(img/4.png);
+}
+.circle_5 {
+	margin: 14px 0 0 -132px;
+	background-image: url(img/5.png);
+}
+.circle_6 {
+	margin: -86px 0 0 -132px;
+	background-image: url(img/6.png);
+}
+
+@keyframes circle {
+	0%, 33% {
+		transform: rotate(0deg);
+	}
+	66%, 100% {
+		transform: rotate(-360deg);
+	}
+}

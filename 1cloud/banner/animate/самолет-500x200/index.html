@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=500,height=200">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>anim</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<a href="%link1%" target="_blank" class="bnr">
+	<div class="label">12+</div>
+	<div class="cloud cloud_back"></div>
+	<div class="cloud cloud_front"></div>
+	<div class="air"></div>
+	<div class="logo"></div>
+	<div class="text"></div>
+	<div class="icons"></div>
+</a>
+
+<script type="text/javascript" src="prefixfree.min.js"></script>
+<script type="text/javascript">
+	var bnr = document.querySelector('.bnr');
+	var hover = false;
+	bnr.addEventListener('mouseover', function() {
+		if (!hover) {
+			hover = true;
+			bnr.classList.add('hover');
+			setTimeout(function() {
+				hover = false;
+				bnr.classList.remove('hover');
+			}, 10000);
+		}
+	});
+</script>
+
+</body>
+</html>
