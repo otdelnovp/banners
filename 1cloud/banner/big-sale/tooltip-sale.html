@@ -1,0 +1,102 @@
+<style>
+    .BigSaleTooltip {
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 330px;
+    }
+    .BigSaleTooltipClose {
+        position: absolute;
+        z-index: 12;
+        top: 10px;
+        right: 13px;
+        color: #fff;
+        font: 700 25px/1 'Times New Roman', Times, serif;
+        cursor: pointer;
+    }
+    .BigSaleTooltip:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 99.99%;
+        right: 44px;
+        border: 10px solid transparent;
+        border-bottom: 10px solid rgb(0,95,249);
+    }
+    .BigSaleTooltipBox {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        color: #fff;
+        background: rgb(0,95,249);
+        background: -moz-linear-gradient(top,  rgba(0,95,249,1) 0%, rgba(0,71,216,1) 100%);
+        background: -webkit-linear-gradient(top,  rgba(0,95,249,1) 0%,rgba(0,71,216,1) 100%);
+        background: linear-gradient(to bottom,  rgba(0,95,249,1) 0%,rgba(0,71,216,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005ff9', endColorstr='#0047d8',GradientType=0 );
+    }
+    .BigSaleTooltipOverlay {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: -moz-linear-gradient(top,  rgba(0,95,249,0) 0%, rgba(0,95,249,0.1) 100%);
+        background: -webkit-linear-gradient(top,  rgba(0,95,249,0) 0%,rgba(0,95,249,0.1) 100%);
+        background: linear-gradient(to bottom,  rgba(0,95,249,0) 0%,rgba(0,95,249,0.1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00005ff9', endColorstr='#1a005ff9',GradientType=0 );
+    }
+    .BigSaleTooltipBg {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAACWCAMAAACPfDHXAAAC0FBMVEUAAAD/QSH/Riv/QyX/QiX/Qib/Qibr8/z/Qib/QSX/QSX/PiL/RyP/Qib/QSX/QiX/QSX/Qib/QSX/QCT/Qib/QiX/Phj/QSW72/L/QSX/////QSbh7fr/QiW/2PK82fS62PS92vT/QSa62PT/QiX/QSX8/f//QifB2vO60PH////T5vf///++2/X/Qibw9v3k8Pq72fX/QibS5vf////f7fr+///m8fv/////RCLe7frp7f3n1uDs9fy62PP////W6PjM4/T/RSHG2fT/Pivo5O200e/+/v7s8vvo8fvn8Pv/TTX+///g7vq62fO51/L53d//j4b/e2f////q8/vM4/fgqLP/ZE7/UDv/QiW71/P5qab/XEP/X0n/hHH/////Qib/Qib///+62PPq8/u72fT+/v/Q5PfA2/S+2vT/QifG3/bF3vX1+f3x9vzl7/vu9fzB3PXE3fT7/P7n8fz9/v/0+P251/Pg7vvO4/fL4vf2+v7W5/jK4fb3+/7j7/vf7frb6/nY6fmz0fDZ6vnI4Pb5/P7/Qyfr9Pzh7/vC3vW31fK10/Hc7PrJ4PWuy+yxzu6wzO3d7fq92fTv9v3N4/e61vPS5vjLxdrX6PnJ4fb/QSfz9/241vO30/Gsyeu82POy0O/U5vi51fL/TTXm8fy10fDt9fzC2/Oyz+//QinA2fL/WkPH4Pa82vTp8fz+///D3PX6/f/T5/jH3fT/V0LT5ff/5+XE3PP/urH/rqP/VULK3/TSytzPx9vkoar/gHj/c1/X6fn/9PL/0cv/YlD/TzbHwtn/3Njkx9Plu8T/opbxj5D/i3v/f27x+P3Q5fj/6ebg09/azt7/l4n7iYX+c2r/aFfl8PzV2erDz+jKxdv/3dn/3djVv9Dpvcb/xb7fq7byqazrl53+mJP6lJHv2+Hgrbf/o5f/hnr17fDw6O7p5e3f3+ze3+zZs8KDeBr2AAAAYXRSTlMAIAHfYO+AAb/foBAiQHDPkEFfMO4xEY8gniGvQs6A78+/rmBP3WBRQBDfv5uTf3xwcG/vv7+vkIBRMCH+39/egGEiERH+++/v7+/v39/f39/f38/Pzr+/v7Cvn4BwX1E/89LhXgAAEEJJREFUeNrs10tugzAURuHra4yAYB5FyYRZJ513Dd3I3f8mmrQpAwLIKFGlROebWr8sHckDCwAAAAAAAAAAAAAAAAAAAAAAAAAA2HQ4CB5DW190n3EQ3M0F+9Geiwru0thEkMR1wXzlZE4LUu7zFuwiDAtPnJR7OLsKB5n7IOUelVkZJZZmucxpR8odgtkgItHMy42vkpTprqHcYkrpSZnOm0URycxauaUdKZN1Zj666M2q5U8PKfd+aqx0K+ekTDWUvyUHWdaQMpmrWu/zg6zQwt4FD+EaAQAAAAAAwD9QVXfsz44n1b0bpwkbvZCXp33XBrvyY1Zr0qaYNm21vVHXdGNRVE3/2jlPebCZItPtjvXtZux19YLW/viqlhXZJMpT0ibYAr8Vsx4tfaPZ7IJcZUlukzd5Rt/cm01uwjAQhfPjRJM4IVQkRKhig1pxhm57iy7n/pcoiJg4fjYmy8nbGdUj8fSN51UajsQBURMy3xCJ8iB3PKHlvsrNXPSUSNSQc1D51Y9kx2HlynUS/trvZVazUZ8mAjUU/Epq9RXYAQLoA14qu4JAxWxhte4KOlGyX+SiPndHlQhUk3NExbDGSfQy5ZB2ofZmke1NHFWuV5iPNlkOnceyJGb/XuXAT42JQCkGxZ6+nN/SAFBW7eODio2+bCit9hb5axPXl/6b6Awtrl+9fDQqpcpLH2B5x+5mkD57XstMeqRUSx/LdlrmqasQlg07V/SzVuVlmdCgtDC37brCI+UCSkqtWTEClj6MR+2sS1kqHuUKz1D+hPGS0dzeImdOCxQFGrkFjL3p72B1udmaNKc/8DxQV+aeUA22BGb7HqCEK+DlxJxtLBjXbiRS3pfyGL6pNw92gDFGFuzxPVgJVG4kUj7exAoeKB+WgHEoslzcJ7YwB183HKYVfuH/MVqTN05YCqAGIosunJxO5vCB07qfoBTf3k9didNIUkrhE/zSOK7IPucNTGvaRqRcSCdvWUkAZQRLfTvPof0ny27GNeTU+JUeKUHxBtcAZSwWqKX/3b4sya2RdcIj5cqopN35XYfDqjPDD4yyoVRbau9/8s3lp4koCuNUHlNtGjQYKKUUUaiEVmgAAQEDxIXPhW9NNNE+ZGhLH9JHWtpS2vQFSVlAk6akq0bSTRUJiQRWutBoDDEu3PgHkKCJf4Nnpq9hboemOzt+S2guuT++Oeebc29LvwrVImWwo4pRtbQQ1cRAspUWKeEHLFUNMqVtodkUFfox5kHecQ5rImXJmTAyfaynsC2rxrYWI4mEgp4qdqoRSNL9QiuCTDqP1AHeCYRkJyfzZ9gTKRlJ1qOnMBzEpojQzzFN4HhIpHxexUoBSbTV8hG3MajYxINDgXm6CSz5n0RK2vENF005/JKtH81MDX3NXC63uY9POYRgVaTEcips8BLtSJGD1sCGclAy369hT6TErojkg7euKpXK8QGZRJih2UjPgXWML5KoCp1eGwqFPqUfCUEYoSPvtVT6N2wx0dD1lEEfnFJmdU8iRK+9wC7LRckNpfe+7nzetuZX7h6QDT8DpOw6+M6D7JJ6Fzxqk0E/b1bmtzz8tJae/3hlocQwkfz2L5tN75w3m4ElVeODkpEMTlZFSoHUEYtH7EZ1OAosc1ve/sCQpBGUjEa/FjZFEwk9oAwCSUTdMhGGJNfOqgqWqE3nxrf8K3ajJWxK6J1BK+x7avcV8p5MYdZRou1gI703LGp12GQyZF0JSypRdZNV+djJ4v8YHofPqaQrBWKVZingxl1+L7BUm6IGvdMZRC2pOMsjW7yga1I+MfHkyFyJiS56PEZAmUpFowkbrBc0W5UMkgmxYgffvJqW2uy94Erp6GKVSqWZ1c3hSR/USwImGAm1pKIOevzkhQf9OP4u6YqPUQeRGALSbl80EijDKYPhG+lKqxVcyaCBu1p6DWnsodbp6oqACSRB07OvgaULHnKPcUP9+wAdOPAF4vbA8tqcw4HHYknXH0VBd4ZGsUMgIysLsM76+gaJMqHPth1AyaSd9KFIeewUPTpU//tt/ZwqI82Szu3AXT7vit2+/xEh+Vjc/nJ2RhcIuOccOMEyTrHtgUV9X5KDOSr1eSOwSOYBJ+qFwUa2HetbJo4k410SZjM9rldObhe0qUAvCJabumUHngSYY2kFTTcftmmmpzeBJYGSYLnlouBOE9Au944SlpT3x/2AcmFxEVBukG0nYSOKZSEMoSJ/831PC1elc3ONymN5RpXXm80ZwpixL/Qyqf3xU7W6qsmgXMuydL1XFLS/blGHASYmkLriPr8/ErHbASXxgP+t7sx+XYqiMG4eggeJByGEiIQHEZEIHjzhDe8SkqqOaiiSImqqGooiqHkuyjXPXPM8z/M8hgfiX/B9a/fsM7WUB3pWe8/FvSR+91trfXvt3Z5546jK0XNcKN3SRJYrS9nHVzJaVfV7J3fyJ6jJAC4B/7Lw+Fh2iotk/j2/ZS9kGY+NGpVNTlkBlEcPffCZcXIsWKJdD+q5BR1JVEmUEwF4HIwl3dDvUVKYbX55/LV+nSqOISApEVAFM5w5fcRnj6cv/EI7EgkXMsIyCZb3Vj7wmXF+LJN55Gwinnph1syZi4hS+DLBBSX6zq9JCunusoS0hyfeNrmT3xGBM7UOSX40vkSW6Dx7mOJAGVppVe+3seC2ZUUoFDo0deqs2UQ5aWzRDS2nR59Gjx4sydBMcEZvq8ds0qIZ7GVTL6DsaDIsfjy1k6x9Y37HXqJEuYQhEkf02GfGp+lj50+W3o4EF5TihoiStVK1cIcqy3DtNcw1dW9U/Shb+51xy07yCZJbx6aIsNxTTPHQW92WotH8gBlT1kxZQZRUpXJDUCpRgiVR/qpYBq36fGUYiEYeeq/fTtQhI1G8vLSTvCVq1CiZ4hl28Sy7+L1QvgiSLD+tSQMlZQlVziq6oWcsoPNYLMWku2X5+uRr5DWefOg4ttu5U9a/YbWjHAp81gg8sZGUMmktAcsgywzLZXoKsX0mQ5+QrD1NmyQo2XdmK5TTJ6piSZYlV+GPUIzvnDjmVOu1K479nXpNqh1lBwsoiu+sjeRZG0h+x6ZlYaQ4u7hYoud5guSz9nQMgKUdWYol2o6Y9OXGbMi13rlctPi3310MOlmyUpoZXu0oraQYtW5N8ktmsFrGM6PIkro8F1WRP02XRJRUpaCkLPVAo1yxPGb1U48umYUzeMLxGsBGVY6yNTBZ472tTro4SucRox6Lpddkk6cmP8xH166Nro1+QQk1zLuoUvUdZdJH6r7j6uHvfGbMfQqUZty0HZit17bKUXYxUQk1a6XMryoXZ86cycQOHz7MPv45GgXMW6obZdNs4aEtKJaiyhkmynWS4a5iedun48pJR0O/bXsdT7W3HaC0ROKlr7KI+k7DXmYPnzqVfF67a+3aJ9KNFMqSzpJztnUYJ7u2d3ZrSZ6/7+xIF3dbimWjajdDff22OFsZRwjxDOzl8VHZU6dO3Vi7q/YlUBYOxMAyqVbnqzVKrieNDMeCZ85BmyxfGf/m7kslfOY1jII8Y9Fbq7xOQJHM9HOVaZIoC4UCYB4+fCp7a9fZTcuWheNEqQZwR5WznMnpr/Qd6eFj3BnO3iKS/HqxpG8/iTMIclsJL9xvx95XLlcG0geUNeEC4vhhxJcclpThAjNcm/SpBkoWSxMl/JDNDt1Ruf0aInQoMiiX8zIN8sY4o5/NDFWkScG5qqYmUkOWiIBf282sgdKwQ8b+Dtfh65jhB20sr6h2Uy6Y4hIeOCnYuJvfEm8q1CRR5mo21dQUagAzgh8DVpTMcDrLFczwLSbK6VyGa5fOYhnULC9Bko+cuR20OaI7j068O3b/YvDisVeXTty8M7xOVUbjLu07+K3x4/f9hp/XIq5uzeXAkmHM3+Jih5JmD5eZJaul2uABy9EOm34zCisZLDtSl08OxnX+WVT+jmdde3RMOAz4+4okCUdOlGRJmpsUymWReFw2flQPlwxHsaQspYfvGAc7JLK0zDTufA1aaZVhaimg/wllc7n9XPMyINvL5tgfeSHRpCK56+qGDRu2Ck6/gRLFMiMLHqI8Khs85q6ETNqI0tbEj434w/g/KBs01O+/4k7tHgpkoHKUBElJMnYR5faFG4gzp8dvYS542MMfPs77jpx7MEuN0oWlQrl8naC0pHh5Qbo6+r9EWfnt51p3LM6BHMvGs3N/Ebt28WLE1e0pPMDStlnBBU/2Q16tO6+roaXad5TGs/xu0aabLCsn+f9Qlr/9nEjS5MiLkC0XAVr4nD+RS6xfv3XBggUbFi5cmEqlNm9Obd+8fb258asyfM9DOZYaBcvvs8VazteypLdUE2AXympO8DK3n6P/sUuRH85w/yFI5kBy/YIFALk9xViyZMnO7ebESJbhkCVWTEduhN4ewW7PbCPDp2+TY1j6dOCECfs9hLLc7ee6drRxCiR+jzGR8Fs0SUmC5eadS5YsXbLd8peKLh3pfV1t+xzR1pIoLUseVsv93kGJ1VbLErefa93BTqt0XrtQUpNbQXLhBjwIEiSBcikg22UZi+FnyHX4A6C8QJactMl8aB5leXcMTrxgG/fg/r9jGazz74O3n2tZt6Xj9nNdOzjo/bZaBsgSJLfmkNxEmWKdXCIgFy/xW4IocRAGmX0D1hInNy6bKx5jyaP2y9B4Dpbdx60+VdZtVeIFMI07cIfGoMZfbMID1/ICTfCR80t2b0B2K0nuFJJLUzbo0nhij1krH94A0XNTL2iWzyYaKX5XmUuw3O8RlCVvP2dbcW/Cf35vZG+EsdcEGSiR4KiT0m+UJFMASZKLF6+3qTcgu5GnlRcC0AdTp5oLcTk9BFmqgxoca0wYEfQISrzTTbvOnW23n+thMTgBHExjhCNhiTJpL6PM9Ww5quPoMrkYsdRvDaJktXxTq/YQr2+xzIeMuaU5A8ZA3TMoyxyk5BxnGdUoEON4MjLhZRqJ2wYtSCxQhVJnN0luVKXS5YdOn7u8e/fn58VjGrO1t9wHlpSlMSKCvfQqyg5FQYocBeGBA3DVmfGIzPjMgYiLYo7dm81bgQRJgFyK5FYoaYXsjYd+SG/i8piGluX8sdvkVBtZrtOLnv3eRNlJkhaClJQGR4GIXYSYEeMjDmkmGHSUpqHcSZBLCXLjxvXOpafI0jIBljNtehuXKHlSAyx1jnsSZVcMzFkgBSPEKBChoD3yVLFnTywesaIkTBEl7eR2ZDcKZVGSCJeKiRKyjPHU4IqQnqZz2AZZPttmXT/SXYKlq/dUn690RXuALCY25EiKiHQ6m00jsuk1uPA5KuNESU2S5EKsuXcaoiTJxS6UsuJR8yFjAgxDpAdEcjKdO7ls41z1WHuPh1Q5mLMbAcmshgBx4hQB/eDBy5QpSfw2Pd5OB+ZcKiVAqsWiym7GUqFnRymjNlUtVYpDlnoGPN3o4mp0yXPAnGx4DWWnTZRkvECOUM0evP4midMVIEiMK6as4JNITZQJqZYLgHLhBnAcCJI6uxmbSwyRWInj6ux/kmf/t+guLo5ItXGyLB4TFF3+tvkE8VCfgj8Bj/ou/lv6M6AAAAAASUVORK5CYII=) bottom right no-repeat;
+    }
+    .BigSaleTooltipContent {
+        position: relative;
+        z-index: 11;
+        padding: 20px 35px 25px 25px;
+        border-radius: 12px;
+        font: 400 16px/20px 'TT Norms Pro', 'HelveticaNeue', Arial, Helvetica, sans-serif;
+    }
+    .BigSaleTooltipTitle {
+        margin: 0 0 11px;
+        font-size: 30px;
+        line-height: 32px;
+    }
+    .BigSaleTooltipDescription {
+        margin: 0 0 20px;
+        color: #C2D7F2;
+    }
+    .BigSaleTooltipButton {
+        display: block;
+        text-align: center;
+        width: 115px;
+        height: 40px;
+        line-height: 40px;
+        font-weight: 500;
+        border-radius: 8px;
+        color: #000 !important;
+        background: #FFD400;
+        text-decoration: none !important;
+        transition: background 300ms;
+    }
+    .BigSaleTooltipButton:hover {
+        background: #FFE511;
+    }
+</style>
+<div class="BigSaleTooltip">
+    <div class="BigSaleTooltipClose">&times;</div>
+    <div class="BigSaleTooltipBox" onclick="this.querySelector('a').click();">
+        <div class="BigSaleTooltipBg"></div>
+        <div class="BigSaleTooltipOverlay"></div>
+        <div class="BigSaleTooltipContent">
+            <div class="BigSaleTooltipTitle">В Облаке – большие скидки</div>
+            <div class="BigSaleTooltipDescription">Дарим −20% на годовой тариф</div>
+            <a href="http://cloud.mail.ru/home/?action=request-payment&tariffId=W64G1y_newyear2019_discount20_1y&utm_source=tooltip&utm_medium=inner&utm_campaign=comboreturn&utm_content=combo" target="_blank" class="BigSaleTooltipButton" onclick="event.stopPropagation()">Подробнее</a>
+        </div>
+    </div>
+</div>
