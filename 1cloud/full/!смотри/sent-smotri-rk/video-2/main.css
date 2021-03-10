@@ -1,0 +1,129 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-ms-overflow-style: scrollbar;
+}
+
+html {font-size: 10px;}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	color: #fff;
+	background: #00023C;
+	overflow: hidden;
+}
+
+.inner {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	min-width: 860px;
+	width: 860px;
+	height: 100%;
+	color: #fff;
+	text-decoration: none;
+	background: url(img/bg.png) 0 50% no-repeat;
+}
+
+.box {
+	width: 500px;
+	min-width: 414px;
+	margin: 0 0 66px;
+}
+
+.logo {
+	position: relative;
+	margin: 0 0 60px;
+	width: 100%;
+	height: 43px;
+	background: url(img/logo.png) left center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	overflow: hidden;
+	text-indent: -5000px;
+}
+
+.title {
+	position: relative;
+	margin: 0 0 40px;
+	width: 100%;
+	height: 118px;
+	background: url(img/title.png) left center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	font-size: 0;
+	color: transparent;
+}
+
+.btn,
+.btn:hover {
+	margin: 0 0 80px;
+	width: 262px;
+	height: 76px;
+	text-align: center;
+	text-decoration: none;
+	font: 700 24px/76px Arial, Helvetica, sans-serif;
+	color: #fff;
+	background: #6129FF;
+	-webkit-border-radius: 14px;
+	border-radius: 14px;
+	transition: opacity 300ms;
+}
+.btn:hover {
+	opacity: 0.8;
+}
+
+.disclaimer {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	font: 500 28px/1 'TT Norms Pro', 'Proxima Nova', Arial, Helvetica, sans-serif;
+}
+
+
+.video {
+	position: relative;
+	width: 414px;
+	height: 233px;
+}
+.player {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+@media screen and (max-width: 860px) {
+	.wrapper {
+		justify-content: flex-start;
+	}
+}
+
+@media screen and (max-height: 780px) {
+	.box {
+		margin: 0;
+	}
+	.logo {
+		margin: 0 0 40px;
+		height: 36px;
+	}
+	.title {
+		margin: 0 0 30px;
+		height: 80px;
+	}
+	.btn,
+	.btn:hover {
+		margin: 0 0 50px;
+		width: 220px;
+		height: 60px;
+		font: 700 20px/60px Arial, Helvetica, sans-serif;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+	}
+}

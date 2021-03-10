@@ -1,0 +1,121 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-ms-overflow-style: scrollbar;
+}
+
+html {font-size: 10px;}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	color: #fff;
+	background: #000;
+	overflow: hidden;
+}
+
+.inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	min-width: 580px;
+	max-width: 1100px;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	background: url(img/bg-big.png) center no-repeat;
+}
+
+.box {
+	position: relative;
+	z-index: 3;
+	margin: 0 0 100px;
+}
+
+.logo {
+	position: relative;
+	margin: 0 auto 84px;
+	width: 180px;
+	height: 42px;
+	background: url(img/logo.png) center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	overflow: hidden;
+	text-indent: -5000px;
+}
+
+.title {
+	position: relative;
+	margin: 0 auto 40px;
+	width: 530px;
+	height: 170px;
+	background: url(img/title.png) left center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	overflow: hidden;
+	text-indent: -5000px;
+}
+.description {
+	position: relative;
+	margin: 0 0 60px;
+	font: 400 20px/30px 'Mail Sans Roman', 'TT Norms Pro', 'Proxima Nova', Arial, Helvetica, sans-serif;
+}
+.note {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	font: 400 14px/20px 'Mail Sans Roman', 'TT Norms Pro', 'Proxima Nova', Arial, Helvetica, sans-serif;
+	opacity: 0.5;
+}
+
+.btn,
+.btn:hover {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	text-decoration: none;
+	font: 500 20px/60px Arial, Helvetica, sans-serif;
+	color: #fff;
+	background: #005FF9;
+	-webkit-border-radius: 1.2vh;
+	border-radius: 1.2vh;
+	transition: background 300ms;
+}
+.btn:hover {
+	background: #035ae6;
+}
+@media screen and (max-width: 1100px), screen and (max-height: 700px) {
+	.inner {
+		max-width: 664px;
+		background-image: url(img/bg-small.png);
+	}
+	.box {
+		margin: 0 0 80px;
+	}
+	.logo {
+		width: 170px;
+		height: 40px;
+	}
+	.title {
+		width: 360px;
+		height: 116px;
+	}
+	.note {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 660px) {
+	.wrapper {
+		justify-content: flex-start;
+	}
+}

@@ -1,0 +1,68 @@
+<style>
+    .bnrCloudAtom {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        width: 100%;
+        height: 40px;
+        min-width: 640px;
+        overflow: hidden;
+        color: #000;
+        cursor: pointer;
+        background: #E0E1E6;
+    }
+    .bnrCloudAtomContent {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        z-index: 11;
+        height: 100%;
+        text-align: center;
+    }
+    .bnrCloudAtomLogo {
+        display: block;
+        margin: 0 12px 0 20px;
+        width: 32px;
+        height: 32px;
+        background: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAADAFBMVEUAAAD////////////////////////////////////////////////////////////////////////////////69Pz////////////IZMHCadPEaM7HZsfFZ8rKYrvca7vYVpTjbrKDaf/NYLPOXq/SXKZ3cf+KZf/UWJ7dVYjpUXWRYf+VX/+bW//36/fNcdnocKzQXarUWqLWWJpThv9bgv9hff9oev9ydP9+bP+2Zei9aNnXc8rMY7fNYLfnUnv2ZHc8kf9JjP9td/+YXP91Qv+jXPn+9ffDc+m2XePTdNLSbMzedcHjToPza4LuVHaHZv+OY/9sSf9/Pv+6ad7CatfPbtLVasTab8MsQMKqY8DhcbmwYbnfXZr/kJf9gZDbVo3eTIzzcongVID/VHB7bv85bv9SW/9fU//z9v6+dfS0au+wYevJdeO5ceLIcN5dHtRHLcurZ8bEbsPkdbfUYLGyXLHMTq//oaLaXaLWS5rbTZMggP9pVP+EN/+NMf+eRvyrUu61cuy+cevDb+D92d5sE9plGNe/Xdb8ydPIYss6NcfFV8L8rLfKUbfSV6y5V6Xrc6TRTaTBU5vwdpLlYJLlWojxUm8ymv9Dgf9Wbf9IZP/OnvyeWPuzbvjQ2PWrXfLaxPDz4O+8aOS+Y991Dt25Xdq9b9WSRtFTJdDCX8/AV8/Abs2+ZcrCVMf9ucYWT7kCXbK5W7DbY6n/l6Hud5rqYIj/dIXsXIH6XHX/M1nez/+azP+qmv9Od/9gYP+cM/769P2zZvayY/D/6+6OI+64x+rituV9CODNdt1eLdbkq9NWgc2iVckrVMbKXsK+b7nNWrjDa6/Mcqv1jqL+iJfgVpLvcJDlU4b/cIP3QmO1yP9Lqv+Iof9enP+HU/hgc/elSvY3jPWKQPPKj/KAvfHqzO/lzutbXuowf+fRtOVcT+WemeOFBOIvdd9cPt1/b9uDrNlvUddJktMqZdPUkc3Pg8Mjdb/KWr/bkbnTgbjcjrXynLPsf63kbqfse6KxWEtEAAAAGHRSTlMA32AgEL+fgO+Pz6Der3BAMG++sH/5zq5fJ8MgAAAEzElEQVRYw6WXdUBTURTG98ZCUcK+InbPAAt01FSUDecMwASnqCAgoKQYtIUgjTQiCCgNStjd3d3d3XXfNiZ79/EY4/v/+73v3nPufffQUDG06WyWBhPDMCAThqkzmSw2XYtBq09qLVgYoBCmQVer281ozQRKSB0yyO1NgLJikSBaIHYqYXSivylooJoq+lmgwWKh31c9Ax2oJE158THVAE1q+qoZUFFsWQBV/TAC5Q5YKBtBHZBqYEW1uLgeCJNiBQN/cDgbbuyo3raWiqBW5wr2fxky3owzASJ2zLtcfIiqkhqATJ89l80ZL0HMwyWOWFlnO5I2wUlPk6XL5sgQvMrKyuvXxRFr0SAYPMVk/qOenr4xS+UI3uVZEonRGAyaFpm/sMDT1zcGRyybc+2a2YQJ9tuWQPHEgChtsj18UlhQEL5+va9vZEyfIV2uXElIqKrCEWJeNVJWOo2NFlBHJze3qCgcMiIjIwf72dnFx1dUVInsRTxeBNpKzRB/aI5RrlF+fn5R+Lfz5729y/1wRIIZJ/6qiCdCy8Ak+rNyrK3dBDlr1mzdGnb2bCdTb28/u75zzTicP/qQQGyrVgggRCCwdnMTCATZEBEWpmvas8vsvn3nQoKXV7S96BLSzIST8ChIwOW6uRzkcrOys23CTHvCbZQSEoReXtvtRYRKYoQ+Sg0KWsgNDj5wwMWFq9PepMegnoNrCHZCoZd+nH0EJSD1ftDGgy7B6enpWTrt23cy6V6LUC4UzuwaHRdnQQAonKB9+wIDA9PGuljrdOioSyB0NhbOxAnFQEEKABAYEBDgb2WVZm0jI5j+J1gaT4MR9LdfogKkBvj7W40ZY57GtSFm8LM0Np7WGSespADs9LeC/sn9+g9YSCR4W1pKAdG/KAAAt09e0ZuEMFVPEqFrV/2/FhSA3dC/YEU3nLDRSGEfpuhJIuCEtRSAnZNXLFiwd0S33pP6DxirQHA9rjdl3FScoP/bom4AgH7Hvb0kBPPaBBMJYNxUSYRNtQEYYQ2Ojo7JwyFh4qR+5mOl/dAJEnRdXfXwCJBQfpKilUGGY0pK8ujhveZ3m9i7n/kArixDd3e+q7s0Qp+fgArglJzisMfwP2GhjBDK57vjhB6x3xUfTMhxvu3gsMfA0BASRkBC/xqCM58f6q6nGxt7kXCckd/CTQeHpGEGBoajIUFaTpzQwTmEz7cpi4q9aEEAIFeaU9LypKHDhhngy6gpZ4eOoc7OIYVlUVEXBiJXGnKp3lk+cpQCwRwSQpzdbH3KUD9go9f6LggYNXQoTpCX0yjYw9bHx+cc9CPXujYgrmH5SBlBVoy7Dw8f9phha0vmB1okv7ZbiTWEe89evj2xaNXmY69Pz4CETQAVg+TnuisxceSD528+nZk+fd26xVsWrYYECPAg82NkTyynxx+/lpaWlpSUQMJiKSHPY8ZTQKJWEKAJyJRx5P2pU2fkhDyPTEAmej2PNKeMI6/efTixaHXei7qfOEgzo2qTmQlI1ZaGiw1UFl06aSg/KaAraFwEFjQ3JkJz+eCjqfoONH7gUP3Fz2r00EUQHWvQpKBJMvU2U97OZpAPznR1ZewtFewIQwOjLD2rhRqtPjG04PjPZKpjmNzWvHnLdnD81yb59D88cn/QAQ6iQQAAAABJRU5ErkJggg==) center left no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+    .bnrCloudAtomTitle {
+        font: 500 14px/1 'Mail Sans Roman', 'TT Norms Pro', 'HelveticaNeue', Arial, Helvetica, sans-serif;
+    }
+    .bnrCloudAtomButton {
+        display: block;
+        margin: 0 20px 0 15px;
+        width: 108px;
+        height: 30px;
+        font: 500 14px/30px 'Mail Sans Roman', 'TT Norms Pro', 'HelveticaNeue', Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-weight: 500;
+        border-radius: 8px;
+        color: #fff !important;
+        background: #005FF9;
+        text-decoration: none !important;
+        transition: opacity 300ms;
+    }
+    .bnrCloudAtomButton:hover {
+        opacity: 0.8;
+    }
+    .bnrCloudAtomZero {
+        position: absolute;
+        top: 0;
+        right: 12px;
+        font: 400 14px/40px 'Mail Sans Roman', 'TT Norms Pro', 'HelveticaNeue', Arial, Helvetica, sans-serif;
+        opacity: 0.3;
+    }
+</style>
+<div class="bnrCloudAtom" onclick="this.querySelector('a').click();">
+    <div class="bnrCloudAtomContent">
+        <div class="bnrCloudAtomLogo"></div>
+        <div class="bnrCloudAtomTitle">Ваш браузер устарел! Установите новый браузер Atom от Mail.ru</div>
+        <a href="https://1l-go.mail.ru/r/adid/3164948_2013344/pid/102819/pof/1/f/3/?_1larg_sub=2.496643&rfr=496643&utm_source=cloud" target="_blank"  class="bnrCloudAtomButton" onclick="event.stopPropagation()">Установить</a>
+    </div>
+    <div class="bnrCloudAtomZero">0+</div>
+</div>
