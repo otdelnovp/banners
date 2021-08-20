@@ -1,0 +1,148 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-ms-overflow-style: scrollbar;
+}
+
+.bnrWinline {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 250px;
+	min-width: 940px;
+	overflow: hidden;
+	color: #000;
+	background: #a8a8aa url(img/fon.jpg) 50% 0 no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.bnrWinlineBgLeft,
+.bnrWinlineBgRight {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 57%;
+	height: 100%;
+	background: url(img/bg_left.png) 100% 0 no-repeat;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+}
+.bnrWinlineBgRight {
+	left: auto;
+	right: 0;
+	background-image: url(img/bg_right.png);
+	background-position: 0 0;
+}
+
+.bnrWinlineContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 11;
+	margin: 0 auto;
+	height: 100%;
+	width: 600px;
+}
+
+.bnrWinlineLogo {
+	margin: 0 auto 12px;
+	width: 160px;
+	height: 38px;
+	background: url(img/logo.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	text-indent: -5000px;
+	overflow: hidden;
+}
+
+.bnrWinlineTitle {
+	position: relative;
+	margin: 0 auto 20px;
+	left: 44px;
+	width: 100%;
+	height: 84px;
+	background: url(img/title.png) 50% 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	text-indent: -5000px;
+	overflow: hidden;
+}
+
+.bnrWinlineButton {
+	display: block;
+	text-align: center;
+	position: relative;
+	margin: 0 auto 20px;
+	width: 250px;
+	height: 41px;
+	border-radius: 20px;
+	background: #FFBD02;
+	background: -moz-linear-gradient(top,  #FFBD02 0%, #FF4F02 100%);
+	background: -webkit-linear-gradient(top,  #FFBD02 0%,#FF4F02 100%);
+	background: linear-gradient(to bottom,  #FFBD02 0%,#FF4F02 100%);
+	transition: opacity 300ms;
+	text-indent: -5000px;
+	overflow: hidden;
+}
+.bnrWinlineButton span {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/btn.png) 0 0 no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+.bnrWinlineButton:hover {
+	opacity: 0.8;
+}
+
+.bnrWinlineNote {
+	position: absolute;
+	z-index: 10;
+	bottom: 9px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font: 300 12px/1 'TT Norms Pro', Arial, Helvetica, sans-serif;
+	opacity: 0.6;
+}
+
+.bnrWinline18 {
+	position: absolute;
+	z-index: 10;
+	bottom: 9px;
+	right: 18px;
+	width: 30px;
+	height: 30px;
+	border: 1px solid;
+	border-radius: 30px;
+	text-align: center;
+	font: 400 13px/30px 'TT Norms Pro', Arial, Helvetica, sans-serif;
+	opacity: 0.25;
+}
+
+@media screen and (min-width: 1100px) {
+	.bnrWinlineBgLeft,
+	.bnrWinlineBgRight {
+		width: 53%;
+	}
+}
+@media screen and (min-width: 1400px) {
+	.bnrWinlineBgLeft,
+	.bnrWinlineBgRight {
+		width: 50%;
+	}
+}
