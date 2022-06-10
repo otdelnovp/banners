@@ -1,0 +1,113 @@
+<style>
+    .bnrSaleCloud {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 60px;
+        min-width: 760px;
+        overflow: hidden;
+        cursor: pointer;
+        color: #fff;
+	    background: #F63B45;
+    }
+    .bnrSaleCloudContent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 11;
+        left: -100px;
+        margin: 0 auto;
+        width: 30vw;
+        min-width: 500px;
+        height: 100%;
+        text-align: center;
+        font: 400 12px/1 'Mail Sans Roman', 'TT Norms Pro', 'HelveticaNeue', Arial, Helvetica, sans-serif;
+    }
+    .bnrSaleCloudText {
+        position: relative;
+        z-index: 13;
+    }
+    .bnrSaleCloudTitle {
+        margin: 2px 0 7px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .bnrSaleCloudButton {
+        display: block;
+        position: absolute;
+        z-index: 15;
+        top: 50%;
+        right: 100px;
+        margin: -18px 0 0;
+        width: 150px;
+        height: 36px;
+        font: 500 13px/36px 'Mail Sans Roman', 'TT Norms Pro', 'HelveticaNeue', Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-weight: 500;
+        border-radius: 8px;
+        color: #2C2D2E !important;
+        background: #fff;
+        text-decoration: none !important;
+        transition: opacity 300ms;
+    }
+    .bnrSaleCloudButton:hover {
+        opacity: 0.8;
+    }
+
+    @media screen and (max-width: 2300px) {
+        .bnrSaleCloudContent {
+            left: -120px;
+            min-width: 500px;
+            width: 20vw;
+        }
+        .bnrSaleCloudTitle {
+            margin-bottom: 5px;
+        }
+    }
+
+    @media screen and (max-width: 1900px) {
+        .bnrSaleCloudContent {
+            left: -100px;
+            min-width: 500px;
+        }
+        .bnrSaleCloudTitle {
+            margin-bottom: 5px;
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+        .bnrSaleCloudContent {
+            left: -100px;
+            min-width: 500px;
+        }
+        .bnrSaleCloudTitle {
+            margin-bottom: 5px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .bnrSaleCloudContent {
+            left: -100px;
+            min-width: 500px;
+            width: 20vw;
+        }
+        .bnrSaleCloudButton {
+            right: 70px;
+            width: 120px;
+        }
+    }
+</style>
+<div class="bnrSaleCloud" onclick="this.querySelector('a').click();">
+    <div class="bnrSaleCloudContent">
+        <div class="bnrSaleCloudLeft"></div>
+        <div class="bnrSaleCloudRight"></div>
+        <div class="bnrSaleCloudText">
+            <div class="bnrSaleCloudTitle">Работа Облака остановлена</div>
+            <div class="bnrSaleCloudDescription">Ваше Облако переполнено. Увеличьте его, чтобы продолжать загружать новые файлы.</div>
+        </div>
+    </div>
+    <a href="https://cloud.mail.ru/subscriptions?utm_source=cloud&utm_medium=banner_up&utm_campaign=overquota" target="_blank" class="bnrSaleCloudButton" onclick="event.stopPropagation()">Увеличить</a>
+</div>
