@@ -1,0 +1,102 @@
+html, body { margin: 0; padding: 0; width: 100%; height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-ms-overflow-style: scrollbar;
+}
+
+html {font-size: 10px;}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background: #7700FF;
+	background: -moz-linear-gradient(60deg,  #7700FF 70%, rgba(230,160,255,0.8) 100%);
+	background: -webkit-linear-gradient(60deg,  #7700FF 70%,rgba(230,160,255,0.8) 100%);
+	background: linear-gradient(60deg,  #7700FF 70%,rgba(230,160,255,0.8) 100%);
+	overflow: hidden;
+}
+
+.inner {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	min-width: 80vh;
+	width: 80vh;
+	height: 100%;
+	color: #fff;
+	text-decoration: none;
+	background: url(img/bg.png) 0 50% no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.box {
+	width: 55vh;
+	margin: 10vh 0 0;
+}
+
+.logo {
+	position: relative;
+	margin: 0 0 5vh;
+	width: 100%;
+	height: 4vh;
+	background: url(img/logo.png) left center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	overflow: hidden;
+	text-indent: -5000px;
+}
+
+.title {
+	position: relative;
+	margin: 0 0 3vh;
+	font: 500 6.5vh/1.1 'TT Norms Pro', 'Proxima Nova', Arial, Helvetica, sans-serif;
+}
+
+.description {
+	margin: 0 0 5vh;
+	width: 100%;
+	font: 500 2vh/1.5 'TT Norms Pro', 'Proxima Nova', Arial, Helvetica, sans-serif;
+}
+
+.note {
+	position: relative;
+	font: 400 1.1vh/1.6 'Mail Sans Roman', 'TT Norms Pro', 'Proxima Nova', Arial, Helvetica, sans-serif;
+	opacity: 0.7;
+}
+
+.btn,
+.btn:hover {
+	margin: 0 0 2vh;
+	width: 26vh;
+	height: 6.2vh;
+	text-align: center;
+	text-decoration: none;
+	font: 700 2vh/6.2vh Arial, Helvetica, sans-serif;
+	color: #fff;
+	background: #FF4F12;
+	-webkit-border-radius: 1.6vh;
+	border-radius: 1.6vh;
+	transition: opacity 300ms;
+}
+.btn:hover {
+	opacity: 0.8;
+}
+
+.disclaimer {
+	width: 100%;
+	font: 400 1vh/2 'TT Norms Pro', 'Proxima Nova', Arial, Helvetica, sans-serif;
+	opacity: 0.6;
+}
+
+@media screen and (max-width: 80vh) {
+	.wrapper {
+		justify-content: flex-start;
+	}
+}
